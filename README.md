@@ -1,1 +1,58 @@
 ## Snippets extension for VSCode
+
+> Person Snippet
+
+## Support Language
+- bats
+- c/cpp
+- coffeescript
+- csharp
+- css
+- dart
+  - flutter
+- fish
+- fortran
+- fsharp
+- go
+- groovy
+- hack
+- html
+  - bootstrap 3/4/5
+- java
+- javascript
+  - angular
+  - jquery
+  - jsx
+  - react
+- json
+- jsonc
+- latex
+- lua
+- markdown
+- mssql
+- nginx
+- ocaml
+- php
+  - blade
+  - laravel
+  - symfony
+  - codeigniter4
+  - thinkphp
+  - pdo
+  - phalcon
+  - phpunit
+  - twig
+- python
+  - django
+  - flask
+- java
+- go
+- bash
+- powershell
+- swift
+- typescript
+  - angular
+  - react
+- visual basic
+- vue
+- yaml
