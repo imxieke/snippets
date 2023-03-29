@@ -30,14 +30,6 @@
 	"contributes": {
 		"snippets": [
 			{
-				"language": "all",
-				"path": "./snippets/all.json"
-			},
-			{
-				"language": "all",
-				"path": "./snippets/emoji.json"
-			},
-			{
 				"language": "bats",
 				"path": "./snippets/bats.json"
 			},
@@ -260,6 +252,42 @@
 			{
 				"language": "yaml",
 				"path": "./snippets/yaml.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "go",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "dockerfile",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "ini",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "markdown",
+				"path": "./snippets/global.json"
 			}
 		]
 	}

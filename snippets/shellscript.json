@@ -13,92 +13,12 @@
 		],
 		"description": "StrToUpper"
 	},
-	"shebang": {
-		"prefix": [
-			"shebang",
-			"bash",
-			"#!",
-			"first line"
-		],
-		"body": "#!/usr/bin/env ${1|bash,node,perl,php,python,python3,ruby|}\n\n",
-		"description": "Start of bash\nThat is shell scripts should start with this command"
-	},
-	"env": {
-		"prefix": "env",
-		"body": "#!/usr/bin/env $1\n",
-		"description": [
-			"Custom shebang Environment"
-		]
-	},
-	"zsh": {
-		"prefix": "zsh",
-		"body": "#!/usr/bin/env zsh\n",
-		"description": [
-			"zsh shebang"
-		]
-	},
 	"shellpath": {
 		"prefix": "shellpath",
 		"body": "$(dirname $(realpath $0))",
 		"description": [
 			"获取脚本所在绝对路径"
 		]
-	},
-	"sh": {
-		"prefix": "sh",
-		"body": "#!/bin/sh\n",
-		"description": "executer"
-	},
-	"file_head_A": {
-		"prefix": "file_head_A",
-		"body": [
-			"#!/bin/bash"
-		],
-		"description": "文件头部 Bourne Again Shell"
-	},
-	"file_head_B": {
-		"prefix": "file_head_B",
-		"body": [
-			"#!/usr/bin/sh",
-			"# or ",
-			"#!/bin/sh"
-		],
-		"description": "文件头部 Bourne Shell"
-	},
-	"file_head_C": {
-		"prefix": "file_head_C",
-		"body": [
-			"#!/usr/bin/csh"
-		],
-		"description": "文件头部 C Shell"
-	},
-	"file_head_K": {
-		"prefix": "file_head_k",
-		"body": [
-			"#!/usr/bin/ksh"
-		],
-		"description": "文件头部 K Shell"
-	},
-	"run_code_as_exe": {
-		"prefix": "run_code_as_exe",
-		"body": [
-			"chmod +x ${name:$file_path}"
-		],
-		"description": "运行代码 以可执行程序方式"
-	},
-	"run_code_with_shell": {
-		"prefix": "run_code_with_shell",
-		"body": [
-			"/bin/bash ./file_path.sh"
-		],
-		"description": "运行代码 作为解释器的参数"
-	},
-	"var_define": {
-		"prefix": "var_define",
-		"body": [
-			"var_name=value"
-		],
-		"description": "变量定义"
 	},
 	"var_read": {
 		"prefix": "var_read",
