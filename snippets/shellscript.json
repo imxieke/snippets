@@ -1,0 +1,5801 @@
+{
+	"strtoupper": {
+		"prefix": "strtoupper",
+		"body": [
+			"tr 'A-Z' 'a-z'"
+		],
+		"description": "StrToUpper"
+	},
+	"strtolower": {
+		"prefix": "strtolower",
+		"body": [
+			"tr 'a-z' 'A-Z'"
+		],
+		"description": "StrToUpper"
+	},
+	"shebang": {
+		"prefix": [
+			"shebang",
+			"bash",
+			"#!",
+			"first line"
+		],
+		"body": "#!/usr/bin/env ${1|bash,node,perl,php,python,python3,ruby|}\n\n",
+		"description": "Start of bash\nThat is shell scripts should start with this command"
+	},
+	"env": {
+		"prefix": "env",
+		"body": "#!/usr/bin/env $1\n",
+		"description": [
+			"Custom shebang Environment"
+		]
+	},
+	"zsh": {
+		"prefix": "zsh",
+		"body": "#!/usr/bin/env zsh\n",
+		"description": [
+			"zsh shebang"
+		]
+	},
+	"shellpath": {
+		"prefix": "shellpath",
+		"body": "$(dirname $(realpath $0))",
+		"description": [
+			"获取脚本所在绝对路径"
+		]
+	},
+	"sh": {
+		"prefix": "sh",
+		"body": "#!/bin/sh\n",
+		"description": "executer"
+	},
+	"file_head_A": {
+		"prefix": "file_head_A",
+		"body": [
+			"#!/bin/bash"
+		],
+		"description": "文件头部 Bourne Again Shell"
+	},
+	"file_head_B": {
+		"prefix": "file_head_B",
+		"body": [
+			"#!/usr/bin/sh",
+			"# or ",
+			"#!/bin/sh"
+		],
+		"description": "文件头部 Bourne Shell"
+	},
+	"file_head_C": {
+		"prefix": "file_head_C",
+		"body": [
+			"#!/usr/bin/csh"
+		],
+		"description": "文件头部 C Shell"
+	},
+	"file_head_K": {
+		"prefix": "file_head_k",
+		"body": [
+			"#!/usr/bin/ksh"
+		],
+		"description": "文件头部 K Shell"
+	},
+	"run_code_as_exe": {
+		"prefix": "run_code_as_exe",
+		"body": [
+			"chmod +x ${name:$file_path}"
+		],
+		"description": "运行代码 以可执行程序方式"
+	},
+	"run_code_with_shell": {
+		"prefix": "run_code_with_shell",
+		"body": [
+			"/bin/bash ./file_path.sh"
+		],
+		"description": "运行代码 作为解释器的参数"
+	},
+	"var_define": {
+		"prefix": "var_define",
+		"body": [
+			"var_name=value"
+		],
+		"description": "变量定义"
+	},
+	"var_read": {
+		"prefix": "var_read",
+		"body": [
+			"$$var_name"
+		],
+		"description": "变量读取"
+	},
+	"var_set_readonly": {
+		"prefix": "var_set_readonly",
+		"body": [
+			"readonly var_name"
+		],
+		"description": "变量设置 只读变量"
+	},
+	"var_delete": {
+		"prefix": "var_delete",
+		"body": [
+			"unset var_name"
+		],
+		"description": "变量删除"
+	},
+	"arr_define_1d": {
+		"prefix": "arr_define_1d",
+		"body": [
+			"array_name=(",
+			" value0",
+			" value1",
+			")"
+		],
+		"description": "数组：定义一维数组"
+	},
+	"arr_read_1d": {
+		"prefix": "arr_read_1d",
+		"body": [
+			"${array_name[index]}"
+		],
+		"description": "数组：读取一维数组"
+	},
+	"arr_get_length_1d": {
+		"prefix": "arr_get_length_1d",
+		"body": [
+			"${#array_name[@]}",
+			"# or ",
+			"#${#my_array[*]}"
+		],
+		"description": "数组：获取一维数组长度"
+	},
+	"arr_get_values_1d": {
+		"prefix": "arr_get_values_1d",
+		"body": [
+			"${array_name[@]}",
+			"# or ",
+			"#${my_array[*]}"
+		],
+		"description": "数组：获取一维数组元素"
+	},
+	"arr_define_2d": {
+		"prefix": "arr_define_2d",
+		"body": [
+			"declare -A array_name",
+			"array_name=(",
+			" [key1]=value1",
+			" [key2]=value2",
+			")"
+		],
+		"description": "数组：定义二维数组"
+	},
+	"comment_line": {
+		"prefix": "comment_line",
+		"body": [
+			"# commment_here .."
+		],
+		"description": "单行注释"
+	},
+	"comment_multi_line": {
+		"prefix": "comment_multi_line",
+		"body": [
+			":<<EOF",
+			" commment_here ..",
+			" commment_here ..",
+			"EOF"
+		],
+		"description": "注释：插入多行注释"
+	},
+	"arg_get_length": {
+		"prefix": "arg_get_length",
+		"body": [
+			"$#"
+		],
+		"description": "参数：获取参数-返回参数个数"
+	},
+	"arg_get_all_in_string_1": {
+		"prefix": "arg_get_all_in_string_1",
+		"body": [
+			"$*"
+		],
+		"description": "参数：获取参数-以一个单字符串显示所有向脚本传递的参数"
+	},
+	"arg_get_all_in_string_2": {
+		"prefix": "arg_get_all_in_string_2",
+		"body": [
+			"\"$@\""
+		],
+		"description": "参数：获取参数-在引号中返回每个参数"
+	},
+	"arg_current_process_id": {
+		"prefix": "arg_current_process_id",
+		"body": [
+			"$$"
+		],
+		"description": "参数：获取参数-脚本运行的当前进程ID号"
+	},
+	"arg_last_process_id": {
+		"prefix": "arg_last_process_id",
+		"body": [
+			"$!"
+		],
+		"description": "参数：获取参数-后台运行的最后一个进程的ID号"
+	},
+	"arg_show_current_options": {
+		"prefix": "arg_show_current_options",
+		"body": [
+			"$-"
+		],
+		"description": "参数：获取参数-显示Shell使用的当前选项"
+	},
+	"arg_show_last_exit_status": {
+		"prefix": "arg_show_last_exit_status",
+		"body": [
+			"$?"
+		],
+		"description": "参数：获取参数-显示最后命令的退出状态。"
+	},
+	"math_add": {
+		"prefix": "math_add",
+		"body": [
+			"`expr $$a + $$b`"
+		],
+		"description": "算数运算：加法 $a + $b"
+	},
+	"math_sub": {
+		"prefix": "math_sub",
+		"body": [
+			"`expr $$a - $$b` "
+		],
+		"description": "算数运算：减法 $a - $b"
+	},
+	"math_multi": {
+		"prefix": "math_multi",
+		"body": [
+			"`expr $$a \\* $$b` "
+		],
+		"description": "算数运算：乘法 $a * $b"
+	},
+	"math_devide": {
+		"prefix": "math_devide",
+		"body": [
+			"`expr $$a / $$b` "
+		],
+		"description": "算数运算：除法 $a / $b"
+	},
+	"math_mod": {
+		"prefix": "math_mod",
+		"body": [
+			"`expr $$a % $$b` "
+		],
+		"description": "算数运算：取余 $a % $b"
+	},
+	"math_euqal": {
+		"prefix": "math_euqal",
+		"body": [
+			"[ $$a == $$b ]"
+		],
+		"description": "算数运算：相等 [$a == $b]"
+	},
+	"math_not_euqal": {
+		"prefix": "math_not_euqal",
+		"body": [
+			"[ $$a != $$b ]"
+		],
+		"description": "算数运算：不等 [$a != $b]"
+	},
+	"relation_euqal": {
+		"prefix": "relation_euqal",
+		"body": [
+			"[ $$a -eq $$b ]"
+		],
+		"description": "关系运算：相等 [$a -eq $b]"
+	},
+	"relation_not_euqal": {
+		"prefix": "relation_not_euqal",
+		"body": [
+			"[ $$a -ne $$b ]"
+		],
+		"description": "关系运算：不等 [$a -ne $b]"
+	},
+	"relation_large_than": {
+		"prefix": "relation_large_than",
+		"body": [
+			"[ $$a -gt $$b ]"
+		],
+		"description": "关系运算：大于 [$a -gt $b]"
+	},
+	"relation_not_large_than": {
+		"prefix": "relation_not_large_than",
+		"body": [
+			"[ $$a -le $$b ]"
+		],
+		"description": "关系运算：不大于 [$a -le $b]"
+	},
+	"relation_less_than": {
+		"prefix": "relation_less_than",
+		"body": [
+			"[ $$a -lt $$b ]"
+		],
+		"description": "关系运算：小于 [$a -lt $b]"
+	},
+	"relation_not_less_than": {
+		"prefix": "relation_not_less_than",
+		"body": [
+			"[ $$a -ge $$b ]"
+		],
+		"description": "关系运算：不小于 [$a -ge $b]"
+	},
+	"bool_not": {
+		"prefix": "bool_not",
+		"body": [
+			"[ $$a != $$b ]"
+		],
+		"description": "布尔运算：非 [ $a != $b ]"
+	},
+	"bool_or": {
+		"prefix": "bool_or",
+		"body": [
+			"[ $$a -o $$b ]"
+		],
+		"description": "布尔运算：或 [ $a -o $b ]"
+	},
+	"bool_and": {
+		"prefix": "bool_and",
+		"body": [
+			"[ $$a -a $$b ]"
+		],
+		"description": "布尔运算：与 [ $a -a $b ]"
+	},
+	"logic_or": {
+		"prefix": "logic_or",
+		"body": [
+			"[[ $$a && $$b ]]"
+		],
+		"description": "逻辑运算：或 [[ $a && $b ]]"
+	},
+	"logic_and": {
+		"prefix": "logic_and",
+		"body": [
+			"[[ $$a || $$b ]]"
+		],
+		"description": "逻辑运算：与 [[ $a || $b ]]"
+	},
+	"char_equal": {
+		"prefix": "char_equal",
+		"body": [
+			"[ $$a = $$b ]"
+		],
+		"description": "字符运算：相等 [ $a = $b ]"
+	},
+	"char_not_equal": {
+		"prefix": "char_not_equal",
+		"body": [
+			"[ $$a != $$b ]"
+		],
+		"description": "字符运算：不等 [ $a != $b ]"
+	},
+	"char_check_length_is_zero": {
+		"prefix": "char_check_length_is_zero",
+		"body": [
+			"[ -z $$a ]"
+		],
+		"description": "字符运算：长度为空 [ -z $a ]"
+	},
+	"char_check_length_is_not_zero": {
+		"prefix": "char_check_length_is_not_zero",
+		"body": [
+			"[ -n \"$$a\" ]"
+		],
+		"description": "字符运算：长度非空 [ -n \"$a\" ] "
+	},
+	"char_content_is_not_zero": {
+		"prefix": "char_content_is_not_zero",
+		"body": [
+			"[ $$a ]"
+		],
+		"description": "字符运算：内容非空 [ $a ]"
+	},
+	"file_is_block": {
+		"prefix": "file_is_block",
+		"body": [
+			"[ -b $$file ]"
+		],
+		"description": "文件检测：是否是块设备文件 [ -b $file ]"
+	},
+	"file_is_char": {
+		"prefix": "file_is_char",
+		"body": [
+			"[ -c $$file ]"
+		],
+		"description": "文件检测：是否是字符设备文件 [ -c $file ]"
+	},
+	"file_is_diretory": {
+		"prefix": "file_is_diretory",
+		"body": [
+			"[ -d $$file ]"
+		],
+		"description": "文件检测：是否是目录 [ -d $file ]"
+	},
+	"file_is_nomarl": {
+		"prefix": "file_is_nomarl",
+		"body": [
+			"[ -f $$file ]"
+		],
+		"description": "文件检测：是否是普通文件（既不是目录，也不是设备文件） [ -f $file ]"
+	},
+	"file_is_readable": {
+		"prefix": "file_is_readable",
+		"body": [
+			"[ -r $$file ]"
+		],
+		"description": "文件检测：是否可读 [ -r $file ]"
+	},
+	"file_is_writeable": {
+		"prefix": "file_is_writeable",
+		"body": [
+			"[ -w $$file ]"
+		],
+		"description": "文件检测：是否可写 [ -w $file ]"
+	},
+	"file_is_execeable": {
+		"prefix": "file_is_execeable",
+		"body": [
+			"[ -x $$file ]"
+		],
+		"description": "文件检测：是否可执 [ -x $file ]"
+	},
+	"file_is_not_zereo_size": {
+		"prefix": "file_is_not_zereo_size",
+		"body": [
+			"[ -s $$file ]"
+		],
+		"description": "文件检测：大小非空 [ -s $file ]"
+	},
+	"file_exsites": {
+		"prefix": "file_exsites",
+		"body": [
+			"[ -e $$file ]"
+		],
+		"description": "文件检测：是否存在 [ -e $file ]"
+	},
+	"echo_mode_c": {
+		"prefix": "echo_mode_c",
+		"body": [
+			"echo -e $$var_name"
+		],
+		"description": "打印字符：开启转译 echo -e \"OK! \n\""
+	},
+	"echo_mode_not_c": {
+		"prefix": "echo_mode_not_c",
+		"body": [
+			"echo $$var_name"
+		],
+		"description": "打印字符：关闭转译 echo \"OK! \n\""
+	},
+	"read_input_from_tty": {
+		"prefix": "read_input_from_tty",
+		"body": [
+			"read -p \"your tips here:\" -n $$char_limit -t $$time_limit -s password"
+		],
+		"description": "读取输入：读取命令行输入的内容"
+	},
+	"if_multiline": {
+		"prefix": "if_multiline",
+		"body": [
+			"if condition",
+			"then",
+			"    command1",
+			"    command2",
+			"fi"
+		],
+		"description": "条件语句：if 多行写法"
+	},
+	"if_oneline": {
+		"prefix": "if_oneline",
+		"body": [
+			"if condition ; then command1; fi"
+		],
+		"description": "条件语句：if 一行写法"
+	},
+	"for_multiline": {
+		"prefix": "for_multiline",
+		"body": [
+			"for condition",
+			"do",
+			"    command1",
+			"    command2",
+			"done"
+		],
+		"description": "循环语句：for 多行写法"
+	},
+	"for_oneline": {
+		"prefix": "for_oneline",
+		"body": [
+			"for condition ; do command1; done"
+		],
+		"description": "循环语句：for 一行写法"
+	},
+	"while_multiline": {
+		"prefix": "while_multiline",
+		"body": [
+			"while condition",
+			"do",
+			"    command1",
+			"    command2",
+			"done"
+		],
+		"description": "循环语句：while 多行写法"
+	},
+	"until_multiline": {
+		"prefix": "until_multiline",
+		"body": [
+			"until condition",
+			"do",
+			"    command1",
+			"    command2",
+			"done"
+		],
+		"description": "循环语句：until 多行写法"
+	},
+	"function_define": {
+		"prefix": "function_define",
+		"body": [
+			"function fun_name(arg1,arg2...){",
+			"    action1;",
+			"    action2;",
+			"    return value;",
+			"}"
+		],
+		"description": "循环语句：until 多行写法"
+	},
+	"io_redirect_to_file_overide": {
+		"prefix": "io_redirect_to_file_overide",
+		"body": [
+			"command > $$file_path"
+		],
+		"description": "输入输出重新定向：输出到指定文件 覆盖方式"
+	},
+	"io_redirect_to_file_append": {
+		"prefix": "io_redirect_to_file_append",
+		"body": [
+			"command >> $$file_path"
+		],
+		"description": "输入输出重新定向：输出到指定文件 追加方式"
+	},
+	"io_redirect_from_file": {
+		"prefix": "io_redirect_from_file",
+		"body": [
+			"command < $$file_path"
+		],
+		"description": "输入输出重新定向：从指定文件输入"
+	},
+	"io_redirect_from_tty": {
+		"prefix": "io_redirect_from_tty",
+		"body": [
+			"command << command-eof",
+			"  #write some command here",
+			"command-eof"
+		],
+		"description": "输入输出重新定向：从tty输入"
+	},
+	"file_include": {
+		"prefix": "file_include",
+		"body": [
+			". $$file_path",
+			"# or",
+			"#source $$file_path"
+		],
+		"description": "文件包含"
+	},
+	"value": {
+		"prefix": "_",
+		"body": [
+			"\"\\${$0}\""
+		],
+		"description": ""
+	},
+	"subshell": {
+		"prefix": "__",
+		"body": [
+			"\"\\$($0)\""
+		],
+		"description": ""
+	},
+	"false": {
+		"prefix": "f",
+		"body": [
+			"false"
+		],
+		"description": ""
+	},
+	"true": {
+		"prefix": "t",
+		"body": [
+			"true"
+		],
+		"description": ""
+	},
+	"null": {
+		"prefix": "n",
+		"body": [
+			"null"
+		],
+		"description": ""
+	},
+	"return": {
+		"prefix": "r",
+		"body": [
+			"return"
+		],
+		"description": ""
+	},
+	"continue": {
+		"prefix": "c",
+		"body": [
+			"continue$0;"
+		],
+		"description": ""
+	},
+	"shift": {
+		"prefix": "s",
+		"body": [
+			"shift$0;"
+		],
+		"description": ""
+	},
+	"alias": {
+		"prefix": "a1",
+		"body": [
+			"alias ${1:identifer}='${0:command}';"
+		],
+		"description": ""
+	},
+	"export": {
+		"prefix": "e1",
+		"body": [
+			"export $0;"
+		],
+		"description": ""
+	},
+	"source '.sh';": {
+		"prefix": "s1b",
+		"body": [
+			"source \"\\$(cd \"\\$(dirname \"\\${BASH_SOURCE[0]}\")\" && pwd)/$0.sh\";"
+		],
+		"description": ""
+	},
+	"source '.zsh';": {
+		"prefix": "s1z",
+		"body": [
+			"source \"\\$(cd \"\\$(dirname \"\\${(%):-%x}\")\" && pwd)/$0.zsh\";"
+		],
+		"description": ""
+	},
+	"declare": {
+		"prefix": "d1",
+		"body": [
+			"declare ${1:name}=$0;"
+		],
+		"description": ""
+	},
+	"declare array": {
+		"prefix": "declare array",
+		"body": [
+			"declare -a ${1:name}=(${2:\"value1\" \"value2\"});\n"
+		],
+		"description": "Declare a new array and add initialize it."
+	},
+	"declare map": {
+		"prefix": "dA1",
+		"body": [
+			"declare -A ${1:name}=($0);"
+		],
+		"description": ""
+	},
+	"declare boolean": {
+		"prefix": "db1",
+		"body": [
+			"declare ${1:name}=${0:false};"
+		],
+		"description": ""
+	},
+	"declare number": {
+		"prefix": "di1",
+		"body": [
+			"declare -i ${1:name}=${0:0};"
+		],
+		"description": ""
+	},
+	"declare nameref": {
+		"prefix": "dn1",
+		"body": [
+			"declare -n ${1:name}=$0;"
+		],
+		"description": ""
+	},
+	"declare readonly": {
+		"prefix": "dr1",
+		"body": [
+			"declare -r ${1:name}=\"$0\";"
+		],
+		"description": ""
+	},
+	"declare string": {
+		"prefix": "ds1",
+		"body": [
+			"declare ${1:name}=\"$0\";"
+		],
+		"description": ""
+	},
+	"declare export": {
+		"prefix": "dx1",
+		"body": [
+			"declare -x ${1:name}=$0;"
+		],
+		"description": ""
+	},
+	"if; then; fi": {
+		"prefix": "itf",
+		"body": [
+			"if $0; then",
+			"\t",
+			"fi"
+		],
+		"description": ""
+	},
+	"elif; then;": {
+		"prefix": "et",
+		"body": [
+			"elif $0; then"
+		],
+		"description": ""
+	},
+	"for in; do; done": {
+		"prefix": "fidd",
+		"body": [
+			"for $1 in $0; do",
+			"\t",
+			"done"
+		],
+		"description": ""
+	},
+	"for (); do; done": {
+		"prefix": "fdd",
+		"body": [
+			"for ((i=1; i<$0; i++)); do",
+			"\t",
+			"done"
+		],
+		"description": ""
+	},
+	"while; do; done": {
+		"prefix": "wdd",
+		"body": [
+			"while $0; do",
+			"\t",
+			"done"
+		],
+		"description": ""
+	},
+	"until; do; done": {
+		"prefix": "udd",
+		"body": [
+			"until $0; do",
+			"\t",
+			"done"
+		],
+		"description": ""
+	},
+	"case in; esac": {
+		"prefix": "cie",
+		"body": [
+			"case $0 in",
+			"\t",
+			"esac"
+		],
+		"description": ""
+	},
+	");;": {
+		"prefix": "_)",
+		"body": [
+			"$1)",
+			"\t$0",
+			"\t;;"
+		],
+		"description": ""
+	},
+	"*);;": {
+		"prefix": "_*",
+		"body": [
+			"*)",
+			"\t$0",
+			"\t;;"
+		],
+		"description": ""
+	},
+	"function {}": {
+		"prefix": "f_",
+		"body": [
+			"function ${1:name} {",
+			"\t",
+			"\t$0",
+			"\t",
+			"}"
+		],
+		"description": ""
+	},
+	"name () {}": {
+		"prefix": "$_",
+		"body": [
+			"${1:name} () {",
+			"\t",
+			"\t$0",
+			"\t",
+			"}"
+		],
+		"description": ""
+	},
+	"local": {
+		"prefix": "l1",
+		"body": [
+			"local ${1:name}=\\${${0:1}};"
+		],
+		"description": ""
+	},
+	"local array": {
+		"prefix": "la1",
+		"body": [
+			"local -a ${1:name}=(\"\\${!${0:1}:+\\${!${0:1}}}\");"
+		],
+		"description": ""
+	},
+	"local map": {
+		"prefix": "lA1",
+		"body": [
+			"local -A ${1:name}=(\"\\${!${0:1}:+\\${!${0:1}}}\");"
+		],
+		"description": ""
+	},
+	"local boolean": {
+		"prefix": "lb1",
+		"body": [
+			"local ${1:name}=${0:false};"
+		],
+		"description": ""
+	},
+	"local number": {
+		"prefix": "li1",
+		"body": [
+			"local -i ${1:name}=\\${${0:1}};"
+		],
+		"description": ""
+	},
+	"local readonly": {
+		"prefix": "lr1",
+		"body": [
+			"local -r ${1:name}=\"\\${${0:1}}\";"
+		],
+		"description": ""
+	},
+	"local string": {
+		"prefix": "ls1",
+		"body": [
+			"local ${1:name}=\"\\${${0:1}}\";"
+		],
+		"description": ""
+	},
+	"bash-scope": {
+		"prefix": "$b",
+		"body": [
+			"#!/usr/bin/env bash",
+			"main () {",
+			"",
+			"set -o errexit;",
+			"set -o pipefail;",
+			"set -o nounset;",
+			"",
+			"local -r __dirname=\"$(cd \"$(dirname \"\\${BASH_SOURCE[0]}\")\" && pwd)\";",
+			"local -r __filename=\"\\${__dirname}/$(basename \"\\${BASH_SOURCE[0]}\")\";",
+			"",
+			"$0",
+			"",
+			"exit 0;};main \"$@\";"
+		],
+		"description": ""
+	},
+	"zsh-scope": {
+		"prefix": "$z",
+		"body": [
+			"#!/usr/bin/env zsh",
+			"main () {",
+			"",
+			"set -o errexit;",
+			"set -o pipefail;",
+			"set -o nounset;",
+			"",
+			"local -r __dirname=\"$(cd \"$(dirname \"\\${(%):-%x}\")\" && pwd)\";",
+			"local -r __filename=\"\\${__dirname}/$(basename \"\\${(%):-%x}\")\";",
+			"",
+			"$0",
+			"",
+			"exit 0;};main \"$@\";"
+		],
+		"description": ""
+	},
+	"sections": {
+		"prefix": "___",
+		"body": [
+			"# Imports ______________________________________________________________________",
+			"",
+			"$0",
+			"",
+			"# Variables ____________________________________________________________________",
+			"",
+			"",
+			"",
+			"# Functions ____________________________________________________________________",
+			"",
+			"",
+			"",
+			"# Options ______________________________________________________________________",
+			"",
+			"",
+			"",
+			"# Initialize ___________________________________________________________________",
+			"",
+			"",
+			"",
+			"# EOF - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+		],
+		"description": ""
+	},
+	"echo": {
+		"prefix": "echo",
+		"body": "echo ${0:massage}",
+		"description": "echo message"
+	},
+	"function with definitions": {
+		"prefix": "fnd",
+		"body": [
+			"#######################################",
+			"# Description",
+			"# Globals:",
+			"# - EXPORT_1 : which contains ...",
+			"# Arguments:",
+			"# - \\$1 : the first paramter (eg. param1)",
+			"# Outputs:",
+			"# Returns:",
+			"#######################################",
+			"${1:lib}::${2:function_name}() {",
+			"  local -r ${3:PARAM_1}=\"\\${1:?\"${2:function_name} is missing a parameter\"}\"",
+			"  $0",
+			"  export ${4:EXPORT_1}",
+			"}"
+		],
+		"description": "Function in a libary with definitions of params and exports"
+	},
+	"if else": {
+		"prefix": "ife",
+		"body": [
+			"if [[ $1 ]]; then",
+			"\t$2",
+			"else",
+			"\t$0",
+			"fi"
+		],
+		"description": "if else block"
+	},
+	"elif": {
+		"prefix": "elif",
+		"body": [
+			"elif [[ $1 ]]; then",
+			"\t$0"
+		],
+		"description": "elif block"
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"main() {",
+			"}",
+			"",
+			"main \"$@\""
+		],
+		"description": "a main function declaration with passthrough of all paramters passed to the file"
+	},
+	"const": {
+		"prefix": "const",
+		"body": [
+			"local -r ${1:VARIABLE}=\"${0}\""
+		],
+		"description": "creates a local readonly variable ie. a constant (this is meant for use within functions only)"
+	},
+	"TODO": {
+		"prefix": "todo",
+		"body": [
+			"# TODO: (${1:author}) ${0:description}"
+		],
+		"description": "creates a local readonly variable ie. a constant"
+	},
+	"Escape Special Characters": {
+		"prefix": "escape",
+		"body": "| sed 's/[^a-zA-Z0-9]/\\\\\\&/g'",
+		"description": "put a backslash in front of all special characters."
+	},
+	"if_then_else_fi_[": {
+		"prefix": "if",
+		"body": [
+			"",
+			"if [ $2 ]${1:    # ← see 'man test' for available unary and binary operators.}",
+			"then",
+			"\t$3",
+			"else",
+			"\t$0",
+			"fi",
+			""
+		],
+		"description": "Stub out a simple conditional statement that uses the test command \"[\""
+	},
+	"if_then_else_fi_[[": {
+		"prefix": "if regex",
+		"body": [
+			"",
+			"if [[ $1 =~ $2 ]]    # ← see 'man bash' for valid conditional statements.",
+			"then",
+			"\t$3",
+			"else",
+			"\t$0",
+			"fi",
+			""
+		],
+		"description": "Stub out a simple conditional statement that uses bash's built in conditional expression syntax to compare a string on the left hand side to a regex on the right hand side."
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"",
+			"for $1 in $2",
+			"do",
+			"\t$0",
+			"done",
+			""
+		],
+		"description": "Stub out a for loop"
+	},
+	"if-then-else-fi ((": {
+		"prefix": "if arithmetic",
+		"body": [
+			"",
+			"if (( $1 ))    # ← see 'man bash' for valid conditional statements.",
+			"then",
+			"\t$2",
+			"else",
+			"\t$0",
+			"fi",
+			""
+		],
+		"description": "Stub out a simple conditional statement that uses bash's built in arithmetic operators."
+	},
+	"if-command-then-else-fi": {
+		"prefix": "if command",
+		"body": [
+			"${1:\t# ← put the command whos exit code you want to check here} &>/dev/null",
+			"if [ \\$? -eq 0 ]; then",
+			"\t$2",
+			"else",
+			"\t$0",
+			"fi"
+		],
+		"description": "Stub out a conditional statment that checks the exit code of a command"
+	},
+	"for i in quantity": {
+		"prefix": "for i",
+		"body": [
+			"",
+			"for (( i=$1; i<$2; i++ ))",
+			"do",
+			"\t$0",
+			"done",
+			""
+		],
+		"description": "Stub out a for loop that iterates over a number, such as the length of a string, which can be accessed with snippet \"length of string\""
+	},
+	"read while": {
+		"prefix": "read while",
+		"body": [
+			"",
+			"while read line",
+			"do",
+			"\t${1:    # ← put the command that you want to run on each $line here}",
+			"done < <($0)${2:    # ← put the command that generates the lines you want to process inside the parentheses}"
+		],
+		"description": "For each line of output, run a command."
+	},
+	"read user input": {
+		"prefix": "read input",
+		"body": [
+			"read -p \"${1:Enter Input}\" ${2:INPUT}",
+			"${3:echo \\$INPUT}"
+		],
+		"description": "prompt user for input."
+	},
+	"string length": {
+		"prefix": "length of variable string",
+		"body": [
+			"\\${#${0:variable-name-here}\\}"
+		],
+		"description": "get length of a variable that is a string."
+	},
+	"character in string": {
+		"prefix": "character in variable string",
+		"body": [
+			"\\${${1:variable-name-here}:${2:index-of-character}:${0:number-of-characters-from-index-onwards-to-return}\\}"
+		]
+	},
+	"printf statement": {
+		"prefix": "printf",
+		"body": [
+			"${1|printf,print-if-verbose|} ${4|\",\"\\n,\"\\n\\n,\"\\n\\n\\n,\"\\n\\n\\n\\n,\"\\n\\n\\n\\n\\n|}$0${5|\",\\n\",\\n\\n\",\\n\\n\\n\",\\n\\n\\n\\n\",\\n\\n\\n\\n\\n\"|} | ${2|fold -w $(tput cols),fold -w $(( $(tput cols) - 1 * $(tput it) )) \\| awk '{print \"\\t\"$0}',fold -w $(( $(tput cols) - 2 * $(tput it) )) \\| awk '{print \"\\t\\t\"$0}',fold -w $(( $(tput cols) - 3 * $(tput it) )) \\| awk '{print \"\\t\\t\\t\"$0}',fold -w $(( $(tput cols) - 4 * $(tput it) )) \\| awk '{print \"\\t\\t\\t\\t\"$0}',fold -w $(( $(tput cols) - 5 * $(tput it) )) \\| awk '{print \"\\t\\t\\t\\t\\t\"$0}'|} ${3:1>&2}"
+		],
+		"description": "printf with newlines and text wrapping. Default options send to standard error, not standard output."
+	},
+	"bold": {
+		"prefix": "bold text",
+		"body": [
+			"\\e[1m$0\\e[0m"
+		],
+		"description": "Make text in printf bold. Note that you MUST place this text INSIDE a printf statement for it to work."
+	},
+	"italic": {
+		"prefix": "italic",
+		"body": [
+			"\\e[3m$0\\e[0m"
+		],
+		"description": "Make text in printf italic. Note that you MUST place this text INSIDE a printf statement for it to work."
+	},
+	"underline": {
+		"prefix": "underline",
+		"body": [
+			"\\e[4m$0\\e[0m"
+		],
+		"description": "Make text in printf underlined. Note that you MUST place this text INSIDE a printf statement for it to work."
+	},
+	"highlight": {
+		"prefix": "highlight",
+		"body": [
+			"\\e[38;5;0m\\e[48;5;220m$0\\e[0m"
+		],
+		"description": "Make text in printf highlighted. Note that you MUST place this text INSIDE a printf statement for it to work."
+	},
+	"newline and tab": {
+		"prefix": "new tab",
+		"body": "\\n${1|\\t,\\t\\t,\\t\\t\\t,\\t\\t\\t\\t,\\n\\t,\\n\\t\\t,\\n\\t\\t\\t,\\n\\t\\t\\t\\t|}$0",
+		"description": "newline with one to four tabs."
+	},
+	"case statement": {
+		"prefix": "case",
+		"body": [
+			"",
+			"case $1 in",
+			"\t$2    # ← put one or more switches here. Use snippet \"switch\" or snippet \"switch multi\"",
+			"\t*) # This catches all cases that weren't previously listed. That's why it has the wildcard \"*\" operator.",
+			"\t${0:    # ← put your command here}",
+			"\t;;",
+			"esac",
+			""
+		],
+		"description": "case statement. Use the switch statement snippet \"switch\" to add one or more switches to the case statement."
+	},
+	"switch statement": {
+		"prefix": "switch",
+		"body": [
+			"$1 )",
+			"\t${0:    # ← put your command here}",
+			";;"
+		],
+		"description": "switch for case statement. Use one or more of these inside a case statement."
+	},
+	"multi-switch statement": {
+		"prefix": "switch multi",
+		"body": [
+			"$1 | $2 )",
+			"\t${0:    # ← put your command here}",
+			";;"
+		],
+		"description": "switch for case statement that accepts either one condition OR another. Use one or more of these inside a case statement."
+	},
+	"grep for string that ends with pattern": {
+		"prefix": "grep ends with",
+		"body": [
+			"grep \"$0\"\\$"
+		],
+		"description": "Search a string for a pattern that occurs at the end of the string. Especially useful for finding file extensions."
+	},
+	"grep for string that starts with pattern": {
+		"prefix": "grep starts with",
+		"body": [
+			"grep ^\"$0\""
+		],
+		"description": "Search a string for a pattern that occurs at the start of the string. Especially useful for finding comments in scripts"
+	},
+	"strip pattern from end of string": {
+		"prefix": "strip from end",
+		"body": [
+			"sed \"s/$0\\$//g\""
+		],
+		"description": "Use sed to remove a pattern from the end of a string. Super useful for removing extensions from file names."
+	},
+	"strip pattern from beginning of string": {
+		"prefix": "strip from start",
+		"body": [
+			"sed \"s/^$0//g\""
+		],
+		"description": "Use sed to remove a pattern from the start of a string. Super useful for uncommenting text."
+	},
+	"replace part of a string": {
+		"prefix": "replace",
+		"body": [
+			"sed \"s/$1/$0/g\""
+		],
+		"description": "use sed to replace part of a string. Super useful for updating key value pairs in configuration files."
+	},
+	"extract nth-from-last field from string": {
+		"prefix": "extract nth-from-last field",
+		"body": [
+			"awk 'BEGIN { FS=\"$1\" }{ print $(NF-$2)}'",
+			"${0:#field separator↑               ↑ nth-from-last}"
+		],
+		"description": "Use awk to extract the nth-from-last field in a string, where the field is defined by the field separator \"FS=\" and the nth-from-last field is defined by $(NF-n)"
+	},
+	"extract nth field from string": {
+		"prefix": "extract nth field",
+		"body": [
+			"awk 'BEGIN { FS=\"$1\" }{ print $($2)}'",
+			"${0:#field separator↑        nth ↑}"
+		],
+		"description": "Use awk to extract the first field in a string, where the field is defined by the field separator \"FS=\" and the nth field is defined by $(n)"
+	},
+	"create a tarball": {
+		"prefix": "tar -cpvf",
+		"body": [
+			"${1|tar,sudo tar|} -cpvf $2.tar $2",
+			"${0:# ↑ You might need to \"sudo\" in order to read some of the files you want to compress. But if you do, keep in mind that the resulting tar will be owned by \"root\".}"
+		],
+		"description": "Bundle one or more files or directories into a tarball with \"-c\". Preserve permissions with \"-p\". Show progress with \"-v\". Output to a .tar with \"-f\"."
+	},
+	"append to a tarball": {
+		"prefix": "tar -rpvf",
+		"body": [
+			"${1|tar,sudo tar|} -rpvf $2.tar $2",
+			"${0:# ↑ You might need to \"sudo\" in order to read some of the files you want to compress. But if you do, keep in mind that the resulting tar will be owned by \"root\".}"
+		],
+		"description": "Add one or more files or directories into a tarball with \"-r\". Preserve permissions with \"-p\". Show progress with \"-v\".  Append to a .tar with \"-f\"."
+	},
+	"list contents of a tape archive": {
+		"prefix": "tar -tvf $0.tar",
+		"body": [
+			"${1|tar,sudo tar|} -tvf $2.tar $0"
+		],
+		"description": "List table of contents with \"-t\". Preserve permissions with \"-p\". Show permissions \"-v\".  Select the tar you want to list with \"-f\"."
+	},
+	"compress a tape archive": {
+		"prefix": "gzip",
+		"body": [
+			"${1|gzip,sudo gzip|} --verbose $2.tar",
+			"${0:# ↑ Pay attention to the user who owns the tarfile you want to zip. If you had to \"sudo\" to make it, then it is owned by \"root\". If you do not \"sudo gzip\", then the resulting \".tar.gz\" will be owned by you - not by root! This means that the permissions of the files that were zipped up will also change, and they will ultimately be owned by whoever unzips the file! You probably don't want the permissions to change. Therefore, you should \"gzip\" as the same user (most likely \"root\") that made the tarfile.}"
+		],
+		"description": "Compress a tape archive (tar) with \"gzip\"."
+	},
+	"extract contents from a compressed tape archive": {
+		"prefix": "tar -xpvzf",
+		"body": [
+			"tar -xpvzf $1.tar.gz",
+			"${0:# ↑ Pay attention to the user who made the tarfile you want to extract. If you had to \"sudo\" to make it, then it is owned by \"root\", and you need to \"sudo\" to extract it - otherwise \"tar\" will inadvertently make your current user the owner of all of the files, ruining the permissions in the process!}"
+		],
+		"description": "Extract all files and directories from a tarball with \"-x\". Preserve permissions with \"-p\". Show progress with \"-v\". Decompress the contents of the tarball with \"-z\" Select the tar.gz file to extract from with \"-f\"."
+	},
+	"usage": {
+		"prefix": "usage",
+		"body": [
+			"",
+			"usage () {",
+			"\tprintf \"\\n\\n\\e[1mNAME\\e[0m\\n\" 1>&2",
+			"\tprintf \"\\t\\e[1m${1:command-name-here}\\e[0m -- ${2:one-sentence description of what the command does.}\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\\e[1mSYNOPSIS\\e[0m\\n\" 1>&2",
+			"\n\t${3:# ↑ The synopsis describes the syntax of the command.\n\t# Think of it as a command's 'method signature'\n\t#\n\t#\tHere are the rules for writing a synopsis:\n\t#\n\t#\tThe synopsis should contain the name of\n\t#\tthe command, the flags that can be supplied\n\t#\tto the command, and the arguments that\n\t#\tcan be supplied with each flag.\n\t#\n\t#\t\tA flag is a letter preceded by a single\n\t#\t\tdash '-', or a word preceded by two dashes\n\t#\t\t'--'. Flags are like switches. They modify\n\t#\t\thow the script runs. They should be \n\t#\t\ttyped exactly as defined in the command's\n\t#\t\tusage statement or man page.\n\t#\n\t#\t\tAn argument is a string that is user-defined.\n\t#\t\tArguments typically describe file paths\n\t#\t\tor filenames.\n\t#\n\t#\tThe name of the command, and all flags should\n\t#\tbe bold. Any time you see text that is bold, it\n\t#\tshould be typed as is.\n\t#\n\t#\tAll arguments should be italicized. Any time you\n\t#\tsee text that is italicized, you should replace\n\t#\tit with your own string. \n\t#\n\t#\tSome flags and arguments are optional. That means\n\t#\tthat you don't have to supply them to the command\n\t#\tin order to run it. Surround these flags and\n\t#\targuments with square brackets '[' ']'.\n\t#\n\t#\tSome flags and some arguments are mutually exclusive.\n\t#\tThat means that given a set of flags or arguments,\n\t#\tyou can only choose one. Separate each flag in a\n\t#\tset of mutually exclusive flags with a pipe character\n\t#\t'|'.\n\t#\n\t#\tSome commands accept an unlimited list of\n\t#\targuments. Use an ellipsis '...' to indicate that\n\t#\tan argument can be followed by an unlimited list.}\n",
+			"\tprintf \"\\t$4\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\\e[1mDESCRIPTION\\e[0m\\n\" 1>&2",
+			"\tprintf \"\\t$5\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\\e[1mOPTIONS\\e[0m\\n\" 1>&2",
+			"\tprintf \"\\t$6\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\\e[1mEXAMPLES\\e[0m\\n\" 1>&2",
+			"\tprintf \"\\t$7\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\\e[1mFILES\\e[0m\\n\" 1>&2",
+			"\tprintf \"\\t$0\" | fold -w $(( $(tput cols) - 1 * $(tput it) )) 1>&2",
+			"\tprintf \"\\n\\n\" 1>&2",
+			"}",
+			""
+		],
+		"description": "make a usage function. This function describes how to use the shell script you're writing. It is printed to standard error whenever a user inputs the incorrect arguments. It is printed to standard output whenever the user asks for help."
+	},
+	"timestamp": {
+		"prefix": "date",
+		"body": [
+			"$(date +%Y-%m-%dT%H%M%S%z)"
+		],
+		"description": "insert a date and time stamp into a string."
+	},
+	"exit": {
+		"prefix": "exit",
+		"body": [
+			"${1|exit 0 #success,exit 1 #catchall,exit 2 #misuse of shell builtin,exit 126 #command invoked cannot execute e.g. permission issue or command is not an executable,exit 127 #command not found e.g. file or script does not exist|}"
+		],
+		"description": "Exit and throw correct error code. For list of all codes, see: http://www.tldp.org/LDP/abs/html/exitcodes.html"
+	},
+	"heredoc to file": {
+		"prefix": "heredoc to file",
+		"body": [
+			"${1:sudo} ${2|tee,tee -a|} ${3:filename} <<- ${4|EOF,\"EOF\"|} > /dev/null ${5:# (1) use `sudo` to send text to a file that the current user can't write to. (2) use `tee` to overwrite it; use `tee -a` to append to it. (3) put EOF (aka the delimeter) into quotes if you do NOT want the shell to expand parameters or substitute commands }",
+			"$0",
+			"EOF"
+		],
+		"description": "Append multi-line text to a file, or feed it into the standard input of a command, with a heredoc"
+	},
+	"resolve relative path": {
+		"prefix": "relpath",
+		"body": [
+			"# NOTE: this function only works in a BASH script. Do not use it in a ZSH script.",
+			"resolve-relative-path-to () {",
+			"",
+			"\tPATHS_TO_PARSE=()",
+			"\tPATHS_TO_PARSE[0]=\\$(dirname \\$0)",
+			"\tPATHS_TO_PARSE[1]=\"\\$1\"",
+			"\tPATH_NUMBER=0",
+			"\tPATH_COMPONENTS_CURRENT_SCRIPT=()",
+			"\tPATH_COMPONENTS_GO_TO_DIR=()",
+			"\tRESOLVED_PATH=",
+			"",
+			"\tfor PATH_TO_PARSE in \"\\${PATHS_TO_PARSE[@]}\"",
+			"\tdo",
+			"\t\tPATH_COMPONENTS=()",
+			"\t\tPATH_TO_PARSE_IS_TYPE=",
+			"\t\tPATH_COMPONENT_NUMBER=0",
+			"\t\tPATH_COMPONENT_PREVIOUS=\"\"",
+			"",
+			"\t\t#first, strip the last trailing slash from a path, because it is equivalent to the path without a trailing slash: e.g. 'path/to/my/dir/' === 'path/to/my/dir'",
+			"\t\tif [[ \"\\$PATH_TO_PARSE\" =~ .+/$ ]]",
+			"\t\tthen",
+			"\t\t\tPATH_TO_PARSE=$(sed 's/.$//' <<< \"\\$PATH_TO_PARSE\")",
+			"\t\tfi",
+			"",
+			"\t\twhile read PATH_COMPONENT",
+			"\t\tdo",
+			"",
+			"\t\t\tif (( \\$PATH_COMPONENT_NUMBER == 0 ))",
+			"\t\t\tthen",
+			"",
+			"\t\t\t\tif [ \"\\$PATH_COMPONENT\" = \"\" ]",
+			"\t\t\t\tthen",
+			"\t\t\t\t\tPATH_TO_PARSE_IS_TYPE=0",
+			"\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_TO_PARSE_IS_TYPE\")",
+			"\t\t\t\t\tPATH_COMPONENTS+=(\"/\")",
+			"\t\t\t\telif [ \"\\$PATH_COMPONENT\" = \".\" ]",
+			"\t\t\t\tthen",
+			"\t\t\t\t\tPATH_TO_PARSE_IS_TYPE=2",
+			"\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_TO_PARSE_IS_TYPE\")",
+			"\t\t\t\telse",
+			"\t\t\t\t\tcase \\$PATH_COMPONENT in",
+			"\t\t\t\t\t\t\"..\")",
+			"\t\t\t\t\t\t\tPATH_TO_PARSE_IS_TYPE=3",
+			"\t\t\t\t\t\t;;",
+			"\t\t\t\t\t\t*)",
+			"\t\t\t\t\t\t\tPATH_TO_PARSE_IS_TYPE=1",
+			"\t\t\t\t\t\t;;",
+			"\t\t\t\t\tesac",
+			"\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_TO_PARSE_IS_TYPE\")",
+			"\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_COMPONENT\")",
+			"\t\t\t\tfi",
+			"",
+			"\t\t\telse",
+			"",
+			"\t\t\t\tcase \\$PATH_COMPONENT in",
+			"\t\t\t\t\t\"\" | \".\" )",
+			"\t\t\t\t\t\tprintf \"\\n\\e[1m\\$PATH_TO_PARSE\\e[0m is not a valid path, because neither \\e[1m''\\e[0m nor \\e[1m'.'\\e[0m are valid non-leading directory components.\\n\" | fold -w \\$(tput cols) 1>&2",
+			"\t\t\t\t\t\texit 1",
+			"\t\t\t\t\t;;",
+			"\t\t\t\t\t\"..\" )",
+			"\t\t\t\t\t\tif [ \"\\$PATH_COMPONENT_PREVIOUS\" != \"..\" ]",
+			"\t\t\t\t\t\tthen",
+			"\t\t\t\t\t\t\tprintf \"\\n\\e[1m\\$PATH_TO_PARSE\\e[0m is not a valid path, because \\e[1m'..'\\e[0m cannot follow \\e[1m\\$PATH_COMPONENT_PREVIOUS\\e[0m.\\n\" | fold -w $(tput cols) 1>&2",
+			"\t\t\t\t\t\t\texit 1",
+			"\t\t\t\t\t\telse",
+			"\t\t\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_COMPONENT\")",
+			"\t\t\t\t\t\tfi",
+			"\t\t\t\t\t;;",
+			"\t\t\t\t\t*)",
+			"\t\t\t\t\t\tPATH_COMPONENTS+=(\"\\$PATH_COMPONENT\")",
+			"\t\t\t\t\t;;",
+			"\t\t\t\tesac",
+			"",
+			"\t\t\tfi",
+			"\t\t\tlet PATH_COMPONENT_NUMBER+=1",
+			"",
+			"\t\t\tPATH_COMPONENT_PREVIOUS=\"\\$PATH_COMPONENT\"",
+			"",
+			"\t\tdone < <( awk -F '/' -v ORS='\\n' '{ for (i = 1; i <= NF; i++) print \\$i }' <<< \"\\$PATH_TO_PARSE\" )",
+			"",
+			"\t\tif [ \"\\$PATH_NUMBER\" -eq 0 ]",
+			"\t\tthen",
+			"\t\t\tfor (( i=0; i<${#PATH_COMPONENTS[@]}; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tPATH_COMPONENTS_CURRENT_SCRIPT[\\$i]=${PATH_COMPONENTS[\\$i]}",
+			"\t\t\tdone",
+			"\t\telse",
+			"\t\t\tfor (( i=0; i<${#PATH_COMPONENTS[@]}; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tPATH_COMPONENTS_GO_TO_DIR[\\$i]=${PATH_COMPONENTS[\\$i]}",
+			"\t\t\tdone",
+			"\t\tfi",
+			"",
+			"\t\tPATH_NUMBER+=1",
+			"",
+			"\t\tunset PATH_COMPONENTS PATH_TO_PARSE_IS_TYPE PATH_COMPONENT_NUMBER PATH_COMPONENT_PREVIOUS",
+			"",
+			"\tdone",
+			"",
+			"\tif [ ${PATH_COMPONENTS_GO_TO_DIR[0]} -eq 0 ]",
+			"\tthen",
+			"",
+			"\t\tRESOLVED_PATH=\"${PATHS_TO_PARSE[1]}\"",
+			"",
+			"\telif [ ${PATH_COMPONENTS_GO_TO_DIR[0]} -eq 3 -a ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 0 -o ${PATH_COMPONENTS_GO_TO_DIR[0]} -eq 3 -a ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 1 ]",
+			"\tthen",
+			"",
+			"\t\tlet NUMBER_OF_DIRECTORIES_TO_BACK_OUT_OF=0",
+			"",
+			"\t\tfor (( i=1; i<${#PATH_COMPONENTS_GO_TO_DIR[@]}; i++ ))",
+			"\t\tdo",
+			"",
+			"\t\t\tif [ \"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}\" == \"..\" ]",
+			"\t\t\tthen",
+			"\t\t\t\tlet NUMBER_OF_DIRECTORIES_TO_BACK_OUT_OF+=1;",
+			"\t\t\tfi",
+			"",
+			"\t\tdone",
+			"",
+			"\t\tif [ ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 0 ]",
+			"\t\tthen",
+			"\t\t\tRESOLVED_PATH+=\"/\"",
+			"\t\tfi",
+			"",
+			"\t\tlet END_INDEX=${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}-\\$NUMBER_OF_DIRECTORIES_TO_BACK_OUT_OF",
+			"",
+			"\t\tlet START_INDEX=1",
+			"",
+			"\t\tif [ \\$END_INDEX -lt \\$START_INDEX ]",
+			"\t\tthen",
+			"",
+			"\t\t\tlet NUMBER_OF_PARENT_DIRECTORIES=\\$START_INDEX-\\$END_INDEX",
+			"",
+			"\t\t\tfor (( i=0; i<\\$NUMBER_OF_PARENT_DIRECTORIES; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tRESOLVED_PATH+=\"../\"",
+			"\t\t\tdone",
+			"",
+			"\t\tfi",
+			"",
+			"\t\tif [ ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 0 ]",
+			"\t\tthen",
+			"\t\t\tSTART_INDEX=2",
+			"\t\tfi",
+			"",
+			"\t\tfor(( i=\\$START_INDEX; i<\\$END_INDEX; i++ ))",
+			"\t\tdo",
+			"\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_CURRENT_SCRIPT[\\$i]}/\"",
+			"\t\tdone",
+			"",
+			"\t\tlet START_INDEX=1+\\$NUMBER_OF_DIRECTORIES_TO_BACK_OUT_OF",
+			"",
+			"\t\tfor (( i=\\$START_INDEX; i<${#PATH_COMPONENTS_GO_TO_DIR[\\$i]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tif (( \\$i == ${#PATH_COMPONENTS_GO_TO_DIR[@]} - 1 ))",
+			"\t\t\tthen",
+			"\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}\"",
+			"\t\t\telse",
+			"\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}/\"",
+			"\t\t\tfi",
+			"\t\tdone",
+			"",
+			"\telif [ ${PATH_COMPONENTS_GO_TO_DIR[0]} -eq 3 -a ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 3 ]",
+			"\tthen",
+			"",
+			"\t\tlet UPWARD_PATH_COMPONENTS_GO_TO_DIR=0",
+			"\t\tlet DOWNWARD_PATH_COMPONENTS_CURRENT_SCRIPT=0",
+			"",
+			"\t\tfor (( i=1; i<${#PATH_COMPONENTS_GO_TO_DIR[@]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tif [ ${PATH_COMPONENTS_GO_TO_DIR[\\$i]} = \"..\" ]",
+			"\t\t\tthen",
+			"\t\t\t\tlet UPWARD_PATH_COMPONENTS_GO_TO_DIR+=1",
+			"\t\t\telse",
+			"\t\t\t\tbreak",
+			"\t\t\tfi",
+			"\t\tdone",
+			"",
+			"\t\tfor (( i=1; i<${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tlet INDEX=${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}-\\$i",
+			"\t\t\tif [ ${PATH_COMPONENTS_CURRENT_SCRIPT[\\$INDEX]} != \"..\" ]",
+			"\t\t\tthen",
+			"\t\t\t\tlet DOWNWARD_PATH_COMPONENTS_CURRENT_SCRIPT+=1",
+			"\t\t\telse",
+			"\t\t\t\tbreak",
+			"\t\t\tfi",
+			"\t\tdone",
+			"",
+			"\t\tlet UPWARD_COMPONENTS_RESOLVED_PATH=(\\$DOWNWARD_PATH_COMPONENTS_CURRENT_SCRIPT-\\$UPWARD_PATH_COMPONENTS_GO_TO_DIR)*-1",
+			"",
+			"\t\tif [ \\$UPWARD_COMPONENTS_RESOLVED_PATH -gt 0 ]",
+			"\t\tthen",
+			"",
+			"\t\t\tfor (( i=1; i<${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tif [ ${PATH_COMPONENTS_CURRENT_SCRIPT[\\$i]} = \"..\" ]",
+			"\t\t\t\tthen",
+			"\t\t\t\t\tlet UPWARD_COMPONENTS_RESOLVED_PATH+=1",
+			"\t\t\t\t\techo \\$UPWARD_COMPONENTS_RESOLVED_PATH",
+			"\t\t\t\telse",
+			"\t\t\t\t\tbreak",
+			"\t\t\t\tfi",
+			"\t\t\tdone",
+			"",
+			"\t\t\tfor (( i=0; i<\\$UPWARD_COMPONENTS_RESOLVED_PATH; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tRESOLVED_PATH+=\"../\"",
+			"\t\t\tdone",
+			"",
+			"\t\telse",
+			"",
+			"\t\t\tlet END_INDEX=${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}+\\$UPWARD_COMPONENTS_RESOLVED_PATH",
+			"\t\t\tfor (( i=1; i<\\$END_INDEX; i++ ))",
+			"\t\t\tdo",
+			"\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_CURRENT_SCRIPT[\\$i]}/\"",
+			"\t\t\tdone",
+			"",
+			"\t\tfi",
+			"",
+			"\t\tfor (( i=1; i<${#PATH_COMPONENTS_GO_TO_DIR[@]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tif [ \"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}\" != \"..\" ]",
+			"\t\t\tthen",
+			"\t\t\t\tif (( \\$i < ${#PATH_COMPONENTS_GO_TO_DIR[@]} - 1 ))",
+			"\t\t\t\tthen",
+			"\t\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}/\"",
+			"\t\t\t\telse",
+			"\t\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}\"",
+			"\t\t\t\tfi",
+			"\t\t\tfi",
+			"\t\tdone",
+			"",
+			"\telse",
+			"",
+			"\t\tlet START_INDEX=1",
+			"",
+			"\t\tif [ ${PATH_COMPONENTS_CURRENT_SCRIPT[0]} -eq 0 ]",
+			"\t\tthen",
+			"\t\t\tRESOLVED_PATH+=\"/\"",
+			"\t\t\tlet START_INDEX=2",
+			"\t\tfi",
+			"",
+			"\t\tfor (( i=\\$START_INDEX; i<${#PATH_COMPONENTS_CURRENT_SCRIPT[@]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_CURRENT_SCRIPT[\\$i]}/\"",
+			"\t\tdone",
+			"",
+			"\t\tlet START_INDEX=1",
+			"",
+			"\t\tfor (( i=\\$START_INDEX; i<${#PATH_COMPONENTS_GO_TO_DIR[@]}; i++ ))",
+			"\t\tdo",
+			"\t\t\tif (( \\$i == ${#PATH_COMPONENTS_GO_TO_DIR[@]} - 1 ))",
+			"\t\t\tthen",
+			"\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}\"",
+			"\t\t\telse",
+			"\t\t\t\tRESOLVED_PATH+=\"${PATH_COMPONENTS_GO_TO_DIR[\\$i]}/\"",
+			"\t\t\tfi",
+			"\t\tdone",
+			"",
+			"\tfi",
+			"",
+			"\tif [[ \"\\$RESOLVED_PATH\" =~ ^([^./])*$ ]]",
+			"\tthen",
+			"\t\tADD_DOT_SLASH=\"./\"",
+			"\t\tADD_DOT_SLASH+=\"\\$RESOLVED_PATH\"",
+			"\t\tRESOLVED_PATH=\"\\$ADD_DOT_SLASH\"",
+			"\tfi",
+			"",
+			"\tprintf \"\\$RESOLVED_PATH\"",
+			"",
+			"\tunset PATHS_TO_PARSE PATH_NUMBER PATH_COMPONENTS_CURRENT_SCRIPT PATH_COMPONENTS_GO_TO_DIR RESOLVED_PATH PATH_COMPONENTS PATH_TO_PARSE_IS_TYPE PATH_COMPONENT_NUMBER PATH_COMPONENT_PREVIOUS NUMBER_OF_DIRECTORIES_TO_BACK_OUT_OF END_INDEX START_INDEX ADD_DOT_SLASH",
+			"",
+			"}"
+		],
+		"description": "combine the relative path TO a script with the relative path FROM a script to another file in order to get the relative path from the current working directory to that file."
+	},
+	"stdout stderr to null": {
+		"prefix": "null stdout stderr",
+		"body": [
+			"&>/dev/null"
+		],
+		"description": "send all output of a command to /dev/null"
+	},
+	"archive.compress-tar-gz": {
+		"prefix": [
+			"archive compress tar.gz",
+			"archive tar.gz"
+		],
+		"body": "tar -czvf ${1|/path/to/archive, \"${pathToArchive}\"|}.tar.gz ${2|/path/to/directory-or-file, \"${pathToDirectoryOrFile}\"|}\n",
+		"description": "compress file/folder to a .tar.gz file"
+	},
+	"archive.compress-tar-xz": {
+		"prefix": [
+			"archive compress tar.xz",
+			"archive tar.xz"
+		],
+		"body": "tar -cJf ${1|/path/to/archive, \"${pathToArchive}\"|}.tar.xz ${2|/path/to/directory-or-file, \"${pathToDirectoryOrFile}\"|}\n",
+		"description": "compress file/folder to a .tar.xz file"
+	},
+	"archive.compress-zip": {
+		"prefix": [
+			"archive compress .zip",
+			"archive zip"
+		],
+		"body": "zip -rq ${1|/path/to/archive, \"${pathToArchive}\"|}.zip ${2|/path/to/directory-or-file,\"${pathToDirectoryOrFile}\"|}\n",
+		"description": "compress file/folder to a .zip file"
+	},
+	"archive.decompress-tar-gz": {
+		"prefix": [
+			"archive decompress tar.gz",
+			"decompress tar.gz"
+		],
+		"body": "tar -C ${1|/extract/to/path, \"${extractToPath}\"|} -xzvf ${2|/path/to/archive, \"${pathToArchive}\"|}.tar.gz\n",
+		"description": "decompress a .tar.gz file to specified path"
+	},
+	"archive.decompress-tar-xz": {
+		"prefix": [
+			"archive decompress tar.xz",
+			"decompress tar.xz"
+		],
+		"body": "tar -C ${1|/extract/to/path, \"${extractToPath}\"|} -xf ${2|/path/to/archive, \"${pathToArchive}\"|}.tar.xz\n",
+		"description": "decompress a .tar.xz file to specified path"
+	},
+	"archive.decompress-unzip": {
+		"prefix": [
+			"archive decompress .zip",
+			"archive unzip"
+		],
+		"body": "unzip -q ${1|/path/to/archive, \"${pathToArchive}\"|}.zip -d ${2|/extract/to/path,\"${extractToPath}\"|}",
+		"description": "decompress a .zip file to specified path"
+	},
+	"array.all-elements": {
+		"prefix": "array all",
+		"body": "${0:echo }\"${${1:myArray}[@]}\"",
+		"description": "access all array elements"
+	},
+	"array.at-index": {
+		"prefix": "array at index",
+		"body": "${0:echo }\"${${1:myArray}[${2:index}]}\"",
+		"description": "retrieve element from array at specified index (zero based)"
+	},
+	"array.concat": {
+		"prefix": "array concat",
+		"body": "${1:newArray}=(\"${${2:array1}[@]}\" \"${${3:array2}[@]}\")\n",
+		"description": "concatenate two arrays"
+	},
+	"array.contains": {
+		"prefix": "array contains",
+		"body": [
+			"if [[ \"\\${${1:myArray}[*]}\" =~ ${2|'element',\"${value}\"|} ]]; then",
+			"\techo 'array contains element'",
+			"fi\n"
+		],
+		"description": "check if the array contains an element"
+	},
+	"array.declare": {
+		"prefix": "array declare",
+		"body": [
+			"${1:myArray}=(",
+			"\t'${2:constant}'",
+			"\t\"${3:${variable\\}}\"",
+			"\t'${4:another constant}'",
+			")\n"
+		],
+		"description": "declare an array"
+	},
+	"array.delete-at": {
+		"prefix": "array delete at",
+		"body": "unset \"${1:myArray}[${2:index}]\"\n",
+		"description": "delete element at index from array"
+	},
+	"array.delete": {
+		"prefix": "array delete",
+		"body": "unset ${1:myArray}\n",
+		"description": "delete entire array"
+	},
+	"array.filter": {
+		"prefix": "array filter",
+		"body": "readarray -t ${1:filtered} < <(for i in \"${${2:myArray}[@]}\" ; do echo \"\\${i\\}\"; done | grep ${3|',\"|}${4:pattern}${3})\n",
+		"description": "filter elements of an array based on given grep pattern"
+	},
+	"array.iterate": {
+		"prefix": [
+			"array iterate",
+			"array forEach"
+		],
+		"body": [
+			"for item in \"${${1:myArray}[@]}\"; do",
+			"\t${2:echo \"\\${item\\}\"}",
+			"done\n"
+		],
+		"description": "iterate array elements"
+	},
+	"array.length": {
+		"prefix": "array length",
+		"body": "${1:length}=${#${2:myArray}[@]}\n",
+		"description": "length of an array"
+	},
+	"array.print": {
+		"prefix": [
+			"array print",
+			"echo array"
+		],
+		"body": "echo \"\\${${1:myArray}[@]}\"\n",
+		"description": "iterate array elements"
+	},
+	"array.push": {
+		"prefix": [
+			"array push",
+			"array add"
+		],
+		"body": "${1:myArray}+=('${2:newItem}')\n",
+		"description": "push new item to the end of array"
+	},
+	"array.range": {
+		"prefix": [
+			"array slice",
+			"array range"
+		],
+		"body": "${1:newArray}=\"${${2:myArray}[*]:${3:fromIndex}:${4:n}}\"\n",
+		"description": "n elements of an array from specified index (zero based)"
+	},
+	"array.replace": {
+		"prefix": "array replace",
+		"body": "${1:newArray}=${${2:myArray}[*]//${3:find}/${4:replace}}\n",
+		"description": "find and replace elements in array using regex"
+	},
+	"array.reverse": {
+		"prefix": "array reverse",
+		"body": [
+			"for((i=\\${#${1:myArray}[@]}-1;i>=0;i--)); do",
+			"\t${2:reversed}+=(\"\\${${1:myArray}[i]}\")",
+			"done",
+			"",
+			"unset \"${1:myArray}\" # optional",
+			"echo \"\\${${2:reversed}[@]}\"",
+			""
+		],
+		"description": "reverse order of array elements"
+	},
+	"array.set-element-at": {
+		"prefix": "array set element",
+		"body": "${1:myArray}[${2:index}]=\"${3:value}\"\n",
+		"description": "set array element at specified index"
+	},
+	"command.failure-check": {
+		"prefix": [
+			"command failure check",
+			"cmd failure check"
+		],
+		"body": [
+			"if ! ${1:command} >/dev/null 2>&1; then",
+			"\techo \"failed\"",
+			"else",
+			"\techo \"succeed\"",
+			"fi\n"
+		],
+		"description": "check if last command failed"
+	},
+	"command.hide-error": {
+		"prefix": [
+			"hide command error",
+			"don't show command error"
+		],
+		"body": "${1:command} 2> /dev/null\n",
+		"description": "If a command fails don't show error (suppress stderr)"
+	},
+	"command.if-exists": {
+		"prefix": [
+			"if command exists",
+			"if cmd exists"
+		],
+		"body": [
+			"if [ \"\\$(command -v ${1:command})\" ]; then",
+			"\t${2:echo \"command \\\"${1:command}\\\" exists on system\"}",
+			"fi\n"
+		],
+		"description": "check if command exists"
+	},
+	"command.nice": {
+		"prefix": [
+			"command nice",
+			"cmd nice"
+		],
+		"body": "sudo nice -n ${1|-20,-15,-10,-5,0,5,10,15,19|} ${2:command}\n",
+		"description": "run command with desired privilege. n: -20 (highest priority) to 19 (lowest priority)"
+	},
+	"command.renice": {
+		"prefix": [
+			"command renice",
+			"cmd renice"
+		],
+		"body": "for p in \\$(pidof \"${1:processName}\"); do sudo renice -n ${2|-20,-15,-10,-5,0,5,10,15,19|} -p \"\\$p\"; done\n",
+		"description": "change running process priority. n: -20 (highest priority) to 19 (lowest priority)"
+	},
+	"command.run": {
+		"prefix": [
+			"command",
+			"cmd",
+			"command substitution",
+			"cmd substitution"
+		],
+		"body": "${1:result}=\"$(${2:command})\"\n",
+		"description": "run command (command substitution)"
+	},
+	"command.success-check": {
+		"prefix": [
+			"command success check",
+			"cmd success check"
+		],
+		"body": [
+			"if ${1:command} >/dev/null 2>&1; then",
+			"\techo \"succeed\"",
+			"else",
+			"\techo \"failed\"",
+			"fi\n"
+		],
+		"description": "check if last command succeed"
+	},
+	"cryptography.base64-decode": {
+		"prefix": "crypto base64 decode",
+		"body": "${1:base64Decoded}=\\$(echo -n \"${2|stringToDecode,${variableToDecode}|}\" | base64 -d)\n",
+		"description": "decode variable from base64"
+	},
+	"cryptography.base64-encode": {
+		"prefix": "crypto base64 encode",
+		"body": "${1:base64Encoded}=\\$(echo -n \"${2|stringToEncode,${variableToEncode}|}\" | base64)\n",
+		"description": "encode variable to base64"
+	},
+	"cryptography.hash": {
+		"prefix": "crypto hash",
+		"body": "${1:hash}=\\$(echo -n \"\\$${2:variableToHash}\" | ${3|md5sum,shasum,sha1sum,sha224sum,sha256sum,sha384sum,sha512sum|} | cut -f1 -d ' ')\n",
+		"description": "compute hash of variable (md5, sha, sha1, sha224, sha256, sha384, sha512)"
+	},
+	"date.day-of-month-current": {
+		"prefix": "date now dayOfMonth",
+		"body": "${1:dayOfMonth}=\\$(date +%d)\n",
+		"description": "current day of month (1..31)"
+	},
+	"date.day-of-week-current": {
+		"prefix": "date now dayOfWeek",
+		"body": "${1:dayOfWeek}=\\$(date +%${2|A,a|})\n",
+		"description": "current day of week name (A: full, a: abbreviated)"
+	},
+	"date.day-of-year-current": {
+		"prefix": "date now dayOfYear",
+		"body": "${1:dayOfYear}=\\$(date +%j)\n",
+		"description": "current day of year (1..366)"
+	},
+	"date.local-short": {
+		"prefix": "date now short",
+		"body": "${1:dateShort}=\\$(date -I) ${0:# format: yyyy/mm/dd}\n",
+		"description": "yyyy/mm/dd"
+	},
+	"date.month-name-current": {
+		"prefix": "date now monthName",
+		"body": "${1:monthName}=\\$(date +%${2|B,b|})\n",
+		"description": "current month name (B: full, b: abbreviated)"
+	},
+	"date.month-number-current": {
+		"prefix": "date now monthNumber",
+		"body": "${1:monthNumber}=\\$(date +%m)\n",
+		"description": "current month number (1..12)"
+	},
+	"date.utc-long": {
+		"prefix": "date now UTC",
+		"body": "${1:dateUTC}=\\$(date -u)\n",
+		"description": "coordinated Universal Time"
+	},
+	"date.year-current": {
+		"prefix": "date now year",
+		"body": "${1:year}=\\$(date +%${2|Y,y|})\n",
+		"description": "current Year (Y: full, y: last two digits)"
+	},
+	"event.on-ctrl-c": {
+		"prefix": [
+			"event CTRL+C",
+			"event terminated"
+		],
+		"body": [
+			"# CTRL+C event handler",
+			"function on_ctrl_c() {",
+			"\techo # Set cursor to the next line of '^C'",
+			"\ttput cnorm # show cursor. You need this if animation is used.",
+			"\t${1:# i.e. clean-up code here}",
+			"\texit 1 # Don't remove. Use a number (1-255) for error code.",
+			"}",
+			"",
+			"# Put this line at the beginning of your script (after functions used by event handlers).",
+			"# Register CTRL+C event handler",
+			"trap on_ctrl_c SIGINT"
+		],
+		"description": "register a function (handler) to run on script termination (CTRL+C)"
+	},
+	"event.on-exit": {
+		"prefix": "event EXIT",
+		"body": [
+			"# Exit event handler",
+			"function on_exit() {",
+			"\ttput cnorm # Show cursor. You need this if animation is used.",
+			"\t${1:# i.e. clean-up code here}",
+			"\texit 0 # Exit gracefully.",
+			"}",
+			"",
+			"# Put this line at the beginning of your script (after functions used by event handlers).",
+			"# Register exit event handler.",
+			"trap on_exit EXIT"
+		],
+		"description": "register a function (handler) to run on script exit"
+	},
+	"filesystem.directories-iterate": {
+		"prefix": "iterate directories",
+		"body": [
+			"# Make sure path ends with /",
+			"for directory in ${1|'/path/to/directory/',\"${pathToDirectory}\"|}*; do",
+			"\tif [[ -d \"\\${directory}\" && ! -L \"\\${directory}\" ]]; then",
+			"\t\t${2:echo \"\\${directory\\}\"}",
+			"\tfi",
+			"done\n"
+		],
+		"description": "write to a file"
+	},
+	"filesystem.directory-create-nested": {
+		"prefix": "directory create nested",
+		"body": "mkdir -p ${1|\"parent dir/child dir\",\"${pathToCreate}\"|}\n",
+		"description": "create nested directories"
+	},
+	"filesystem.directory-create": {
+		"prefix": "directory create",
+		"body": "mkdir \"${1:directory name}\"\n",
+		"description": "create directory"
+	},
+	"filesystem.directory-delete-nested": {
+		"prefix": [
+			"directory delete nested",
+			"directory remove nested"
+		],
+		"body": "rm -rf ${1|/path/to/directory,${pathToDirectory}|}\n",
+		"description": "delete directory and all contents!"
+	},
+	"filesystem.file-delete": {
+		"prefix": [
+			"file delete",
+			"file remove"
+		],
+		"body": "rm -f ${1|/path/to/file,${pathToFile}|}\n",
+		"description": "delete file(s)"
+	},
+	"filesystem.file-read": {
+		"prefix": "file read",
+		"body": [
+			"while IFS= read -r line; do",
+			"\techo \"\\$line\"",
+			"done < ${1|/path/ro/file,\"${inputFile}\"|}\n"
+		],
+		"description": "read a file"
+	},
+	"filesystem.file-search": {
+		"prefix": [
+			"file search",
+			"search in files",
+			"find in files"
+		],
+		"body": "${1:result}=\\$(find \"${2|/path/to/search,${pathToSearch}|}\" -maxdepth ${3|1,2,3,4,5,6,7,8,9|} -type f -exec grep \"${4:criteria}\" {} +)\n",
+		"description": "find files which contain search criteria in given path and below"
+	},
+	"filesystem.file-write-multiline-sudo": {
+		"prefix": "file write multiline sudo",
+		"body": [
+			"cat << EOF | sudo tee \"${1|/path/to/file,${filePath}|}\" >/dev/null",
+			"${2:first line\nsecond line\n...}",
+			"EOF\n"
+		],
+		"description": "write multiple lines into file when sudo permission is required"
+	},
+	"filesystem.file-write-multiline": {
+		"prefix": "file write multiline",
+		"body": [
+			"cat >\"${1|/path/to/file,${filePath}|}\" <<EOF",
+			"${2:first line\nsecond line\n...}",
+			"EOF\n"
+		],
+		"description": "write multiple lines into file"
+	},
+	"filesystem.file-write": {
+		"prefix": "file write",
+		"body": [
+			"echo \"${1:sample header}\" > \"${2|/path/to/file,${pathToFile}|}\"",
+			"echo # Empty line",
+			"for ${3:line} in \"\\${${4:lines}[@]}\"; do",
+			"\techo \"\\${${3:line}\\}\" >> \"${2}\" # >> means append",
+			"done\n"
+		],
+		"description": "write to a file"
+	},
+	"filesystem.files-iterate": {
+		"prefix": "iterate files",
+		"body": [
+			"# Searching in the current directory",
+			"for file in ${1|*,*.{jpg\\,png}|}; do",
+			"\t${2:echo \"\\${file\\}\"}",
+			"done\n"
+		],
+		"description": "write to a file"
+	},
+	"filesystem.find-files-or-directories": {
+		"prefix": [
+			"file find",
+			"directory find"
+		],
+		"body": "readarray -t resultArray < <(find \"/path/to/search\" -maxdepth 1 -type f -name \"criteria\")\n",
+		"description": "find files (-type f) or directories (-type d) by name or pattern (*.jpg)"
+	},
+	"filesystem.if-directory-exists": {
+		"prefix": "if directory exists",
+		"body": [
+			"if [ -d \"${1|/path/to/directory,${pathToDirectory}|}\" ]; then",
+			"\t${2:echo \"directory \\\"${1}\\\" exists\"}",
+			"fi\n"
+		],
+		"description": "check if a directory exists"
+	},
+	"filesystem.if-file-executable": {
+		"prefix": "if file executable",
+		"body": [
+			"if [ -x \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"file \\\"${1}\\\" is executable\"}",
+			"fi\n"
+		],
+		"description": "check if file is executable"
+	},
+	"filesystem.if-file-exists-and-is-symbolic-link": {
+		"prefix": "if file link",
+		"body": [
+			"if [ -h \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"Path \\\"${1}\\\" is a symbolic link\"}",
+			"fi\n"
+		],
+		"description": "if given path is a symbolic link"
+	},
+	"filesystem.if-file-exists": {
+		"prefix": "if file exists",
+		"body": [
+			"if [ -f \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"File \\\"${1}\\\" exists\"}",
+			"fi\n"
+		],
+		"description": "check if file exists"
+	},
+	"filesystem.if-file-not-empty": {
+		"prefix": "if file not empty",
+		"body": [
+			"if [ -s \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"File \\\"${1}\\\" is not empty\"}",
+			"fi\n"
+		],
+		"description": "check if file size is greater than zero"
+	},
+	"filesystem.if-file-readable": {
+		"prefix": "if file readable",
+		"body": [
+			"if [ -r \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"File \\\"${1}\\\" is readable\"}",
+			"fi\n"
+		],
+		"description": "check if file readable"
+	},
+	"filesystem.if-file-writeable": {
+		"prefix": "if file writeable",
+		"body": [
+			"if [ -w \"${1|/path/to/file,${filePath}|}\" ]; then",
+			"\t${2:echo \"File \\\"${1}\\\" is writeable\"}",
+			"fi\n"
+		],
+		"description": "if file writeable"
+	},
+	"filesystem.if-file1-newer-than-file2": {
+		"prefix": "if file newer",
+		"body": [
+			"if [ \"${1|/path/to/file1,${filePath1}|}\" -nt \"${2|/path/to/file2,${filePath2}|}\" ]; then",
+			"\t${3:echo \"Path \\\"${1}\\\" is newer than path \\\"${2}\\\"\"}",
+			"fi\n"
+		],
+		"description": "check if file1 is newer than file2"
+	},
+	"filesystem.if-file1-older-than-file2": {
+		"prefix": "if file older",
+		"body": [
+			"if [ \"${1|/path/to/file1,${filePath1}|}\" -ot \"${2|/path/to/file2,${filePath2}|}\" ]; then",
+			"\t${3:echo \"Path \\\"${1}\\\" is older than path \\\"${2}\\\"\"}",
+			"fi\n"
+		],
+		"description": "check if file1 is older than file2"
+	},
+	"filesystem.if-files-are-equal": {
+		"prefix": "if file =",
+		"body": [
+			"if cmp -s \"${1|/path/to/file1,${filePath1}|}\" \"${2|/path/to/file2,${filePath2}|}\"; then",
+			"\t${3:echo \"File \\\"${1}\\\" is equal to file \\\"${2}\\\"\"}",
+			"fi\n"
+		],
+		"description": "check if files are equal"
+	},
+	"filesystem.if-path-exists": {
+		"prefix": "if path exists",
+		"body": [
+			"if [ -e \"${1|/path/to/something,${pathToSomething}|}\" ]; then",
+			"\t${2:echo \"Path \\\"${1}\\\" exists\"}",
+			"fi\n"
+		],
+		"description": "if path exists (file, directory, link...)"
+	},
+	"filesystem.remove-files-older-newer-than": {
+		"prefix": "remove old/new files/directories",
+		"body": "find \"${1|/path/to/directory/,${pathToDirectory}|}\"* -type ${2|f,d|} -mtime ${3|-,+|}${4:days} -delete\n",
+		"description": "find and remove files(f)/directories(d) older(+)/newer(-) than x days"
+	},
+	"float.if-equal": {
+		"prefix": [
+			"if float =",
+			"if double ="
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} == \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"equal\"}",
+			"fi\n"
+		],
+		"description": "if numbers are equal"
+	},
+	"float.if-greater-or-equal": {
+		"prefix": [
+			"if float >=",
+			"if double >="
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} >= \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"greater or equal\"}",
+			"fi\n"
+		],
+		"description": "if num1 is greater to num2"
+	},
+	"float.if-greater": {
+		"prefix": [
+			"if float >",
+			"if double >"
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} > \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"greater\"}",
+			"fi\n"
+		],
+		"description": "if num2 is greater than num2"
+	},
+	"float.if-lesser-or-equal": {
+		"prefix": [
+			"if float <=",
+			"if double <="
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} <= \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"lesser or equal\"}",
+			"fi\n"
+		],
+		"description": "if num1 is lesser or equal to num2"
+	},
+	"float.if-lesser": {
+		"prefix": [
+			"if float <",
+			"if double <"
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} < \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"lesser\"}",
+			"fi\n"
+		],
+		"description": "if num1 is lesser than num2"
+	},
+	"float.if-not-equal": {
+		"prefix": [
+			"if float !=",
+			"if double !="
+		],
+		"body": [
+			"if (( $(echo \"\\${${1:num1}} != \\${${2:num2}}\" | bc -l) )); then",
+			"\t${3:echo \"not equal\"}",
+			"fi\n"
+		],
+		"description": "if numbers are not equal"
+	},
+	"fn-fx.fn-animate": {
+		"prefix": "fn animation animate",
+		"body": [
+			"# Usage: animate framesArray interval",
+			"function animate () {",
+			"\tlocal frames=(\"\\$@\")",
+			"",
+			"\t((lastIndex=\\${#frames[@]} - 1))",
+			"\tlocal mode=\\${frames[lastIndex]}",
+			"\tunset \"frames[lastIndex]\"",
+			"",
+			"\t((lastIndex=\\${#frames[@]} - 1))",
+			"\tlocal interval=\\${frames[lastIndex]}",
+			"\tunset \"frames[lastIndex]\"",
+			"",
+			"\t# Comment out next two lines if you are using CTRL+C event handler.",
+			"${1:\ttrap 'tput cnorm; echo' EXIT\n\ttrap 'exit 127' HUP INT TERM}\n",
+			"\ttput civis # hide cursor",
+			"\ttput sc # save cursor position",
+			"",
+			"\ttput civis # hide cursor",
+			"\ttput sc # save cursor position",
+			"",
+			"\tindex=0",
+			"\tmax=\"\\${#frames[@]}\"",
+			"\tindices=()",
+			"\tdirection=\"forward\"",
+			"\treadarray -t forwardIndices < <(seq 0 1 \"\\${max}\")",
+			"\treadarray -t backwardIndices < <(seq \"\\${max}\" -1 0)",
+			"",
+			"\twhile true; do",
+			"\t\tif [ \"\\${mode}\" = \"circular\" ]; then",
+			"\t\t\tdirection=\"forward\"",
+			"\t\telif [ \"\\${mode}\" = \"pendular\" ]; then",
+			"\t\t\tif (( index >= max )); then",
+			"\t\t\t\tdirection=\"backward\"",
+			"\t\t\telif (( index <= 0 )); then",
+			"\t\t\t\tdirection=\"forward\"",
+			"\t\t\tfi",
+			"\t\telse",
+			"\t\t\techo \"Wrong mode! Valid modes: circular, pendular\"",
+			"\t\t\texit 255",
+			"\t\tfi",
+			"",
+			"\t\tif [ \"\\${direction}\" = \"forward\" ]; then",
+			"\t\t\tindices=( \"\\${forwardIndices[@]}\" )",
+			"\t\telse",
+			"\t\t\tindices=( \"\\${backwardIndices[@]}\" )",
+			"\t\tfi",
+			"\t\t",
+			"",
+			"\t\tfor index in \"\\${indices[@]}\"; do",
+			"\t\t\ttput rc # restore cursor position",
+			"\t\t\techo \"\\${frames[\\$index]}\"",
+			"\t\t\tsleep \"\\${interval}\"",
+			"\t\tdone",
+			"\tdone",
+			"}\n"
+		],
+		"description": "animate frames of animation with interval seconds between frames circular and pendular"
+	},
+	"fn-fx.fn-animation-pacman": {
+		"prefix": "fn animation pacman",
+		"body": [
+			"# Usage: pacMan inputString interval pad",
+			"# Example: pacman \"Hello World\" 0.5 \"*\"",
+			"function pacMan () {",
+			"\tlocal string=\"\\${1\\}\"",
+			"\tlocal interval=\"\\${2\\}\"",
+			"\t: \"\\${interval:=0.2}\"",
+			"\tlocal pad=\"\\${3\\}\"",
+			"\t: \"\\${pad:=.}\"",
+			"\tlocal length=\\${#string}",
+			"\tlocal padding=\"\"",
+			"",
+			"\t# Comment out next two lines if you are using CTRL+C event handler.",
+			"${1:\ttrap 'tput cnorm; echo' EXIT\n\ttrap 'exit 127' HUP INT TERM}\n",
+			"\ttput civis # hide cursor",
+			"\ttput sc # save cursor position",
+			"",
+			"\tfor((i=0;i<=length;i++)); do",
+			"\t\ttput rc",
+			"\t\techo \"\\${padding\\}c\\${string:i:length}\"",
+			"\t\tsleep \"\\$interval\"",
+			"\t\ttput rc",
+			"\t\techo \"\\${padding\\}C\\${string:i:length}\"",
+			"\t\tsleep \"\\${interval\\}\"",
+			"\t\tpadding+=\"\\${pad\\}\"",
+			"\tdone",
+			"",
+			"\ttput cnorm",
+			"\ttput rc",
+			"\techo \"\\${padding\\}\"",
+			"}\n${0:}"
+		],
+		"description": "pacMan animation (eating input text)"
+	},
+	"fn-fx.fn-banner-color": {
+		"prefix": "fn banner color",
+		"body": [
+			"# Usage: bannerColor \"my title\" \"red\" \"*\"",
+			"function bannerColor() {",
+			"\tcase \\${2\\} in",
+			"\t\tblack) color=0",
+			"\t\t;;",
+			"\t\tred) color=1",
+			"\t\t;;",
+			"\t\tgreen) color=2",
+			"\t\t;;",
+			"\t\tyellow) color=3",
+			"\t\t;;",
+			"\t\tblue) color=4",
+			"\t\t;;",
+			"\t\tmagenta) color=5",
+			"\t\t;;",
+			"\t\tcyan) color=6",
+			"\t\t;;",
+			"\t\twhite) color=7",
+			"\t\t;;",
+			"\t\t*) echo \"color is not set\"; exit 1",
+			"\t\t;;",
+			"\tesac\n",
+			"\tlocal msg=\"\\${3\\} \\${1\\} \\${3\\}\"",
+			"\tlocal edge",
+			"\tedge=\\${msg//?/\\$3\\}",
+			"\ttput setaf \\${color\\}",
+			"\ttput bold",
+			"\techo \"\\${edge}\"",
+			"\techo \"\\${msg\\}\"",
+			"\techo \"\\${edge}\"",
+			"\ttput sgr 0",
+			"\techo",
+			"}\n"
+		],
+		"description": "print a color banner."
+	},
+	"fn-fx.fn-banner-simple": {
+		"prefix": "fn banner simple",
+		"body": [
+			"# Usage: bannerSimple \"my title\" \"*\"",
+			"function bannerSimple() {",
+			"\tlocal msg=\"\\${2\\} \\${1\\} \\${2\\}\"",
+			"\tlocal edge",
+			"\tedge=\\${msg//?/\\$2\\}",
+			"\techo \"\\${edge\\}\"",
+			"\techo \"\\$(tput bold)\\${msg\\}\\$(tput sgr0)\"",
+			"\techo \"\\${edge\\}\"",
+			"\techo",
+			"}\n"
+		],
+		"description": "function: print a banner with provided title and surrounding character"
+	},
+	"fn-fx.fn-import": {
+		"prefix": "fn import",
+		"body": [
+			"# Usage: import \"mylib\"",
+			"function import() {",
+			"\tlocal file=\"./${1:lib}/\\${1\\}.sh\"",
+			"\tif [ -f \"\\${file\\}\" ]; then",
+			"\t\tsource \"\\${file\\}\"",
+			"\telse",
+			"\t\techo \"Error: Cannot find library at: \\${file\\}\"",
+			"\t\texit 1",
+			"\tfi",
+			"}\n"
+		],
+		"description": "import functions from other shellscript files"
+	},
+	"fn-fx.fn-input-choice": {
+		"prefix": [
+			"fn options",
+			"fn input choice"
+		],
+		"body": [
+			"# Usage: options=(\"one\" \"two\" \"three\"); inputChoice \"Choose:\" 1 \"\\${options[@]}\"; choice=\\$?; echo \"\\${options[\\$choice]}\"",
+			"function inputChoice() {",
+			"\techo \"\\${1\\}\"; shift",
+			"\techo \"\\$(tput dim)\"\"- Change option: [up/down], Select: [ENTER]\" \"\\$(tput sgr0)\"",
+			"\tlocal selected=\"\\${1\\}\"; shift\n",
+			"\tESC=\\$(echo -e \"\\033\")",
+			"\tcursor_blink_on()  { tput cnorm; }",
+			"\tcursor_blink_off() { tput civis; }",
+			"\tcursor_to()        { tput cup \\$((\\$1-1)); }",
+			"\tprint_option()     { echo \"\\$(tput sgr0)\" \"\\$1\" \"\\$(tput sgr0)\"; }",
+			"\tprint_selected()   { echo \"\\$(tput rev)\" \"\\$1\" \"\\$(tput sgr0)\"; }",
+			"\tget_cursor_row()   { IFS=';' read -rsdR -p \\$'\\E[6n' ROW COL; echo \"\\${ROW#*[}\"; }",
+			"\tkey_input()        { read -rs -n3 key 2>/dev/null >&2; [[ \\$key = \\${ESC}[A ]] && echo up; [[ \\$key = \\${ESC}[B ]] && echo down; [[ \\$key = \"\" ]] && echo enter; }\n",
+			"\tfor opt; do echo; done\n",
+			"\tlocal lastrow",
+			"\tlastrow=\\$(get_cursor_row)",
+			"\tlocal startrow=\\$((lastrow - \\$#))",
+			"\ttrap \"cursor_blink_on; echo; echo; exit\" 2",
+			"\tcursor_blink_off\n",
+			"\t: selected:=0\n",
+			"\twhile true; do",
+			"\t\tlocal idx=0",
+			"\t\tfor opt; do",
+			"\t\t\tcursor_to \\$((startrow + idx))",
+			"\t\t\tif [ \\${idx\\} -eq \"\\${selected\\}\" ]; then",
+			"\t\t\t\tprint_selected \"\\${opt\\}\"",
+			"\t\t\telse",
+			"\t\t\t\tprint_option \"\\${opt\\}\"",
+			"\t\t\tfi",
+			"\t\t\t((idx++))",
+			"\t\tdone\n",
+			"\t\tcase \\$(key_input) in",
+			"\t\t\tenter) break;;",
+			"\t\t\tup)    ((selected--)); [ \"\\${selected}\" -lt 0 ] && selected=\\$((\\$# - 1));;",
+			"\t\t\tdown)  ((selected++)); [ \"\\${selected}\" -ge \\$# ] && selected=0;;",
+			"\t\tesac",
+			"\tdone\n",
+			"\tcursor_to \"\\${lastrow\\}\"",
+			"\tcursor_blink_on",
+			"\techo\n",
+			"\treturn \"\\${selected\\}\"",
+			"}\n"
+		],
+		"description": "provides a list of choices to user and returns the index of selected choice"
+	},
+	"fn-fx.fn-input-multi-choice": {
+		"prefix": [
+			"fn checkbox",
+			"fn input multichoice"
+		],
+		"body": [
+			"# Usage: multiChoice \"header message\" resultArray \"comma separated options\" \"comma separated default values\"",
+			"# Credit: https://serverfault.com/a/949806",
+			"function multiChoice {",
+			"\techo \"\\${1\\}\"; shift",
+			"\techo \"\\$(tput dim)\"\"- Change Option: [up/down], Change Selection: [space], Done: [ENTER]\" \"\\$(tput sgr0)\"",
+			"\t# little helpers for terminal print control and key input",
+			"\tESC=\\$( printf \"\\033\")",
+			"\tcursor_blink_on()   { printf \"%s\" \"\\${ESC}[?25h\"; }",
+			"\tcursor_blink_off()  { printf \"%s\" \"\\${ESC}[?25l\"; }",
+			"\tcursor_to()         { printf \"%s\" \"\\${ESC}[\\$1;\\${2:-1}H\"; }",
+			"\tprint_inactive()    { printf \"%s   %s \" \"\\$2\" \"\\$1\"; }",
+			"\tprint_active()      { printf \"%s  \\${ESC}[7m \\$1 \\${ESC}[27m\" \"\\$2\"; }",
+			"\tget_cursor_row()    { IFS=';' read -rsdR -p \\$'\\E[6n' ROW COL; echo \"\\${ROW#*[}\"; }",
+			"\tkey_input()         {",
+			"\t\tlocal key",
+			"\t\tIFS= read -rsn1 key 2>/dev/null >&2",
+			"\t\tif [[ \\$key = \"\"      ]]; then echo enter; fi;",
+			"\t\tif [[ \\$key = \\$'\\x20' ]]; then echo space; fi;",
+			"\t\tif [[ \\$key = \\$'\\x1b' ]]; then",
+			"\t\t\tread -rsn2 key",
+			"\t\t\tif [[ \\$key = [A ]]; then echo up;    fi;",
+			"\t\t\tif [[ \\$key = [B ]]; then echo down;  fi;",
+			"\t\tfi",
+			"\t}",
+			"\ttoggle_option()    {",
+			"\t\tlocal arr_name=\\$1",
+			"\t\teval \"local arr=(\\\"\\\\${\\${arr_name}[@]}\\\")\"",
+			"\t\tlocal option=\\$2",
+			"\t\tif [[ \\${arr[option]} == 1 ]]; then",
+			"\t\t\tarr[option]=0",
+			"\t\telse",
+			"\t\t\tarr[option]=1",
+			"\t\tfi",
+			"\t\teval \"\\$arr_name\"='(\"\\${arr[@]}\")'",
+			"\t}",
+			"",
+			"\tlocal retval=\\$1",
+			"\tlocal options",
+			"\tlocal defaults",
+			"",
+			"\tIFS=';' read -r -a options <<< \"\\$2\"",
+			"\tif [[ -z \\$3 ]]; then",
+			"\t\tdefaults=()",
+			"\telse",
+			"\t\tIFS=';' read -r -a defaults <<< \"\\$3\"",
+			"\tfi",
+			"",
+			"\tlocal selected=()",
+			"",
+			"\tfor ((i=0; i<\\${#options[@]}; i++)); do",
+			"\t\tselected+=(\"\\${defaults[i]}\")",
+			"\t\tprintf \"\\n\"",
+			"\tdone",
+			"",
+			"\t# determine current screen position for overwriting the options",
+			"\tlocal lastrow",
+			"\tlastrow=\\$(get_cursor_row)",
+			"\tlocal startrow=\\$((lastrow - \\${#options[@]}))",
+			"",
+			"\t# ensure cursor and input echoing back on upon a ctrl+c during read -s",
+			"\ttrap \"cursor_blink_on; stty echo; printf '\\n'; exit\" 2",
+			"\tcursor_blink_off",
+			"",
+			"\tlocal active=0",
+			"\twhile true; do",
+			"\t\t# print options by overwriting the last lines",
+			"\t\tlocal idx=0",
+			"\t\tfor option in \"\\${options[@]}\"; do",
+			"\t\t\tlocal prefix=\"[ ]\"",
+			"\t\t\tif [[ \\${selected[idx]} == 1 ]]; then",
+			"\t\t\t\tprefix=\"[x]\"",
+			"\t\t\tfi",
+			"",
+			"\t\t\tcursor_to \\$((startrow + idx))",
+			"\t\t\tif [ \\$idx -eq \\$active ]; then",
+			"\t\t\t\tprint_active \"\\$option\" \"\\$prefix\"",
+			"\t\t\telse",
+			"\t\t\t\tprint_inactive \"\\$option\" \"\\$prefix\"",
+			"\t\t\tfi",
+			"\t\t\t((idx++))",
+			"\t\tdone",
+			"",
+			"\t\t# user key control",
+			"\t\tcase \\$(key_input) in",
+			"\t\t\tspace)  toggle_option selected \\$active;;",
+			"\t\t\tenter)  break;;",
+			"\t\t\tup)     ((active--));",
+			"\t\t\t\tif [ \\$active -lt 0 ]; then active=\\$((\\${#options[@]} - 1)); fi;;",
+			"\t\t\tdown)   ((active++));",
+			"\t\t\t\tif [ \"\\$active\" -ge \\${#options[@]} ]; then active=0; fi;;",
+			"\t\tesac",
+			"\tdone",
+			"",
+			"\t# cursor position back to normal",
+			"\tcursor_to \"\\$lastrow\"",
+			"\tprintf \"\\n\"",
+			"\tcursor_blink_on",
+			"",
+			"\tindices=()",
+			"\tfor((i=0;i<\\${#selected[@]};i++)); do",
+			"\t\tif ((selected[i] == 1)); then",
+			"\t\t\tindices+=(\"\\${i}\")",
+			"\t\tfi",
+			"\tdone",
+			"",
+			"\t# eval \\$retval='(\"\\${selected[@]}\")'",
+			"\teval \"\\$retval\"='(\"\\${indices[@]}\")'",
+			"}\n"
+		],
+		"description": "provides a list of choices to user and returns the index of selected choices"
+	},
+	"fn-fx.fn-math-average": {
+		"prefix": "fn math average",
+		"body": [
+			"# Usage: average int1 int2 ...",
+			"function average () {",
+			"\tlocal sum=0",
+			"\tfor int in \"\\$@\"; do",
+			"\t\t((sum += int))",
+			"\tdone",
+			"\techo \\$((sum / \\$#))",
+			"}\n"
+		],
+		"description": "calculate average of given integers"
+	},
+	"fn-fx.fn-math-factorial": {
+		"prefix": "fn math factorial",
+		"body": [
+			"# Usage: factorial n",
+			"factorial ()",
+			"{",
+			"\tif (( \\$1 < 2 )); then",
+			"\t\techo 1",
+			"\telse",
+			"\t\techo \\$(( \\$1 * \\$(factorial \\$(( \\$1 - 1 ))) ))",
+			"\tfi",
+			"}\n"
+		],
+		"description": "calculate n!"
+	},
+	"fn-fx.fn-math-fibonacci-series": {
+		"prefix": "fn math fibonacci series",
+		"body": [
+			"# Usage: fibonacciSeries n",
+			"fibonacciSeries ()",
+			"{",
+			"\tfib=()",
+			"\tfib+=(0)",
+			"\tfib+=(1)",
+			"",
+			"\tfor((i=2;i<\\${1};i++)); do",
+			"\t\tfib[i]=\\$((fib[i-1] + fib[i-2]))",
+			"\tdone",
+			"",
+			"\techo \"\\${fib[@]}\"",
+			"}\n"
+		],
+		"description": "array of fibonacci series"
+	},
+	"fn-fx.fn-math-fibonacci": {
+		"prefix": "fn math fibonacci",
+		"body": [
+			"# Usage: fibonacci n",
+			"fibonacci ()",
+			"{",
+			"\tif ((\\$1 < 2)); then ",
+			"\t\techo \"\\$1\"",
+			"\telse",
+			"\t\techo \\$((\\$(fibonacci \\$((\\$1 - 1))) + \\$(fibonacci \\$((\\$1 - 2)))))",
+			"\tfi",
+			"}\n"
+		],
+		"description": "calculate Nth fibonacci number"
+	},
+	"fn-fx.fn-math-product": {
+		"prefix": "fn math product",
+		"body": [
+			"# Usage: product int1 int2 ...",
+			"function product () {",
+			"\tlocal result=1",
+			"\tfor int in \"$@\"; do",
+			"\t\t((result *= int))",
+			"\tdone",
+			"\techo \"\\${result\\}\"",
+			"}\n"
+		],
+		"description": "calculate product of given integers"
+	},
+	"fn-fx.fn-math-sum": {
+		"prefix": "fn math sum",
+		"body": [
+			"# Usage: sum int1 int2 ...",
+			"function sum () {",
+			"\tlocal result=0",
+			"\tfor int in \"\\$@\"; do",
+			"\t\t((result += int))",
+			"\tdone",
+			"\techo \"\\${result\\}\"",
+			"}\n"
+		],
+		"description": "calculate sum of given integers"
+	},
+	"fn-fx.fn-progress": {
+		"prefix": "fn progress",
+		"body": [
+			"# Usage: progressBar \"message\" currentStep totalSteps",
+			"function progressBar() {",
+			"\tlocal   bar='████████████████████'",
+			"\tlocal space='....................'",
+			"\tlocal wheel=('\\' '|' '/' '-')",
+			"",
+			"\tlocal msg=\"\\${1\\}\"",
+			"\tlocal current=\\${2\\}",
+			"\tlocal total=\\${3\\}",
+			"\tlocal wheelIndex=\\$((current % 4))",
+			"\tlocal position=\\$((100 * current / total))",
+			"\tlocal barPosition=\\$((position / 5))",
+			"",
+			"\techo -ne \"\\r|\\${bar:0:\\$barPosition}\\$(tput dim)\\${space:\\$barPosition:20}\\$(tput sgr0)| \\${wheel[wheelIndex]} \\${position}% [ \\${msg} ] \"",
+			"}\n"
+		],
+		"description": "progress bar function"
+	},
+	"fn-fx.fn-scan": {
+		"prefix": "fn scan local",
+		"body": [
+			"# Usage: scan proto host fromPort toPort",
+			"function scan () {",
+			"\tlocal openPortsArray=()",
+			"\tfor ((port=\\${3\\}; port<=\\${4\\}; port++)); do",
+			"\t\t(echo >/dev/\"\\${1\\}\"/\"\\${2\\}\"/\"\\${port\\}\") >/dev/null 2>&1 && openPortsArray+=(\"\\${port}\")",
+			"\tdone",
+			"\techo \"\\${openPortsArray[@]}\"",
+			"}\n"
+		],
+		"description": "scan localhost's port range (tcp/udp)"
+	},
+	"fn-fx.fn-time-format-seconds": {
+		"prefix": "fn time format seconds",
+		"body": [
+			"# Usage: formatSeconds 70 -> 1m 10s",
+			"# Credit: https://unix.stackexchange.com/a/27014",
+			"function formatSeconds {",
+			"\tlocal T=\\$1",
+			"\tlocal D=\\$((T/60/60/24))",
+			"\tlocal H=\\$((T/60/60%24))",
+			"\tlocal M=\\$((T/60%60))",
+			"\tlocal S=\\$((T%60))",
+			"\tlocal result=\"\"",
+			"",
+			"\t(( D > 0 )) && result=\"\\${D}d \"",
+			"\t(( H > 0 )) && result=\"\\${result}\\${H}h \"",
+			"\t(( M > 0 )) && result=\"\\${result}\\${M}m \"",
+			"\t(( S > 0 )) && result=\"\\${result}\\${S}s \"",
+			"\techo -e \"\\${result}\" | sed -e 's/[[:space:]]*\\$//'",
+			"}\n"
+		],
+		"description": "format seconds into days/hours/minutes/seconds"
+	},
+	"fn-fx.fn-urldecode": {
+		"prefix": "fn urldecode",
+		"body": [
+			"# Usage: urldecode url",
+			"# Credit: https://unix.stackexchange.com/a/187256",
+			"function urldecode () {",
+			"\tlocal urlEncoded=\"\\${1//+/ }\"",
+			"\tprintf '%b' \"\\${urlEncoded//%/\\\\\\\\x}\"",
+			"}\n"
+		],
+		"description": "decodes encoded URL"
+	},
+	"fn-fx.fn-urlencode": {
+		"prefix": "fn urlencode",
+		"body": [
+			"# Usage: urlencode url",
+			"# Credit: https://unix.stackexchange.com/a/187256",
+			"function urlencode () {",
+			"\tlocal length=\"\\${#1}\"",
+			"\tfor (( i = 0; i < length; i++ )); do",
+			"\t\tlocal c=\"\\${1:i:1}\"",
+			"\t\tcase \"\\${c\\}\" in",
+			"\t\t\t[a-zA-Z0-9.~_-]) printf \"%s\" \"\\${c\\}\" ;;",
+			"\t\t\t*) printf '%%%02X' \"'\\${c\\}\" ;;",
+			"\t\tesac",
+			"\tdone",
+			"}\n"
+		],
+		"description": "encodes URL"
+	},
+	"fn-fx.fn-version-compare": {
+		"prefix": [
+			"fn version compare",
+			"fn semver compare"
+		],
+		"body": [
+			"# Usage: versionCompare \"1.2.3\" \"1.1.7\"",
+			"function versionCompare () {",
+			"\tfunction subVersion () {",
+			"\t\techo -e \"\\${1%%\".\"*}\"",
+			"\t}",
+			"\tfunction cutDot () {",
+			"\t\tlocal offset=${#1}",
+			"\t\tlocal length=${#2}",
+			"\t\techo -e \"\\${2:((++offset)):length}\"",
+			"\t}",
+			"\tif [ -z \"\\${1\\}\" ] || [ -z \"\\${2\\}\" ]; then",
+			"\t\techo \"=\" && exit 0",
+			"\tfi",
+			"\tlocal v1",
+			"\tv1=\\$(echo -e \"\\${1}\" | tr -d '[:space:]')",
+			"\tlocal v2",
+			"\tv2=\\$(echo -e \"\\${2}\" | tr -d '[:space:]')",
+			"\tlocal v1Sub",
+			"\tv1Sub=\\$(subVersion \"\\$v1\")",
+			"\tlocal v2Sub",
+			"\tv2Sub=\\$(subVersion \"\\$v2\")",
+			"\tif (( v1Sub > v2Sub )); then",
+			"\t\techo \">\"",
+			"\telif (( v1Sub < v2Sub )); then",
+			"\t\techo \"<\"",
+			"\telse",
+			"\t\tversionCompare \"\\$(cutDot \"\\$v1Sub\" \"\\$v1\")\" \"\\$(cutDot \"\\$v2Sub\" \"\\$v2\")\"",
+			"\tfi",
+			"}\n"
+		],
+		"description": "function: compares two semvers and returns >, < or ="
+	},
+	"fn-fx.fx-animate": {
+		"prefix": "fx animation animate",
+		"body": [
+			"# Usage: animate framesArray interval",
+			"animate \"\\${${1:frames}[@]}\" ${2|0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1|} ${3|circular,pendular|}\n"
+		],
+		"description": "call animate function to start animation"
+	},
+	"fn-fx.fx-animation-pacman": {
+		"prefix": "fx animation pacman",
+		"body": [
+			"# Usage: pacMan inputString interval pad",
+			"pacMan \"${1:Hello World}\" ${2|0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1|} \"${3|.,*,+,-,~,x,o|}\"\n"
+		],
+		"description": "call pacMan animation (eating input text) function"
+	},
+	"fn-fx.fx-banner-color": {
+		"prefix": "fx banner color",
+		"body": [
+			"# Usage: bannerColor \"my title\" \"red\" \"*\"",
+			"bannerColor \"${1:my title}\" \"${2|black,red,green,yellow,blue,magenta,cyan,white|}\" \"${3|*,:,+,.,x,o,$|}\"\n"
+		],
+		"description": "call bannerColor function"
+	},
+	"fn-fx.fx-banner-simple": {
+		"prefix": "fx banner simple",
+		"body": [
+			"# Usage: bannerSimple \"my title\" \"*\"",
+			"bannerSimple \"${1:my title}\" \"${2|*,:,+,.,x,o,$|}\"\n"
+		],
+		"description": "call bannerSimple function"
+	},
+	"fn-fx.fx-import": {
+		"prefix": "fx import",
+		"body": [
+			"# Usage: import \"filename\"",
+			"import \"${1:libname}\"\n"
+		],
+		"description": "import functions from other shellscript files located in a directory (default: lib) relative to current file"
+	},
+	"fn-fx.fx-input-choice": {
+		"prefix": [
+			"fx options",
+			"fx input choice"
+		],
+		"body": [
+			"# Usage: options=(\"one\" \"two\" \"three\"); inputChoice \"Choose:\" 1 \"\\${options[@]}\"; choice=\\$?; echo \"\\${options[\\$choice]}\"",
+			"${1:options}=(${2:\"one\" \"two\" \"three\"})",
+			"inputChoice \"${3:Choose:}\" ${4|0,1,2,3,4,5,6,7,8,9|} \"\\${${1}[@]}\"; choice=\\$?",
+			"echo \"\\${${1}[\\$choice]}\" selected\n"
+		],
+		"description": "call input choice function"
+	},
+	"fn-fx.fx-input-multi-choice": {
+		"prefix": [
+			"fx checkbox",
+			"fx input multichoice"
+		],
+		"body": [
+			"# Usage: multiChoice \"header message\" resultArray \"comma separated options\" \"comma separated default values\"",
+			"multiChoice \"${1:Select options:}\" ${2:result} \"One 1;Two 2;Three 3\" \"1;0;1\"",
+			"echo \"${${2}[@]}\"\n"
+		],
+		"description": "call input multichoice function"
+	},
+	"fn-fx.fx-math fibonacci": {
+		"prefix": "fx math fibonacci",
+		"body": [
+			"# Usage: fibonacci n",
+			"result=\\$(fibonacci ${1:n})\n"
+		],
+		"description": "calculate Nth fibonacci number"
+	},
+	"fn-fx.fx-math-average": {
+		"prefix": "fx math average",
+		"body": [
+			"# Usage: average int1 int2 ...",
+			"result=\\$(average \"\\${${1:int1}\\}\" \"\\${${2:int2}\\}\" \"\\${${3:int3}\\}\")\n"
+		],
+		"description": "call math average function"
+	},
+	"fn-fx.fx-math-factorial": {
+		"prefix": "fx math factorial",
+		"body": [
+			"# Usage: factorial n",
+			"readarray -t result < <(factorial ${1:n})",
+			"echo \"\\${result[@]\\}\"\n"
+		],
+		"description": "calculate n!"
+	},
+	"fn-fx.fx-math-fibonacci-series": {
+		"prefix": "fx math fibonacci series",
+		"body": [
+			"# Usage: fibonacciSeries n",
+			"readarray -t ${1:result} < <(fibonacciSeries ${2:n})",
+			"echo \"\\${${1}[@]}\"\n"
+		],
+		"description": "array of fibonacci series"
+	},
+	"fn-fx.fx-math-product": {
+		"prefix": "fx math product",
+		"body": [
+			"# Usage: product int1 int2 ...",
+			"result=\\$(product \\${${1:int1}\\} \\${${2:int2}\\} \\${${3:int3}\\})\n"
+		],
+		"description": "call math product function"
+	},
+	"fn-fx.fx-math-sum": {
+		"prefix": "fx math sum",
+		"body": [
+			"# Usage: sum int1 int2 ...",
+			"result=\\$(sum \\${${1:int1}\\} \\${${2:int2}\\} \\${${3:int3}\\})\n"
+		],
+		"description": "call math sum function"
+	},
+	"fn-fx.fx-progress": {
+		"prefix": "fx progress",
+		"body": [
+			"# Usage: progressBar \"message\" currentStep totalSteps",
+			"${1:totalSteps}=${2:100}",
+			"",
+			"for ((${3:currentStep}=${4:1}; ${3} <= ${1}; ${3}++)); do",
+			"\tsleep 0.1 # simulating one step of job",
+			"\tprogressBar \"Installing foo...\" \"\\${${3}\\}\" \"\\${${1}\\}\"",
+			"done\n",
+			"echo\n"
+		],
+		"description": "call progress bar function"
+	},
+	"fn-fx.fx-scan": {
+		"prefix": "fx scan local",
+		"body": [
+			"# Usage: scan proto host fromPort toPort",
+			"readarray -t openPorts < <(scan ${1|tcp,udp|} \"${2|localhost,127.0.0.1,::1|}\" ${3:fromPort} ${4:toPort})",
+			"${5:echo \"\\${openPorts[@]\\}\"}\n"
+		],
+		"description": "call scan function to scan localhost over a port range"
+	},
+	"fn-fx.fx-time-format-seconds": {
+		"prefix": "fx time format seconds",
+		"body": [
+			"# Usage: formatSeconds 70 -> 1m 10s",
+			"readarray -t ${1:result} < <(formatSeconds ${2:seconds})",
+			"echo \"${${1}[@]}\"\n"
+		],
+		"description": "call formatSeconds function"
+	},
+	"fn-fx.fx-urldecode": {
+		"prefix": "fx urldecode",
+		"body": [
+			"# Usage: urldecode url",
+			"urldecode \"${1|encodedUrl,${encodedUrl}|}\"\n"
+		],
+		"description": "call urldecode function"
+	},
+	"fn-fx.fx-urlencode": {
+		"prefix": "fx urlencode",
+		"body": [
+			"# Usage: urlencode url",
+			"urlencode \"${1|url,${url}|}\"\n"
+		],
+		"description": "call urlencode function"
+	},
+	"fn-fx.fx-version-compare": {
+		"prefix": [
+			"fx version compare",
+			"fx semver compare"
+		],
+		"body": [
+			"# Usage: versionCompare \"1.2.3\" \"1.1.7\"",
+			"versionCompare \"${1:major}.${2:minor}.${3:patch}\" \"${4:major}.${5:minor}.${6:patch}\"\n"
+		],
+		"description": "call versionCompare function"
+	},
+	"ftp.delete": {
+		"prefix": "ftp delete file",
+		"body": "curl ftp://${1:user}:${2:password}@${3:ipOrDomain}/${4:path}/${5:fileToDelete} -Q \"DELE ${5:fileToDelete}\"\n",
+		"description": "delete specified file from ftp server"
+	},
+	"ftp.download": {
+		"prefix": "ftp download",
+		"body": "curl ftp://${1:user}:${2:password}@${3:ipOrDomain}/${4:filePathOnServer}/\n",
+		"description": "download specified file from ftp server"
+	},
+	"ftp.list-of-files": {
+		"prefix": "ftp list",
+		"body": "curl ftp://${1:user}:${2:password}@${3:ipOrDomain}/${4:directoryPathOnServer}/\n",
+		"description": "get the list of files on the ftp server at specific path"
+	},
+	"ftp.rename": {
+		"prefix": "ftp rename",
+		"body": "curl ftp://${1:user}:${2:password}@${3:ipOrDomain}/${4:path}/ -Q \"-RNFR ${4:path}/${5:renameFrom}\" -Q \"-RNTO ${4:path}/${6:renameTo}\"\n",
+		"description": "rename specified file/directory on ftp server"
+	},
+	"ftp.upload": {
+		"prefix": "ftp upload",
+		"body": "curl -T ${1:fileToUpload} ftp://${2:user}:${3:password}@${4:ipOrDomain}/${5:directoryPathOnServer}/\n",
+		"description": "upload specified file to ftp server"
+	},
+	"function.arguments-array": {
+		"prefix": [
+			"function arguments",
+			"func args"
+		],
+		"body": "echo \"$@\"",
+		"description": "function all arguments array"
+	},
+	"function.arguments-count": {
+		"prefix": [
+			"function arguments count",
+			"func args count"
+		],
+		"body": "echo $#",
+		"description": "number of function arguments"
+	},
+	"function.declare": {
+		"prefix": [
+			"function",
+			"func"
+		],
+		"body": [
+			"function ${1:name} () {",
+			"\t${2:echo \"\\$1\" # arguments are accessible through \\$1, \\$2,...}",
+			"}\n"
+		],
+		"description": "function"
+	},
+	"function.return-value": {
+		"prefix": [
+			"function return value",
+			"func return value",
+			"func ret val"
+		],
+		"body": "echo \"$?\"",
+		"description": "last function/command return code"
+	},
+	"git.branch-create": {
+		"prefix": "git branch create",
+		"body": "git checkout -b ${1:branchName}\n",
+		"description": "create branch locally and switch into it."
+	},
+	"git.branch-delete-local": {
+		"prefix": "git branch delete local",
+		"body": "git branch --delete ${1:localBranch}\n",
+		"description": "delete local branch."
+	},
+	"git.branch-delete-remote": {
+		"prefix": "git branch delete remote",
+		"body": "git push origin --delete ${1:remoteBranch}\n",
+		"description": "delete remote branch."
+	},
+	"git.branch-list": {
+		"prefix": "git branch list",
+		"body": "git branch\n",
+		"description": "list all branches."
+	},
+	"git.branch-push": {
+		"prefix": "git branch push",
+		"body": "git push origin ${1:branchName}\n",
+		"description": "push branch to remote."
+	},
+	"git.branch-rename": {
+		"prefix": "git branch rename",
+		"body": "git branch -m ${1:newName}\n",
+		"description": "rename current branch."
+	},
+	"git.changes-revert": {
+		"prefix": "git changes revert",
+		"body": "git checkout .\n",
+		"description": "revert tracked changes"
+	},
+	"git.clone-branch": {
+		"prefix": "git clone branch",
+		"body": "git clone -b ${1:branchName} https://${2:github.com}/${3:user}/${4:repository}.git\n",
+		"description": "clone a remote branch to local machine."
+	},
+	"git.clone": {
+		"prefix": "git clone",
+		"body": "git clone https://${1:github.com}/${2:user}/${3:repository}.git\n",
+		"description": "clone remote repository to local machine."
+	},
+	"git.commit-list-notpushed": {
+		"prefix": "git commit list notPushed",
+		"body": "git log origin/master..HEAD\n",
+		"description": "list non pushed commits."
+	},
+	"git.commit-search": {
+		"prefix": "git commit search",
+		"body": "git log --all --grep='${1:searchCriteria}'\n",
+		"description": "search for a commit which contains searchCriteria."
+	},
+	"git.commit-undo": {
+		"prefix": "git commit undo",
+		"body": "git reset --${1|soft,hard|} HEAD~${2|1,2,3,4,5,6,7,8,9|}\n",
+		"description": "undo last N commits (soft: preserve local changes, hard: delete local changes"
+	},
+	"git.commit": {
+		"prefix": "git commit",
+		"body": "git commit -m \"${1:commit message}\"\n",
+		"description": "commit changes."
+	},
+	"git.config-list": {
+		"prefix": "git config list",
+		"body": "git config --list\n",
+		"description": "list git configurations."
+	},
+	"git.config-set": {
+		"prefix": "git config set",
+		"body": "git config --${1|local,global|} ${2|user.name,user.email|} \"${3:value}\"\n",
+		"description": "configure git."
+	},
+	"git.patch-apply": {
+		"prefix": "git patch apply",
+		"body": "git apply < \"${1|/path/to/patch1.patch,${patchPath}|}\"\n",
+		"description": "apply a patch from file"
+	},
+	"git.patch-create": {
+		"prefix": "git patch create",
+		"body": "git diff > \"${1|/path/to/patch1.patch,${patchPath}|}\"\n",
+		"description": "create a patch from changes"
+	},
+	"git.remote-list": {
+		"prefix": "git remote list",
+		"body": "git remote\n",
+		"description": "list all remotes"
+	},
+	"git.remote-url-change": {
+		"prefix": "git remote urlChange",
+		"body": "git remote set-url origin https://${1:github.com}/${2:user}/${3:repository}.git\n",
+		"description": "change remote url"
+	},
+	"git.remote-urlAdd": {
+		"prefix": "git remote urlAdd",
+		"body": "git remote add origin https://${1:github.com}/${2:user}/${3:repository}.git\n",
+		"description": "add remote url"
+	},
+	"git.tag-commit": {
+		"prefix": [
+			"git tag commit",
+			"git commit tag"
+		],
+		"body": "git tag -a ${1:release/1.0.0} -m \"${2:1.0.0 release}\"\n",
+		"description": "tag a commit"
+	},
+	"git.tag-list": {
+		"prefix": "git tag list",
+		"body": "git tag\n",
+		"description": "list all tags"
+	},
+	"git.tag-remote-delete": {
+		"prefix": "git tag remote delete",
+		"body": "git push --delete origin ${1:tagName} && git push origin :${1:tagName}\n",
+		"description": "delete tag from remote"
+	},
+	"git.tag-remote-push": {
+		"prefix": "git tag remote push",
+		"body": "git push origin ${1:tagName}\n",
+		"description": "push tag to remote"
+	},
+	"http.cookie": {
+		"prefix": "http cookie",
+		"body": [
+			"curl --request ${1|GET,POST,DELETE,PUT|} -sL \\",
+			"\t--user-agent '${2|Shellman,Your custom user agent|}' \\",
+			"\t--cookie ${3|'key=value',\"${key}=${value}\"|} \\",
+			"\t--url ${4|'http://example.com',\"${url}\"|}\n"
+		],
+		"description": "send http request with cookies, using curl"
+	},
+	"http.download": {
+		"prefix": "http download",
+		"body": [
+			"curl --request ${1|GET,POST|} -sL \\",
+			"\t--user-agent '${2|Shellman,Your custom user agent|}' \\",
+			"\t--output ${3|'/path/to/file',\"${pathToFile}\"|} \\",
+			"\t--url ${4|'http://example.com/file.zip',\"${downloadUrl}\"|}\n"
+		],
+		"description": "download from url and save to /path/to/file, using curl"
+	},
+	"http.get": {
+		"prefix": [
+			"http GET",
+			"http DELETE"
+		],
+		"body": [
+			"curl --request ${1|GET,DELETE|} -sL \\",
+			"\t--user-agent '${2|Shellman,Your custom user agent|}' \\",
+			"\t--url ${3|'http://example.com',\"${url}\"|}\n"
+		],
+		"description": "send http GET/DELETE request using curl"
+	},
+	"http.header": {
+		"prefix": "http header",
+		"body": [
+			"curl --request ${1|GET,POST,DELETE,PUT|} -sL \\",
+			"\t--user-agent '${2|Shellman,Your custom user agent|}' \\",
+			"\t--header ${3|'key: value',\"${key}\": \"${value}\"|} \\",
+			"\t--url ${4|'http://example.com',\"${url}\"|}\n"
+		],
+		"description": "send http request with custom header, using curl"
+	},
+	"http.post-send-file": {
+		"prefix": "http POST file",
+		"body": [
+			"curl --request POST -sL \\",
+			"\t--user-agent '${1|Shellman,Your custom user agent|}' \\",
+			"\t--url ${2|'http://example.com',\"${url}\"|} \\",
+			"\t--form ${3|'key=value',\"${key}\"=\"${value}\"|} \\",
+			"\t--form ${4|'file=@/path/to/file',file=@\"${pathToFile}\"|}\n"
+		],
+		"description": "send file with http POST, using curl"
+	},
+	"http.post": {
+		"prefix": [
+			"http POST",
+			"http PUT"
+		],
+		"body": [
+			"curl --request ${1|POST,PUT|} -sL \\",
+			"\t--user-agent '${2|Shellman,Your custom user agent|}' \\",
+			"\t--url ${3|'http://example.com',\"${url}\"|} \\",
+			"\t--data ${4|'key=value',\"${key}\"=\"${value}\"|} \n"
+		],
+		"description": "send data with http POST/PUT, using curl"
+	},
+	"input.password": {
+		"prefix": "input password",
+		"body": [
+			"echo \"${1:Please enter your password: }\"",
+			"read -rs ${2:password}",
+			"${3:echo \"\\${password\\}\"}\n"
+		],
+		"description": "get text as input from user without showing characters"
+	},
+	"input.text": {
+		"prefix": [
+			"input text",
+			"ask question"
+		],
+		"body": [
+			"read -rep \"${1:Question here? }\" -i \"${2:Default answer}\" answer",
+			"${3:echo \"\\${answer\\}\"}\n"
+		],
+		"description": "get text as input from user"
+	},
+	"integer.if-equal": {
+		"prefix": "if int =",
+		"body": [
+			"if (( ${1:int1} == ${2:int2} )); then",
+			"\t${3:echo \"equal\"}",
+			"fi\n"
+		],
+		"description": "if integers are equal"
+	},
+	"integer.if-greater-or-equal": {
+		"prefix": "if int >=",
+		"body": [
+			"if (( ${1:int1} >= ${2:int2} )); then",
+			"\t${3:echo \"greater or equal\"}",
+			"fi\n"
+		],
+		"description": "if int1 is greater or equal to int2"
+	},
+	"integer.if-greater": {
+		"prefix": "if int >",
+		"body": [
+			"if (( ${1:int1} > ${2:int2} )); then",
+			"\t${3:echo \"greater\"}",
+			"fi\n"
+		],
+		"description": "if int1 is greater than int2"
+	},
+	"integer.if-lesser-or-equal": {
+		"prefix": "if int <=",
+		"body": [
+			"if (( ${1:int1} <= ${2:int2} )); then",
+			"\t${3:echo \"lesser or equal\"}",
+			"fi\n"
+		],
+		"description": "if int1 is lesser or equal to int2"
+	},
+	"integer.if-lesser": {
+		"prefix": "if int <",
+		"body": [
+			"if (( ${1:int1} < ${2:int2} )); then",
+			"\t${3:echo \"lesser\"}",
+			"fi\n"
+		],
+		"description": "if int1 is lesser than int2"
+	},
+	"integer.if-not-equal": {
+		"prefix": "if int !=",
+		"body": [
+			"if (( ${1:int1} != ${2:int2} )); then",
+			"\t${3:echo \"not equal\"}",
+			"fi\n"
+		],
+		"description": "if integers are not equal"
+	},
+	"internal.for-i-j": {
+		"prefix": "for ij",
+		"body": [
+			"for((i=0;i<${1:n};i++)); do",
+			"\tfor((j=0;j<${2:m};j++)); do",
+			"\t\t${3:echo \"\\${i\\}, \\${j\\}\"}",
+			"\tdone",
+			"done\n"
+		],
+		"description": "for loop by index"
+	},
+	"internal.for-i": {
+		"prefix": "for i",
+		"body": [
+			"for((i=0;i<${1:n};i++)); do",
+			"\t${2:echo \"\\${i\\}\"}",
+			"done\n"
+		],
+		"description": "for loop by index"
+	},
+	"internal.for-in-collection": {
+		"prefix": "for in collection",
+		"body": [
+			"for ${1:item} in {${2:\"Hello World!\",a,bc,1372}}; do",
+			"\techo \"\\${${1:item}\\}\"",
+			"done\n"
+		],
+		"description": "for loop in collection"
+	},
+	"internal.for-in-column": {
+		"prefix": "for in column",
+		"body": [
+			"for ${1:col} in \\$(${2:docker images} | awk '{ print ${3:\\$1\":\"\\$2} }'); do",
+			"\t${4:echo \"\\${${1:col}\\}\" | cut -d ':' -f 1}",
+			"\t${5:echo \"\\${${1:col}\\}\" | cut -d ':' -f 2}",
+			"done\n"
+		],
+		"description": "for loop in collection"
+	},
+	"internal.for-in-range": {
+		"prefix": "for in range",
+		"body": [
+			"for ${1:item} in ${2|{a..z},{0..20}|}; do",
+			"\techo \"\\${${1:item}\\}\"",
+			"done\n"
+		],
+		"description": "for loop in collection"
+	},
+	"internal.if-elif-else": {
+		"prefix": "if",
+		"body": [
+			"if [ ${1:condition} ]; then",
+			"\t${2: # if body}",
+			"elif [ ${3:condition} ]; then",
+			"\t${4: # else if body}",
+			"else",
+			"\t${5: # else body}",
+			"fi\n"
+		],
+		"description": "if"
+	},
+	"internal.iff-not": {
+		"prefix": "iff not",
+		"body": "[ ${1:condition} ] || ${2:command}\n",
+		"description": "if condition is false then run command (short circuit)"
+	},
+	"internal.iff": {
+		"prefix": "iff",
+		"body": "[ ${1:condition} ] && ${2:command}\n",
+		"description": "if condition is true then run command (short circuit)"
+	},
+	"internal.infinite-loop": {
+		"prefix": "loop infinite",
+		"body": [
+			"while true; do",
+			"${1:\techo \"infinite loop\"\n\tsleep 1s}",
+			"done\n"
+		],
+		"description": "infinite loop"
+	},
+	"internal.switch": {
+		"prefix": "switch case",
+		"body": [
+			"case \"\\${${1:item}\\}\" in",
+			"\t${2:1})",
+			"\t\t${3:echo \"item = 1\"}",
+			"\t;;",
+			"\t${4:2|3})",
+			"\t\t${5:echo \"item = 2 or item = 3\"}",
+			"\t;;",
+			"\t*)",
+			"\t\t${6:echo \"default (none of above)\"}",
+			"\t;;",
+			"esac\n"
+		],
+		"description": "switch case"
+	},
+	"internal.until": {
+		"prefix": "loop until",
+		"body": [
+			"until [ ${1:condition} ]; do",
+			"\t${2:# body}",
+			"done\n"
+		],
+		"description": "until loop"
+	},
+	"internal.while": {
+		"prefix": "loop while",
+		"body": [
+			"while [ ${1:condition} ]; do",
+			"\t${2:# body}",
+			"done\n"
+		],
+		"description": "while loop"
+	},
+	"ip.array-of-local": {
+		"prefix": "ip local IPs",
+		"body": "${1:IPs}=\\$(hostname -I)\n",
+		"description": "array of local IPs"
+	},
+	"ip.info": {
+		"prefix": "ip info",
+		"body": "${1:info}=\\$(curl -s ipinfo.io/${2|ip,city,region,country,loc,postal,org|})\n",
+		"description": "public ip information"
+	},
+	"ip.public-address": {
+		"prefix": "ip public",
+		"body": "${1:publicIp}=\\$(curl -s ${2|bot.whatismyipaddress.com,ident.me,ipecho.net/plain,icanhazip.com,ifconfig.me,api.ipify.org,ipinfo.io/ip|})\n",
+		"description": "public ip address"
+	},
+	"math.add": {
+		"prefix": "math +",
+		"body": "${1:result}=\\$((${2:int1} + ${3:int2}))\n",
+		"description": "add two variables"
+	},
+	"math.const-gamma": {
+		"prefix": "math const 𝛾",
+		"body": "MATH_GAMMA='0.57721566490153286060651209008240243'\n",
+		"description": "math Euler-Mascheroni constant"
+	},
+	"math.const-napier": {
+		"prefix": "math const e",
+		"body": "MATH_NAPIER='2.71828182845904523536028747135266249'\n",
+		"description": "math Napier's constant"
+	},
+	"math.const-omega": {
+		"prefix": "math const Ω",
+		"body": "MATH_OMEGA='0.56714329040978387299996866221035554'\n",
+		"description": "math Omega constant"
+	},
+	"math.const-phi": {
+		"prefix": "math const ϕ",
+		"body": "MATH_GOLDEN_RATIO='1.61803398874989484820458683436563811'\n",
+		"description": "math golden ration constant"
+	},
+	"math.const-pi": {
+		"prefix": "math const π",
+		"body": "MATH_PI='3.14159265358979323846264338327950288'\n",
+		"description": "math PI constant"
+	},
+	"math.decrement": {
+		"prefix": "math --",
+		"body": "((${1|int--,--int|}))\n",
+		"description": "decrement integer variable"
+	},
+	"math.divide-equal": {
+		"prefix": "math /=",
+		"body": "((${1:int1} /= ${2:int2}))\n",
+		"description": "divide int1 by int2 and assign the whole part to int1"
+	},
+	"math.divide": {
+		"prefix": "math /",
+		"body": "${1:result}=\\$((${2:int1} / ${3:int2}))\n",
+		"description": "divide int1 by int2 as integers and returns whole part"
+	},
+	"math.expr": {
+		"prefix": [
+			"expr",
+			"arithmetic"
+		],
+		"body": "${1:result}=\\$(expr \\${${2:int1}\\} ${3|+,-,\\*,/,%|} \\${${4:int2}\\})\n",
+		"description": "arithmetic operations on integers"
+	},
+	"math.increment": {
+		"prefix": "math ++",
+		"body": "((${1|int++,++int|}))\n",
+		"description": "increment integer variable by 1"
+	},
+	"math.let": {
+		"prefix": "let",
+		"body": "let \"${1:result} = ${2:int1} ${3|+,-,*,/,%|} ${4:int2}\"\n",
+		"description": "arithmetic operations on integers"
+	},
+	"math.minus-equal": {
+		"prefix": "math -=",
+		"body": "((${1:int1} -= ${2:int2}))\n",
+		"description": "subtract int2 from int1 and assign the result to int1"
+	},
+	"math.modulus-equal": {
+		"prefix": "math %=",
+		"body": "((${1:int1} %= ${2:int2}))\n",
+		"description": "divide int1 by int2 and assign the reminder to int1"
+	},
+	"math.modulus": {
+		"prefix": "math %",
+		"body": "${1:result}=\\$((${2:int1} % ${3:int2}))\n",
+		"description": "reminder of dividing int1 by int2 (modulus)"
+	},
+	"math.multiply-equal": {
+		"prefix": "math *=",
+		"body": "((${1:int1} *= ${2:int2}))\n",
+		"description": "multiply int1 by int2 and assign the result to int1"
+	},
+	"math.multiply": {
+		"prefix": "math *",
+		"body": "${1:result}=\\$((${2:int1} * ${3:int2}))\n",
+		"description": "multiply int1 by int2"
+	},
+	"math.plus-equal": {
+		"prefix": "math +=",
+		"body": "((${1:int1} += ${2:int2}))\n",
+		"description": "add int1 and int2 and assign the result to int1"
+	},
+	"math.power": {
+		"prefix": "math ^",
+		"body": "${1:result}=\\$((${2:base} ** ${3:power}))\n",
+		"description": "exponentiate base to power"
+	},
+	"math.precision": {
+		"prefix": "math 0.00",
+		"body": "${1:result}=\\$(echo \"scale=${2|0,1,2,3,4,5,6,7,8,9|};(\\${${3:num1}\\} ${4|+,-,*,/,^|} \\${${5:num2}\\})\" | bc)\n",
+		"description": "math operations with up to scale decimal places precision"
+	},
+	"math.random-number": {
+		"prefix": "math random",
+		"body": "${1:result}=\\$((${2:min} + RANDOM % \\$((${3:max}-${2:min}))))\n",
+		"description": "generate random integer x such as min <= x <= max"
+	},
+	"math.sqrt": {
+		"prefix": [
+			"math √",
+			"math sqrt"
+		],
+		"body": "${1:result}=\\$(echo \"scale=${2|0,1,2,3,4,5,6,7,8,9|};sqrt(${3|num,${num}|})\" | bc)\n",
+		"description": "square root of var up to scale decimal places"
+	},
+	"math.subtract": {
+		"prefix": "math -",
+		"body": "${1:result}=\\$((${2:int1} - ${3:int2}))\n",
+		"description": "subtract int2 from int1"
+	},
+	"misc.am-I-not-root": {
+		"prefix": [
+			"am I not root",
+			"am I not sudo"
+		],
+		"body": [
+			"if (( \\$(id -u) != 0 )); then",
+			"\t${1:echo \"I'm not root\"}",
+			"fi\n"
+		],
+		"description": "check if script is not running as root (sudo)"
+	},
+	"misc.am-I-root": {
+		"prefix": [
+			"am I root",
+			"am I sudo"
+		],
+		"body": [
+			"if (( $(id -u) == 0 )); then",
+			"\t${1:echo \"I'm root\"}",
+			"fi\n"
+		],
+		"description": "check if script is running as root (sudo)"
+	},
+	"misc.animation-frame": {
+		"prefix": "animation frame",
+		"body": [
+			"# Your frames need to have the exact same width and height.",
+			"# If they are different in size, fill unused space with `space`s (no `TAB`s).",
+			"IFS='' read -r -d '' ${1:frames}[${2|1,2,3,4,5,6,7,8,9|}] <<\"EOF\"",
+			"${3:# Frame here}",
+			"EOF\n"
+		],
+		"description": "define animation frame"
+	},
+	"misc.arguments-parse": {
+		"prefix": [
+			"argument parsing",
+			"parse args"
+		],
+		"body": [
+			"POSITIONAL=()",
+			"while (( \\$# > 0 )); do",
+			"\tcase \"\\${1\\}\" in",
+			"\t\t-f|--flag)",
+			"\t\techo flag: \"\\${1\\}\"",
+			"\t\tshift # shift once since flags have no values",
+			"\t\t;;",
+			"\t\t-s|--switch)",
+			"\t\tnumOfArgs=1 # number of switch arguments",
+			"\t\tif (( \\$# < numOfArgs + 1 )); then",
+			"\t\t\tshift \\$#",
+			"\t\telse",
+			"\t\t\techo \"switch: \\${1\\} with value: \\${2\\}\"",
+			"\t\t\tshift \\$((numOfArgs + 1)) # shift 'numOfArgs + 1' to bypass switch and its value",
+			"\t\tfi",
+			"\t\t;;",
+			"\t\t*) # unknown flag/switch",
+			"\t\tPOSITIONAL+=(\"\\${1\\}\")",
+			"\t\tshift",
+			"\t\t;;",
+			"\tesac",
+			"done\n",
+			"set -- \"\\${POSITIONAL[@]}\" # restore positional params\n"
+		],
+		"description": "parse command line arguments (flags/switches)"
+	},
+	"misc.echo-text": {
+		"prefix": [
+			"echo text",
+			"print text"
+		],
+		"body": "echo '${1:text here}'\n",
+		"description": "print text, variable or both"
+	},
+	"misc.echo-variable": {
+		"prefix": [
+			"echo variable",
+			"print variable"
+		],
+		"body": "echo \"\\${${1|result,variable|}\\}\"\n",
+		"description": "print text, variable or both"
+	},
+	"misc.exit": {
+		"prefix": "exit code",
+		"body": "exit ${1|0,1,2,3,4,5,6,7,8,9,255|}\n",
+		"description": "provide an exit code on error"
+	},
+	"misc.region": {
+		"prefix": [
+			"region",
+			"section"
+		],
+		"body": [
+			"# >>>>>>>>>>>>>>>>>>>>>>>> ${1|functions,event handlers,variables,frames,argument parsing,main code|} >>>>>>>>>>>>>>>>>>>>>>>>",
+			"$0",
+			"# <<<<<<<<<<<<<<<<<<<<<<<< ${1} <<<<<<<<<<<<<<<<<<<<<<<<"
+		],
+		"description": "comment out a special region (i.e. variable declarations)"
+	},
+	"misc.sleep": {
+		"prefix": "sleep",
+		"body": "sleep ${1:30}${2|s,m,h,d|}\n",
+		"description": "sleep for a specified amount of time (s: second, m: minute, h: hour, d: day)"
+	},
+	"misc.stopwatch-elapsed": {
+		"prefix": "stopwatch elapsed",
+		"body": [
+			"stopwatchElapsedTotalSeconds=$((stopwatchEndTime - stopwatchStartTime))",
+			"stopwatchElapsedMinutes=$((stopwatchElapsedTotalSeconds / 60))",
+			"stopwatchElapsedSeconds=$((stopwatchElapsedTotalSeconds % 60))",
+			"${1:echo \"elapsed \\${stopwatchElapsedMinutes\\} minutes and \\${stopwatchElapsedSeconds\\} seconds}.\"\n"
+		],
+		"description": "elapsed time"
+	},
+	"misc.stopwatch-start": {
+		"prefix": "stopwatch start",
+		"body": "stopwatchStartTime=\\$(date +%s)\n",
+		"description": "start stopwatch"
+	},
+	"misc.stopwatch-stop": {
+		"prefix": "stopwatch stop",
+		"body": "stopwatchEndTime=\\$(date +%s)\n",
+		"description": "stop stopwatch"
+	},
+	"misc.summary": {
+		"prefix": "summary",
+		"body": [
+			"# Title:         ${1:title}",
+			"# Description:   ${2:description}",
+			"# Author:        ${3:author <email>}",
+			"# Date:          ${4:yyyy-mm-dd}",
+			"# Version:       ${5:1.0.0}",
+			"",
+			"# Exit codes",
+			"# ==========",
+			"# 0   no error",
+			"# 1   script interrupted",
+			"# ${6:2}   ${7:error description}\n\n"
+		],
+		"description": "script summary"
+	},
+	"misc.timeout": {
+		"prefix": "timeout",
+		"body": "timeout ${1:seconds} ${2:command}\n",
+		"description": "run command within a time frame"
+	},
+	"output.color-black": {
+		"prefix": "color black",
+		"body": "echo \"\\$(tput setaf 0)\"${1:black text}\"\\$(tput sgr0)\"\n",
+		"description": "write in black"
+	},
+	"output.color-blue": {
+		"prefix": "color blue",
+		"body": "echo \"\\$(tput setaf 4)\"${1:blue text}\"\\$(tput sgr0)\"\n",
+		"description": "write in blue"
+	},
+	"output.color-cyan": {
+		"prefix": "color cyan",
+		"body": "echo \"\\$(tput setaf 6)\"${1:cyan text}\"\\$(tput sgr0)\"\n",
+		"description": "write in cyan"
+	},
+	"output.color-green": {
+		"prefix": "color green",
+		"body": "echo \"\\$(tput setaf 2)\"${1:green text}\"\\$(tput sgr0)\"\n",
+		"description": "write in green"
+	},
+	"output.color-magenta": {
+		"prefix": "color magenta",
+		"body": "echo \"\\$(tput setaf 5)\"${1:magenta text}\"\\$(tput sgr0)\"\n",
+		"description": "write in magenta"
+	},
+	"output.color-red": {
+		"prefix": "color red",
+		"body": "echo \"\\$(tput setaf 1)\"${1:red text}\"\\$(tput sgr0)\"\n",
+		"description": "write in red"
+	},
+	"output.color-white": {
+		"prefix": "color white",
+		"body": "echo \"\\$(tput setaf 7)\"${1:white text}\"\\$(tput sgr0)\"\n",
+		"description": "write in white"
+	},
+	"output.color-yellow": {
+		"prefix": "color yellow",
+		"body": "echo \"\\$(tput setaf 3)\"${1:yellow text}\"\\$(tput sgr0)\"\n",
+		"description": "write in yellow"
+	},
+	"output.format-bold": {
+		"prefix": "format bold",
+		"body": "echo \"\\$(tput bold)\"${1:bold text}\"\\$(tput sgr0)\"\n",
+		"description": "write in bold"
+	},
+	"output.format-dim": {
+		"prefix": "format dim",
+		"body": "echo \"\\$(tput dim)\"${1:dimmed text}\"\\$(tput sgr0)\"\n",
+		"description": "write in dim"
+	},
+	"output.format-italic": {
+		"prefix": "format italic",
+		"body": "echo \"\\$(tput sitm)\"${1:italic text}\"\\$(tput sgr0)\"\n",
+		"description": "write in italic"
+	},
+	"output.format-reverse": {
+		"prefix": "format reverse",
+		"body": "echo \"\\$(tput rev)\"${1:reversed text}\"\\$(tput sgr0)\"\n",
+		"description": "write in reverse"
+	},
+	"process.process-id": {
+		"prefix": "process ID(s)",
+		"body": [
+			"readarray -t ${1:processIDsArray} < <(pgrep ${2|processName, \"${processName}\"|})",
+			"${3:echo \"\\${${1}[@]\\}\"}\n"
+		],
+		"description": "find process ID(s) aka PIDs"
+	},
+	"process.process-instances": {
+		"prefix": "process instances",
+		"body": "${1:processInstances}=\\$(pgrep -l \"\\${${2:processName}\\}\")\n",
+		"description": "list processes"
+	},
+	"process.process-kill": {
+		"prefix": "process kill",
+		"body": "sudo kill -9 \"\\$(pgrep ${1:processName})\"\n",
+		"description": "kill process by name"
+	},
+	"process.process-list": {
+		"prefix": "process list all",
+		"body": "ps -A\n",
+		"description": "list processes"
+	},
+	"process.process-name": {
+		"prefix": "process Name by ID",
+		"body": "${1:processName}=\\$(ps -p \\${${2:pid}\\} -o comm=)\n",
+		"description": "find process name by it's ID(s)"
+	},
+	"string.concat": {
+		"prefix": [
+			"string concat",
+			"string + string"
+		],
+		"body": "${1:string}=\"\\${${2:string1}}\\${${3:string2}}\"\n",
+		"description": "concatenate two strings"
+	},
+	"string.contains": {
+		"prefix": [
+			"string contains",
+			"if string contains"
+		],
+		"body": [
+			"if [[ \"\\${${1:string}\\}\" == *\"\\${${2:substring}\\}\"* ]]; then",
+			"\t${3:echo \"\\${${1:string}\\} contains: \\${${2:substring}\\}\"}",
+			"fi\n"
+		],
+		"description": "check whether string contains substring"
+	},
+	"string.first-index-substring": {
+		"prefix": "string indexOf",
+		"body": [
+			"temp=\\${${1:string}%%\\${${2:substring}}*} && index=\\${#temp\\}",
+			"${3:echo \"index of \\\"\\${${2:substring}\\}\\\" in \\\"\\${${1:string}\\}\\\" is \\${index\\}\"\n}"
+		],
+		"description": "first index of substring in a string"
+	},
+	"string.if-empty": {
+		"prefix": "if string empty",
+		"body": [
+			"if [[ -z \"\\${${1:string}\\}\" ]]; then",
+			"\t${2:echo \"empty string\"}",
+			"fi\n"
+		],
+		"description": "if string is empty"
+	},
+	"string.if-equal": {
+		"prefix": [
+			"if string =",
+			"string equal"
+		],
+		"body": [
+			"if [[ \"\\${${1:string1}\\}\" == \"\\${${2:string2}\\}\" ]]; then",
+			"\t${3:echo \"The two strings are the same\"}",
+			"fi\n"
+		],
+		"description": "if strings are equal"
+	},
+	"string.if-not-empty": {
+		"prefix": "if string not empty",
+		"body": [
+			"if [[ -n \"\\${${1:string}\\}\" ]]; then",
+			"\t${2:echo \"string is not empty\"}",
+			"fi\n"
+		],
+		"description": "if string is not empty"
+	},
+	"string.if-not-equal": {
+		"prefix": [
+			"if string !=",
+			"string not equal"
+		],
+		"body": [
+			"if [[ \"\\${${1:string1}\\}\" != \"\\${${2:string2}\\}\" ]]; then",
+			"\t${3:echo \"The two strings are different\"}",
+			"fi\n"
+		],
+		"description": "if strings are not equal"
+	},
+	"string.length": {
+		"prefix": "string length",
+		"body": "${1:length}=\\${#${2:string}}\n",
+		"description": "length of string in characters"
+	},
+	"string.random": {
+		"prefix": "string random",
+		"body": "${1:randomString}=$(tr -dc ${2:A-Za-z0-9} </dev/urandom | head -c ${3:8} ; echo '')\n",
+		"description": "random string from provided characters with desired length (default: 8)"
+	},
+	"string.replace": {
+		"prefix": "string replace",
+		"body": "${1:replaced}=\\$(echo -e \"\\${${2:string}}\" | sed -e ${3|'s/find/replace/g',\"s/${find}/${replace}/g\"|})\n",
+		"description": "find all occurrences of a substrings and replace them"
+	},
+	"string.reverse": {
+		"prefix": "string reverse",
+		"body": "${1:reversed}=\\$(echo -e \"\\${${2:string}}\" | rev)\n",
+		"description": "reverse string characters"
+	},
+	"string.substring-count": {
+		"prefix": [
+			"string substring count",
+			"string substring frequency"
+		],
+		"body": [
+			"tmp=\"\\${${1:string}//\\$${2:substring}\\}\" && ${3:frequency}=\\$(((\\${#${1}\\} - \\${#tmp\\}) / \\${#${2:substring}}))",
+			"${0:echo \"\\${${3:frequency}\\}\"}\n"
+		],
+		"description": "frequency of a substring in a string"
+	},
+	"string.substring": {
+		"prefix": "string substring",
+		"body": "${1:substring}=\\$(echo -e \"\\${${2:string}:\\${${3:offset}\\}:\\${${4:length}\\}}\")\n",
+		"description": "part of the string from offset (zero indexed) up to characters length"
+	},
+	"string.to-lower": {
+		"prefix": "string toLower",
+		"body": "${1:toLower}=\\$(echo -e \"\\${${2:string}}\" | tr '[:upper:]' '[:lower:]')\n",
+		"description": "convert string to lowercase"
+	},
+	"string.to-upper": {
+		"prefix": "string toUpper",
+		"body": "${1:toUpper}=\\$(echo -e \"\\${${2:string}}\" | tr '[:lower:]' '[:upper:]')\n",
+		"description": "convert string to uppercase"
+	},
+	"string.trim-all": {
+		"prefix": "string trim all",
+		"body": "${1:trimmed}=\\$(echo -e \"\\${${2:string}}\" | tr -d '[:space:]')\n",
+		"description": "remove all white space(s)"
+	},
+	"string.trim-left": {
+		"prefix": "string trim left",
+		"body": "${1:trimmed}=\\$(echo -e \"\\${${2:string}}\" | sed -e 's/^[[:space:]]*//')\n",
+		"description": "remove leading white space(s)"
+	},
+	"string.trim-right": {
+		"prefix": "string trim right",
+		"body": "${1:trimmed}=\\$(echo -e \"\\${${2:string}}\" | sed -e 's/[[:space:]]*$//')\n",
+		"description": "remove trailing white space(s)"
+	},
+	"string.trim": {
+		"prefix": "string trim",
+		"body": "${1:trimmed}=\\$(echo -e \"\\${${2:string}}\" |  sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*\\$//')\n",
+		"description": "remove leading and trailing white space(s)"
+	},
+	"system.distro-codename": {
+		"prefix": "system distro codename",
+		"body": [
+			"${1:distroCodeName}=\\$(lsb_release -c | awk '{print \\$2}')",
+			"${2:echo \"\\${${1:distroCodeName}\\}\"}\n"
+		],
+		"description": "OS codename (i.e. Focal Fossa)"
+	},
+	"system.distro-name": {
+		"prefix": "system distro name",
+		"body": [
+			"${1:distroName}=\\$(lsb_release -i | awk '{print \\$3}')",
+			"${2:echo \"\\${${1:distroName}\\}\"}\n"
+		],
+		"description": "OS ID (i.e. Ubuntu)"
+	},
+	"system.distro-version": {
+		"prefix": "system distro version",
+		"body": [
+			"${1:distroVersion}=\\$(lsb_release -r | awk '{print \\$2}')",
+			"${2:echo \"\\${${1:distroVersion}\\}\"}\n"
+		],
+		"description": "OS Release (i.e. 20.04.2)"
+	},
+	"system.kernel-name": {
+		"prefix": "system kernel name",
+		"body": [
+			"${1:kernelName}=\\$(uname -s)",
+			"${2:echo \"\\${${1:kernelName}\\}\"}\n"
+		],
+		"description": "OS kernel name (i.e. Linux)"
+	},
+	"system.kernel-release": {
+		"prefix": "system kernel release",
+		"body": [
+			"${1:kernelRelease}=\\$(uname -r)",
+			"${2:echo \"\\${${1:kernelRelease}\\}\"}\n"
+		],
+		"description": "OS kernel release (i.e. 4.4.0-140-generic)"
+	},
+	"system.memory-info": {
+		"prefix": "system memory info",
+		"body": [
+			"sysMemory${1|MemTotal,MemFree,MemAvailable,Cached,Buffers,Active,Inactive,SwapTotal,SwapFree,SwapCached|}=\\$(grep '${1}' < /proc/meminfo | awk '{print \\$2}' | head -n 1)",
+			"${2:echo \"\\${sysMemory${1}\\}\"}\n"
+		],
+		"description": "system memory information in kilobytes (KB)"
+	},
+	"system.processor-architecture": {
+		"prefix": [
+			"system processor architecture",
+			"system cpu architecture",
+			"system cpu arch"
+		],
+		"body": [
+			"${1:arch}=\\$(lscpu | grep 'Architecture' |awk '{print \\$2}' | head -n 1)",
+			"${2:echo \"\\${${1:arch}\\}\"}\n"
+		],
+		"description": "processor architecture (i.e. x86_64)"
+	},
+	"system.processor-count": {
+		"prefix": [
+			"system processor count",
+			"system cpu count"
+		],
+		"body": [
+			"${1:cores}=\\$(lscpu | grep 'CPU(s)' |awk '{print \\$2}' | head -n 1)",
+			"${2:echo \"\\${${1:cores}\\}\"}\n"
+		],
+		"description": "processor count (cores)"
+	},
+	"system.processor-model": {
+		"prefix": [
+			"system processor model",
+			"system cpu model"
+		],
+		"body": [
+			"${1:cpuModel}=\\$(lscpu | grep 'Model name' |cut -d ' ' -f 3- | sed -e 's/^[[:space:]]*//')",
+			"${2:echo \"\\${${1:cpuModel}\\}\"}\n"
+		],
+		"description": "processor model name (i.e. Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz)"
+	},
+	"system.processor-type": {
+		"prefix": [
+			"system processor type",
+			"system cpu type"
+		],
+		"body": [
+			"${1:cpuType}=\\$(uname -p)",
+			"${2:echo \"\\${${1:cpuType}\\}\"}\n"
+		],
+		"description": "OS processor type (i.e. x86_64)"
+	},
+	"system.service-manage": {
+		"prefix": [
+			"service manage",
+			"systemd manage"
+		],
+		"body": "sudo systemctl ${1|enable,enable --now,disable,disable --now,start,stop,reload,restart,status|} ${2|'serviceName',\"${serviceName}\"|} # use '--user' for user services\n",
+		"description": "manage service operations"
+	},
+	"system.uptime-seconds": {
+		"prefix": "system uptime seconds",
+		"body": [
+			"# Use 'fn time format seconds' snippet for formatting",
+			"${1:systemUptime}=\\$(awk '{print \\$1}' /proc/uptime)",
+			"${3:echo \"\\${${1}\\}\"}\n"
+		],
+		"description": "system uptime in seconds."
+	},
+	"system.uptime": {
+		"prefix": "system uptime",
+		"body": [
+			"${1:systemUptime}=\\$(uptime ${2|-p,-s|})",
+			"${3:echo \"\\${${1}\\}\"}\n"
+		],
+		"description": "system uptime. -p: --pretty, -s: since"
+	},
+	"time.epoch-seconds": {
+		"prefix": "time seconds epoch",
+		"body": [
+			"${1:timeNowSecondsEpoch}=\\$(date +%s)",
+			"${2:echo \"\\${${1}\\}\"}\n"
+		],
+		"description": "seconds since epoch (1970-01-01 00:00:00)"
+	},
+	"time.local-time-current": {
+		"prefix": "time now local",
+		"body": [
+			"${1:timeNowLocal}=\\$(date +%${2|R,r|})",
+			"${3:echo \"\\${${1}\\}\"}\n"
+		],
+		"description": "current local time (R: 24hrs, r: 12hrs)"
+	},
+	"time.time-utc": {
+		"prefix": "time now UTC",
+		"body": [
+			"${1:timeNowUTC}=\\$(date -u +%R)",
+			"${2:echo \"\\${${1}\\}}\"\n"
+		],
+		"description": "current UTC time"
+	},
+	"variable.variable-assign": {
+		"prefix": [
+			"variable assign",
+			"variable set"
+		],
+		"body": "${1:variable}=${2|'value',\"${anotherVariable}\"|}\n",
+		"description": "assign a value or another variable to a new variable"
+	},
+	"variable.variable-default-value": {
+		"prefix": [
+			"variable default value",
+			"assign if empty"
+		],
+		"body": ": \"\\${${1:variable}:=${2:defaultValue}}\"\n",
+		"description": "assign default value to variable if variable is empty otherwise assign null"
+	},
+	"variable.variable-read": {
+		"prefix": [
+			"var",
+			"variable read",
+			"variable expand"
+		],
+		"body": "\"\\${${1|result,variable|}\\}\"\n",
+		"description": "read the value of a variable"
+	},
+	"Time difference  HH:mm:ss": {
+		"prefix": "time diff",
+		"body": [
+			"#Function: dateDiff()",
+			"#",
+			"#Brief: Calculates difference between two dates with one second precision",
+			"#",
+			"#Argument 1(\\$1): Larger date",
+			"#Argument 2(\\$2): Smaller date",
+			"dateDiff() {",
+			"    if [ \\$# -ne 2 ]; then echo \"Invalid number of parameters\"; exit 1; fi",
+			"    declare d1=\\$(date -d \"\\$1\" '+%s')",
+			"    declare d2=\\$(date -d \"\\$2\" '+%s')",
+			"    declare diff=\\$(( (\\$d1-\\$d2) ))",
+			"    echo \"\\$( date -d@\\$diff '+%T' )\"",
+			"}",
+			"",
+			"START=\\$(date -d 'now');",
+			"echo \"Start time: \\$(date -d \"\\$START\" '+%T')\"",
+			"sleep 2",
+			"END=\\$(date -d 'now');",
+			"echo \"End   time: \\$(date -d \"\\$END\" '+%T')\"",
+			"echo \"Difference: \\$(dateDiff \"\\$END\" \"\\$START \")\"",
+			""
+		],
+		"description": "Calculate time difference"
+	},
+	"Current time": {
+		"prefix": "time now",
+		"body": [
+			"CURRENT=\\$(date +\"%H:%M:%S\")",
+			"echo \"Current time: \\$CURRENT\""
+		],
+		"description": "Print current time on the format HH:mm:ss"
+	},
+	"Current date & time": {
+		"prefix": "date and time now",
+		"body": [
+			"CURRENT=\\$(date +\"%Y-%m-%d %H:%M:%S\")",
+			"echo \"Current date & time: \\$CURRENT\""
+		],
+		"description": "Print current time on the format YYYY-MM-DD HH:mm:ss"
+	},
+	"Add to current time": {
+		"prefix": "time in future",
+		"body": [
+			"FEATURE=\\$(date -d '+7 minute +30 second' '+%T')",
+			"echo \"After 7.5 minutes the time is \\$FEATURE\""
+		],
+		"description": "Add to current time"
+	},
+	"Checks if a file is found": {
+		"prefix": "file exists",
+		"body": [
+			"if test -f \"${1:filename.txt}\"",
+			"then",
+			"    ${2:echo \"File exists\"}",
+			"else",
+			"    ${3:echo \"File does not exist\"}",
+			"fi",
+			""
+		],
+		"description": "Checks if a file is found"
+	},
+	"Checks if a directory is found": {
+		"prefix": "dir exists",
+		"body": [
+			"if test -d \"${1:~/dirname}\"",
+			"then",
+			"    ${2:echo \"Directory exists\"}",
+			"else",
+			"    ${3:echo \"Directory does not exist\"}",
+			"fi",
+			""
+		],
+		"description": "Checks if a Directory is found"
+	},
+	"Iterate files in directory": {
+		"prefix": "list files",
+		"body": [
+			"for FILE in ${1:*.sh}; do ",
+			"    if [ -f \"\\$FILE\" ]; then",
+			"        ${2:echo -e \"File name: \\$FILE\";} ",
+			"    fi",
+			"done",
+			""
+		],
+		"description": "Walk through each file name in a directory"
+	},
+	"Iterate only directories in directory": {
+		"prefix": "list dirs",
+		"body": [
+			"for DIR in ${1:*/}; do ",
+			"    if [ -d \"\\$DIR\" ]; then",
+			"        ${2:echo -e \"Directory: \\$DIR\";} ",
+			"    fi",
+			"done",
+			""
+		],
+		"description": "Walk through each sub-directory name in a directory"
+	},
+	"Iterate files in directory recursive": {
+		"prefix": "list files recursive",
+		"body": [
+			"find . -type f ${1|-name '*', -name '*.txt'|} -print0 | ",
+			"while IFS= read -r -d '' FILE; do",
+			"    printf '%s\\n' \"\\$FILE\"",
+			"done",
+			""
+		],
+		"description": "Iterate file names in directory recursive. That is, walking through sub-directories also."
+	},
+	"Iterate files in directory recursive regex": {
+		"prefix": "list files recursive reg",
+		"body": [
+			"find . -type f -iregex '.*\\.\\(txt\\|}doc\\|sh\\)\\$' -print0 | ",
+			"while IFS= read -r -d '' FILE; do",
+			"${1|    printf '%s\\n' \"$FILE\",    printf 'Path:%-30s\\tName:\"%-30s\"\\n' \"$(dirname \"$FILE\")\" \"$(basename \"$FILE\")\"|}",
+			"done",
+			""
+		],
+		"description": "Iterate file names in directory recursively using regex.  That is, walking through sub-directories also."
+	},
+	"Iterate directories in directory": {
+		"prefix": "list dirs recursive",
+		"body": [
+			"find . -type d -name ${1:'*'} -print0 | ",
+			"while IFS= read -r -d '' DIR; do",
+			"    printf '%s\\n' \"\\$DIR\"",
+			"done",
+			""
+		],
+		"description": "Iterate directory names in directory recursively.  That is, walking through sub-directories also."
+	},
+	"Compare file names in two directories": {
+		"prefix": "compare filenames in dir",
+		"body": [
+			"#Function: compareFilenamesInDirectory()",
+			"#",
+			"#Brief: Compares file names in two directories and prints out file names",
+			"#",
+			"#Argument 1(\\$1): (Optional) [-matching] (default) Print filenames that exit in both directories.",
+			"#                           [-missing]            Print filenames that only exits in First directory.",
+			"#                           If this argument is skipped then -matching is used.",
+			"#Argument 2(\\$2): Dir1, first directory to compare",
+			"#Argument 3(\\$3): Dir2, second directory to be compared with Dir1",
+			"#   # Example which searches for all files existing in current directory and are missing in \"/bin\"",
+			"#   compareFilenamesInDirectory -missing \".\" \"/bin\"",
+			"compareFilenamesInDirectory() {",
+			"    declare OPTION",
+			"    if [ \\$# -eq 3 ]; then",
+			"        if [[ \"\\$1\" != \"-missing\" && \"\\$1\" != \"-matching\" && \"\\$1\" != \"\" ]]; then",
+			"            echo \"Invalid parameter \\\"\\$1\\\"\"",
+			"            return 1",
+			"        fi",
+			"        OPTION=\\$1",
+			"        shift",
+			"    fi",
+			"    if [ \\$# -ne 2 ]; then",
+			"        echo \"Invalid number of parameters\"",
+			"        return 1",
+			"    fi",
+			"    declare NAME",
+			"    if ! test -d \"\\$1\"; then",
+			"        echo \"Error: Directory: \\\"\\$1\\\" does not exist\"",
+			"        return 1",
+			"    fi",
+			"    if ! test -d \"\\$2\"; then",
+			"        echo \"Error: Directory: \\\"\\$2\\\" does not exist\"",
+			"        return 1",
+			"    fi",
+			"    for FILE in \"\\$1\"/*; do",
+			"        if [ -f \"\\$FILE\" ]; then",
+			"            NAME=\\$(echo \\$(basename \"\\$FILE\"))",
+			"            if [ \"\\$OPTION\" = \"-missing\" ]; then",
+			"                if ! test -f \"\\$2\"/\\$NAME; then",
+			"                    echo \"\\$NAME\"",
+			"                fi",
+			"            else",
+			"                if test -f \"\\$2\"/\\$NAME; then",
+			"                    echo \"\\$NAME\"",
+			"                fi",
+			"            fi",
+			"        fi",
+			"    done",
+			"}\n"
+		],
+		"description": "Compare file names in two directories and prints out matching or missing file names"
+	},
+	"Script directory": {
+		"prefix": "get script dir",
+		"body": [
+			"#Function: getScriptPath()",
+			"#",
+			"#Brief: Gets the path to this script",
+			"#",
+			"getScriptPath(){",
+			"    echo \"\\$( cd \"\\$( dirname \"\\${BASH_SOURCE[0]}\" )\" && pwd )\"",
+			"}",
+			"",
+			"DIR=\\$(getScriptPath)",
+			"echo \"Path to this script is \\$DIR\"\n"
+		],
+		"description": "Get path to the the current bash file"
+	},
+	"Script Name": {
+		"prefix": "get script name",
+		"body": [
+			"#Function: getFileName()",
+			"#",
+			"#Brief: Extracts name of file",
+			"#",
+			"#Argument 1(\\$1): filename or dir and filename",
+			"getFileName(){",
+			"    if [ \\$# -ne 1 ]; then echo \"Invalid number of parameters\"; exit 1; fi",
+			"    echo \"\\$( basename \"\\$1\" )\"",
+			"}",
+			"",
+			"FILE=\\${BASH_SOURCE[0]}",
+			"NAME=\\$(getFileName \\$FILE)",
+			"echo \"File name: \\$NAME\"",
+			""
+		],
+		"description": "Get name of current script"
+	},
+	"Extract filename": {
+		"prefix": "get file name",
+		"body": [
+			"#Function: getFileName()",
+			"#",
+			"#Brief: Extracts name of file",
+			"#",
+			"#Argument 1(\\$1): filename or dir and filename",
+			"getFileName(){",
+			"    if [ \\$# -ne 1 ]; then echo \"Invalid number of parameters\"; exit 1; fi",
+			"    echo \"\\$( basename \"\\$1\" )\"",
+			"}",
+			"",
+			"FILE=\"/c/stuff/me.txt\"",
+			"NAME=\\$(getFileName \\$FILE)",
+			"echo \"File name: \\$NAME\"",
+			""
+		],
+		"description": "Extracts filename name from a file path"
+	},
+	"Extract file directory": {
+		"prefix": "get file directory",
+		"body": [
+			"#Function: getFileDirectory()",
+			"#",
+			"#Brief: Extracts the path from a file path and name",
+			"#",
+			"getFileDirectory(){",
+			"    if [ \\$# -ne 1 ]; then echo \"Invalid number of parameters\"; exit 1; fi",
+			"    echo \"\\$( dirname \"\\$1\" )\"",
+			"}",
+			"",
+			"FILE=\"/c/stuff/me.txt\"",
+			"DIR=\\$(getFileDirectory \\$FILE )",
+			"echo \"Directory: \\$DIR\"\n"
+		],
+		"description": "Extracts directory from a file path."
+	},
+	"Extract file extension": {
+		"prefix": "get file extension",
+		"body": [
+			"#Function: getFileExtension()",
+			"#",
+			"#Brief: Extracts file extension from a file path.",
+			"#",
+			"#Argument 1(\\$1): Describe argument 1",
+			"getFileExtension(){",
+			"    if [ \\$# -ne 1 ]; then echo \"Invalid number of parameters\"; exit 1; fi",
+			"    echo \"\\${1##*.}\"",
+			"}",
+			"",
+			"FILE=\"/c/stuff/me.txt\"",
+			"EXTENSION=\\$(getFileExtension \\$FILE )",
+			"echo \"File extension is \\$EXTENSION\"\n"
+		],
+		"description": " Extract file extension from a file path."
+	},
+	"Read on line at a time": {
+		"prefix": "read text file",
+		"body": [
+			"while read line",
+			"    do echo \"Line \\\\\"\\$line\\\\\"\"",
+			"done < \"textfile.txt\""
+		],
+		"description": "Read a text file one line at a time"
+	},
+	"Read a value from a ini file": {
+		"prefix": [
+			"ini file get value",
+			"ini file read value",
+			"iniGetSectionKeyValue",
+			"getIniSectionKeyValue"
+		],
+		"body": [
+			"#Function: getSectionKeyValue()",
+			"#",
+			"#Brief: Gets the value of a key(variable name) under specified section in a ini file and prints it to the terminal",
+			"#",
+			"#Argument 1(\\$1): File path",
+			"#Argument 2(\\$2): Section name",
+			"#Argument 3(\\$3): Key name",
+			"#Returns       : on success 0 on error ! null",
+			"#Example:",
+			"#     VALUE=\\$(getSectionKeyValue \"settings.ini\" \"section2\" \"keyName\" )",
+			"#     if  [ \\$? -eq \"0\" ]; then ",
+			"#         if [[ -z \\$VALUE ]]; then",
+			"#             echo \"Value not found, or i'ts value is empty.\"",
+			"#         else",
+			"#             echo \"Got the value: \\\\\"\\$VALUE\\\\\"\"",
+			"#         fi",
+			"#     else ",
+			"#         echo \"Invalid parameters\"; ",
+			"#     fi",
+			"getSectionKeyValue(){",
+			"    declare file=\\$1",
+			"    declare section=\\$2",
+			"    declare key=\\$3",
+			"    ",
+			"    if [ \\$# -ne 3 ];                  then return 1; fi # Invalid number of parameters provided",
+			"    if [[ -z \\$file || ! -f \\$file  ]]; then return 2; fi # Path to a existing file must be provided",
+			"    if [[ -z \\$section ]];             then return 3; fi # Section name is missing",
+			"    if [[ -z \\$key ]];                 then return 4; fi # Variable name is missing",
+			"    sed -nr \"/^\\\\[\\$section\\\\]/ { :l /^\\$key[ ]*=/ { s/[^=]*=[ ]*//; p; q;}; n; b l;}\" \\$file",
+			"}\n"
+		],
+		"description": "Get a value of a key(variable) under specified section in a configuration file"
+	},
+	"Save a value to a ini file": {
+		"prefix": [
+			"ini file set value",
+			"ini file write value",
+			"iniSetSectionKeyValue",
+			"setIniSectionKeyValue"
+		],
+		"body": [
+			"# Function: setSectionKeyValue()",
+			"# ",
+			"# Brief: Adds or changes a section key value pair in a file.",
+			"# ",
+			"# Arguments:",
+			"#     1 (\\$1):  Fully qualified path to a existing file.",
+			"#     2 (\\$2):  Section name to add the key value pair to (do not include '[' and ']').",
+			"#     3 (\\$3):  Name of the key to add.",
+			"#     4 (\\$4):  Value to set or add.",
+			"#     ",
+			"# Return values:",
+			"#     0 (success): If key value pair was added or it's value changed.",
+			"#     1 ( error ): If file was not found.",
+			"#     2 ( error ): Section name missing or invalid.",
+			"#     3 ( error ): Key name missing or invalid.",
+			"#     4 ( error ): Value missing or invalid.",
+			"#",
+			"# You can use the \\$? operator to access the function returned value.",
+			"# Example: ",
+			"#     if setSectionKeyValue \"settings.ini\" \"section2\" \"keyName\" \"This is a new value added\"; then",
+			"#         echo \"Value added\"",
+			"#     else",
+			"#         echo \"Error adding a value!\"",
+			"#     fi",
+			"# ",
+			"setSectionKeyValue() {",
+			"    declare file=\\$1",
+			"    declare section=\\$2",
+			"    declare key=\\$3",
+			"    declare value=\\$4",
+			"    if ! test -f \"\\$file\";then echo \"\\${FUNCNAME[0]} error: File \\\\\"\\$file\\\\\" was not found, so unable to change key value pair.\"; return 1; fi;",
+			"    if [ -z \"\\$section\" ];   then echo \"\\${FUNCNAME[0]} error: Section name missing\"; return 2; fi;",
+			"    if [ -z \"\\$key\" ];   then echo \"\\${FUNCNAME[0]} error: Key name missing\";     return 3; fi;",
+			"    if [ -z \"\\$4\" ];   then echo \"\\${FUNCNAME[0]} error: Value name missing\";   return 4; fi;",
+			"    ",
+			"    if [[ \"\\$section\" =~ .*\"[\".* || \"\\$section\" =~ .*\"]\".* ]]; then echo \"\\${FUNCNAME[0]} error: Section name invalid\"; return 2; fi;",
+			"    section_start=\\$(grep -n -m 1 \"\\\\[\\$section\\\\]\" \\$file |cut -f1 -d: )",
+			"    if [ -z \"\\$section_start\" ];   then ",
+			"        #Section does not exist so we will append and return",
+			"        echo -e \"\\\\n[\\$section]\">>\"\\$file\"; echo \"\\$key=\\$value\">>\"\\$file\"; return 0;",
+			"    fi;",
+			"    #The section exists in file let's find out if it is the last one",
+			"    section_start=\\$((\\$section_start+1))",
+			"    section_end=\\$(sed -n ''\\$section_start',\\$p' \\$file | grep -n -m 1 \"\\\\[\" |cut -f1 -d: )",
+			"    if [ -z \"\\$section_end\" ]; then section_end=0; fi;",
+			"    section_key=\\$(sed -n ''\\$section_start',\\$p' \\$file | grep -n -m 1 \"^\\$key=\" |cut -f1 -d: )",
+			"    if [ -z \"\\$section_key\" ]; then section_key=0; fi;",
+			"    if [ \\$section_end -gt 0 ]; then ",
+			"        #Not the last section in the file",
+			"        if [[ \\$section_key -gt 0 && \\$section_key -lt \\$section_end ]]; then ",
+			"            #The key exists in this section, let's replace it's value",
+			"            sed -i '/^\\\\['\\$section'\\\\]\\$/,/^\\\\[/ s/^'\\$key'=.*\\$/'\\$key'='\"\\$value\"'/' \\$file",
+			"            return 0;",
+			"        fi;",
+			"        #The key does not exists, is not in the last section, so let's add it",
+			"        declare arg='/^\\\\['\\$section'\\\\]/,/^\\\\[/ { x; /^\\$/ !{ x; H }; /^\\$/ { x; h; }; d; }; x; /^\\\\['\\$section'\\\\]/ { s/\\\\(\\\\n\\\\+[^\\\\n]*\\\\)\\$/\\\\n'\\$key'='\\$value'\\\\1/; p; x; p; x; d }; x'",
+			"        sed -i \"\\$arg\" \\$file",
+			"        return 0;",
+			"    fi;",
+			"    #Last section in the file",
+			"    if [ \\$section_key -gt 0 ]; then ",
+			"        #this will replace if key exists",
+			"        declare arg='/^\\\\['\\$section'\\\\]\\$/,/^\\\\[/ s/^'\\$key'=.*\\$/'\\$key'='\\$value'/'",
+			"        sed  -i \"\\$arg\" \\$file;",
+			"    else",
+			"        #The key does not exist, let's append it and it's value",
+			"        echo \"\\$key=\\$value\">>\"\\$file\"",
+			"    fi",
+			"    return 0;",
+			" }\n"
+		],
+		"description": "Add or change a section key value pair in a file"
+	},
+	"File creation time": {
+		"prefix": [
+			"created",
+			"file created"
+		],
+		"body": [
+			"# ${TM_FILENAME} Created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+			""
+		],
+		"description": "Add comment with file name and, file creation time"
+	},
+	"source sh": {
+		"prefix": "source sh",
+		"body": [
+			"source \"\\$(cd \"\\$(dirname \"\\${BASH_SOURCE[0]}\")\" && pwd)/${1:filename}.sh\"\n"
+		],
+		"description": "Import another another shell script"
+	},
+	"Text Color commands": {
+		"prefix": "text colors",
+		"body": [
+			"#Text Color commands",
+			"#",
+			"#Brief: Commands to change the color of a text",
+			"highlight=\\$(echo -en '\\033[01;37m')",
+			"purpleColor=\\$(echo -en '\\033[01;35m')",
+			"cyanColor=\\$(echo -en '\\033[01;36m')",
+			"errorColor=\\$(echo -en '\\033[01;31m')",
+			"warningColor=\\$(echo -en '\\033[00;33m')",
+			"successColor=\\$(echo -en '\\033[01;32m')",
+			"norm=\\$(echo -en '\\033[0m')",
+			"",
+			"echo \"Example color variations: \\${highlight}highlight\\${norm} text, \\${errorColor}error\\${norm} text, \\${successColor}success\\${norm} text, \\${purpleColor}purple\\${norm} text or \\${cyanColor}cyan\\${norm} text.\"",
+			""
+		],
+		"description": "Text Color commands"
+	},
+	"Show all terminal text colors": {
+		"prefix": [
+			"terminal colors",
+			"text colors table"
+		],
+		"body": [
+			"#Terminal Text Colors",
+			"#",
+			"formatA=\\$(echo -en '\\\\033[100;37m')",
+			"formatC=\\$(echo -en '\\\\033[5;31m')",
+			"formatB=\\$(echo -en '\\\\033[01;32m')",
+			"formatS=\\$(echo -en '\\\\033[103;31m')",
+			"norm=\\$(echo -en '\\\\033[0m')",
+			"echo \"                ────────────────────────────────\"",
+			"echo \"              /\\${formatS}                                  \\${norm}\\\\\\\\\"",
+			"echo \"             /\\${formatS}   \\${norm}                              \\${formatS}   \\${norm}\\\\\\\\\"",
+			"echo \"            |\\${formatS}   \\${norm}      \\${formatA}Terminal\\${norm} \\${formatB}color\\${norm} \\${formatC}codes\\${norm}      \\${formatS}   \\${norm}|\"",
+			"echo \"             \\\\\\\\\\${formatS}   \\${norm}                              \\${formatS}   \\${norm}/\"",
+			"echo \"              \\\\\\\\\\${formatS}                                  \\${norm}/\"",
+			"echo \"                ────────────────────────────────\"",
+			"echo",
+			"",
+			"declare color SPACES",
+			"for ((BACKGROUND = 0; BACKGROUND < 108; BACKGROUND++)); do",
+			"    if ((BACKGROUND == 9)); then BACKGROUND=40; fi",
+			"    if ((BACKGROUND == 48)); then BACKGROUND=100; fi",
+			"    for ((TEXT = 30; TEXT < 98; TEXT++)); do",
+			"        if ((TEXT == 38)); then TEXT=90; fi",
+			"        color=\\$(echo -en \"\\\\033[\\${BACKGROUND};\\${TEXT}m\")",
+			"        SPACES=\" \"",
+			"        ((BACKGROUND < 10)) && SPACES=\"\\$SPACES \"",
+			"        ((BACKGROUND < 100)) && SPACES=\"\\$SPACES \"",
+			"",
+			"        echo -ne \"\\${color}\"",
+			"        echo -n \"\\\\033[\\${BACKGROUND};\\${TEXT}m\\${norm}\\$SPACES\"",
+			"    done",
+			"    echo",
+			"done"
+		],
+		"description": "Show all terminal text colors and a example on how to use colors with echo"
+	},
+	"function": {
+		"prefix": "function",
+		"body": "${1:name} ()\n{\n\t${0}\n}",
+		"description": [
+			"This defines a function named name.\n",
+			"The reserved word function is optional.\n",
+			"If the function reserved word is supplied, the parentheses are optional.\n",
+			"1. Recommended way:\n",
+			"name() {}\n",
+			"2. C-like-way:\nfunction name [()] {}"
+		]
+	},
+	"Function 1 argument": {
+		"prefix": "function 1 argument",
+		"body": [
+			"#Function: ${1:functionName}()",
+			"#",
+			"#Brief: ${2:What does this function solve?}",
+			"#",
+			"#Argument 1(\\$1): ${3:Describe argument 1}",
+			"$1(){",
+			"    if [ $# -ne 1 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"    $4",
+			"}\n"
+		],
+		"description": "Create a function which takes 1 argument"
+	},
+	"Function 2 arguments": {
+		"prefix": "function 2 arguments",
+		"body": [
+			"#Function: ${1:functionName}()",
+			"#",
+			"#Brief: ${2:What does this function solve?}",
+			"#",
+			"#Argument 1(\\$1): ${3:Describe argument 1}",
+			"#Argument 2(\\$2): ${4:Describe argument 2}",
+			"$1(){",
+			"    if [ $# -ne 2 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"    $5",
+			"}\n"
+		],
+		"description": "Create a function which takes 2 arguments"
+	},
+	"Function 3 arguments": {
+		"prefix": "function 3 arguments",
+		"body": [
+			"#Function: ${1:functionName}()",
+			"#",
+			"#Brief: ${2:What does this function solve?}",
+			"#",
+			"#Argument 1(\\$1): ${3:Describe argument 1}",
+			"#Argument 2(\\$2): ${4:Describe argument 2}",
+			"#Argument 3(\\$3): ${5:Describe argument 3}",
+			"$1(){",
+			"    if [ $# -ne 3 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"    $6",
+			"}\n"
+		],
+		"description": "Create a function which takes 3 arguments"
+	},
+	"Script help function": {
+		"prefix": "print help",
+		"body": [
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\n' \"$(basename \"\\$0\")\"",
+			"    echo \"  ${1:What does you script do?}\"",
+			"    echo ",
+			"    echo \"OPTIONS         Option description\"",
+			"    echo \"  --help        Prints this help page\"",
+			"    echo",
+			"    exit 0",
+			"}\n"
+		],
+		"description": "Script help function"
+	},
+	"Help function with one option": {
+		"prefix": "print help, one option",
+		"body": [
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\n' \"$(basename \"\\$0\")\"",
+			"    echo \"  ${1:What does you script do?}\"",
+			"    echo ",
+			"    echo \"OPTIONS         Option description\"",
+			"    echo \"  --help        Prints this help page\"",
+			"    echo \"  -${2:option}  ${4:What does $2 represent?} \"",
+			"    echo",
+			"    exit 0",
+			"}\n"
+		],
+		"description": "Help function with one option"
+	},
+	"Help function with one option and one option argument": {
+		"prefix": "print help, one option, one option argument",
+		"body": [
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\n' \"$(basename \"\\$0\")\"",
+			"    printf 'Usage: %s [OPTIONS]... (-${1:source} <${2:dir}>)\\n' \"\\$(basename \"\\$0\")\"",
+			"    echo \"  ${3:What does you script do?}\"",
+			"    echo ",
+			"    echo \"OPTIONS         Option description\"",
+			"    echo \"  --help        Prints this help page\"",
+			"    echo \"  -$1       ${4:What does $1 represent?} \"",
+			"    echo \"  -${5:express}     ${6:What does this option represent?} \"",
+			"    echo",
+			"    echo \"ARGUMENTS     Option argument description\"",
+			"    echo \" $2     ${7:Describe $2 in more detail!}\"",
+			"    echo",
+			"    exit 0",
+			"}\n"
+		],
+		"description": "Help function with one option and one option argument"
+	},
+	"Boilerplate simple": {
+		"prefix": "boilerplate 1",
+		"body": [
+			"#!/bin/bash\n",
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\n' \"$(basename \"\\$0\")\"",
+			"    echo \"  ${1:What does this script do?}\"",
+			"    echo ",
+			"    echo \"OPTIONS        Option description\"",
+			"    echo \"  -help        Prints this help page\"",
+			"    echo",
+			"    exit 0",
+			"}",
+			"",
+			"#Text Color commands",
+			"#Brief: Commands to change the color of a text",
+			"highlight=\\$(echo -en '\\033[01;37m')",
+			"purpleColor=\\$(echo -en '\\033[01;35m')",
+			"cyanColor=\\$(echo -en '\\033[01;36m')",
+			"errorColor=\\$(echo -en '\\033[01;31m')",
+			"warningColor=\\$(echo -en '\\033[00;33m')",
+			"successColor=\\$(echo -en '\\033[01;32m')",
+			"norm=\\$(echo -en '\\033[0m')",
+			"",
+			"#Function: parseOptions()",
+			"#",
+			"#Brief: Checks if all options are correct and saves them to variables",
+			"#",
+			"#Arguments all bash options",
+			"parseOptions() {",
+			"    while ((\"\\$#\")); do # While there are arguments still to be shifted",
+			"",
+			"        if [[ \"\\$1\" == \"--help\" || \"\\$1\" == \"-h\" ]]; then",
+			"            printHelp",
+			"        fi",
+			"        shift",
+			"    done",
+			"",
+			"}",
+			"",
+			"parseOptions \"\\$@\"",
+			"",
+			"echo \"Hello \\${cyanColor}bash\\${norm} world\"",
+			""
+		],
+		"description": "Boilerplate simple Hello bash world"
+	},
+	"Boilerplate, simple one option": {
+		"prefix": "boilerplate 2",
+		"body": [
+			"#!/bin/bash\n",
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\n' \"$(basename \"\\$0\")\"",
+			"    echo \"  ${1:Description}\"",
+			"    echo ",
+			"    echo \"OPTIONS        Option description\"",
+			"    echo \"  -help        Prints this help page\"",
+			"    echo \"  -${2:express}     \"",
+			"    echo",
+			"    exit 0",
+			"}",
+			"",
+			"#Text Color commands",
+			"#Brief: Commands to change the color of a text",
+			"highlight=\\$(echo -en '\\033[01;37m')",
+			"purpleColor=\\$(echo -en '\\033[01;35m')",
+			"cyanColor=\\$(echo -en '\\033[01;36m')",
+			"errorColor=\\$(echo -en '\\033[01;31m')",
+			"warningColor=\\$(echo -en '\\033[00;33m')",
+			"successColor=\\$(echo -en '\\033[01;32m')",
+			"norm=\\$(echo -en '\\033[0m')",
+			"",
+			"#Function: parseOptions()",
+			"#",
+			"#Brief: Checks if all options are correct and saves them to variables",
+			"#",
+			"#Arguments all bash options",
+			"parseOptions() {",
+			"    while ((\"\\$#\")); do # While there are arguments still to be shifted",
+			"",
+			"        if [[ \"\\$1\" == \"--help\" || \"\\$1\" == \"-h\" ]]; then",
+			"            printHelp",
+			"        elif [[ \"\\$1\" = \"-$2\" ]]; then ${2/(.*)/${1:/upcase}/}=\"true\"",
+			"        else",
+			"            echo \"Invalid option:  \\${errorColor}\\$1\\${norm}, get help by running command: \\$0 --help\"",
+			"            exit 1",
+			"        fi",
+			"        ",
+			"        shift",
+			"    done",
+			"",
+			"}",
+			"",
+			"${2/(.*)/${1:/upcase}/}=\"false\"",
+			"parseOptions \"\\$@\"",
+			"",
+			"echo \"Hello world ${2/(.*)/${1:/upcase}/}=\\${highlight}\\$${2/(.*)/${1:/upcase}/}\\${norm}\"",
+			""
+		],
+		"description": "Boilerplate bash script with help that accepts one optional parameter"
+	},
+	"Boilerplate, one option, one option argument": {
+		"prefix": "boilerplate 3",
+		"body": [
+			"#!/bin/bash",
+			"",
+			"#true or false options.",
+			"options=( \"-h\" \"--help\" \"-${1:express}\" \"-${2:source}=\" ) ",
+			"",
+			"#Options that must be provided by the user",
+			"optionsRequired=( ${3:\"-$1\"  \"-$2=\"} ) ",
+			"",
+			"#Set to true you want to allow any arguments to be given",
+			"#Set to false if you only want to allow options in  \"options\" and \"optionsWithArgument\"",
+			"ALLOW_UNPROCESSED=\"${4|true,false|}\" ",
+			"",
+			"printHelp() {",
+			"    printf 'Usage: %s [OPTIONS]...\\\\n' \"\\$(basename \"\\$0\")\"",
+			"    printf 'Usage: %s [OPTIONS]... (-$2=<$8>)\\\\n' \"\\$(basename \"\\$0\")\"",
+			"    echo \"  ${5:What does you script do?}\"",
+			"    echo ",
+			"    echo \"OPTIONS         Option description\"",
+			"    echo \"  --help        Prints this help page\"",
+			"    echo \"  -$1    ${6:What does $1 represent?} \"",
+			"    echo \"  -$2    ${7:What does $2 represent?} \"",
+			"    echo",
+			"    echo \"ARGUMENTS     Option argument description\"",
+			"    echo \" ${8:$2Value}     ${9:Describe $8 in more detail!}\"",
+			"    echo",
+			"    exit 0",
+			"}",
+			"",
+			"",
+			"highlight=\\$(echo -en '\\\\033[01;37m')",
+			"errorColor=\\$(echo -en '\\\\033[01;31m')",
+			"warningColor=\\$(echo -en '\\\\033[00;33m')",
+			"norm=\\$(echo -en '\\\\033[0m')",
+			"",
+			"#Function: parseOptions()",
+			"#",
+			"#Brief: Checks if all options are correct and saves each in a variable.",
+			"#After: Value of each options given, is stored in a uppercase named variable.",
+			"#       f. example -express will be stored in a global variable called EXPRESS",
+			"#Returns:",
+			"#      0 : (success) All parameters are valid",
+			"#      1 : (error) One or more parameters are invalid",
+			"#",
+			"declare -a UNPROCESSED",
+			"parseOptions() {",
+			"    containsElement() { #if function arrayContains exists, it can be used instead of containsElement",
+			"        local e match=\"\\$1\"",
+			"        shift",
+			"        for e; do [[ \"\\$e\" == \"\\$match\" ]] && return 0; done",
+			"        return 1",
+			"    }",
+			"",
+			"    extractArgumentValue() {",
+			"        if [ \\$# -ne 2 ]; then return; fi",
+			"        declare CHECK=\\$2",
+			"        declare PREFIX_LEN=\\${#CHECK}",
+			"        PREFIX_LEN=\\$((PREFIX_LEN + 1)) #Incrementing for equal sign",
+			"        if [[ \"\\$1\" != \"\\$CHECK\"* ]]; then return; fi",
+			"        echo \"\\${1:\\${PREFIX_LEN}}\"",
+			"    }",
+			"",
+			"    extractArgumentName() {",
+			"        if [ \\$# -ne 1 ]; then return; fi",
+			"        if [[ \\$1 != *\"=\"* ]]; then return; fi;",
+			"        declare match=\"=\"",
+			"        declare prefix=\\${1%%\"\\$match\"*}",
+			"        echo \"\\${prefix}\"",
+			"    }",
+			"",
+			"    declare -a _optionsFound",
+			"    declare tmp tmpValue tmpName",
+			"    while ((\"\\$#\")); do # While there are arguments still to be shifted",
+			"        tmp=\"$1\"",
+			"        tmpValue=\"true\"",
+			"        tmpName=\\$(extractArgumentName \"\\$1\")",
+			"",
+			"        if [[ -n \"\\$tmpName\" ]] && containsElement \"\\$tmpName=\" \"\\${options[@]}\"; then",
+			"            tmpValue=\\$(extractArgumentValue \"\\$1\" \"\\$tmpName\")",
+			"            tmp=\\$tmpName",
+			"            tmpName=\"\\$tmpName=\"",
+			"            _optionsFound+=(\"\\$tmpName\")",
+			"        elif containsElement \"\\$1\" \"\\${options[@]}\"; then",
+			"            tmp=\"\\$1\"",
+			"            tmpName=\"\\$tmp\"",
+			"            _optionsFound+=(\"\\$tmpName\")",
+			"        elif [[ \"\\$ALLOW_UNPROCESSED\" == \"true\" ]]; then",
+			"            UNPROCESSED+=(\"\\$1\")",
+			"            _optionsFound+=(\"\\$1\")",
+			"        else",
+			"            echo \"\\${errorColor}Error: \\${highlight}\\$1\\${norm} is an invalid argument.\"",
+			"            return 1",
+			"        fi",
+			"        #removing prefix - and -- and assigning value to upper cased variable.",
+			"",
+			"        tmp=\\${tmp#\"-\"}                  # removing -",
+			"        tmp=\\${tmp#\"-\"}                  # removing - if there were two",
+			"        tmp=\\$(echo \"\\$tmp\" | tr a-z A-Z) # CAPITALIZING the variable name",
+			"        printf -v \"\\$tmp\" \"\\$tmpValue\"    # Assigning a value to VARIABLE",
+			"        if [[ -z \"\\$tmpValue\" ]]; then",
+			"            echo \"Value missing for \\$tmpName\"",
+			"            return 1",
+			"        fi",
+			"",
+			"        shift",
+			"    done",
+			"    if [[ -n \"\\$HELP\" || -n \"\\$H\" ]]; then printHelp; fi",
+			"    #Check if all required options have been provided.",
+			"    if [[ \\${#optionsRequired[@]} -eq 0 ]]; then return 0; fi",
+			"    for arg in \"\\${optionsRequired[@]}\"; do",
+			"        if ! containsElement \"\\$arg\" \"\\${_optionsFound[@]}\"; then",
+			"            echo \"\\${errorColor}Required option missing \\${norm} \\$arg \"",
+			"            return 1",
+			"        fi",
+			"    done",
+			"}",
+			"",
+			"# You could test code below by running this script with these Arguments",
+			"#   ./thisScript.sh -$1 -$2=\"~/Downloads /home/gandalf\" -weird",
+			"if ! parseOptions \"\\$@\"; then exit 1; fi",
+			"if [[ -n \"\\$${1/(.*)/${1:/upcase}/}\" ]]; then echo \"-$1=\\\"\\$${1/(.*)/${1:/upcase}/}\\\"\"; fi",
+			"if [[ -n \"\\$${2/(.*)/${1:/upcase}/}\" ]]; then echo \"-$2=\\\"\\$${2/(.*)/${1:/upcase}/}\\\"\"; fi",
+			"",
+			"for arg in \"\\${UNPROCESSED[@]}\"; do",
+			"    echo  \"\\${warningColor}Unprocessed argument\\${norm} \\$arg \"",
+			"done",
+			"",
+			""
+		],
+		"description": "Boilerplate with one option and one option which requires a argument"
+	},
+	"Check if all options are valid and saves each in a variable": {
+		"prefix": "parse options",
+		"body": [
+			"",
+			"#true or false options.",
+			"options=( \"-h\" \"--help\" \"-${1:express}\" \"-${2:source}=\" ) ",
+			"",
+			"#Options that must be provided by the user",
+			"optionsRequired=( ${3:\"-$1\"  \"-$2=\"} ) ",
+			"",
+			"#Set to true you want to allow any arguments to be given",
+			"#Set to false if you only want to allow options in  \"options\" and \"optionsWithArgument\"",
+			"ALLOW_UNPROCESSED=\"${4|true,false|}\" ",
+			"",
+			"printHelp() {",
+			"    echo \"  TODO: Write help for this script\"",
+			"    exit 0",
+			"}",
+			"",
+			"",
+			"highlight=\\$(echo -en '\\\\033[01;37m')",
+			"errorColor=\\$(echo -en '\\\\033[01;31m')",
+			"warningColor=\\$(echo -en '\\\\033[00;33m')",
+			"norm=\\$(echo -en '\\\\033[0m')",
+			"",
+			"#Function: parseOptions()",
+			"#",
+			"#Brief: Checks if all options are correct and saves each in a variable.",
+			"#After: Value of each options given, is stored in a uppercase named variable.",
+			"#       f. example -express will be stored in a global variable called EXPRESS",
+			"#Returns:",
+			"#      0 : (success) All parameters are valid",
+			"#      1 : (error) One or more parameters are invalid",
+			"#",
+			"declare -a UNPROCESSED",
+			"parseOptions() {",
+			"    containsElement() { #if function arrayContains exists, it can be used instead of containsElement",
+			"        local e match=\"\\$1\"",
+			"        shift",
+			"        for e; do [[ \"\\$e\" == \"\\$match\" ]] && return 0; done",
+			"        return 1",
+			"    }",
+			"",
+			"    extractArgumentValue() {",
+			"        if [ \\$# -ne 2 ]; then return; fi",
+			"        declare CHECK=\\$2",
+			"        declare PREFIX_LEN=\\${#CHECK}",
+			"        PREFIX_LEN=\\$((PREFIX_LEN + 1)) #Incrementing for equal sign",
+			"        if [[ \"\\$1\" != \"\\$CHECK\"* ]]; then return; fi",
+			"        echo \"\\${1:\\${PREFIX_LEN}}\"",
+			"    }",
+			"",
+			"    extractArgumentName() {",
+			"        if [ \\$# -ne 1 ]; then return; fi",
+			"        if [[ \\$1 != *\"=\"* ]]; then return; fi;",
+			"        declare match=\"=\"",
+			"        declare prefix=\\${1%%\"\\$match\"*}",
+			"        echo \"\\${prefix}\"",
+			"    }",
+			"",
+			"    declare -a _optionsFound",
+			"    declare tmp tmpValue tmpName",
+			"    while ((\"\\$#\")); do # While there are arguments still to be shifted",
+			"        tmp=\"$1\"",
+			"        tmpValue=\"true\"",
+			"        tmpName=\\$(extractArgumentName \"\\$1\")",
+			"",
+			"        if [[ -n \"\\$tmpName\" ]] && containsElement \"\\$tmpName=\" \"\\${options[@]}\"; then",
+			"            tmpValue=\\$(extractArgumentValue \"\\$1\" \"\\$tmpName\")",
+			"            tmp=\\$tmpName",
+			"            tmpName=\"\\$tmpName=\"",
+			"            _optionsFound+=(\"\\$tmpName\")",
+			"        elif containsElement \"\\$1\" \"\\${options[@]}\"; then",
+			"            tmp=\"\\$1\"",
+			"            tmpName=\"\\$tmp\"",
+			"            _optionsFound+=(\"\\$tmpName\")",
+			"        elif [[ \"\\$ALLOW_UNPROCESSED\" == \"true\" ]]; then",
+			"            UNPROCESSED+=(\"\\$1\")",
+			"            _optionsFound+=(\"\\$1\")",
+			"        else",
+			"            echo \"\\${errorColor}Error: \\${highlight}\\$1\\${norm} is an invalid argument.\"",
+			"            return 1",
+			"        fi",
+			"        #removing prefix - and -- and assigning value to upper cased variable.",
+			"",
+			"        tmp=\\${tmp#\"-\"}                  # removing -",
+			"        tmp=\\${tmp#\"-\"}                  # removing - if there were two",
+			"        tmp=\\$(echo \"\\$tmp\" | tr a-z A-Z) # CAPITALIZING the variable name",
+			"        printf -v \"\\$tmp\" \"\\$tmpValue\"    # Assigning a value to VARIABLE",
+			"        if [[ -z \"\\$tmpValue\" ]]; then",
+			"            echo \"Value missing for \\$tmpName\"",
+			"            return 1",
+			"        fi",
+			"",
+			"        shift",
+			"    done",
+			"    if [[ -n \"\\$HELP\" || -n \"\\$H\" ]]; then printHelp; fi",
+			"    #Check if all required options have been provided.",
+			"    if [[ \\${#optionsRequired[@]} -eq 0 ]]; then return 0; fi",
+			"    for arg in \"\\${optionsRequired[@]}\"; do",
+			"        if ! containsElement \"\\$arg\" \"\\${_optionsFound[@]}\"; then",
+			"            echo \"\\${errorColor}Required option missing \\${norm} \\$arg \"",
+			"            return 1",
+			"        fi",
+			"    done",
+			"}",
+			"",
+			"# You could test code below by running this script with these Arguments",
+			"#   ./thisScript.sh -$1 -$2=\"~/Downloads /home/gandalf\" -weird",
+			"if ! parseOptions \"\\$@\"; then exit 1; fi",
+			"if [[ -n \"\\$${1/(.*)/${1:/upcase}/}\" ]]; then echo \"-$1=\\\"\\$${1/(.*)/${1:/upcase}/}\\\"\"; fi",
+			"if [[ -n \"\\$${2/(.*)/${1:/upcase}/}\" ]]; then echo \"-$2=\\\"\\$${2/(.*)/${1:/upcase}/}\\\"\"; fi",
+			"",
+			"for arg in \"\\${UNPROCESSED[@]}\"; do",
+			"    echo  \"\\${warningColor}Unprocessed argument\\${norm} \\$arg \"",
+			"done",
+			"",
+			""
+		],
+		"description": "Check if all options are valid and saves each in a variable"
+	},
+	"Only allow super user to run this script": {
+		"prefix": [
+			"is super",
+			"is root",
+			"is sudo"
+		],
+		"body": [
+			"if ((\\$EUID != 0)); then",
+			"    echo \"Error: This command has to be run with superuser privileges (under the root user on most systems).\"",
+			"    exit 1",
+			"fi"
+		],
+		"description": "Only allow super user to run this script."
+	},
+	"Frame your text": {
+		"prefix": "frame",
+		"body": [
+			"#Function: frame()",
+			"#",
+			"#Brief: Writes pretty frame around provide text to the terminal",
+			"#",
+			"# Usage frame [OPTION]... <text>",
+			"# OPTIONS",
+			"#  --     The frame will drawn with a single line",
+			"#  -=     The frame will drawn with a double line",
+			"#  -c     The frame will be drawn with provided character.  This option must be ",
+			"#         followed be the character to be used for drawing the frame surrounding",
+			"#         frame. b Sometimes you will need to double quote this character, ",
+			"#         For example for * you will need to double quote like this \"*\".",
+			"#  -t     Only top part of the frame will be printed <text> will be ignored",
+			"#  -b     Only the bottom part of the frame will be printed <text> will be ignored",
+			"#  -m     Only provided text will be printed with surrounding frame sides",
+			"#  -l     Provided <text> should be left aligned",
+			"#  -r     Provided <text> should be right aligned",
+			"#  -f     If provided the next parameter must contain the",
+			"#         formatting to be used on the text inside the frame.",
+			"#  -line  Print a horizontal line, <text> will be ignored",
+			"#  -dLine Print a horizontal dashed line, <text> will be ignored",
+			"#  -w     If provided the next parameter must contain a number representing how",
+			"#         wide you want the surrounding frame to be, by default this number is 80.",
+			"#",
+			"#Please remember to double quote all parameters",
+			"#example on how to write a blue text with double quoted frame around it:",
+			"#  frame  -c = -f \\$(echo -en '\\033[01;34m') \"I am blue text\"",
+			"#example on how to align many lines within one frame",
+			"#  frame -w 50 -t",
+			"#  frame -w 50 -m \"I am left aligned with no space\" -l",
+			"#  frame -w 50 -m \"I am centered text\"",
+			"#  frame -w 50 -m \" I am right aligned with 5 spaces     \" -r",
+			"#  frame -w 50 -b",
+			"frame() {",
+			"    declare align='center'; #Alignment for text inside the frame",
+			"    declare format;         #Text formatting",
+			"    declare parts=\"all\";    #Print frame part- top, lower, middle or all parts.",
+			"    declare box=\"-\";        #character(s) surrounding the text which will make the frame.",
+			"    declare width=\"80\";     #The frame width",
+			"    declare text;",
+			"    declare normal=\\$(echo -en '\\033[0m')",
+			"",
+			"    while ((\"\\$#\")); do # While there are arguments still to be shifted",
+			"        ",
+			"        if [[ \"\\$1\" = \"--\" ]]; then",
+			"           box=\"-\"",
+			"        elif [[ \"\\$1\" = \"-=\" ]]; then",
+			"           box=\"=\"",
+			"        elif [[ \"\\$1\" = \"-t\" ]]; then",
+			"            parts=\"top\";",
+			"        elif [[ \"\\$1\" = \"-m\" ]]; then",
+			"            parts=\"middle\";",
+			"        elif [[ \"\\$1\" = \"-b\" ]]; then",
+			"            parts=\"bottom\";",
+			"        elif [[ \"\\$1\" = \"-l\" ]]; then",
+			"            align=\"left\";",
+			"        elif [[ \"\\$1\" = \"-line\" ]]; then",
+			"            echo -n \"├\"; printf '─%.0s' \\$(seq \\$((\\$width - 2)) ); echo \"┤\"; return",
+			"        elif [[ \"\\$1\" = \"-dLine\" ]]; then",
+			"            echo -n \"│\"; printf -- '-%.0s' \\$(seq \\$((\\$width - 2)) ); echo \"│\"; return",
+			"        elif [[ \"\\$1\" = \"-r\" ]]; then",
+			"            align=\"right\";",
+			"        elif [[ \"\\$1\" = \"-c\" ]]; then",
+			"           #We will need string of length 1 next",
+			"           shift;",
+			"            if [[ -z \\$1 || -n \\$1 && \\${#1} -ne 1 ]]; then echo \"Option -c will need to be followed by a character\" ; exit 1; fi;",
+			"            box=\"\\$1\"",
+			"        elif [[ \"\\$1\" = \"-w\" ]]; then",
+			"           #We will need string of length 1 next",
+			"           shift;",
+			"           re='^[0-9]+\\$'",
+			"            if ! [[  \"\\$1\" =~ \\$re ]] ; then echo \"Option -w will need to be followed by a number\" ; exit 1; fi;",
+			"            width=\"\\$1\"",
+			"        elif [[ \"\\$1\" = \"-f\" ]]; then",
+			"           shift;",
+			"           #We will need the formatting string next",
+			"            if [ -z \\$1 ]; then echo \"Formatting option provided but formatting value missing!\" ; exit 1; fi;",
+			"            format=\"\\$1\"",
+			"        else",
+			"            text=\"\\$1\"",
+			"        fi",
+			"        shift",
+			"    done",
+			"    if [[ -z \"\\$text\" &&  ( \"\\$parts\" != \"top\" && \"\\$parts\" != \"bottom\"  ) ]]; then echo \"Error No text Provided\"; exit 1; fi;",
+			"        declare char=\"\\$box\"",
+			"        declare side=\"\\$box\"",
+			"        declare upLeft=\"\\$box\"",
+			"        declare upRight=\"\\$box\"",
+			"        declare downLeft=\"\\$box\"",
+			"        declare downRight=\"\\$box\"",
+			"    if [[ \"\\$box\" = \"=\" ]]; then",
+			"        char=\"═\"",
+			"        side=\"║\"",
+			"        upLeft=\"╔\"",
+			"        upRight=\"╗\"",
+			"        downLeft=\"╚\"",
+			"        downRight=\"╝\"",
+			"    elif [[ \"\\$box\" = \"-\" ]]; then",
+			"        char=\"─\"",
+			"        side=\"│\"",
+			"        upLeft=\"┌\"",
+			"        upRight=\"┐\"",
+			"        downLeft=\"└\"",
+			"        downRight=\"┘\"",
+			"    fi",
+			"    STRING=\\$text",
+			"    size=\\$(((\\$((width - 2)) - (\\${#STRING})) / 2))",
+			"    str=\"%0.s\\$char\"",
+			"    if [[ \"\\$parts\" = \"all\" || \"\\$parts\" = \"top\" ]]; then",
+			"        echo -en \"\\$upLeft\"",
+			"        printf \\$str \\$(seq 1 \\$((width - 2)))",
+			"        printf \"\\$upRight\\n\"",
+			"    fi",
+			"    pad=\\$(printf '%*s' \"\\$size\")",
+			"    ",
+			"    if [ \\$((\\${#STRING} % 2)) -eq 0 ]; then pad2=\"\\${pad}\"; else pad2=\"\\${pad} \"; fi",
+			"    ",
+			"    if [[ \"\\$parts\" = \"all\" || \"\\$parts\" = \"middle\" ]]; then",
+			"        if [[ \"\\$align\" = \"left\" ]]; then",
+			"            size=\\$(((\\$((width - 2)) - (\\${#STRING}))))",
+			"            pad=\\$(printf '%*s' \"\\$size\")",
+			"            if [[ -n \"\\$format\" ]]; then STRING=\"\\$format\\${STRING}\\${normal}\"; fi",
+			"            echo -e \"\\$side\\$STRING\\$pad\\$side\"",
+			"        elif [[ \"\\$align\" = \"right\" ]]; then",
+			"            size=\\$(((\\$((width - 2)) - (\\${#STRING}))))",
+			"            pad=\\$(printf '%*s' \"\\$size\")",
+			"            if [[ -n \"\\$format\" ]]; then STRING=\"\\$format\\${STRING}\\${normal}\"; fi",
+			"            echo -e \"\\$side\\$pad\\$STRING\\$side\"",
+			"        else",
+			"            if [[ -n \"\\$format\" ]]; then STRING=\"\\$format\\${STRING}\\${normal}\"; fi",
+			"            echo -e \"\\$side\\$pad\\$STRING\\$pad2\\$side\"",
+			"        fi",
+			"    fi",
+			"    #normal",
+			"    if [[ \"\\$parts\" = \"all\" || \"\\$parts\" = \"bottom\" ]]; then",
+			"        printf \"\\$downLeft\"",
+			"        printf \\$str \\$(seq 1 \\$((width - 2)))",
+			"        printf \"\\$downRight\\n\"",
+			"    fi",
+			"}",
+			"",
+			"frame \"I am a looking good title\""
+		],
+		"description": "Frame your text"
+	},
+	"Select pre defined option": {
+		"prefix": "menuOptions",
+		"body": [
+			"# Renders a text based list of options that can be selected by the",
+			"# user using up, down and enter keys and returns the chosen option.",
+			"#",
+			"#   Arguments   : list of options, maximum of 256",
+			"#                 \"opt1\" \"opt2\" ...",
+			"#   Return value: selected index (0 for opt1, 1 for opt2 ...)",
+			"function menuOption {",
+			"",
+			"    # little helpers for terminal print control and key input",
+			"    ESC=\\$( printf \"\\033\")",
+			"    cursor_blink_on()  { printf \"\\$ESC[?25h\"; }",
+			"    cursor_blink_off() { printf \"\\$ESC[?25l\"; }",
+			"    cursor_to()        { printf \"\\$ESC[\\$1;\\${2:-1}H\"; }",
+			"    print_option()     { printf \"   \\$1 \"; }",
+			"    print_selected()   { printf \"  \\$ESC[7m \\$1 \\$ESC[27m\"; }",
+			"    get_cursor_row()   { IFS=';' read -sdR -p \\$'\\E[6n' ROW COL; echo \\${ROW#*[}; }",
+			"    key_input()        { read -s -n3 key 2>/dev/null >&2",
+			"                         if [[ \\$key = \\$ESC[A ]]; then echo up;    fi",
+			"                         if [[ \\$key = \\$ESC[B ]]; then echo down;  fi",
+			"                         if [[ \\$key = \"\"     ]]; then echo enter; fi; }",
+			"",
+			"    # initially print empty new lines (scroll down if at bottom of screen)",
+			"    for opt; do printf \"\\n\"; done",
+			"",
+			"    # determine current screen position for overwriting the options",
+			"    local lastrow=`get_cursor_row`",
+			"    local startrow=\\$((\\$lastrow - \\$#))",
+			"",
+			"    # ensure cursor and input echoing back on upon a ctrl+c during read -s",
+			"    trap \"cursor_blink_on; stty echo; printf '\\n'; exit\" 2",
+			"    cursor_blink_off",
+			"",
+			"    local selected=0",
+			"    while true; do",
+			"        # print options by overwriting the last lines",
+			"        local idx=0",
+			"        for opt; do",
+			"            cursor_to \\$((\\$startrow + \\$idx))",
+			"            if [ \\$idx -eq \\$selected ]; then",
+			"                print_selected \"\\$opt\"",
+			"            else",
+			"                print_option \"\\$opt\"",
+			"            fi",
+			"            ((idx++))",
+			"        done",
+			"",
+			"        # user key control",
+			"        case `key_input` in",
+			"            enter) break;;",
+			"            up)    ((selected--));",
+			"                   if [ \\$selected -lt 0 ]; then selected=\\$((\\$# - 1)); fi;;",
+			"            down)  ((selected++));",
+			"                   if [ \\$selected -ge \\$# ]; then selected=0; fi;;",
+			"        esac",
+			"    done",
+			"",
+			"    # cursor position back to normal",
+			"    cursor_to \\$lastrow",
+			"    #printf \"\\n\"",
+			"    cursor_blink_on",
+			"",
+			"    return \\$selected",
+			"}",
+			"",
+			"#How to use this menu",
+			"",
+			"while true; do",
+			"    options=(\"first option\" \"second option\" \"third option\" \"exit\")",
+			"    menuOption \"\\${options[@]}\"",
+			"    choice=\\$?",
+			"    case \\$choice in",
+			"    0)",
+			"        echo \"First option was selected\";;",
+			"    1) ",
+			"        echo \"Second option was selected\";;",
+			"    2)",
+			"        echo \"Third option was selected\";;",
+			"    3) ",
+			"        echo \"exit selected\"",
+			"        exit 0;;",
+			"    esac",
+			"",
+			"    echo \"Chosen index = \\\"\\$choice\\\" value=\\\"\\${options[\\$choice]}\\\"\"",
+			"    sleep 2.5",
+			"done\n"
+		],
+		"description": "Select pre defined option"
+	},
+	"Searches for an string within an array of strings": {
+		"prefix": "arrayContains",
+		"body": [
+			"#Function: arrayContains()",
+			"#",
+			"#Brief: Searches for an string within an array of strings",
+			"#",
+			"#Argument 1(\\$1): String to search for",
+			"#Argument 2(\\$2): Array of strings",
+			"#Returns",
+			"#       0 if found",
+			"#       1 if not found",
+			"#Example:",
+			"#  flags=(\"-reset\" \"-express\" \"-source\")",
+			"#   if arrayContains \"-express\" \"\\${flags[@]}\"; then",
+			"#      echo \"String was found\"",
+			"#   else",
+			"#       echo \"String not found!\"",
+			"#   fi",
+			"arrayContains() {",
+			"    local e match=\"\\$1\"",
+			"    shift",
+			"    for e; do [[ \"\\$e\" == \"\\$match\" ]] && return 0; done",
+			"    return 1",
+			"}\n"
+		],
+		"description": "Searches for an string within an array of strings"
+	},
+	"For number loop": {
+		"prefix": "for number",
+		"body": [
+			"for (( i=0; i<10; i++ )); do",
+			" echo -n \"\\$i \"",
+			"done\n"
+		],
+		"description": "For loop with a number condition variable"
+	},
+	"For number in braces": {
+		"prefix": "for number braces",
+		"body": [
+			"for i in {1..10}",
+			"do",
+			"    echo -n \"\\$i \"",
+			"done\n"
+		],
+		"description": "For loop with brace expansion"
+	},
+	"Case Example": {
+		"prefix": "case example",
+		"body": [
+			"ANIMAL=\"cat\"",
+			"echo -n \"\\$ANIMAL is \"",
+			"case \\$ANIMAL in ",
+			"    hawk)",
+			"        echo \"a bird\"",
+			"        ;;",
+			"    dog|cat) ",
+			"        echo \"a pet\"",
+			"        ;;",
+			"    *)",
+			"      echo \"unknown\"",
+			"        ;;",
+			"esac"
+		],
+		"description": "Case Statement Example"
+	},
+	"Case": {
+		"prefix": "case",
+		"body": [
+			"case $1 in ",
+			"    ${2:hawk})",
+			"        ${3:echo \"a bird\"}",
+			"        ;;",
+			"    ${4:dog|cat}) ",
+			"        ${5:echo \"a pet\"}",
+			"        ;;",
+			"    *)",
+			"      ${6:echo \"unknown\"}",
+			"        ;;",
+			"esac\n"
+		],
+		"description": "Case statement"
+	},
+	"Extract argument name from option": {
+		"prefix": "extract argument name",
+		"body": [
+			"    #Function: extractArgumentName()",
+			"    #",
+			"    #Brief: Extracts a name from a given argument which is on the form -name=value or name=\"value with spaces\"",
+			"    #",
+			"    #Argument 1(\\$1): Argument containing prefixed argument -name=suffixed argument value",
+			"    #Returns       : On success the all in front of = including the - sign, on error nothing",
+			"    extractArgumentName() {",
+			"        if [ \\$# -ne 1 ]; then return; fi",
+			"        if [[ \\$1 != *\"=\"* ]]; then return; fi;",
+			"        declare match=\"=\"",
+			"        declare prefix=\\${1%%\"\\$match\"*}",
+			"        echo \"\\${prefix}\"",
+			"    }"
+		],
+		"description": "Extracts a name from a given argument which is on the form -name=value or name=\"value with spaces\""
+	},
+	"Extract argument value from option": {
+		"prefix": "extract argument value",
+		"body": [
+			"    #Function: extractArgumentValue()",
+			"    #",
+			"    #Brief: Extracts a value from a given argument which is on the form name=value or name=\"value with spaces\"",
+			"    #",
+			"    #Argument 1(\\$1): Argument containing prefixed argument including - sign -name=suffixed argument value",
+			"    #Argument 2(\\$2): Argument name  (what should be in front of the = sign)",
+			"    #Returns       : On success the value, on error nothing",
+			"    extractArgumentValue() {",
+			"        if [ \\$# -ne 2 ]; then return; fi",
+			"        declare CHECK=\\$2",
+			"        declare PREFIX_LEN=\\${#CHECK}",
+			"        PREFIX_LEN=\\$((PREFIX_LEN + 1)) #Incrementing for equal sign",
+			"        if [[ \"\\$1\" != \"\\$CHECK\"* ]]; then return; fi",
+			"        echo \"\\${1:\\${PREFIX_LEN}}\"",
+			"    }"
+		],
+		"description": "Extracts a value from a given argument which is on the form name=value or name=\"value with spaces\""
+	},
+	"Extracts filename from the last argument": {
+		"prefix": [
+			"extract filename",
+			"remove directory from path",
+			"remove prefix from path"
+		],
+		"body": [
+			"#Function: removePathFromLastArg()",
+			"#",
+			"#Brief: Extracts filename from the last argument and echos out all all arguments ",
+			"#       where the last argument has been stripped of preceding path or url",
+			"#",
+			"#Argument n(\\$n): Any number of arguments, where the last argument is changed if it contains a path or a url",
+			"#returns       : All arguments where last argument does not contain a path",
+			"#",
+			"#Example usage : removePathFromLastArg https://guttih.com/myFile.txt",
+			"#                removePathFromLastArg -src=\"https://guttih.com/myFile.txt\"",
+			"#",
+			"#                ARGS_ARRAY=\\$(removePathFromLastArg -argument something -src=https://guttih.com/myFile.txt)",
+			"#                echo \"My new args: \\${ARGS_ARRAY[*]}\"",
+			"removePathFromLastArg(){",
+			"",
+			"    extractArgumentName() {",
+			"          if [ \\$# -ne 1 ]; then return; fi",
+			"          declare match=\"=\"",
+			"          if [[ \\$1 != *\"=\"* ]]; then return; fi;",
+			"          declare prefix=\\${1%%\"\\$match\"*}",
+			"          echo \"\\${prefix}\"",
+			"    }",
+			"",
+			"    extractArgumentValue() {",
+			"        if [ \\$# -ne 2 ]; then return; fi",
+			"        declare CHECK=\\$2",
+			"        declare PREFIX_LEN=\\${#CHECK}",
+			"        PREFIX_LEN=\\$((PREFIX_LEN + 1)) #Incrementing for equal sign",
+			"        if [[ \"\\$1\" != \"\\$CHECK\"* ]]; then return; fi",
+			"        echo \"\\${1:\\${PREFIX_LEN}}\"",
+			"    }",
+			"",
+			"     if [ \\$# -lt 1 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"    declare args=( \"\\$@\"  )",
+			"    declare URL=\\${args[-1]}",
+			"",
+			"    #check if argument is on the form name=\"value\"",
+			"    declare tmpName=\\$(extractArgumentName \"\\$URL\")",
+			"    if [[ -n \"\\$tmpName\" ]];  then ",
+			"        URL=\\$(extractArgumentValue \"\\$URL\" \"\\$tmpName\")",
+			"    fi",
+			"    declare PACKAGE=\\$(printf '%s\\\\n' \"\\${URL##*/}\" )",
+			"    unset 'args[-1]' # removes the last element",
+			"    echo  \"\\${args[@]}\" \"\\$PACKAGE\"",
+			"}\n"
+		],
+		"description": "Extracts filename from the last argument and echos out all all arguments, where the last argument has been stripped of preceding path or url"
+	},
+	"Prefix search known length": {
+		"prefix": "string prefix length",
+		"body": [
+			"STRING=\"two-chars-after-3x\"",
+			"echo \"STRING: \\$STRING\"",
+			"echo \"All but last 2    : \\\\\"\\${STRING::-2}\\\\\"\"",
+			"echo \"Only show first 16: \\\\\"\\${STRING::+16}\\\\\"\"",
+			"if [[ \"\\${STRING::-2}\" == \"two-chars-after-\" ]]; then",
+			"    echo \"It's a match\"",
+			"fi",
+			""
+		],
+		"description": "Check if a string starts with a specific text and is of a specific lengthS"
+	},
+	"Prefix search with wildcard": {
+		"prefix": "string starts with",
+		"body": [
+			"STRING=\"Bash is great\"",
+			"echo \"STRING: \\$STRING\"",
+			"if [[ \"\\$STRING\" == \\$\"Bash is \"*  ]]; then",
+			"    echo \"It's a match STRING starts with \\\\\"Bash is \\\\\"\"",
+			"fi",
+			""
+		],
+		"description": "Check if string starts with using wild card"
+	},
+	"Postfix search": {
+		"prefix": "string ends with",
+		"body": [
+			"STRING=\"Bash is great\"",
+			"ENDING=\\${STRING: -7}",
+			"echo \"STRING: \\$STRING\"",
+			"echo \"Last 7    : \\\\\"\\$ENDING\\\\\"\"",
+			"if [[ \"\\$ENDING\" == \"s great\"  ]]; then",
+			"    echo \"It's a match STRING ends with \\\\\"s great\\\\\"\"",
+			"fi",
+			""
+		],
+		"description": "Check if string ends with"
+	},
+	"Substring with cut": {
+		"prefix": "string cut",
+		"body": [
+			"STRING=\"Bash is great\"",
+			"STRLEN=\\$(echo \\${#STRING})",
+			"echo \"String                          :\\$STRING\"",
+			"echo \"Length                          :\\$STRLEN\"",
+			"echo \"First 4                         :\\$(echo \"\\$STRING\"|cut -c -3)\"",
+			"echo \"middle                          :\\$(echo \"\\$STRING\"|cut -c 4-9) \"",
+			"echo \"last  3 when length is known    :\\$(echo \"\\$STRING\"|cut -c 11-)\"",
+			"echo \"last  3 when length is NOT known:\\$(echo \"\\$STRING\"|cut -c \\$(( STRLEN - 2))-)\"",
+			""
+		],
+		"description": "Examples when extracting substring from a string using cut. (For when bash version is old)"
+	},
+	"Replace text in a file": {
+		"prefix": "replace text in file",
+		"body": [
+			"#Function: replaceStrings()",
+			"#",
+			"#Brief: Replaces text of all strings in a file that  ",
+			"#       match given string with a specific value. ",
+			"#",
+			"#Argument 1(\\$1): File to change",
+			"#Argument 2(\\$2): String to search for",
+			"#Argument 3(\\$3): new value",
+			"#Argument 4(\\$4): (Optional) Set to \"true\" if you want the entire line to be matched",
+			"#   # Example - Replace all lines which contain exactly the content \"Find me\" in the file test.txt",
+			"#      replaceStrings \"test.txt\" \"Find me\" \"New string\" true",
+			"#   # Example - Replace all substrings that match \"Find me\" in the file test.txt",
+			"#      replaceStrings \"test.txt\" \"Find me\" \"New string\"",
+			"replaceStrings(){",
+			"    if [ \\$# -lt 3 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"    ",
+			"    declare FILE=\\$1",
+			"    declare SEARCH_FOR=\\$2",
+			"    declare REPLACE_WITH=\\$3",
+			"    declare END_TOKEN=\"\"",
+			"    declare START_TOKEN=\"\"",
+			"    if [[ \\$4 == \"true\" || \\$4 == \"TRUE\"  ]]; then START_TOKEN=\"^\";END_TOKEN=\"\\$\"; fi;",
+			"    if [[  ! -f \\$FILE  ]]; then",
+			"        echo \"File \\\\\"\\$FILE\\\\\" does not exist\"; exit 1;",
+			"    fi",
+			"    sed -i 's,'\"\\$START_TOKEN\"''\"\\$SEARCH_FOR\"''\"\\$END_TOKEN\"','\"\\$REPLACE_WITH\"',g' \\$FILE",
+			"}",
+			""
+		],
+		"description": "Replace texts in a file that match a specified substring"
+	},
+	"Replace trailing text in a file that starts with": {
+		"prefix": "replace text in file that starts with",
+		"body": [
+			"#Function: replaceStringsAfter()",
+			"#",
+			"#Brief: Replaces trailing text of all strings in a file that start ",
+			"#       with a specific value.  Leading white spaces will be removed. ",
+			"#",
+			"#Argument 1(\\$1): File to change",
+			"#Argument 2(\\$2): String to search for",
+			"#Argument 3(\\$3): new value",
+			"#   Example - find a line that starts with \"variable=\" in the file test.txt and replace that line with the text \"variable=new_value\"",
+			"#      replaceStringsAfter test.txt \"variable=\" \"new_value\"",
+			"replaceStringsAfter(){",
+			"    if [ \\$# -ne 3 ]; then echo \"Invalid number of parameters provided to \\$FUNCNAME\"; exit 1; fi",
+			"",
+			"    declare FILE=\\$1",
+			"    declare SEARCH_FOR=\\$2",
+			"    declare REPLACE_WITH=\\$3",
+			"    if [[  ! -f \\$FILE  ]]; then",
+			"        echo \"File \\\\\"\\$FILE\\\\\" does not exist\"; exit 1;",
+			"    fi",
+			"",
+			"    sed -i 's,^\\\\s*'\"\\$SEARCH_FOR\"'.*\\$,'\"\\$SEARCH_FOR\"''\"\\$REPLACE_WITH\"',g' \\$FILE",
+			"}",
+			""
+		],
+		"description": "Replace trailing texts in a file that begin with a specified substring"
+	},
+	"Create multiline file": {
+		"prefix": "create text file",
+		"body": [
+			"#Function: createFile()",
+			"#",
+			"#Brief: Creates a file with muliple lines",
+			"#",
+			"#Argument 1(\\$1): File to create",
+			"createFile() {",
+			"    declare FILE=\"\\$1\"",
+			"    echo \"Creating \\$FILE\"",
+			"    CURRENT=\\$(date +\"%Y-%m-%d %H:%M:%S\")",
+			"    read -r -d '' VAR <<EOM",
+			"# File created \\$CURRENT.",
+			"    This file contains",
+			"    multiple lines",
+			"EOM",
+			"    echo \"\\$VAR\" >\"\\$FILE\"",
+			"}",
+			"",
+			"createFile \"newFile.txt\"",
+			""
+		],
+		"description": "Create a text file with multiple lines"
+	},
+	"file_read_by_line": {
+		"prefix": "file_read_by_line",
+		"body": "cat $${0:FILE_NAME} | while read ${1:LINE}\ndo\n\techo $${1:LINE}\ndone\n",
+		"description": "read a text file line by line"
+	},
+	"file_batch_rename": {
+		"prefix": "file_batch_rename",
+		"body": "ls | xargs -i mv {} {}.old",
+		"description": "batch rename files for som reason"
+	},
+	"awk_substr": {
+		"prefix": "awk_substr",
+		"body": "echo $VAR | awk '\\{print substr(\\$0,0,length(\\$0)-2)\\}'",
+		"description": "sub string by awk"
+	},
+	"awk_printf": {
+		"prefix": "awk_printf",
+		"body": "awk  -F ':'  '\\{printf(\"filename:%10s,linenumber:%s,columns:%s,linecontent:%s\n\",FILENAME,NR,NF,\\$0)\\}' /etc/passwd",
+		"description": "printf example of awk"
+	},
+	"awk_for_loop": {
+		"prefix": "awk_for_loop",
+		"body": "awk -F ':' 'BEGIN \\{count=0;} \\{name[count] = \\$1;count++;\\}; END{for (i = 0; i < NR; i++) print i, name[i]\\}' /etc/passwd",
+		"description": "for loop example of awk, show all users"
+	},
+	"for in ls": {
+		"prefix": "for_in_ls",
+		"body": "for var in `ls`\ndo\ndone",
+		"description": [
+			"Custom shebang Environment"
+		]
+	},
+	"read": {
+		"prefix": "read",
+		"body": "read -r ${0:VAR}",
+		"description": "Read input of ${VAR}."
+	},
+	"if": {
+		"prefix": "if",
+		"body": "if [[ ${0:condition} ]]; then\n\t${1}\nfi",
+		"description": "An IF statement."
+	},
+	"elseif": {
+		"prefix": "elseif",
+		"body": "elif [[ ${0:condition} ]]; then\n\t${1}",
+		"description": "Add an elseif to an if statement."
+	},
+	"else": {
+		"prefix": "else",
+		"body": "else\n\t${0:command}",
+		"description": "else"
+	},
+	"for_in": {
+		"prefix": "for_in",
+		"body": "for ${0:VAR} in $${1:LIST}\ndo\n\techo \"$${0:VAR}\"\ndone\n",
+		"description": "for loop in list"
+	},
+	"for_i": {
+		"prefix": "for_i",
+		"body": "for ((${0:i} = 0; ${0:i} < ${1:10}; ${0:i}++)); do\n\techo \"$${0:i}\"\ndone\n",
+		"description": "An index-based iteration for loop."
+	},
+	"while": {
+		"prefix": "while",
+		"body": "while [[ ${1:condition} ]]; do\n\t${0}\ndone\n",
+		"description": "A while loop by condition."
+	},
+	"until": {
+		"prefix": "until",
+		"body": "until [[ ${1:condition} ]]; do\n\t${0}\ndone\n",
+		"description": "until loop by condition"
+	},
+	"case": {
+		"prefix": "case",
+		"body": "case \"$${0:VAR}\" in\n\t${1:1}) echo 1\n\t;;\n\t${2:2|3}) echo 2 or 3\n\t;;\n\t*) echo default\n\t;;\nesac\n",
+		"description": [
+			"case word in [ [(] pattern [ | pattern ] ... ) list ;; ] ... esac\n",
+			"A case command first expands word, and tries to match it against each pattern in turn."
+		]
+	},
+	"break": {
+		"prefix": "break",
+		"body": "break ${0}",
+		"description": [
+			"The break command tells Bash to leave the loop straight away.\n",
+			"Enter the break or break (n) where n=number of loops."
+		]
+	},
+	"expr": {
+		"prefix": "expr",
+		"body": "expr ${0:1 + 1}",
+		"description": "Calculate numbers with Bash."
+	},
+	"test_string_empty": {
+		"prefix": "test_string_empty",
+		"body": "test -z \"$${0:VAR}\"",
+		"description": "A test to check the lengh of VAR is zero (i.e. it is empty) and returns TRUE if so."
+	},
+	"test_string_equal": {
+		"prefix": "test_string_equal",
+		"body": "test \"$${0:VAR1}\" = \"$${1:VAR2}\"",
+		"description": "A test to compare two different STRINGS and returns TRUE if they are of equal value."
+	},
+	"test_string_not_empty": {
+		"prefix": "test_string_not_empty",
+		"body": "test -n \"$${0:VAR}\"",
+		"description": "A test that checks the length of a STRING is greater than zero and returns TRUE if so."
+	},
+	"test_string_not_equal": {
+		"prefix": "test_string_not_equal",
+		"body": "test \"$${0:VAR1}\" != \"$${1:VAR2}\"",
+		"description": "A test to compare two different STRINGS.  Returns TRUE if they are NOT of equal value."
+	},
+	"test_int_equal": {
+		"prefix": "test_int_equal",
+		"body": "test \"$${0:VAR1}\" -eq \"$${1:VAR2}\"",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if they are of equal value."
+	},
+	"test_int_great_equal": {
+		"prefix": "test_int_great_equal",
+		"body": "test \"$${0:VAR1}\" -ge \"$${1:VAR2}\"",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if INTEGER1 is of equal or greater value than INTEGER2."
+	},
+	"test_int_great_than": {
+		"prefix": "test_int_great_than",
+		"body": "test \"$${0:VAR1}\" -gt \"$${1:VAR2}\"",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if INTEGER1 is greater than INTEGER2 in value."
+	},
+	"test_int_less_equal": {
+		"prefix": "test_int_less_equal",
+		"body": "test \"$${0:VAR1}\" -le \"$${1:VAR2}\"",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if INTEGER1 is less than or equal to INTEGER2 in value."
+	},
+	"test_int_less_than": {
+		"prefix": "test_int_less_than",
+		"body": "test \"$${0:VAR1}\" -lt \"$${1:VAR2}\"",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if INTEGER1 is less than INTEGER2 in value."
+	},
+	"test_int_not_equal": {
+		"prefix": "test_int_not_equal",
+		"body": "test \"$${0:VAR1}\" -ne \"$${1:VAR2}",
+		"description": "A test to compare two different INTEGERS.  Returns TRUE if INTEGER1 is NOT equal to INTEGER2 in value."
+	},
+	"test_exist": {
+		"prefix": "test_exist_file",
+		"body": "test -e \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists."
+	},
+	"test_exist_file": {
+		"prefix": "test_exist_regular_file",
+		"body": "test -f \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists and is a regular file."
+	},
+	"test_exist_directory": {
+		"prefix": "test_exist_directory",
+		"body": "test -d \"$${0:VAR}\"",
+		"description": "A test to check if a FILE exists and is a directory."
+	},
+	"test_exist_readable": {
+		"prefix": "test_exist_readable",
+		"body": "test -r \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists and read permission is granted."
+	},
+	"test_exist_writeable": {
+		"prefix": "test_exist_writeable",
+		"body": "test -w \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists and write permission is granted."
+	},
+	"test_exist_executable": {
+		"prefix": "test_exist_executable",
+		"body": "test -x \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists and execute (or search) permission is granted."
+	},
+	"test_exist_link": {
+		"prefix": "test_exist_link",
+		"body": "test -h \"$${0:VAR}\"",
+		"description": "A test to check if FILE exists and is a symbolic link (same as -L)."
+	},
+	"test_file_equal": {
+		"prefix": "test_file_equal",
+		"body": "test \"$${0:VAR}\" -ef \"$${1:VAR}\"",
+		"description": "A test to check if FILE1 and FILE2 have the same device and inode numbers."
+	},
+	"test_file_new_than": {
+		"prefix": "test_file_new_than",
+		"body": "test \"$${0:VAR}\" -nt \"$${1:VAR}\"",
+		"description": "A test to check if FILE1 is newer (modification date) than FILE2."
+	},
+	"test_file_old_than": {
+		"prefix": "test_file_old_than",
+		"body": "test \"$${0:VAR}\" -ot \"$${1:VAR}\"",
+		"description": "A test to check if FILE1 is older than FILE2."
+	}
+}

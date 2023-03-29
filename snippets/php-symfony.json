@@ -1,0 +1,973 @@
+{
+    "Symfony Generate Symfony Controller Function": {
+        "body": [
+            "/**\r",
+            " * @Route(\"${1:Route}\", name=\"${2:RouteName}\")\r",
+            " */\r",
+            "public function ${3:FunctionName}(): ${4|Response,JsonResponse|}\r",
+            "{\r",
+            "    return \\$this->${5|render,json|}('${6|$0.html.twig,JsonData|}', ${7|[],JsonResponse::HTTPCODE|});\r",
+            "}"
+        ],
+        "prefix": [
+            "sfControllerFunction",
+            "function",
+            "controllerFunction",
+            "fun",
+            "public"
+        ],
+        "description": "use this snippets to generate function in the controller with Route, RouteName, FunctionName, Template for rendering in twig"
+    },
+    "Symfony Generate $form variable": {
+        "body": [
+            "\\$${form} = \\$this->createForm(${FormType}::class, \\$${Entity});"
+        ],
+        "prefix": [
+            "sfFormGen",
+            "form",
+            "createForm"
+        ],
+        "description": "use this snippet to generate form variable into the controller function change the form type and the entity"
+    },
+    "Symfoy Form HandleRequest": {
+        "body": [
+            "\\$${form}->handleRequest(\\$${request});",
+            "",
+            "if (\\$${form}->isSubmitted() && \\$${form}->isValid()) { \r",
+            "\t$0",
+            "}"
+        ],
+        "prefix": [
+            "sfHandleRequest",
+            "handle",
+            "handleRequest"
+        ],
+        "description": "use this snippet to Generate handleRequest Function"
+    },
+    "Symfony manager persist": {
+        "body": [
+            "\\$${entityManager}->persist(\\$${Entity});"
+        ],
+        "prefix": [
+            "sfPersist",
+            "persist"
+        ],
+        "description": "use this snippet to generate $entityManager persist "
+    },
+    "Symfony manager flush": {
+        "body": [
+            "\\$${entityManager}->flush();"
+        ],
+        "prefix": [
+            "sfFlush",
+            "flush"
+        ],
+        "description": "use this snippet to generate $entityManager flush "
+    },
+    "Symfony manager persist and flush": {
+        "body": [
+            "\\$${entityManager}->persist(\\$${Entity});\r",
+            "\\$${entityManager}->flush();"
+        ],
+        "prefix": [
+            "sfPersistAndFlush",
+            "persistAndFlush",
+            "flushAndPersist"
+        ],
+        "description": "use this snippet to generate $entityManager flush "
+    },
+    "Symfony RedirectToRoute": {
+        "body": [
+            "return \\$this->redirectToRoute('${RouteName}');"
+        ],
+        "prefix": [
+            "sfRedirectToRoute",
+            "redirectToRoute",
+            "toRoute"
+        ],
+        "description": "use this snippet to generate return to redirecttoroute name change the routeName with the Your RouteName"
+    },
+    "Symfony generate the function to hash the users password": {
+        "body": [
+            "\\$${passwordHash} = \\$${encoder}->encodePassword(\\$${userClassName}, \\$${userClassName}->getPassword());\r",
+            "\\$${userClassName}->setPassword(\\$${passwordHash});"
+        ],
+        "prefix": [
+            "sfUserHash",
+            "hash",
+            "passwordHash"
+        ],
+        "description": "use this function to generate function for hashing the users password don not forgot to setup the file security.yaml"
+    },
+    "Symfony Send the Form var to the twig": {
+        "body": [
+            "'form' => \\$${form}->createView(),"
+        ],
+        "prefix": [
+            "sfTwigForm",
+            "createView",
+            "twigForm"
+        ],
+        "description": "pass the entire form object to the twig template with given variable name: form"
+    },
+    "Symfony Generate Logout function": {
+        "body": [
+            "/**\r",
+            " * @Route(\"/logout\",name=\"logout\")\r",
+            " */\r",
+            "public function logout()\r",
+            "{\r",
+            "}"
+        ],
+        "prefix": [
+            "sfLogout",
+            "logout"
+        ],
+        "description": "use this snippet to generate logout function withe symfony you just need to setup the file security.yaml"
+    },
+    "Symfony add flash messages": {
+        "body": [
+            "\\$this->addFlash(\r",
+            "   '${1|success,info,error,critical,emergency,alert,warning,notice,debug,log|}',\r",
+            "   '${flashMessage}'\r",
+            ");"
+        ],
+        "prefix": [
+            "sfAddFlash",
+            "addFlash",
+            "flash"
+        ],
+        "description": "use this snippet to generate flash message you need to setup the display code in the file base.html.twig"
+    },
+    "Symfony findAll from one repository": {
+        "body": [
+            "\\$${VarName} = \\$${repo}->findAll();"
+        ],
+        "prefix": [
+            "sfFindAll",
+            "findAll"
+        ],
+        "description": "use this snippet to generate the function findAll from one repository you need to inject the repo you want in the function parameters"
+    },
+    "Symfony generate the function findOneBy": {
+        "body": [
+            "\\$${VarName} = \\$${repo}->findOneBy(['${property}' => '${value}']);"
+        ],
+        "prefix": [
+            "sfFindOneBy",
+            "findOneBy"
+        ],
+        "description": "use this snippet to generate the function findOneBy to get one value from repo do not forgot to inject the repository in this function parameters"
+    },
+    "Symfony generate the function find": {
+        "body": [
+            "\\$${VarName} = \\$${repo}->find(${id});"
+        ],
+        "prefix": [
+            "sfFind",
+            "findOne",
+            "find"
+        ],
+        "description": "use this snippet to generate the function findOne you need to inject the repo in this function parameters"
+    },
+    "Symfony generate the function findBy ": {
+        "body": [
+            "\\$$VarName = \\$${repo}->findBy(['${property}'=>${value}]);"
+        ],
+        "prefix": [
+            "sfFindBy",
+            "findBy"
+        ],
+        "description": "use this function to generate the function findBy from one repo do not forgot to incject the repo you want in this function parameters"
+    },
+    "Symfony Query the data base using doctrine methods from one repository": {
+        "body": [
+            "\\$${1:VarName} = \\$${2:repo}->${3|find,findOneBy,findBy,findAll|}();"
+        ],
+        "prefix": [
+            "find",
+            "findAll",
+            "findOnBy",
+            "findBy"
+        ],
+        "description": "Symfony Query the data base using doctrine methods from one repository"
+    },
+    "Symfony passe the vars to twig": {
+        "body": [
+            "'${varName}' => ${value},"
+        ],
+        "prefix": [
+            "sfTwigVar",
+            "var",
+            "twigVar"
+        ],
+        "description": "use this snippet to send the vars to twig via the function render"
+    },
+    "Symfony Render function to render view in twig": {
+        "body": [
+            "return \\$this->render('${fileName}.html.twig',[\r",
+            "\t$0\r",
+            "]);"
+        ],
+        "prefix": [
+            "sfRender",
+            "render"
+        ],
+        "description": "use this snippet to generate render function to send the view into twig"
+    },
+    "Symfony get the current conected user on the site": {
+        "body": [
+            "\\$${user} = \\$this->getUser();"
+        ],
+        "prefix": [
+            "sfGetUser",
+            "user",
+            "getUser"
+        ],
+        "description": "use this snippet to get the current conected user "
+    },
+    "Symfony generate the remove function for the manager": {
+        "body": [
+            "\\$${manager}->remove(\\$${varName});\r",
+            "\\$${manager}->flush();"
+        ],
+        "prefix": [
+            "sfRemove",
+            "remove"
+        ],
+        "description": "use this snippet to remove or delete data from the database do not forgot to inject the class entitymanagerenterface in the function parametters"
+    },
+    "Symfony redirect to url": {
+        "body": [
+            "return \\$this->redirect('${1:url}',${2|200,300,301,302,404,403,201,221,500|});"
+        ],
+        "prefix": [
+            "sfRedirect",
+            "redirect",
+            "redirectToUrl"
+        ],
+        "description": "use this snippet to return the redirection to url"
+    },
+    "Symfony dump elements": {
+        "body": [
+            "dump(\\$${var});"
+        ],
+        "prefix": [
+            "sfDump",
+            "dump",
+            "varDump"
+        ],
+        "description": "use this snippet to generate the dump function in symfony"
+    },
+    "Symfony return json response": {
+        "body": [
+            "return \\$this->json(['${1:property}'=>'${2:value}'],${3|200,300,301,302,404,403,201,221,500|});"
+        ],
+        "prefix": [
+            "sfJson",
+            "json",
+            "returnJson"
+        ],
+        "description": "use this snippet to generate return json in symfony controller"
+    },
+    "Symfony CreateQueryBuilder in the repos": {
+        "body": [
+            "public function ${1:findByExampleField}(\\$${2:value})\r",
+            "{\r",
+            "\treturn \\$this->createQueryBuilder('${3:a}')\r",
+            "\t\t->${4|andWhere,where,orWhere|}('${3}.exampleField = :${5:val}')\r",
+            "\t\t->setParameter('${5}', \\$${2})\r",
+            "\t\t->orderBy('${3}.{6:id}', '${7|ASC,DESC|}')\r",
+            "\t\t->setMaxResults(${8:10})\r",
+            "\t\t->getQuery()\r",
+            "\t\t->getResult();\r",
+            "}"
+        ],
+        "prefix": [
+            "sfQueryBuilder",
+            "query",
+            "queryBuilder",
+            "builder"
+        ],
+        "description": "use this snippt to create querybuilder in the repos to get data from the database"
+    },
+    "Symfony getSalt to make it work the UserInterFace": {
+        "body": [
+            "public function getSalt()\r",
+            "{\r",
+            "}"
+        ],
+        "prefix": [
+            "sfGetSalt",
+            "salt"
+        ],
+        "description": "use this snippet to generate the function getSalt for the user entity when you implaments the UserInterFace"
+    },
+    "Symfony getUsername to make it work the UserInterFace": {
+        "body": [
+            "public function getUsername()\r",
+            "{\r",
+            "\treturn \\$this->${property};",
+            "}"
+        ],
+        "prefix": [
+            "sfGetUsername",
+            "getUserName"
+        ],
+        "description": "use this snippet to generate the function getUsername for the user entity when you implaments the UserInterFace"
+    },
+    "Symfony eraseCredentials to make it work the UserInterFace": {
+        "body": [
+            "public function eraseCredentials()\r",
+            "{\r",
+            "}"
+        ],
+        "prefix": [
+            "sfEraseCredentials",
+            "eraseCredentials"
+        ],
+        "description": "use this snippet to generate the function eraseCredentials for the user entity when you implaments the UserInterFace"
+    },
+    "Symfony Assert EqualTo": {
+        "body": [
+            "@Assert\\EqualTo(propertyPath=\"${propertyName}\", message=\"${errorMessage}\")"
+        ],
+        "prefix": [
+            "sfEqualTo",
+            "EqualTo",
+            "equalTo",
+            "assertEqualTo"
+        ],
+        "description": "use this snippet to generate the assert equalto in the symfony Annotations"
+    },
+    "Symfony Assert Length": {
+        "body": [
+            "@Assert\\Length(min=${10},max=${50}, minMessage=\"${minErrorMessage}\",maxMessage=\"${MaxErrorMessage}\")"
+        ],
+        "prefix": [
+            "sfLength",
+            "length"
+        ],
+        "description": "use this snippet to generate the assert Length in the symfony Annotations"
+    },
+    "Symfony Assert NotBlank": {
+        "body": [
+            "@Assert\\NotBlank"
+        ],
+        "prefix": [
+            "sfNotBlank",
+            "NotBlank",
+            "notBlank"
+        ],
+        "description": "use this snippet to generate the assert NotBlank in the symfony Annotations"
+    },
+    "Symfony Assert Email": {
+        "body": [
+            "@Assert\\Email(message = \"The email  is not a valid email.\")"
+        ],
+        "prefix": "sfEmail",
+        "description": "use this snippet to generate the assert Email in the symfony Annotations"
+    },
+    "Symfony Assert Url": {
+        "body": [
+            "@Assert\\Url()"
+        ],
+        "prefix": "sfUrl",
+        "description": "use this snippet to generate the assert Url in the symfony Annotations"
+    },
+    "Symfony Assert NotEqualTo": {
+        "body": [
+            "@Assert\\NotEqualTo(value=\"${value}\", message=\"${errorMessage}\")"
+        ],
+        "prefix": "sfNotEqualTo",
+        "description": "use this snippet to generate the assert notequalto in the symfony Annotations"
+    },
+    "Symfony Assert GreaterThan": {
+        "body": [
+            "@Assert\\GreaterThan(\"today\")"
+        ],
+        "prefix": "sfGreaterThan",
+        "description": "use this snippet to generate the assert GreaterThan in the symfony Annotations"
+    },
+    "Symfony UniqueEntity on entity": {
+        "body": [
+            "@UniqueEntity(fields = {\"${field1},${field2}\"},message =\"${errorMessage}\")"
+        ],
+        "prefix": "sfUniqueEntity",
+        "description": "use this snippent to generate uniqueEntity to make sure that the fields"
+    },
+    "use this snippet to generate the assert validation constraints in the symfony Annotations": {
+        "body": [
+            "@Assert\\\\${1|NotBlank,Blank,NotNull,IsNull,IsFalse,Type,Email,ExpressionLanguageSyntax,Length,Url,Hostname,Regex,Ip,Json,Uuid,Uild,UserPassword,NotCompromisedPassword,EqualTo,NotEqualTo,IdenticalTo,NotIdenticalTo,LessThan,LessThanOrEqual,GreaterThan,GreaterThanOrEqual,Range,DivisibleBy,Unique,Positive,PositiveOrZero,Negative,NegativeOrZero,Date,DateTime,Time,Timezone,Choice,Language,Locale,Country,File,Image,Bic,CardScheme,Currency,Luhn,Iban,Isbn,Issn,Isin,AtLeastOneOf,Sequentially,Compound,Callback,Expression,All,Valid,Traverse,Collection,Count,UniqueEntity|}()"
+        ],
+        "prefix": [
+            "assert",
+            "valid",
+            "constraint",
+            "validation"
+        ],
+        "description": "use this snippet to generate the assert validation constraints in the symfony Annotations"
+    },
+    "Symfony Orm HaslifecycleCallbacks": {
+        "body": [
+            "@ORM\\HasLifecycleCallbacks()"
+        ],
+        "prefix": [
+            "sfhasLife",
+            "hasLife",
+            "HasLife"
+        ],
+        "description": "use this snippet to generate the Annotation @ORM\\HasLifecycleCallbacks() in symfony entity"
+    },
+    "Symfony generate the prepresist and preudate": {
+        "body": [
+            "* @ORM\\PrePersist\r",
+            "* @ORM\\PreUpdate "
+        ],
+        "prefix": [
+            "sfPre",
+            "PrePersist",
+            "PreUpdate"
+        ],
+        "description": "use this snippet to generate the * @ORM\\PrePersist * @ORM\\PreUpdate "
+    },
+    "Symfony get the manager from doctrine": {
+        "body": [
+            "\\$${manager} = \\$this->getDoctrine()->getManager();"
+        ],
+        "prefix": [
+            "sfManager",
+            "manager",
+            "entityManager"
+        ],
+        "description": "use this snippet to generate the var $manager to reacte with the database "
+    },
+    "symfony route": {
+        "body": [
+            "@Route(\"/${path}\",name=\"${name}\")"
+        ],
+        "prefix": [
+            "sfRoute",
+            "Route",
+            "route"
+        ],
+        "description": "use this snippet to get the @Route of symfony"
+    },
+    "symfony assert blank": {
+        "body": [
+            "@Assert\\Blank(message=\"must be blank\")"
+        ],
+        "prefix": [
+            "sfBlank",
+            "Blank"
+        ],
+        "description": "use this snippet to genarete Assert blank type = Blank"
+    },
+    "symfony assert notnull": {
+        "body": [
+            "@Assert\\NotNull(message=\"can not be null :/\")"
+        ],
+        "prefix": [
+            "sfNotNull",
+            "NotNull"
+        ],
+        "description": "use this snippet to generate the assert NotNull in the symfony Annotations."
+    },
+    "symfony asset isnull": {
+        "body": [
+            "@Assert\\IsNull(message=\"is null\")"
+        ],
+        "prefix": [
+            "sfIsNull",
+            "IsNull"
+        ],
+        "description": "use this snippet to generate the assert IsNull in the symfony Annotations"
+    },
+    "symfony assert istrue": {
+        "body": [
+            "@Assert\\IsTrue(message = \"The token is invalid.\")"
+        ],
+        "prefix": [
+            "sfTrue",
+            "IsTrue"
+        ],
+        "description": "use this snippet to generate the assert IsTrue in the symfony Annotations"
+    },
+    "symfony assert isFalse": {
+        "body": [
+            " @Assert\\IsFalse(message = \"You've entered an invalid state.\")"
+        ],
+        "prefix": [
+            "sfFalse",
+            "IsFalse"
+        ],
+        "description": "symfony assert isFalse"
+    },
+    "symfony assert type": {
+        "body": [
+            "@Assert\\Type(type=\"${1|integer,string,array|}\",message=\"The value {{ value }} is not a valid {{ type }}.\""
+        ],
+        "prefix": "sfType",
+        "description": "use this snippet to generate the assert Type in the symfony Annotations."
+    },
+    "symfony assert regex": {
+        "body": [
+            "@Assert\\Regex(pattern=\"${/\\d/}\",match=false,message=\"Your name cannot contain a number\")"
+        ],
+        "prefix": "sfRegex",
+        "description": "use this snippet to generate the assert Regex in the symfony Annotations."
+    },
+    "symfony assert ip": {
+        "body": [
+            "@Assert\\Ip()"
+        ],
+        "prefix": "sfIp",
+        "description": "use this snippet to generate the assert Ip in the symfony Annotations."
+    },
+    "symfony assert json": {
+        "body": [
+            "@Assert\\Json(message = \"You've entered an invalid Json.\")"
+        ],
+        "prefix": "sfAJson",
+        "description": "use this snippet to generate the assert Json in the symfony Annotations."
+    },
+    "symfony assert uuid": {
+        "body": [
+            "@Assert\\Uuid(message=\"\")"
+        ],
+        "prefix": "sfUuid",
+        "description": "use this snippet to generate the assert Uuid in the symfony Annotations."
+    },
+    "symfony securty assert userpassword": {
+        "body": [
+            "@SecurityAssert\\UserPassword(message = \"Wrong value for your current password\")"
+        ],
+        "prefix": "sfUserPassword",
+        "description": "use this snippet to generate the SecurityAssert UserPassword in the symfony Annotations."
+    },
+    "symfony assert identicalto": {
+        "body": [
+            "@Assert\\IdenticalTo(propertyPath=\"$0\")"
+        ],
+        "prefix": "sfIdenticalTo",
+        "description": "use this snippet to generate the assert IdenticalTo in the symfony Annotations."
+    },
+    "symfony assert lessThanOrEqual": {
+        "body": [
+            "@Assert\\LessThanOrEqual($0)"
+        ],
+        "prefix": "sfLessThanOrEqual",
+        "description": "use this snippet to generate the assert LessThanOrEqual in the symfony Annotations."
+    },
+    "symfony assert lessthan": {
+        "body": [
+            "@Assert\\LessThan($0)"
+        ],
+        "prefix": "sfLessThan",
+        "description": "use this snippet to generate the assert LessThan in the symfony Annotations."
+    },
+    "symfony GreaterThanOrEqual": {
+        "body": [
+            "@Assert\\GreaterThanOrEqual($0)"
+        ],
+        "prefix": "sfGreaterThanOrEqual",
+        "description": "use this snippet to generate the assert GreaterThanOrEqual in the symfony Annotations."
+    },
+    "symfony assert range": {
+        "body": [
+            "@Assert\\Range(min = $1,max = $2,minMessage = \"You must be at least {{ limit }}cm tall to enter\",maxMessage = \"You cannot be taller than {{ limit }}cm to enter\")"
+        ],
+        "prefix": "sfRange",
+        "description": "use this snippet to generate the assert Range in the symfony Annotations."
+    },
+    "symfony DivisibleBy": {
+        "body": [
+            "@Assert\\DivisibleBy($0)"
+        ],
+        "prefix": "sfDivisibleBy",
+        "description": "use this snippet to generate the assert DivisibleBy in the symfony Annotations."
+    },
+    "symfony Unique": {
+        "body": [
+            "@Assert\\Unique(message=\"$0\")"
+        ],
+        "prefix": "sfUnique",
+        "description": "use this snippet to generate the assert Unique in the symfony Annotations."
+    },
+    "symfony Positive": {
+        "body": [
+            "@Assert\\Positive(message=\"$0\")"
+        ],
+        "prefix": "sfPositive",
+        "description": "use this snippet to generate the assert Positive in the symfony Annotations."
+    },
+    "symfony assert PositiveOrZero": {
+        "body": [
+            "@Assert\\PositiveOrZero(message=\"$0\")"
+        ],
+        "prefix": "sfPositiveOrZero",
+        "description": "use this snippet to generate the assert PositiveOrZero in the symfony Annotations."
+    },
+    "symfony Negative": {
+        "body": [
+            "@Assert\\Negative(message=\"$0\")"
+        ],
+        "prefix": "sfNegative",
+        "description": "use this snippet to generate the assert Negative in the symfony Annotations."
+    },
+    "symfony NegativeOrZero": {
+        "body": [
+            "@Assert\\NegativeOrZero(message=\"$0\")"
+        ],
+        "prefix": "sfNegativeOrZero",
+        "description": "use this snippet to generate the assert NegativeOrZero in the symfony Annotations."
+    },
+    "symfony Date": {
+        "body": [
+            "@Assert\\Date(message=\"$0\")"
+        ],
+        "prefix": "sfDate",
+        "description": "use this snippet to generate the assert Date in the symfony Annotations."
+    },
+    "symfony DateTime": {
+        "body": [
+            "@Assert\\DateTime(message=\"$0\")"
+        ],
+        "prefix": "sfDateTime",
+        "description": "use this snippet to generate the assert DateTime in the symfony Annotations."
+    },
+    "symfony Time": {
+        "body": [
+            "@Assert\\Time(message=\"$0\")"
+        ],
+        "prefix": "sfTime",
+        "description": "use this snippet to generate the assert Time in the symfony Annotations."
+    },
+    "symfony Timezone": {
+        "body": [
+            "@Assert\\Timezone(message=\"$0\")"
+        ],
+        "prefix": "sfTimezone",
+        "description": "use this snippet to generate the assert Timezone in the symfony Annotations."
+    },
+    "symfony Language": {
+        "body": [
+            "@Assert\\Language(message=\"$0\")"
+        ],
+        "prefix": "sfLanguage",
+        "description": "use this snippet to generate the assert Language in the symfony Annotations."
+    },
+    "symfony ": {
+        "body": [
+            "@Assert\\Locale(canonicalize = true)"
+        ],
+        "prefix": "sfLocale",
+        "description": "use this snippet to generate the assert Locale in the symfony Annotations."
+    },
+    "symfony Country": {
+        "body": [
+            "@Assert\\Country(message=\"$0\")"
+        ],
+        "prefix": "sfCountry",
+        "description": "use this snippet to generate the assert Country in the symfony Annotations."
+    },
+    "Symfony Generate Vich Annotation uploader": {
+        "body": [
+            "* @Vich\\Uploadable"
+        ],
+        "prefix": [
+            "sfVichUploadable",
+            "Uploadable",
+            "vichUploadable"
+        ],
+        "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle @Uploadable"
+    },
+    "Symfony Generate Vich Annotation uploader field": {
+        "body": [
+            "* @Vich\\UploadableField(mapping = \"${mapping_name}\", fileNameProperty = \"${imageName}\", size = \"${imageSize}\")"
+        ],
+        "prefix": [
+            "sfVichField",
+            "UploadableField",
+            "vichUploadableField"
+        ],
+        "description": "use this snippets to gereate the Annotation for Vich Uploader Bundle UploadableField"
+    },
+    "create symfony controller body": {
+        "prefix": [
+            "sfNewController",
+            "controller",
+            "NewController"
+        ],
+        "body": [
+            "namespace App\\Controller;",
+            "",
+            "use Symfony\\Component\\HttpFoundation\\Response;",
+            "class ${LuckyController} extends AbstractController",
+            "{",
+            "    /**",
+            "     * @Route(\"/${path}\")",
+            "     */",
+            "    public function ${index}(): Response",
+            "    {",
+            "       $0",
+            "    }",
+            "}"
+        ],
+        "description": "create symfony controller body"
+    },
+    "The generateUrl() method is just a helper method that generates the URL for a given route:": {
+        "prefix": [
+            "sfGenerateUrl",
+            "generateUrl",
+            "urlFromRoute"
+        ],
+        "body": [
+            "$${url} \\$this->generateUrl('${routeName}', ['${params}' => $value]);"
+        ],
+        "description": "The generateUrl() method is just a helper method that generates the URL for a given route:"
+    },
+    "Add log message via Logger Service": {
+        "prefix": [
+            "sfLogger",
+            "logger",
+            "log",
+            "addLog"
+        ],
+        "body": [
+            "$${logger}->${1|info,error,critical,emergency,alert,warning,notice,debug,log|}('${logMessage}');"
+        ],
+        "description": "Add log message via Logger Service"
+    },
+    "throw new NotFoundException": {
+        "prefix": [
+            "sfNotFoundException",
+            "NotFoundException"
+        ],
+        "body": [
+            "throw \\$this->createNotFoundException('${not_exist}');"
+        ],
+        "description": "throw new NotFoundException"
+    },
+    "set the container": {
+        "prefix": [
+            "sfSetContainer",
+            "setContainer"
+        ],
+        "body": [
+            "\\$this->setContainer($${container});"
+        ],
+        "description": "set the container"
+    },
+    "Gets a container parameter by its name.": {
+        "prefix": [
+            "sfGetParameter",
+            "getParameter"
+        ],
+        "body": [
+            "\\$this->getParameter('${parameterName}');"
+        ],
+        "description": "Gets a container parameter by its name."
+    },
+    "Returns true if the service id is defined.": {
+        "prefix": [
+            "sfHas",
+            "has"
+        ],
+        "body": [
+            "\\$this->has('${serviceID}');"
+        ],
+        "description": "Returns true if the service id is defined."
+    },
+    "print CURRENT DATE": {
+        "prefix": [
+            "sfToday",
+            "today"
+        ],
+        "body": [
+            "$CURRENT_DATE/$CURRENT_MONTH/$CURRENT_YEAR"
+        ],
+        "description": "print CURRENT DATE"
+    },
+    "Add new Block comment": {
+        "prefix": [
+            "sfBlockComment",
+            "blockComment"
+        ],
+        "body": [
+            "$BLOCK_COMMENT_START ${comment} $BLOCK_COMMENT_END"
+        ],
+        "description": "Add new Block comment"
+    },
+    "Add new Line comment": {
+        "prefix": [
+            "sfLineComment",
+            "lineComment",
+            "comment"
+        ],
+        "body": [
+            "$LINE_COMMENT ${comment}"
+        ],
+        "description": "Add new Line comment"
+    },
+    "Gets a container service by its id.": {
+        "prefix": [
+            "sfGet",
+            "get",
+            "service"
+        ],
+        "body": [
+            "\\$this->get('${1|doctrine,form.factory,http_kernel,parameter_bag,request_stack,router,security.authorization_checker,security.csrf.token_manager,security.token_storage,serializer,session,twig|}');"
+        ],
+        "description": "Gets a container service by its id."
+    },
+    "Forwards the request to another controller.": {
+        "prefix": [
+            "sfForward",
+            "forward",
+            "forwardRequest"
+        ],
+        "body": [
+            "\\$this->forward(\"App\\\\Controller\\\\${YourController}::${ControllerFunction}\");"
+        ],
+        "description": "Forwards the request to another controller."
+    },
+    "Returns a BinaryFileResponse object with original or customized file name and disposition header.": {
+        "prefix": [
+            "sfFile",
+            "file",
+            "returnFile"
+        ],
+        "body": [
+            "\\$this->file('${filePath}');"
+        ],
+        "description": "Returns a BinaryFileResponse object with original or customized file name and disposition header."
+    },
+    "Checks if the attribute is granted against the current authentication token and optionally supplied subject.": {
+        "prefix": [
+            "sfIsGranted",
+            "isGranted"
+        ],
+        "body": [
+            "\\$this->isGranted(\\$${attribute});"
+        ],
+        "description": "Checks if the attribute is granted against the current authentication token and optionally supplied subject."
+    },
+    "Throws an exception unless the attribute is granted against the current authentication token and optionally supplied subject.": {
+        "prefix": "sfDenyAccessUnlessGranted",
+        "body": [
+            "\\$this->denyAccessUnlessGranted(\\$${attribute}, ${null},'Access Denied.');"
+        ],
+        "description": "Throws an exception unless the attribute is granted against the current authentication token and optionally supplied subject."
+    },
+    "get a rendered view.": {
+        "prefix": [
+            "sfRenderView",
+            "renderView"
+        ],
+        "body": [
+            "\\$this->renderView(\\$${viewPath},\\$${parameters});"
+        ],
+        "description": "get a rendered view."
+    },
+    "Renders a view and sets the appropriate status code when a form is listed in parameters.": {
+        "prefix": [
+            "sfRenderForm",
+            "renderForm"
+        ],
+        "body": [
+            "\\$this->renderForm(\\$${view},\\$${parameters},\\$${response});"
+        ],
+        "description": "Renders a view and sets the appropriate status code when a form is listed in parameters."
+    },
+    "Streams a view.": {
+        "prefix": [
+            "sfStream",
+            "stream"
+        ],
+        "body": [
+            "\\$this->stream(\\$${view},\\$${parameters},\\$${response});"
+        ],
+        "description": "Streams a view."
+    },
+    "Returns an AccessDeniedException.": {
+        "prefix": [
+            "sfCreateAccessDeniedException",
+            "createAccessDeniedException",
+            "AccessDeniedException"
+        ],
+        "body": [
+            "\\$this->createAccessDeniedException('${AccessDenied}');"
+        ],
+        "description": "Returns an AccessDeniedException."
+    },
+    "Creates and returns a form builder instance.": {
+        "prefix": [
+            "sfCreateFormBuilder",
+            "createFormBuilder",
+            "formBulder"
+        ],
+        "body": [
+            "\\$${1:formBuilder} = \\$this->createFormBuilder(\\$${2:data},\\$${3:options});",
+            "\\$${1}",
+            "\t->add('${4:field}',${5|TextType,TextareaType,EmailType,IntegerType,MoneyType,NumberType,PasswordType,PercentType,SearchType,UrlType,RangeType,TelType,ColorType,ChoiceType,EntityType,CountryType,LanguageType,LocaleType,TimezoneType,CurrencyType,DateType,DateIntervalType,DateTimeType,TimeType,BirthdayType,WeekType,CheckboxType,FileType,RadioType,UuidType,UlidType,CollectionType,RepeatedType,HiddenType,ButtonType,ResetType,SubmitType,FormType|}::class,[]);"
+        ],
+        "description": "Creates and returns a form builder instance."
+    },
+    "Shortcut to return the Doctrine Registry service.": {
+        "prefix": [
+            "sfGetDoctrine",
+            "getDoctrine",
+            "doctrine"
+        ],
+        "body": [
+            "\\$this->getDoctrine();"
+        ],
+        "description": "Shortcut to return the Doctrine Registry service."
+    },
+    "Dispatches a message to the bus.": {
+        "prefix": [
+            "sfDispatchMessage",
+            "dispatchMessage"
+        ],
+        "body": [
+            "\\$this->dispatchMessage(\\$${message},\\$${stamps});"
+        ],
+        "description": "Dispatches a message to the bus."
+    },
+    "Adds a Link HTTP header to the current response.": {
+        "prefix": [
+            "sfAddLink",
+            "addLink",
+            "link"
+        ],
+        "body": [
+            "\\$this->addLink(\\$${request},\\$${link});"
+        ],
+        "description": "Adds a Link HTTP header to the current response."
+    },
+    "Add new Field to the form builder": {
+        "prefix": [
+            "sfField",
+            "addField",
+            "add",
+            "formField"
+        ],
+        "body": [
+            "->add('${1:task}', ${2|TextType,TextareaType,EmailType,IntegerType,MoneyType,NumberType,PasswordType,PercentType,SearchType,UrlType,RangeType,TelType,ColorType,ChoiceType,EntityType,CountryType,LanguageType,LocaleType,TimezoneType,CurrencyType,DateType,DateIntervalType,DateTimeType,TimeType,BirthdayType,WeekType,CheckboxType,FileType,RadioType,UuidType,UlidType,CollectionType,RepeatedType,HiddenType,ButtonType,ResetType,SubmitType,FormType|}::class);"
+        ],
+        "description": "Add new Field to the form builder"
+    },
+    "get all form's data": {
+        "prefix": [
+            "sfFormData",
+            "formData",
+            "getData",
+            "data"
+        ],
+        "body": [
+            "\\$${data} = \\$${form}->getData();"
+        ],
+        "description": "get all form's data"
+    }
+}

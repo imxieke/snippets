@@ -1,0 +1,266 @@
+{
+	"name": "cloudflying-snippets",
+	"displayName": "Cloudflying Code Snippets",
+	"publisher": "imxieke",
+	"author": "imxieke",
+	"description": "Person VSCode Snippets.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Snippets",
+		"Programming Languages",
+		"Linters"
+	],
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#046380",
+		"theme": "dark"
+	},
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/imxieke/snippets"
+	},
+	"homepage": "https://github.com/imxieke/snippets",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imxieke/snippets.git"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "all",
+				"path": "./snippets/all.json"
+			},
+			{
+				"language": "all",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "bats",
+				"path": "./snippets/bats.json"
+			},
+			{
+				"language": "blade",
+				"path": "./snippets/html-bootstrap5.json"
+			},
+			{
+				"language": "c",
+				"path": "./snippets/arduino.json"
+			},
+			{
+				"language": "coffeescript",
+				"path": "./snippets/coffeescript.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/cpp.json"
+			},
+			{
+				"language": "csharp",
+				"path": "./snippets/csharp.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/css.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/dart.json"
+			},
+			{
+				"language": "dart",
+				"path": "./snippets/flutter.json"
+			},
+			{
+				"language": "fish",
+				"path": "./snippets/fish.json"
+			},
+			{
+				"language": "fortran",
+				"path": "./snippets/fortran.json"
+			},
+			{
+				"language": "flask",
+				"path": "./snippets/flask.json"
+			},
+			{
+				"language": "go",
+				"path": "./snippets/go.json"
+			},
+			{
+				"language": "groovy",
+				"path": "./snippets/groovy.json"
+			},
+			{
+				"language": "hack",
+				"path": "./snippets/hack.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html-bootstrap5.json"
+			},
+			{
+				"language": "java",
+				"path": "./snippets/java.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript-angular.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/html-bootstrap5.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript-jquery.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript-jsx.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript-react.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/json.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/jsonc.json"
+			},
+			{
+				"language": "latex",
+				"path": "./snippets/latex.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/lua.json"
+			},
+			{
+				"language": "markdown",
+				"path": "./snippets/markdown.json"
+			},
+			{
+				"language": "nginx",
+				"path": "./snippets/nginx.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-laravel.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/laravel-blade.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-phalcon.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-codeigniter4.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-pdo.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-phpunit.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-symfony.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-thinkphp-tpl.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-thinkphp6.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/php-twig.json"
+			},
+			{
+				"language": "powershell",
+				"path": "./snippets/powershell.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/python.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/python-django.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/ruby.json"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/rust.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/shellscript.json"
+			},
+			{
+				"language": "swift",
+				"path": "./snippets/swift.json"
+			},
+			{
+				"language": "sql",
+				"path": "./snippets/mssql.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/html-bootstrap5.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript-react.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/typescript-anjular.json"
+			},
+			{
+				"language": "vb",
+				"path": "./snippets/vb.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./snippets/yaml.json"
+			}
+		]
+	}
+}

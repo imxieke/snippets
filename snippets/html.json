@@ -1,0 +1,3396 @@
+{
+	"Kendo Textbox": {
+		"prefix": "us-textbox",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<input class=\"k-textbox form-control\" formControlName=\"${2:ControlName}\" kendoTextBox />",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"     <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo Textbox"
+	},
+	"Kendo numerictextbox": {
+		"prefix": "us-numerictextbox",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-numerictextbox class=\"w-100\" type=\"text\"  formControlName=\"${2:ControlName}\" [min]=\"1\" [max]=\"100\" >",
+			"</kendo-numerictextbox>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo numerictextbox"
+	},
+	"Kendo textarea": {
+		"prefix": "us-textarea",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<textarea class=\"form-control\" formControlName=\"${2:ControlName}\" rows=\"5\"></textarea>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo textarea"
+	},
+	"Kendo Combobox": {
+		"prefix": "us-combobox",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-combobox class=\"w-100\" formControlName=\"${2:ControlName}\"",
+			"  [data]=\"${3:dataSource}Datasource | comboFilter: ${4:filterName}FilterText\"",
+			"  (filterChange)=\"${4:filterName}FilterText = $$event\" [filterable]=\"true\" [valuePrimitive]=\"true\"",
+			"  textField=\"label\" valueField=\"value\">",
+			"</kendo-combobox>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo Combobox"
+	},
+	"Kendo dropdownlist": {
+		"prefix": "us-dropdownlist",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-dropdownlist class=\"w-100\" formControlName=\"${2:ControlName}\" [data]=\"${3:dataSource}Datasource\"",
+			"  [valuePrimitive]=\"true\" textField=\"label\" valueField=\"value\">",
+			"</kendo-dropdownlist>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo dropdownlist"
+	},
+	"Kendo Multiselect": {
+		"prefix": "us-multiselect",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-multiselect class=\"w-100\" formControlName=\"${2:ControlName}\"",
+			"  [data]=\"${3:dataSource}Datasource | comboFilter: ${4:filterName}FilterText\"",
+			"  (filterChange)=\"${4:filterName}FilterText = $$event\" [filterable]=\"true\" [valuePrimitive]=\"true\"",
+			"  textField=\"label\" valueField=\"value\" placeholder=\"\" [allowCustom]=\"false\">",
+			"</kendo-multiselect>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo Multiselect"
+	},
+	"Kendo editor": {
+		"prefix": "us-editor",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-editor formControlName=\"${2:ControlName}\"></kendo-editor>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo editor"
+	},
+	"Kendo Checkbox": {
+		"prefix": "us-checkbox",
+		"body": [
+			"<label class=\"pl-1\">",
+			"  <input type=\"checkbox\" formControlName=\"${1:ControlName}\" id=\"${1:ControlName}\" class=\"k-checkbox\" />",
+			"  <label class=\"k-checkbox-label\" for=\"${1:ControlName}\">${2:labelName}</label>",
+			"</label>"
+		],
+		"description": "Kendo Checkbox"
+	},
+	"Kendo switch": {
+		"prefix": "us-switch",
+		"body": [
+			"<kendo-switch [(ngModel)]=\"${1:ControlName}\" [ngModelOptions]=\"{standalone: true}\"",
+			"  [onLabel]=\"'${2:onLabel}'\" [offLabel]=\"'${3:offLabel}'\" (ngModelChange)=\"${4:ngModelChange}($$event)\">",
+			"</kendo-switch>"
+		],
+		"description": "Kendo switch"
+	},
+	"Kendo datepicker": {
+		"prefix": "us-datepicker",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-datepicker class=\"w-100\" formControlName=\"${2:ControlName}\"></kendo-datepicker>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo datepicker"
+	},
+	"Kendo timepicker": {
+		"prefix": "us-timepicker",
+		"body": [
+			"<label for=\"${2:ControlName}\" appFieldDictionary>${1:labelName}</label>",
+			"<kendo-timepicker class=\"w-100\" formControlName=\"${2:ControlName}\"></kendo-timepicker>",
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${2:ControlName}').touched && formGroup.get('${2:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${1:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Kendo timepicker"
+	},
+	"Validation": {
+		"prefix": "us-validation",
+		"body": [
+			"<div class=\"req-field\">",
+			"  <div *ngIf=\"formGroup.get('${1:ControlName}').touched && formGroup.get('${1:ControlName}').invalid\">",
+			"    <span appFieldDictionary>${2:labelName}</span> is required!",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Validation"
+	},
+	"pre tag Json": {
+		"prefix": "us-debug",
+		"body": [
+			"<pre>{{ ${1:obj} | json }}</pre>$2"
+		],
+		"description": "pre tag Json"
+	},
+	"ng-template": {
+		"prefix": "us-ng-template",
+		"body": [
+			"<ng-template ngFor let-item [ngForOf]=\"${1:dataSource}\">",
+			"${2:}",
+			"</ng-template>"
+		],
+		"description": "ng-template"
+	},
+	"a link": {
+		"prefix": "us-a-link",
+		"body": [
+			"<a [routerLink]=\"['${1:routePath}',${2:routeParam}]\" routerLinkActive=\"${3:className}\" ",
+			"   [routerLinkActiveOptions]=\"{ exact: ${4|true,false|} }\"></a>"
+		],
+		"description": "a link"
+	},
+	"ngModel": {
+		"prefix": "us-ngModel",
+		"body": [
+			"[(ngModel)]=\"${1:modelName}\" [ngModelOptions]=\"{standalone: true}\" ${2:}"
+		],
+		"description": "ngModel with Standalone"
+	},
+	"ngModelChange": {
+		"prefix": "us-e-ngModelChange",
+		"body": [
+			"(ngModelChange)=\"${1:modelChanged}($$event)\" ${2:}"
+		],
+		"description": "ngModelChange"
+	},
+	"valueChange": {
+		"prefix": "us-e-valueChange",
+		"body": [
+			"(valueChange)=\"${1:valueChange}($$event)\" ${2:}"
+		],
+		"description": "valueChange"
+	},
+	"click": {
+		"prefix": "us-e-click",
+		"body": [
+			"(click)=\"${1:onClick}($$event)\" ${2:}"
+		],
+		"description": "click"
+	},
+	"change": {
+		"prefix": "us-e-change",
+		"body": [
+			"(change)=\"${1:onChange}($$event)\" ${2:}"
+		],
+		"description": "change"
+	},
+	"doctype": {
+		"prefix": "doctype",
+		"body": [
+			"<!DOCTYPE>",
+			"$1"
+		],
+		"description": "HTML - Defines the document type",
+		"scope": "text.html"
+	},
+	"a": {
+		"prefix": "a",
+		"body": "<a href=\"$1\">$2</a>$3",
+		"description": "HTML - Defines a hyperlink",
+		"scope": "text.html"
+	},
+	"abbr": {
+		"prefix": "abbr",
+		"body": "<abbr title=\"$1\">$2</abbr>$3",
+		"description": "HTML - Defines an abbreviation",
+		"scope": "text.html"
+	},
+	"address": {
+		"prefix": "address",
+		"body": [
+			"<address>",
+			"$1",
+			"</address>"
+		],
+		"description": "HTML - Defines an address element",
+		"scope": "text.html"
+	},
+	"area": {
+		"prefix": "area",
+		"body": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
+		"description": "HTML - Defines an area inside an image map",
+		"scope": "text.html"
+	},
+	"article": {
+		"prefix": "article",
+		"body": [
+			"<article>",
+			"\t$1",
+			"</article>"
+		],
+		"description": "HTML - Defines an article",
+		"scope": "text.html"
+	},
+	"aside": {
+		"prefix": "aside",
+		"body": [
+			"<aside>",
+			"\t$1",
+			"</aside>$2"
+		],
+		"description": "HTML - Defines content aside from the page content",
+		"scope": "text.html"
+	},
+	"audio": {
+		"prefix": "audio",
+		"body": [
+			"<audio controls>",
+			"\t$1",
+			"</audio>"
+		],
+		"description": "HTML - Defines sounds content",
+		"scope": "text.html"
+	},
+	"b": {
+		"prefix": "b",
+		"body": "<b>$1</b>$2",
+		"description": "HTML - Defines bold text",
+		"scope": "text.html"
+	},
+	"base": {
+		"prefix": "base",
+		"body": "<base href=\"$1\" target=\"$2\">$3",
+		"description": "HTML - Defines a base URL for all the links in a page",
+		"scope": "text.html"
+	},
+	"bdi": {
+		"prefix": "bdi",
+		"body": "<bdi>$1</bdi>$2",
+		"description": "HTML - Used to isolate text that is of unknown directionality",
+		"scope": "text.html"
+	},
+	"bdo": {
+		"prefix": "bdo",
+		"body": [
+			"<bdo dir=\"$1\">",
+			"$2",
+			"</bdo>"
+		],
+		"description": "HTML - Defines the direction of text display",
+		"scope": "text.html"
+	},
+	"big": {
+		"prefix": "big",
+		"body": "<big>$1</big>$2",
+		"description": "HTML - Used to make text bigger",
+		"scope": "text.html"
+	},
+	"blockquote": {
+		"prefix": "blockquote",
+		"body": [
+			"<blockquote cite=\"$2\">",
+			"\t$1",
+			"</blockquote>"
+		],
+		"description": "HTML - Defines a long quotation",
+		"scope": "text.html"
+	},
+	"body": {
+		"prefix": "body",
+		"body": [
+			"<body>",
+			"\t$1",
+			"</body>"
+		],
+		"description": "HTML - Defines the body element",
+		"scope": "text.html"
+	},
+	"br": {
+		"prefix": "br",
+		"body": "<br>",
+		"description": "HTML - Inserts a single line break",
+		"scope": "text.html"
+	},
+	"button": {
+		"prefix": "button",
+		"body": "<button type=\"$1\">$2</button>$3",
+		"description": "HTML - Defines a push button",
+		"scope": "text.html"
+	},
+	"canvas": {
+		"prefix": "canvas",
+		"body": "<canvas id=\"$1\">$2</canvas>$3",
+		"description": "HTML - Defines graphics",
+		"scope": "text.html"
+	},
+	"caption": {
+		"prefix": "caption",
+		"body": "<caption>$1</caption>$2",
+		"description": "HTML - Defines a table caption",
+		"scope": "text.html"
+	},
+	"cite": {
+		"prefix": "cite",
+		"body": "<cite>$1</cite>$2",
+		"description": "HTML - Defines a citation",
+		"scope": "text.html"
+	},
+	"code": {
+		"prefix": "code",
+		"body": "<code>$1</code>$2",
+		"description": "HTML - Defines computer code text",
+		"scope": "text.html"
+	},
+	"col": {
+		"prefix": "col",
+		"body": "<col>$2",
+		"description": "HTML - Defines attributes for table columns",
+		"scope": "text.html"
+	},
+	"colgroup": {
+		"prefix": "colgroup",
+		"body": [
+			"<colgroup>",
+			"\t$1",
+			"</colgroup>"
+		],
+		"description": "HTML - Defines group of table columns",
+		"scope": "text.html"
+	},
+	"command": {
+		"prefix": "command",
+		"body": "<command>$1</command>$2",
+		"description": "HTML - Defines a command button [not supported]",
+		"scope": "text.html"
+	},
+	"datalist": {
+		"prefix": "datalist",
+		"body": [
+			"<datalist>",
+			"\t$1",
+			"</datalist>"
+		],
+		"description": "HTML - Defines a dropdown list",
+		"scope": "text.html"
+	},
+	"dd": {
+		"prefix": "dd",
+		"body": "<dd>$1</dd>$2",
+		"description": "HTML - Defines a definition description",
+		"scope": "text.html"
+	},
+	"del": {
+		"prefix": "del",
+		"body": "<del>$1</del>$2",
+		"description": "HTML - Defines deleted text",
+		"scope": "text.html"
+	},
+	"details": {
+		"prefix": "details",
+		"body": [
+			"<details>",
+			"\t$1",
+			"</details>"
+		],
+		"description": "HTML - Defines details of an element",
+		"scope": "text.html"
+	},
+	"dialog": {
+		"prefix": "dialog",
+		"body": "<dialog>$1</dialog>$2",
+		"description": "HTML - Defines a dialog (conversation)",
+		"scope": "text.html"
+	},
+	"dfn": {
+		"prefix": "dfn",
+		"body": "<dfn>$1</dfn>$2",
+		"description": "HTML - Defines a definition term",
+		"scope": "text.html"
+	},
+	"div": {
+		"prefix": "div",
+		"body": [
+			"<div>",
+			"\t$1",
+			"</div>"
+		],
+		"description": "HTML - Defines a section in a document",
+		"scope": "text.html"
+	},
+	"dl": {
+		"prefix": "dl",
+		"body": [
+			"<dl>",
+			"\t$1",
+			"</dl>"
+		],
+		"description": "HTML - Defines a definition list",
+		"scope": "text.html"
+	},
+	"dt": {
+		"prefix": "dt",
+		"body": "<dt>$1</dt>$2",
+		"description": "HTML - Defines a definition term",
+		"scope": "text.html"
+	},
+	"em": {
+		"prefix": "em",
+		"body": "<em>$1</em>$2",
+		"description": "HTML - Defines emphasized text",
+		"scope": "text.html"
+	},
+	"embed": {
+		"prefix": "embed",
+		"body": "<embed src=\"$1\">$2",
+		"description": "HTML - Defines external interactive content ot plugin",
+		"scope": "text.html"
+	},
+	"fieldset": {
+		"prefix": "fieldset",
+		"body": [
+			"<fieldset>",
+			"\t$1",
+			"</fieldset>"
+		],
+		"description": "HTML - Defines a fieldset",
+		"scope": "text.html"
+	},
+	"figcaption": {
+		"prefix": "figcaption",
+		"body": "<figcaption>$1</figcaption>$2",
+		"description": "HTML - Defines a caption for a figure",
+		"scope": "text.html"
+	},
+	"figure": {
+		"prefix": "figure",
+		"body": [
+			"<figure>",
+			"\t$1",
+			"</figure>"
+		],
+		"description": "HTML - Defines a group of media content, and their caption",
+		"scope": "text.html"
+	},
+	"footer": {
+		"prefix": "footer",
+		"body": [
+			"<footer>",
+			"\t$1",
+			"</footer>"
+		],
+		"description": "HTML - Defines a footer for a section or page",
+		"scope": "text.html"
+	},
+	"form": {
+		"prefix": "form",
+		"body": [
+			"<form>",
+			"\t$1",
+			"</form>"
+		],
+		"description": "HTML - Defines a form",
+		"scope": "text.html"
+	},
+	"h1": {
+		"prefix": "h1",
+		"body": "<h1>$1</h1>$2",
+		"description": "HTML - Defines header 1",
+		"scope": "text.html"
+	},
+	"h2": {
+		"prefix": "h2",
+		"body": "<h2>$1</h2>$2",
+		"description": "HTML - Defines header 2",
+		"scope": "text.html"
+	},
+	"h3": {
+		"prefix": "h3",
+		"body": "<h3>$1</h3>$2",
+		"description": "HTML - Defines header 3",
+		"scope": "text.html"
+	},
+	"h4": {
+		"prefix": "h4",
+		"body": "<h4>$1</h4>$2",
+		"description": "HTML - Defines header 4",
+		"scope": "text.html"
+	},
+	"h5": {
+		"prefix": "h5",
+		"body": "<h5>$1</h5>$2",
+		"description": "HTML - Defines header 5",
+		"scope": "text.html"
+	},
+	"h6": {
+		"prefix": "h6",
+		"body": "<h6>$1</h6>$2",
+		"description": "HTML - Defines header 6",
+		"scope": "text.html"
+	},
+	"head": {
+		"prefix": "head",
+		"body": [
+			"<head>",
+			"\t$1",
+			"</head>"
+		],
+		"description": "HTML - Defines information about the document",
+		"scope": "text.html"
+	},
+	"header": {
+		"prefix": "header",
+		"body": [
+			"<header>",
+			"\t$1",
+			"</header>"
+		],
+		"description": "HTML - Defines a header for a section of page",
+		"scope": "text.html"
+	},
+	"hgroup": {
+		"prefix": "hgroup",
+		"body": [
+			"<hgroup>",
+			"\t$1",
+			"</hgroup>"
+		],
+		"description": "HTML - Defines information about a section in a document",
+		"scope": "text.html"
+	},
+	"hr": {
+		"prefix": "hr",
+		"body": "<hr>",
+		"description": "HTML - Defines a horizontal rule",
+		"scope": "text.html"
+	},
+	"html": {
+		"prefix": "html",
+		"body": [
+			"<html>",
+			"\t$1",
+			"</html>"
+		],
+		"description": "HTML - Defines an html document",
+		"scope": "text.html"
+	},
+	"html5": {
+		"prefix": "html5",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"$1en\">",
+			"\t<head>",
+			"\t\t<title>$2</title>",
+			"\t\t<meta charset=\"UTF-8\">",
+			"\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+			"\t\t<link href=\"$3css/style.css\" rel=\"stylesheet\">",
+			"\t</head>",
+			"\t<body>",
+			"\t$4",
+			"\t</body>",
+			"</html>"
+		],
+		"description": "HTML - Defines a template for a html5 document",
+		"scope": "text.html"
+	},
+	"i": {
+		"prefix": "i",
+		"body": "<i>$1</i>$2",
+		"description": "HTML - Defines italic text",
+		"scope": "text.html"
+	},
+	"iframe": {
+		"prefix": "iframe",
+		"body": "<iframe src=\"$1\">$2</iframe>$3",
+		"description": "HTML - Defines an inline sub window",
+		"scope": "text.html"
+	},
+	"img": {
+		"prefix": "img",
+		"body": "<img src=\"$1\" alt=\"$2\">$3",
+		"description": "HTML - Defines an image",
+		"scope": "text.html"
+	},
+	"input": {
+		"prefix": "input",
+		"body": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
+		"description": "HTML - Defines an input field",
+		"scope": "text.html"
+	},
+	"ins": {
+		"prefix": "ins",
+		"body": "<ins>$1</ins>$2",
+		"description": "HTML - Defines inserted text",
+		"scope": "text.html"
+	},
+	"keygen": {
+		"prefix": "keygen",
+		"body": "<keygen name=\"$1\">$2",
+		"description": "HTML - Defines a generated key in a form",
+		"scope": "text.html"
+	},
+	"kbd": {
+		"prefix": "kbd",
+		"body": "<kbd>$1</kbd>$2",
+		"description": "HTML - Defines keyboard text",
+		"scope": "text.html"
+	},
+	"label": {
+		"prefix": "label",
+		"body": "<label for=\"$1\">$2</label>$3",
+		"description": "HTML - Defines an inline window",
+		"scope": "text.html"
+	},
+	"legend": {
+		"prefix": "legend",
+		"body": "<legend>$1</legend>$2",
+		"description": "HTML - Defines a title in a fieldset",
+		"scope": "text.html"
+	},
+	"li": {
+		"prefix": "li",
+		"body": "<li>$1</li>$2",
+		"description": "HTML - Defines a list item",
+		"scope": "text.html"
+	},
+	"link": {
+		"prefix": "link",
+		"body": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
+		"description": "HTML - Defines a resource reference",
+		"scope": "text.html"
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"<main>",
+			"\t$1",
+			"</main>"
+		],
+		"description": "HTML - Defines an image map",
+		"scope": "text.html"
+	},
+	"map": {
+		"prefix": "map",
+		"body": [
+			"<map name=\"$1\">",
+			"\t$2",
+			"</map>"
+		],
+		"description": "HTML - Defines an image map",
+		"scope": "text.html"
+	},
+	"mark": {
+		"prefix": "mark",
+		"body": "<mark>$1</mark>$2",
+		"description": "HTML - Defines marked text",
+		"scope": "text.html"
+	},
+	"menu": {
+		"prefix": "menu",
+		"body": [
+			"<menu>",
+			"\t$1",
+			"</menu>"
+		],
+		"description": "HTML - Defines a menu list",
+		"scope": "text.html"
+	},
+	"menuitem": {
+		"prefix": "menuitem",
+		"body": "<menuitem>$1</menuitem>$2",
+		"description": "HTML - Defines a menu item [firefox only]",
+		"scope": "text.html"
+	},
+	"meta": {
+		"prefix": "meta",
+		"body": "<meta name=\"$1\" content=\"$2\">$3",
+		"description": "HTML - Defines meta information",
+		"scope": "text.html"
+	},
+	"meter": {
+		"prefix": "meter",
+		"body": "<meter value=\"$1\">$2</meter>$3",
+		"description": "HTML - Defines measurement within a predefined range",
+		"scope": "text.html"
+	},
+	"nav": {
+		"prefix": "nav",
+		"body": [
+			"<nav>",
+			"\t$1",
+			"</nav>"
+		],
+		"description": "HTML - Defines navigation links",
+		"scope": "text.html"
+	},
+	"noscript": {
+		"prefix": "noscript",
+		"body": [
+			"<noscript>",
+			"$1",
+			"</noscript>"
+		],
+		"description": "HTML - Defines a noscript section",
+		"scope": "text.html"
+	},
+	"object": {
+		"prefix": "object",
+		"body": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
+		"description": "HTML - Defines an embedded object",
+		"scope": "text.html"
+	},
+	"ol": {
+		"prefix": "ol",
+		"body": [
+			"<ol>",
+			"\t$1",
+			"</ol>"
+		],
+		"description": "HTML - Defines an ordered list",
+		"scope": "text.html"
+	},
+	"optgroup": {
+		"prefix": "optgroup",
+		"body": [
+			"<optgroup>",
+			"\t$1",
+			"</optgroup>"
+		],
+		"description": "HTML - Defines an option group",
+		"scope": "text.html"
+	},
+	"option": {
+		"prefix": "option",
+		"body": "<option value=\"$1\">$2</option>$3",
+		"description": "HTML - Defines an option in a drop-down list",
+		"scope": "text.html"
+	},
+	"output": {
+		"prefix": "output",
+		"body": "<output name=\"$1\" for=\"$2\">$3</output>$4",
+		"description": "HTML - Defines some types of output",
+		"scope": "text.html"
+	},
+	"p": {
+		"prefix": "p",
+		"body": "<p>$1</p>$2",
+		"description": "HTML - Defines a paragraph",
+		"scope": "text.html"
+	},
+	"param": {
+		"prefix": "param",
+		"body": "<param name=\"$1\" value=\"$2\">$3",
+		"description": "HTML - Defines a parameter for an object",
+		"scope": "text.html"
+	},
+	"pre": {
+		"prefix": "pre",
+		"body": [
+			"<pre>$1</pre>"
+		],
+		"description": "HTML - Defines preformatted text",
+		"scope": "text.html"
+	},
+	"progress": {
+		"prefix": "progress",
+		"body": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
+		"description": "HTML - Defines progress of a task of any kind",
+		"scope": "text.html"
+	},
+	"q": {
+		"prefix": "q",
+		"body": "<q>$1</q>$2",
+		"description": "HTML - Defines a short quotation",
+		"scope": "text.html"
+	},
+	"rp": {
+		"prefix": "rp",
+		"body": "<rp>$1</rp>$2",
+		"description": "HTML - Used in ruby annotations to define what to show browsers that do not support the ruby element",
+		"scope": "text.html"
+	},
+	"rt": {
+		"prefix": "rt",
+		"body": "<rt>$1</rt>$2",
+		"description": "HTML - Defines explanation to ruby annotations",
+		"scope": "text.html"
+	},
+	"ruby": {
+		"prefix": "ruby",
+		"body": [
+			"<ruby>",
+			"$1",
+			"</ruby>"
+		],
+		"description": "HTML - Defines ruby annotations",
+		"scope": "text.html"
+	},
+	"s": {
+		"prefix": "s",
+		"body": "<s>$1</s>$2",
+		"description": "HTML - Used to define strikethrough text",
+		"scope": "text.html"
+	},
+	"samp": {
+		"prefix": "samp",
+		"body": "<samp>$1</samp>$2",
+		"description": "HTML - Defines sample computer code",
+		"scope": "text.html"
+	},
+	"script": {
+		"prefix": "script",
+		"body": [
+			"<script>",
+			"\t$1",
+			"</script>"
+		],
+		"description": "HTML - Defines a script",
+		"scope": "text.html"
+	},
+	"section": {
+		"prefix": "section",
+		"body": [
+			"<section>",
+			"\t$1",
+			"</section>"
+		],
+		"description": "HTML - Defines a section",
+		"scope": "text.html"
+	},
+	"select": {
+		"prefix": "select",
+		"body": [
+			"<select>",
+			"\t$1",
+			"</select>"
+		],
+		"description": "HTML - Defines a selectable list",
+		"scope": "text.html"
+	},
+	"small": {
+		"prefix": "small",
+		"body": "<small>$1</small>$2",
+		"description": "HTML - Defines small text",
+		"scope": "text.html"
+	},
+	"source": {
+		"prefix": "source",
+		"body": "<source src=\"$1\" type=\"$2\">$3",
+		"description": "HTML - Defines media resource",
+		"scope": "text.html"
+	},
+	"span": {
+		"prefix": "span",
+		"body": "<span>$1</span>$2",
+		"description": "HTML - Defines a section in a document",
+		"scope": "text.html"
+	},
+	"strong": {
+		"prefix": "strong",
+		"body": "<strong>$1</strong>$2",
+		"description": "HTML - Defines strong text",
+		"scope": "text.html"
+	},
+	"style": {
+		"prefix": "style",
+		"body": [
+			"<style>",
+			"$1",
+			"</style>"
+		],
+		"description": "HTML - Defines a style definition",
+		"scope": "text.html"
+	},
+	"sub": {
+		"prefix": "sub",
+		"body": "<sub>$1</sub>$2",
+		"description": "HTML - Defines sub-scripted text",
+		"scope": "text.html"
+	},
+	"sup": {
+		"prefix": "sup",
+		"body": "<sup>$1</sup>$2",
+		"description": "HTML - Defines super-scripted text",
+		"scope": "text.html"
+	},
+	"summary": {
+		"prefix": "summary",
+		"body": "<summary>$1</summary>$2",
+		"description": "HTML - Defines a visible heading for the detail element [limited support]",
+		"scope": "text.html"
+	},
+	"table": {
+		"prefix": "table",
+		"body": [
+			"<table>",
+			"\t$1",
+			"</table>"
+		],
+		"description": "HTML - Defines a table",
+		"scope": "text.html"
+	},
+	"tbody": {
+		"prefix": "tbody",
+		"body": [
+			"<tbody>",
+			"\t$1",
+			"</tbody>"
+		],
+		"description": "HTML - Defines a table body",
+		"scope": "text.html"
+	},
+	"td": {
+		"prefix": "td",
+		"body": "<td>$1</td>$2",
+		"description": "HTML - Defines a table cell",
+		"scope": "text.html"
+	},
+	"textarea": {
+		"prefix": "textarea",
+		"body": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
+		"description": "HTML - Defines a text area",
+		"scope": "text.html"
+	},
+	"tfoot": {
+		"prefix": "tfoot",
+		"body": [
+			"<tfoot>",
+			"\t$1",
+			"</tfoot>"
+		],
+		"description": "HTML - Defines a table footer",
+		"scope": "text.html"
+	},
+	"thead": {
+		"prefix": "thead",
+		"body": [
+			"<thead>",
+			"$1",
+			"</thead>"
+		],
+		"description": "HTML - Defines a table head",
+		"scope": "text.html"
+	},
+	"th": {
+		"prefix": "th",
+		"body": "<th>$1</th>$2",
+		"description": "HTML - Defines a table header",
+		"scope": "text.html"
+	},
+	"time": {
+		"prefix": "time",
+		"body": "<time datetime=\"$1\">$2</time>$3",
+		"description": "HTML - Defines a date/time",
+		"scope": "text.html"
+	},
+	"title": {
+		"prefix": "title",
+		"body": "<title>$1</title>$2",
+		"description": "HTML - Defines the document title",
+		"scope": "text.html"
+	},
+	"tr": {
+		"prefix": "tr",
+		"body": "<tr>$1</tr>$2",
+		"description": "HTML - Defines a table row",
+		"scope": "text.html"
+	},
+	"track": {
+		"prefix": "track",
+		"body": "<track src=\"$1\" kind=\"$2\" srclang=\"$3\" label=\"$4\">$5",
+		"description": "HTML - Defines a table row",
+		"scope": "text.html"
+	},
+	"u": {
+		"prefix": "u",
+		"body": "<u>$1</u>$2",
+		"description": "HTML - Used to define underlined text",
+		"scope": "text.html"
+	},
+	"ul": {
+		"prefix": "ul",
+		"body": [
+			"<ul>",
+			"\t$1",
+			"</ul>"
+		],
+		"description": "HTML - Defines an unordered list",
+		"scope": "text.html"
+	},
+	"var": {
+		"prefix": "var",
+		"body": "<var>$1</var>$2",
+		"description": "HTML - Defines a variable",
+		"scope": "text.html"
+	},
+	"video": {
+		"prefix": "video",
+		"body": [
+			"<video width=\"$1\" height=\"$2\" controls>",
+			"\t$3",
+			"</video>"
+		],
+		"description": "HTML - Defines a video",
+		"scope": "text.html"
+	},
+	"template": {
+		"prefix": "template",
+		"body": [
+			"<template>",
+			"\t<${1:div}$2>",
+			"\t\t$0",
+			"\t</${1:div}>",
+			"</template>"
+		],
+		"description": "template element"
+	},
+	"v-text": {
+		"prefix": "vText",
+		"body": [
+			"v-text=\"${1:msg}\""
+		],
+		"description": "Expects: string. Updates the element’s textContent."
+	},
+	"v-html": {
+		"prefix": "vHtml",
+		"body": [
+			"v-html=\"${1:html}\""
+		],
+		"description": "Expects: string. Updates the element’s innerHTML."
+	},
+	"v-show": {
+		"prefix": "vShow",
+		"body": [
+			"v-show=\"${1:condition}\""
+		],
+		"description": "Expects: any"
+	},
+	"v-if": {
+		"prefix": "vIf",
+		"body": [
+			"v-if=\"${1:condition}\""
+		],
+		"description": "Expects: any"
+	},
+	"v-else": {
+		"prefix": "vElse",
+		"body": [
+			"v-else"
+		],
+		"description": "Does not expect expression. previous sibling element must have v-if or v-else-if."
+	},
+	"v-else-if": {
+		"prefix": "vElseIf",
+		"body": [
+			"v-else-if=\"${1:condition}\""
+		],
+		"description": "Expects: any. previous sibling element must have v-if or v-else-if."
+	},
+	"v-for-without-key": {
+		"prefix": "vForWithoutKey",
+		"body": [
+			"v-for=\"${1:item} in ${2:items}\""
+		],
+		"description": "Expects: Array | Object | number | string"
+	},
+	"v-for": {
+		"prefix": "vFor",
+		"body": [
+			"v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\""
+		],
+		"description": "Expects: Array | Object | number | string"
+	},
+	"v-on": {
+		"prefix": "vOn",
+		"body": [
+			"v-on:${1:event}=\"${2:handle}\""
+		],
+		"description": "Expects: Function | Inline Statement"
+	},
+	"v-bind": {
+		"prefix": "vBind",
+		"body": [
+			"v-bind$1=\"${2}\""
+		],
+		"description": "Expects: any (with argument) | Object (without argument)"
+	},
+	"v-model": {
+		"prefix": "vModel",
+		"body": [
+			"v-model=\"${1:something}\""
+		],
+		"description": "Expects: varies based on value of form inputs element or output of components"
+	},
+	"v-slot": {
+		"prefix": "vSlot",
+		"body": [
+			"v-slot$1=\"${2}\""
+		],
+		"description": "Expects: JavaScript expression that is valid in a function argument position (supports destructuring in supported environments). Optional - only needed if expecting props to be passed to the slot."
+	},
+	"v-pre": {
+		"prefix": "vPre",
+		"body": [
+			"v-pre"
+		],
+		"description": "Does not expect expression"
+	},
+	"v-cloak": {
+		"prefix": "vCloak",
+		"body": [
+			"v-cloak"
+		],
+		"description": "Does not expect expression"
+	},
+	"v-once": {
+		"prefix": "vOnce",
+		"body": [
+			"v-once"
+		],
+		"description": "Does not expect expression"
+	},
+	"key": {
+		"prefix": "key",
+		"body": [
+			":key=\"${1:key}\""
+		],
+		"description": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+	},
+	"ref": {
+		"prefix": "ref",
+		"body": [
+			"ref=\"${1:reference}\"$0"
+		],
+		"description": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
+	},
+	"slotA": {
+		"prefix": "slotA",
+		"body": [
+			"slot=\"$1\"$0"
+		],
+		"description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+	},
+	"slotE": {
+		"prefix": "slotE",
+		"body": [
+			"<slot$1>$2</slot>$0"
+		],
+		"description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+	},
+	"slotScope": {
+		"prefix": "slotScope",
+		"body": [
+			"slot-scope=\"$1\"$0"
+		],
+		"description": "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+."
+	},
+	"scope": {
+		"prefix": "scope",
+		"body": [
+			"scope=\"${1:this api replaced by slot-scope in 2.5.0+}\"$0"
+		],
+		"description": "Used to denote a <template> element as a scoped slot, which is replaced by `slot-scope` in 2.5.0+."
+	},
+	"component": {
+		"prefix": "component",
+		"body": [
+			"<component :is=\"${1:componentId}\"></component>$0"
+		],
+		"description": "component element"
+	},
+	"keep-alive": {
+		"prefix": "keepAlive",
+		"body": [
+			"<keep-alive$1>",
+			"$2",
+			"</keep-alive>$0"
+		],
+		"description": "keep-alive element"
+	},
+	"transition": {
+		"prefix": "transition",
+		"body": [
+			"<transition$1>",
+			"$2",
+			"</transition>$0"
+		],
+		"description": "transition element"
+	},
+	"transition-group": {
+		"prefix": "transitionGroup",
+		"body": [
+			"<transition-group$1>",
+			"$2",
+			"</transition-group>"
+		],
+		"description": "transition-group element"
+	},
+	"enter-class": {
+		"prefix": "enterClass",
+		"body": [
+			"enter-class=\"$1\"$0"
+		],
+		"description": "enter-class=''. Expects: string."
+	},
+	"leave-class": {
+		"prefix": "leaveClass",
+		"body": [
+			"leave-class=\"$1\"$0"
+		],
+		"description": "leave-class=''. Expects: string."
+	},
+	"appear-class": {
+		"prefix": "appearClass",
+		"body": [
+			"appear-class=\"$1\"$0"
+		],
+		"description": "appear-class=''. Expects: string."
+	},
+	"enter-to-class": {
+		"prefix": "enterToClass",
+		"body": [
+			"enter-to-class=\"$1\"$0"
+		],
+		"description": "enter-to-class=''. Expects: string."
+	},
+	"leave-to-class": {
+		"prefix": "leaveToClass",
+		"body": [
+			"leave-to-class=\"$1\"$0"
+		],
+		"description": "leave-to-class=''. Expects: string."
+	},
+	"appear-to-class": {
+		"prefix": "appearToClass",
+		"body": [
+			"appear-to-class=\"$1\"$0"
+		],
+		"description": "appear-to-class=''. Expects: string."
+	},
+	"enter-active-class": {
+		"prefix": "enterActiveClass",
+		"body": [
+			"enter-active-class=\"$1\"$0"
+		],
+		"description": "enter-active-class=''. Expects: string."
+	},
+	"leave-active-class": {
+		"prefix": "leaveActiveClass",
+		"body": [
+			"leave-active-class=\"$1\"$0"
+		],
+		"description": "leave-active-class=''. Expects: string."
+	},
+	"appear-active-class": {
+		"prefix": "appearActiveClass",
+		"body": [
+			"appear-active-class=\"$1\"$0"
+		],
+		"description": "appear-active-class=''. Expects: string."
+	},
+	"before-enter": {
+		"prefix": "beforeEnterEvent",
+		"body": [
+			"@before-enter=\"$1\"$0"
+		],
+		"description": "@before-enter=''"
+	},
+	"before-leave": {
+		"prefix": "beforeLeaveEvent",
+		"body": [
+			"@before-leave=\"$1\"$0"
+		],
+		"description": "@before-leave=''"
+	},
+	"before-appear": {
+		"prefix": "beforeAppearEvent",
+		"body": [
+			"@before-appear=\"$1\"$0"
+		],
+		"description": "@before-appear=''"
+	},
+	"enter": {
+		"prefix": "enterEvent",
+		"body": [
+			"@enter=\"$1\"$0"
+		],
+		"description": "@enter=''"
+	},
+	"leave": {
+		"prefix": "leaveEvent",
+		"body": [
+			"@leave=\"$1\"$0"
+		],
+		"description": "@leave=''"
+	},
+	"appear": {
+		"prefix": "appearEvent",
+		"body": [
+			"@appear=\"$1\"$0"
+		],
+		"description": "@appear=''"
+	},
+	"after-enter": {
+		"prefix": "afterEnterEvent",
+		"body": [
+			"@after-enter=\"$1\"$0"
+		],
+		"description": "@after-enter=''"
+	},
+	"after-leave": {
+		"prefix": "afterLeaveEvent",
+		"body": [
+			"@after-leave=\"$1\"$0"
+		],
+		"description": "@after-leave=''"
+	},
+	"after-appear": {
+		"prefix": "afterAppearEvent",
+		"body": [
+			"@after-appear=\"$1\"$0"
+		],
+		"description": "@after-appear=''"
+	},
+	"enter-cancelled": {
+		"prefix": "enterCancelledEvent",
+		"body": [
+			"@enter-cancelled=\"$1\"$0"
+		],
+		"description": "@enter-cancelled=''"
+	},
+	"leave-cancelled": {
+		"prefix": "leaveCancelledEvent",
+		"body": [
+			"@leave-cancelled=\"$1\"$0"
+		],
+		"description": "@leave-cancelled='' (v-show only)"
+	},
+	"appear-cancelled": {
+		"prefix": "appearCancelledEvent",
+		"body": [
+			"@appear-cancelled=\"$1\"$0"
+		],
+		"description": "@appear-cancelled=''"
+	},
+	"routerLink": {
+		"prefix": "routerLink",
+		"body": [
+			"<router-link $1>$2</router-link>$0"
+		],
+		"description": "router-link element"
+	},
+	"routerLinkTo": {
+		"prefix": "routerLinkTo",
+		"body": [
+			"<router-link to=\"$1\">$2</router-link>$0"
+		],
+		"description": "<router-link to=''></router-link>. router-link element"
+	},
+	"to": {
+		"prefix": "to",
+		"body": [
+			"to=\"$1\"$0"
+		],
+		"description": "to=''"
+	},
+	"tag": {
+		"prefix": "tag",
+		"body": [
+			"tag=\"$1\"$0"
+		],
+		"description": "tag=''"
+	},
+	"routerView": {
+		"prefix": "routerView",
+		"body": [
+			"<router-view>$1</router-view>$0"
+		],
+		"description": "router-view element"
+	},
+	"nuxt": {
+		"prefix": "nuxt",
+		"body": [
+			"<nuxt/>"
+		],
+		"description": "This component is used only in layouts to display the page components."
+	},
+	"nuxtChild": {
+		"prefix": "nuxtChild",
+		"body": [
+			"<nuxt-child $1/>$0"
+		],
+		"description": "This component is used for displaying the children components in a nested route."
+	},
+	"nuxtLink": {
+		"prefix": "nuxtLink",
+		"body": [
+			"<nuxt-link ${1|to,:to|}=\"$2\">$0</nuxt-link>"
+		],
+		"description": "This component is used to provide navigations between page components."
+	},
+	"UI-Bootstrap Accordion": {
+		"prefix": "uib-accordion",
+		"body": "<uib-accordion close-others=\"${1|true,false|}\">\n\t<uib-accordion-group heading=\"${2:heading}\">\n\t\t${3:content}\n\t</uib-accordion-group>$4\n</uib-accordion>$5",
+		"description": "UI-Bootstrap Accordion",
+		"scope": ""
+	},
+	"UI-Bootstrap Accordion (All Properties)": {
+		"prefix": "uib-accordion-",
+		"body": "<uib-accordion close-others=\"${1|true,false|}\">\n\t<uib-accordion-group is-open=\"${2:foo.isOpen}\" is-disabled=\"${3:foo.isDisabled}\" panel-class=\"panel-${4|default,primary,success,info,warning,danger|}\"${5: template-url=\"my-template.html\"}>\n\t\t<uib-accordion-heading>\n\t\t\t${6:heading}\n\t\t</uib-accordion-heading>\n\t\t${7:content}\n\t</uib-accordion-group>$8\n</uib-accordion>$9",
+		"description": "UI-Bootstrap Accordion (All Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Accordion Group": {
+		"prefix": "uib-accordion-group",
+		"body": "<uib-accordion-group heading=\"${1:Heading}\" panel-class=\"panel-${2|default,primary,success,info,warning,danger|}\"${3: template-url=\"my-template.html\"}>\n\t${4:Content}\n</uib-accordion-group>$5",
+		"description": "UI-Bootstrap Accordion Group",
+		"scope": ""
+	},
+	"UI-Bootstrap Accordion Heading": {
+		"prefix": "uib-accordion-heading",
+		"body": "<uib-accordion-heading>\n\t${1:My Heading}\n</uib-accordion-heading>$2",
+		"description": "UI-Bootstrap Accordion Heading",
+		"scope": ""
+	},
+	"UI-Bootstrap Alert": {
+		"prefix": "uib-alert",
+		"body": "<uib-alert type=\"${1|success,info,warning,danger|}\" close=\"${2:closeAlert()}\">${3:Content}</uib-alert>$4",
+		"description": "UI-Bootstrap Alert",
+		"scope": ""
+	},
+	"UI-Bootstrap Button": {
+		"prefix": "uib-btn",
+		"body": "<button type=\"button\" class=\"btn btn-${1|default,primary,success,info,warning,danger|}\" ng-click=\"${2:click()}\">\n\t${3:Press Me Hard}\n</button>$4",
+		"description": "UI-Bootstrap Button",
+		"scope": ""
+	},
+	"UI-Bootstrap Button with Checkbox": {
+		"prefix": "uib-btn-checkbox",
+		"body": "<button type=\"button\" class=\"btn btn-${1|default,primary,success,info,warning,danger|}\" ng-model=\"${2:dasModel}\" uib-btn-checkbox btn-checkbox-true=\"${3:1}\" btn-checkbox-false=\"${4:0}\">\n\t${5:Press Me Hard}\n</button>$6",
+		"description": "UI-Bootstrap Button with Checkbox",
+		"scope": ""
+	},
+	"UI-Bootstrap Button Group (Checkboxes)": {
+		"prefix": "uib-btn-group-checkbox",
+		"body": "<div class=\"btn-group\">\n\t<label class=\"btn btn-${1|default,primary,success,info,warning,danger|}\" uib-btn-checkbox ng-model=\"${2:dasModel.first}\">${3:First}</label>\n\t<label class=\"btn btn-${4|default,primary,success,info,warning,danger|}\" uib-btn-checkbox ng-model=\"${5:dasModel.second}\">${6:Second}</label>$7\n</div>$8",
+		"description": "UI-Bootstrap Button Group (Checkboxes)",
+		"scope": ""
+	},
+	"UI-Bootstrap Button Group (Radios)": {
+		"prefix": "uib-btn-group-radio",
+		"body": "<div class=\"btn-group\">\n\t<label class=\"btn btn-${1|default,primary,success,info,warning,danger|}\" ng-model=\"${2:dasModel}\" uib-btn-radio=\"'${3:First}'\"${4: uncheckable}>${5:First}</label>\n\t<label class=\"btn btn-${6|default,primary,success,info,warning,danger|}\" ng-model=\"${2:dasModel}\" uib-btn-radio=\"'${7:Second}'\"${4: uncheckable}>${8:Second}</label>$9\n</div>$10",
+		"description": "UI-Bootstrap Button Group (Radios)",
+		"scope": ""
+	},
+	"UI-Bootstrap Button Radio (Property)": {
+		"prefix": "uib-btn-radio",
+		"body": "uib-btn-radio=\"${1:value}\"",
+		"description": "UI-Bootstrap Button Radio (Property)",
+		"scope": ""
+	},
+	"UI-Bootstrap Carousel": {
+		"prefix": "uib-carousel",
+		"body": "<div uib-carousel active=\"${1:currentSlideIndex}\" interval=\"${2:3000}\">\n\t<div uib-slide index=\"${3:index}\">\n\t\t<img ng-src=\"{{${4:slideImage}}}\" style=\"margin: auto;\">\n\t\t<div class=\"carousel-caption\">\n\t\t\t<h4>${5:A Slide}</h4>\n\t\t\t<p>${6:The Slide Text}</p>\n\t\t</div>\n\t</div>\n</div>$7",
+		"description": "UI-Bootstrap Carousel",
+		"scope": ""
+	},
+	"UI-Bootstrap Carousel Slide": {
+		"prefix": "uib-slide",
+		"body": "<div uib-slide index=\"${1:index}\">\n\t<img ng-src=\"{{${2:slideImage}}}\" style=\"margin: auto;\">\n\t<div class=\"carousel-caption\">\n\t\t<h4>${3:A Slide}</h4>\n\t\t<p>${4:The Slide Text}</p>\n\t</div>\n</div>$5",
+		"description": "UI-Bootstrap Carousel Slide",
+		"scope": ""
+	},
+	"UI-Bootstrap Collapse": {
+		"prefix": "uib-collapse",
+		"body": "uib-collapse=\"${1:isCollapsed}\"",
+		"description": "UI-Bootstrap Collapse",
+		"scope": ""
+	},
+	"UI-Bootstrap Datepicker": {
+		"prefix": "uib-datepicker",
+		"body": "<uib-datepicker ng-model=\"${1:myDate}\" datepicker-options=\"${2:datepickerOptions}\"></uib-datepicker>$3",
+		"description": "UI-Bootstrap Datepicker",
+		"scope": ""
+	},
+	"UI-Bootstrap Datepicker Popup": {
+		"prefix": "uib-datepicker-popup",
+		"body": "<input type=\"text\" class=\"form-control\" uib-datepicker-popup=\"${1:yyyy-MM-dd}\" datepicker-options=\"${2:datepickerOptions}\" ng-model=\"${3:myDate}\" is-open=\"${4:isDatepickerOpen}\">$5",
+		"description": "UI-Bootstrap Datepicker Popup",
+		"scope": ""
+	},
+	"UI-Bootstrap Datepicker Popup (More Properties)": {
+		"prefix": "uib-datepicker-popup-",
+		"body": "<input type=\"text\" class=\"form-control\" uib-datepicker-popup=\"${1:yyyy-MM-dd}\" datepicker-options=\"${2:datepickerOptions}\" ng-model=\"${3:myDate}\" is-open=\"${4:isDatepickerOpen}\" current-text=\"${5:Today}\" clear-text=\"${6:Clear}\" close-text=\"${7:Done}\" close-on-date-selection=\"${8:true}\" on-open-focus=\"${9:true}\" show-button-bar=\"${10:true}\" popup-placement=\"${11|top,top-left,top-right,bottom,bottom-left,bottom-right,left,left-top,left-bottom,right,right-top,right-bottom|}\">$12",
+		"description": "UI-Bootstrap Datepicker Popup (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Dropdown": {
+		"prefix": "uib-dropdown",
+		"body": "<div class=\"btn-group\" uib-dropdown on-toggle=\"${1:toggledDropdown(open)}\" keyboard-nav>\n\t<button type=\"button\" class=\"btn btn-default\" uib-dropdown-toggle>\n\t\t${2:Open Dropdown} <span class=\"caret\"></span>\n\t</button>\n\t<ul class=\"dropdown-menu\" uib-dropdown-menu role=\"menu\">\n\t\t<li role=\"menuitem\">\n\t\t\t<a href>${3:Menu Item}</a>\n\t\t</li>\n\t\t${4:<li class=\"divider\"></li>}\n\t</ul>$5\n</div>$6",
+		"description": "UI-Bootstrap Dropdown",
+		"scope": ""
+	},
+	"UI-Bootstrap Dropdown (Split Button)": {
+		"prefix": "uib-dropdown-split",
+		"body": "<div class=\"btn-group\" uib-dropdown on-toggle=\"${1:toggledDropdown(open)}\" keyboard-nav>\n\t<button type=\"button\" class=\"btn btn-default\" ng-click=\"${2:click()}\">\n\t\t${3:Press Me Hard}\n\t</button>\n\t<button type=\"button\" class=\"btn btn-default\" uib-dropdown-toggle>\n\t\t<span class=\"caret\"></span>\n\t</button>\n\t<ul class=\"dropdown-menu\" uib-dropdown-menu role=\"menu\">\n\t\t<li role=\"menuitem\">\n\t\t\t<a href>${4:Menu Item}</a>\n\t\t</li>\n\t\t${5:<li class=\"divider\"></li>}\n\t</ul>\n</div>$6",
+		"description": "UI-Bootstrap Dropdown (Split Button)",
+		"scope": ""
+	},
+	"UI-Bootstrap Modal Template": {
+		"prefix": "uib-modal-template",
+		"body": "<div class=\"modal-header\">\n\t<button type=\"button\" class=\"close\" aria-label=\"Close\" ng-click=\"$dismiss()\">\n\t\t<span aria-hidden=\"true\">&times;</span>\n\t</button>\n\t<h4 class=\"modal-title\">${1:Modal Title}</h4>\n</div>\n<div class=\"modal-body\">\n\t${2:Modal Body}\n</div>\n<div class=\"modal-footer\">\n\t<button class=\"btn btn-default\" type=\"button\" ng-click=\"$dismiss()\">\n\t\tCancel\n\t</button>\n\t<button class=\"btn btn-primary\" type=\"button\" ng-click=\"${3:successCallback()}\">\n\t\t${4:OK}\n\t</button>\n</div>$5",
+		"description": "UI-Bootstrap Modal Template",
+		"scope": ""
+	},
+	"UI-Bootstrap Pager": {
+		"prefix": "uib-pager",
+		"body": "<uib-pager ng-model=\"${1:currentPage}\" total-items=\"${2:totalItems}\"></uib-pager>$3",
+		"description": "UI-Bootstrap Pager",
+		"scope": ""
+	},
+	"UI-Bootstrap Pager (More Properties)": {
+		"prefix": "uib-pager-",
+		"body": "<uib-pager ng-model=\"${1:currentPage}\" total-items=\"${2:totalItems}\" align=\"${3:true}\" items-per-page=\"${4:10}\" next-text=\"'${5:Next »}'\" previous-text=\"'${6:« Previous}'\" num-pages=\"${7:numPages}\"></uib-pager>$8",
+		"description": "UI-Bootstrap Pager (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Pagination": {
+		"prefix": "uib-pagination",
+		"body": "<uib-pagination\n\tng-model=\"${1:currentPage}\"\n\tng-change=\"${2:changedPage()}\"\n\ttotal-items=\"${3:myItems.length}\">\n</uib-pagination>$4",
+		"description": "UI-Bootstrap Pagination",
+		"scope": ""
+	},
+	"UI-Bootstrap Pagination (More Properties)": {
+		"prefix": "uib-pagination-",
+		"body": "<uib-pagination\n\tng-model=\"${1:currentPage}\"\n\tng-change=\"${2:changedPage()}\"\n\ttotal-items=\"${3:myItems.length}\"\n\titems-per-page=\"${4:10}\"\n\tmax-size=\"${5:5}\"\n\trotate=\"${6|true,false|}\"\n\tforce-ellipses=\"${7|true,false|}\"\n\tnum-pages=\"${8:numPages}\">\n</uib-pagination>$9",
+		"description": "UI-Bootstrap Pagination (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Popover": {
+		"prefix": "uib-popover",
+		"body": "uib-popover=\"${1:Popover Content}\" popover-placement=\"${2|top,top-left,top-right,bottom,bottom-left,bottom-right,left,left-top,left-bottom,right,right-top,right-bottom|}\"",
+		"description": "UI-Bootstrap Popover",
+		"scope": ""
+	},
+	"UI-Bootstrap Popover (More Properties)": {
+		"prefix": "uib-popover-",
+		"body": "uib-popover=\"${1:Popover Content}\" popover-title=\"${2:Popover Title}\" popover-placement=\"${3|top,top-left,top-right,bottom,bottom-left,bottom-right,left,left-top,left-bottom,right,right-top,right-bottom|}\" popover-is-open=\"${4:isPopoverOpen}\" popover-trigger=\"${5|click,mouseenter,outsideClick,focus,none|}\"",
+		"description": "UI-Bootstrap Popover (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Popover Template": {
+		"prefix": "uib-popover-template",
+		"body": "<div class=\"popover\" role=\"tooltip\">\n\t<div class=\"arrow\"></div>\n\t<h3 class=\"popover-title\">\n\t\t${1:Popover Title}\n\t</h3>\n\t<div class=\"popover-content\">\n\t\t${2:Popover Content}\n\t</div>\n</div>",
+		"description": "UI-Bootstrap Popover Template",
+		"scope": ""
+	},
+	"UI-Bootstrap Progressbar": {
+		"prefix": "uib-progressbar",
+		"body": "<uib-progressbar value=\"${1:50}\" max=\"${2:100}\" class=\"${3:progress-striped active}\" type=\"${4|success,info,warning,danger|}\" animate=\"${5|true,false|}\">\n\t${1:50}%\n</uib-progressbar>$6",
+		"description": "UI-Bootstrap Progressbar",
+		"scope": ""
+	},
+	"UI-Bootstrap Progressbar (Stacked)": {
+		"prefix": "uib-progressbar-stacked",
+		"body": "<uib-progress>\n\t<uib-bar value=\"${1:bar.value}\" type=\"${2|success,info,warning,danger|}\">\n\t\t<span ng-hide=\"${1:bar.value} < 5\">{{${1:bar.value}}}%</span>\n\t</uib-bar>$3\n</uib-progress>$4",
+		"description": "UI-Bootstrap Progressbar (Stacked)",
+		"scope": ""
+	},
+	"UI-Bootstrap Bar (for Progressbars)": {
+		"prefix": "uib-bar",
+		"body": "<uib-bar value=\"${1:50}\" type=\"${2|success,info,warning,danger|}\">\n\t${1:50}%\n</uib-bar>$3",
+		"description": "UI-Bootstrap Bar (for Progressbars)",
+		"scope": ""
+	},
+	"UI-Bootstrap Rating": {
+		"prefix": "uib-rating",
+		"body": "<uib-rating ng-model=\"${1:rating}\" max=\"${2:5}\" state-on=\"'${3:glyphicon-ok-sign}'\" state-off=\"'${4:glyphicon-ok-circle}'\" read-only=\"${5:false}\" on-hover=\"${6:hoverRating(value)}\" on-leave=\"${7:leftRating()}\"></uib-rating>\n<span class=\"label\">{{${1:rating}}}</span>$8",
+		"description": "UI-Bootstrap Rating",
+		"scope": ""
+	},
+	"UI-Bootstrap Tabset": {
+		"prefix": "uib-tabset",
+		"body": "<uib-tabset>\n\t<uib-tab heading=\"${1:Tab Heading}\" index=\"${2:0}\">\n\t\t${3:Tab Content}\n\t</uib-tab>$4\n</uib-tabset>$5",
+		"description": "UI-Bootstrap Tabset",
+		"scope": ""
+	},
+	"UI-Bootstrap Tabset (More Properties)": {
+		"prefix": "uib-tabset-",
+		"body": "<uib-tabset active=\"${1:0}\" type=\"${2|tabs,pills|}\" vertical=\"${3|true,false|}\" justified=\"${4|true,false|}\">\n\t<uib-tab heading=\"${5:Tab Heading}\" index=\"${6:0}\">\n\t\t${7:Tab Content}\n\t</uib-tab>$8\n</uib-tabset>$9",
+		"description": "UI-Bootstrap Tabset (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Tab": {
+		"prefix": "uib-tab",
+		"body": "<uib-tab heading=\"${1:Tab Heading}\" index=\"${2:0}\">\n\t${3:Tab Content}\n</uib-tab>$4",
+		"description": "UI-Bootstrap Tab",
+		"scope": ""
+	},
+	"UI-Bootstrap Tab (More Properties)": {
+		"prefix": "uib-tab-",
+		"body": "<uib-tab heading=\"${1:Tab Heading}\" index=\"${2:0}\" active=\"${3:tab.active}\" disable=\"${4:tab.disabled}\" select=\"${5:tabSelected()}\" deselect=\"${6:tabDeselected()}\">\n\t<uib-tab-heading>\n\t\t${7:Tab Heading}\n\t</uib-tab-heading>\n\t${8: Tab Content}\n</uib-tab>$9",
+		"description": "UI-Bootstrap Tab (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Tab Heading": {
+		"prefix": "uib-tab-heading",
+		"body": "<uib-tab-heading>\n\t${1:Tab Heading}\n</uib-tab-heading>$2",
+		"description": "UI-Bootstrap Tab Heading",
+		"scope": ""
+	},
+	"UI-Bootstrap Timepicker": {
+		"prefix": "uib-timepicker",
+		"body": "<uib-timepicker ng-model=\"${1:myTime}\" ng-change=\"${2:changedTime()}\" hour-step=\"${3:1}\" minute-step=\"${4:1}\" show-seconds=\"${5:false}\" show-meridian=\"${6:true}\" show-spinners=\"${7:true}\"></uib-timepicker>$8",
+		"description": "UI-Bootstrap Timepicker",
+		"scope": ""
+	},
+	"UI-Bootstrap Tooltip": {
+		"prefix": "uib-tooltip",
+		"body": "uib-tooltip=\"${1:A Tooltip.}\" tooltip-placement=\"${2:|top,top-left,top-right,bottom,bottom-left,bottom-right,left,left-top,left-bottom,right,right-top,right-bottom|}\"",
+		"description": "UI-Bootstrap Tooltip",
+		"scope": ""
+	},
+	"UI-Bootstrap Tooltip (More Properties)": {
+		"prefix": "uib-tooltip-",
+		"body": "uib-tooltip=\"${1:A Tooltip.}\" tooltip-placement=\"${2|top,top-left,top-right,bottom,bottom-left,bottom-right,left,left-top,left-bottom,right,right-top,right-bottom|}\" tooltip-enable=\"${3|true,false|}\" tooltip-is-open=\"${4:isTooltipOpen}\" tooltip-trigger=\"${5|click,mouseenter,outsideClick,focus,none|}\" tooltip-animation=\"${6|true,false|}\" tooltip-append-to-body=\"${7|true,false|}\" tooltip-popup-delay=\"${8:1000}\" tooltip-popup-close-delay=\"${9:1000}\"",
+		"description": "UI-Bootstrap Tooltip (More Properties)",
+		"scope": ""
+	},
+	"UI-Bootstrap Typeahead": {
+		"prefix": "uib-typeahead",
+		"body": "<input type=\"text\" ng-model=\"${1:selected}\" uib-typeahead=\"${2:state} for ${2:state} in ${3:states} | filter:$viewValue | limitTo:${4:5}\" class=\"form-control\">",
+		"description": "UI-Bootstrap Typeahead",
+		"scope": ""
+	},
+	"Template URL": {
+		"prefix": "template-url",
+		"body": "template-url=\"$1\"$2",
+		"description": "Template URL",
+		"scope": ""
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"bootstrap media": {
+		"prefix": "media",
+		"body": "<div class=\"media\">\n  <div class=\"media-left\">\n    $1\n  </div>\n  <div class=\"media-body\">\n    $2\n  </div>\n  <div class=\"media-right\">\n    $3\n  </div>\n</div>"
+	},
+	"card with image and text": {
+		"prefix": "card",
+		"body": "<div class=\"card\">\n  <img src=\"$1\" alt=\"$2\">\n  <div class=\"card-body\">\n    <h5 class=\"card-title\">$3</h5>\n    <p class=\"card-text\">$4</p>\n    <div class=\"text-warning\">\n      <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n      <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n      <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n      <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n      <i class=\"fa fa-star\" aria-hidden=\"true\"></i>\n    </div>\n    <a href=\"#\" class=\"btn btn-primary pull-right\">$5</a>\n  </div>\n</div>"
+	},
+	"accordion with plus and minus icons": {
+		"prefix": "accordion",
+		"body": " <!-- required bootstrap js and fontawesome -->\n <!-- add 'accordion' snippet in css -->\n <div id=\"accordion\" class=\"accordion\">\n   <div class=\"card mb-0\">\n     <div class=\"card-header collapsed\" data-toggle=\"collapse\" href=\"#collapseOne\">\n      <a class=\"card-title\">$1</a>\n     </div>\n      <div id=\"collapseOne\" class=\"card-body collapse\" data-parent=\"#accordion\" >\n        <p>$2</p>\n      </div>\n      <div class=\"card-header collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseTwo\">\n        <a class=\"card-title\">$3</a>\n      </div>\n      <div id=\"collapseTwo\" class=\"card-body collapse\" data-parent=\"#accordion\" >\n        <p>$4</p>\n      </div>\n      <div class=\"card-header collapsed\" data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapseThree\">\n        <a class=\"card-title\">$5</a>\n      </div>\n      <div id=\"collapseThree\" class=\"collapse\" data-parent=\"#accordion\" >\n        <div class=\"card-body\">$6</div>\n      </div>\n   </div>\n</div>"
+	},
+	"header with top fixed": {
+		"prefix": "header-t-f",
+		"body": "<!-- required bootstrap js -->\n<nav class=\"navbar navbar-expand-md navbar-light fixed-top bg-light\">\n  <div class=\"container\">\n    <a class=\"navbar-brand\" href=\"#\">\n      <img src=\"$1\" alt=\"$2\", height=\"34\">\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\" href=\"#\">$3</a>\n        </li>\n      </ul>\n      <ul class=\"navbar-nav\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">$4</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">$5</a>\n        </li>\n        <li class=\"nav-item\">\n          <button class=\"btn btn-outline-primary my-2 my-sm-0 ml-2\" type=\"submit\">Login/ Signup</button>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>"
+	},
+	"dynamic tab pills": {
+		"prefix": "tabs",
+		"body": "<!-- required bootstrap js -->\n<ul class=\"nav nav-tabs\" role=\"tablist\">\n  <li class=\"nav-item\">\n    <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#home\">Home</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#menu1\">Menu 1</a>\n  </li>\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#menu2\">Menu 2</a>\n  </li>\n</ul>\n\n<div class=\"tab-content\">\n  <div id=\"home\" class=\"container tab-pane active\">\n    <p>$1</p>\n  </div>\n  <div id=\"menu1\" class=\"container tab-pane fade\">\n    <p>$2</p>\n  </div>\n  <div id=\"menu2\" class=\"container tab-pane fade\">\n    <p>$3</p>\n  </div>\n</div>"
+	},
+	"table with responsive": {
+		"prefix": "table-r",
+		"body": "<table class=\"table table-striped table-responsive\">\n  <thead>\n    <tr>\n      <th>$1</th>\n      <th>$2</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>$3</td>\n      <td>$4</td>\n    </tr>\n    <tr>\n      <td>$5</td>\n      <td>$6</td>\n    </tr>\n    <tr>\n      <td>$7</td>\n      <td>$8</td>\n    </tr>\n  </tbody>\n</table>"
+	},
+	"carousel with indicators,controls and captions": {
+		"prefix": "carousel-slider",
+		"body": "<!-- required bootstrap js -->\n<!-- add 'carousel-slider' snippet in css -->\n<div id=\"demo\" class=\"carousel slide\" data-ride=\"carousel\">\n  <ul class=\"carousel-indicators\">\n    <li data-target=\"#demo\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#demo\" data-slide-to=\"1\"></li>\n    <li data-target=\"#demo\" data-slide-to=\"2\"></li>\n  </ul>\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img src=\"$1\" alt=\"\">\n      <div class=\"carousel-caption\">\n        <h3>$2Title</h3>\n        <p>$3Caption</p>\n      </div>\n    </div>\n    <div class=\"carousel-item\">\n      <img src=\"$4\" alt=\"\">\n      <div class=\"carousel-caption\">\n        <h3>$5Title</h3>\n        <p>$6Caption</p>\n      </div>\n    </div>\n    <div class=\"carousel-item\">\n      <img src=\"$7\" alt=\"\">\n      <div class=\"carousel-caption\">\n        <h3>$8Title</h3>\n        <p>$9Caption</p>\n      </div>\n    </div>\n  </div>\n  <a class=\"carousel-control-prev\" href=\"#demo\" data-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\"></span>\n  </a>\n  <a class=\"carousel-control-next\" href=\"#demo\" data-slide=\"next\">\n    <span class=\"carousel-control-next-icon\"></span>\n  </a>\n</div>"
+	},
+	"timeline with responsive": {
+		"prefix": "timeline-r",
+		"body": "<!-- required FontAwesome -->\n<!-- add 'timeline-r' snippet in css -->\n<ul class=\"timeline\">\n  <li>\n    <div class=\"timeline-badge\"><i class=\"fa fa-user\"></i></div>\n    <div class=\"timeline-panel\">\n      <div class=\"timeline-heading\">\n        <h4 class=\"timeline-title\">title</h4>\n      </div>\n      <div class=\"timeline-body\">\n        <p>caption</p>\n      </div>\n    </div>\n  </li>\n  <li class=\"timeline-inverted\">\n    <div class=\"timeline-badge\"><i class=\"fa fa-home\"></i></div>\n    <div class=\"timeline-panel\">\n      <div class=\"timeline-heading\">\n        <h4 class=\"timeline-title\">title</h4>\n      </div>\n      <div class=\"timeline-body\">\n        <p>caption</p>\n      </div>\n    </div>\n  </li>\n  <li>\n    <div class=\"timeline-badge\"><i class=\"fa fa-user\"></i></div>\n    <div class=\"timeline-panel\">\n      <div class=\"timeline-heading\">\n        <h4 class=\"timeline-title\">title</h4>\n      </div>\n      <div class=\"timeline-body\">\n        <p>caption</p>\n      </div>\n    </div>\n  </li>\n  <li class=\"timeline-inverted\">\n    <div class=\"timeline-badge\"><i class=\"fa fa-home\"></i></div>\n    <div class=\"timeline-panel\">\n      <div class=\"timeline-heading\">\n        <h4 class=\"timeline-title\">title</h4>\n      </div>\n      <div class=\"timeline-body\">\n        <p>caption</p>\n      </div>\n    </div>\n  </li>\n</ul>"
+	},
+	"Basic footer": {
+		"prefix": "footer",
+		"body": "<!-- add 'footer' snippet in css -->\n<div class=\"footer-v1 bg-img\">\n\t<div class=\"footer no-margin\">\n\t\t<div class=\"container\">\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t<div class=\"headline\"><p>Exams</p></div>\n\t\t\t\t\t<ul class=\"list-unstyled link-list\">\n\t\t\t\t\t\t<li><a href=\"#\">Exam1</a></li>\n\t\t\t\t\t\t<li><a href=\"#\">Exam2</a></li>\n\t\t\t\t\t\t<li><a href=\"#\">Exam3/a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t<div class=\"headline\"><p>Resources</p></div>\n\t\t\t\t\t<ul class=\"list-unstyled link-list\">\n\t\t\t\t\t\t<li><a href=\"#\">Blog</a></li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"col-md-3\">\n          <div class=\"headline\"><p>Support</p></div>\n          <address>\n            <ul class=\"list-unstyled link-list\">\n              <li><a href=\"#\">Contact Us</a></li>\n              <li>\n                <a href=\"#\"><i class=\"fa fa-envelope\"></i>support@company.com</a>\n              </li>\n            </ul>\n          </address>\n        </div>\n\t\t\t\t<div class=\"col-md-3\">\n\t\t\t\t\t<div class=\"headline\"><p>Company</p></div>\n\t\t\t\t\t<ul class=\"list-unstyled link-list\">\n            <li><a href=\"#\">About Us</a></li>\n            <li> <a href=\"#\">Privacy Policy</a></li>\n            <li><a href=\"#\">Terms of Use</a></li>\n            <li><a href=\"#\">FAQs</a></li>\n            <li><a href=\"#\">Cancellation/Rescheduling policy</a></li>\n          </ul>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+	},
+	"Flip card on hover": {
+		"prefix": "flip-card",
+		"body": "<!-- add 'flip-card' snippet in css -->\n<div class=\"flip-card\">\n  <div class=\"flip-card-inner\">\n    <div class=\"flip-card-front\">\n      <img src=\"$1\" alt=\"Avatar\" style=\"width:200px;height:200px;\">\n    </div>\n    <div class=\"flip-card-back\">\n      <h1>$2</h1>\n      <p>$3</p>\n      <p>$4</p>\n    </div>\n  </div>\n</div>"
+	},
+	"sticky sidebar collapse to icons with responsive": {
+		"prefix": "sidebar-icons",
+		"body": "<!-- required fontawesome -->\n<!-- add 'sidebar-icons' snippet in css -->\n<!-- add 'sidebar-icons' snippet in js -->\n<div class=\"container\">\n\t<div class=\"row\">\n\t\t <div id=\"wrapper\">\n      <div id=\"sidebar-wrapper\">\n        <ul class=\"sidebar-nav\" style=\"margin-left:0;\">\n          <li class=\"sidebar-brand\">\n            <a href=\"#menu-toggle\"  id=\"menu-toggle\" style=\"margin-top:10px;float:right;\" >\n              <i class=\"fa fa-bars \" style=\"font-size:20px !Important;\" aria-hidden=\"true\" aria-hidden=\"true\"></i>\n            </a>\n          </li>\n          <li>\n            <a href=\"#\"><i class=\"fa fa-sort-alpha-asc \" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\">Section</span>  </a>\n          </li>\n          <li>\n            <a href=\"#\"> <i class=\"fa fa-play-circle-o \" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\"> Section</span> </a>\n          </li>\n          <li>\n            <a href=\"#\"> <i class=\"fa fa-puzzle-piece\" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\"> Section</span> </a>\n          </li>\n          <li>\n            <a href=\"#\"> <i class=\"fa fa-font\" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\"> Section</span> </a>\n          </li>\n          <li>\n            <a href=\"#\"><i class=\"fa fa-info-circle \" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\">Section </span> </a>\n          </li>\n          <li>\n            <a href=\"#\"> <i class=\"fa fa-comment-o\" aria-hidden=\"true\"> </i> <span style=\"margin-left:10px;\"> Section</span> </a>\n          </li>\n        </ul>\n      </div>\n  \t</div>\n  </div>\n  <p>Some text</p>\n</div>"
+	},
+	"basic login/signup form using modal": {
+		"prefix": "login-signup",
+		"body": "<!-- required bootstrap js -->\n<button type=\"submit\" name=\"commit\" class=\"btn btn-outline-primary btn-sm\" data-toggle=\"modal\" data-target=\"#login\">\n  Login/Signup\n</button>\n<div class=\"modal fade\" id=\"login\" role=\"dialog\">\n  <div class=\"modal-dialog modal-md\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h4 class=\"modal-title\">Login</h4>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-envelope\"></i>\n            </span>\n          </div>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Email\" aria-label=\"Email\" aria-describedby=\"basic-addon1\">\n        </div>\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-lock\"></i>\n            </span>\n          </div>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Password\" aria-label=\"Password\" aria-describedby=\"basic-addon1\">\n        </div>\n        <button type=\"submit\" name=\"commit\" class=\"btn btn-primary btn-lg btn-block\">\n          <span>Login <i class=\"fa fa-sign-in\"></i></span>\n        </button>\n        <div class=\"text-center\">\n          <a class=\"\" href=\"\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#signup\">Signup</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"modal fade\" id=\"signup\" role=\"dialog\">\n  <div class=\"modal-dialog modal-md\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h4 class=\"modal-title\">Signup</h4>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n      </div>\n      <div class=\"modal-body\">\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-user\"></i>\n            </span>\n          </div>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Name\" aria-label=\"Name\" aria-describedby=\"basic-addon1\">\n        </div>\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-envelope\"></i>\n            </span>\n          </div>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Email\" aria-label=\"Email\" aria-describedby=\"basic-addon1\">\n        </div>\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-lock\"></i>\n            </span>\n          </div>\n          <input type=\"password\" class=\"form-control\" placeholder=\"Password\" aria-label=\"Password\" aria-describedby=\"basic-addon1\">\n        </div>\n        <div class=\"input-group mb-3\">\n          <div class=\"input-group-prepend\">\n            <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">\n              <i class=\"fa fa-lock\"></i>\n            </span>\n          </div>\n          <input type=\"text\" class=\"form-control\" placeholder=\"Password confirmation\" aria-label=\"Password confirmation\" aria-describedby=\"basic-addon1\">\n        </div>\n        <button type=\"submit\" name=\"commit\" class=\"btn btn-primary btn-lg btn-block\">\n          <span>Signup <i class=\"fa fa-sign-in\"></i></span>\n        </button>\n        <div class=\"text-center\">\n          <a class=\"\" href=\"\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#login\">Login</a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+	},
+	"basic breadcrumb": {
+		"prefix": "breadcrumb",
+		"body": "<ul class=\"list-inline\">\n  <li class=\"list-inline-item mr-2\">\n    <a class=\"u-link-v5 g-color-main\" href=\"/\"><i class=\"fa fa-home mr-1\"></i>Home</a>\n    <i class=\"fa fa-angle-right g-ml-7\"></i>\n  </li>\n  <li class=\"list-inline-item mr-2\">\n    <a class=\"u-link-v5 g-color-main\" href=\"#\">Article1</a>\n    <i class=\"fa fa-angle-right g-ml-7\"></i>\n  </li>\n  <li class=\"list-inline-item\">\n    <a class=\"u-link-v5 g-color-main\" href=\"#\">Article2</a>\n    <i class=\"fa fa-angle-right g-ml-7\"></i>\n  </li>\n  <li class=\"list-inline-item g-color-primary\">\n    <span>Article3</span>\n  </li>\n</ul>"
+	},
+	"icons with blocks": {
+		"prefix": "icon-blocks",
+		"body": "<!-- add 'icon-block' snippet in css -->\n<div class=\"media align-items-center\">\n  <div class=\"media-left\">\n    <div class=\"icon-circle\">\n      <i class=\"fa fa-home\"></i>\n    </div>\n  </div>\n  <div class=\"media-body\">\n    <h5 class=\"m-0 pl-2\">Creative Ideas</h5>\n  </div>\n</div>\n<div>\n  <p class=\"mt-2\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>\n</div>"
+	},
+	"Angular UpperCase Pipe": {
+		"prefix": "ng-pipe-uppercase",
+		"description": "Uppercase pipe",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | uppercase }}$0"
+		]
+	},
+	"Angular LowerCase Pipe": {
+		"prefix": "ng-pipe-lowercase",
+		"description": "Lowercase pipe",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | lowercase }}$0"
+		]
+	},
+	"Angular TitleCase Pipe": {
+		"prefix": "ng-pipe-titlecase",
+		"description": "v4: Titlecase pipe",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | titlecase }}$0"
+		]
+	},
+	"Angular Date Pipe": {
+		"prefix": "ng-pipe-date",
+		"description": "Date pipe - Default format: 09/15/1971",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | date }}$0"
+		]
+	},
+	"Angular Custom Date Pipe": {
+		"prefix": "ng-pipe-date-custom",
+		"description": "Date pipe - Format: \"MM/dd/yy\" = 09/15/71",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | date:\"MM/dd/yy\" }}$0"
+		]
+	},
+	"Angular Short Date Pipe": {
+		"prefix": "ng-pipe-date-short",
+		"description": "Short date pipe - Format: 09/15/1971",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | date:shortDate }}$0"
+		]
+	},
+	"Angular Full Date Pipe": {
+		"prefix": "ng-pipe-date-full",
+		"description": "Full date pipe - Format: Wednesday, September 15, 1971",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | date:fullDate }}$0"
+		]
+	},
+	"Angular Percent Pipe": {
+		"prefix": "ng-pipe-percent",
+		"description": "Percent pipe - Usage: number_expression &#x7c; percent[:digitInfo]",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | percent:${digitInfo} }}$0"
+		]
+	},
+	"Angular Decimal Pipe": {
+		"prefix": "ng-pipe-decimal",
+		"description": "Decimal pipe - Usage: number_expression &#x7c; decimal[:digitInfo]",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | decimal:${digitInfo} }}$0"
+		]
+	},
+	"Angular Slice Pipe": {
+		"prefix": "ng-pipe-slice",
+		"description": "Slice pipe - Usage: array_or_string_expression &#x7c; slice:start[:end]",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | slice:${start}:${end} }}$0"
+		]
+	},
+	"Angular Currency Pipe": {
+		"prefix": "ng-pipe-currency",
+		"description": "Currency pipe - Usage: money &#x7c; currency:'EUR'",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${variable} | currency:'${CURRENCY}' }}$0"
+		]
+	},
+	"Angular Json Pipe": {
+		"prefix": "ng-pipe-json",
+		"description": "Json pipe - Usage: object &#x7c; json",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${object} | json }}$0"
+		]
+	},
+	"Angular Async Pipe": {
+		"prefix": "ng-pipe-async",
+		"description": "Async pipe - Usage: observable_or_promise_expression &#x7c; async",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${observable} | async }}$0"
+		]
+	},
+	"Angular Router Link": {
+		"prefix": "ng-router-link",
+		"description": "Router link",
+		"types": "typescript, html",
+		"body": [
+			"<a [routerLink]=\"[ '/${path}', ${routeParam} ]\">${name}</a>$0"
+		]
+	},
+	"Angular Router Attribute": {
+		"prefix": "ng-router-attribute",
+		"description": "Router link",
+		"types": "typescript, html",
+		"body": [
+			"[routerLink]=\"[ '/${path}', ${routeParam} ]\"$0"
+		]
+	},
+	"Angular Router Active Link": {
+		"prefix": "ng-router-linkActive",
+		"description": "Router active link",
+		"types": "typescript, html",
+		"body": [
+			"<a [routerLink]=\"[ '/${path}' ]\" routerLinkActive=\"active\">${name}</a>$0"
+		]
+	},
+	"Angular Router Outlet": {
+		"prefix": "ng-router-outlet",
+		"description": "Router outlet element",
+		"types": "typescript, html",
+		"body": [
+			"<router-outlet></router-outlet>",
+			"$0"
+		]
+	},
+	"Angular Router Outlet Name": {
+		"prefix": "ng-router-outlet-name",
+		"description": "Router outlet element with name",
+		"types": "typescript, html",
+		"body": [
+			"<router-outlet name=\"${name}\"></router-outlet>",
+			"$0"
+		]
+	},
+	"Angular CanActivate Guard Route": {
+		"prefix": "ng-route-guard-canactivate",
+		"description": "CanActivate Guard Route",
+		"types": "typescript, html",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+			"import { Observable } from 'rxjs';",
+			"",
+			"@Injectable({",
+			"\tprovidedIn: 'root'",
+			"})",
+			"export class ${CanActivate}Guard implements CanActivate {",
+			"\tcanActivate(",
+			"\t\troute: ActivatedRouteSnapshot,",
+			"\t\tstate: RouterStateSnapshot",
+			"\t): Observable<boolean> | Promise<boolean> | boolean {",
+			"\t\treturn true;$0",
+			"\t}",
+			"}",
+			""
+		]
+	},
+	"Angular CanActivateChild Guard Route": {
+		"prefix": "ng-route-guard-canactivatechild",
+		"description": "CanActivateChild Route",
+		"types": "typescript, html",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+			"import { Observable } from 'rxjs';",
+			"",
+			"@Injectable({",
+			"\tprovidedIn: 'root'",
+			"})",
+			"export class ${CanActivateChild}Guard implements CanActivateChild {",
+			"\tcanActivateChild(",
+			"\t\troute: ActivatedRouteSnapshot,",
+			"\t\tstate: RouterStateSnapshot",
+			"\t): Observable<boolean> | Promise<boolean> | boolean {",
+			"\t\treturn true;$0",
+			"\t}",
+			"}",
+			""
+		]
+	},
+	"Angular Resolve Guard Route": {
+		"prefix": "ng-route-guard-resolve",
+		"description": "Resolve Guard Route",
+		"types": "typescript, html",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+			"import { Observable } from 'rxjs';",
+			"",
+			"@Injectable({",
+			"\tprovidedIn: 'root'",
+			"})",
+			"export class ${Resolve}Guard implements Resolve<${T}> {",
+			"\tresolve(",
+			"\t\troute: ActivatedRouteSnapshot,",
+			"\t\tstate: RouterStateSnapshot",
+			"\t): Observable<any> | Promise<any> | any {",
+			"\t\treturn true;$0",
+			"\t}",
+			"}",
+			""
+		]
+	},
+	"Angular CanLoad Guard Route": {
+		"prefix": "ng-route-guard-canload",
+		"description": "CanLoad Guard Route",
+		"types": "typescript, html",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { CanLoad, Route } from '@angular/router';",
+			"import { Observable } from 'rxjs';",
+			"",
+			"@Injectable({",
+			"\tprovidedIn: 'root'",
+			"})",
+			"export class ${CanLoad}Guard implements CanLoad {",
+			"\tcanLoad(",
+			"\t\t${route}: Route",
+			"\t): Observable<boolean> | Promise<boolean> | boolean {",
+			"\t\treturn true;$0",
+			"\t}",
+			"}",
+			""
+		]
+	},
+	"Angular CanDeactivate Guard Route": {
+		"prefix": "ng-route-guard-candeactivate",
+		"description": "CanDeactivate Guard Route",
+		"types": "typescript, html",
+		"body": [
+			"import { Injectable } from '@angular/core';",
+			"import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+			"import { Observable } from 'rxjs';",
+			"",
+			"@Injectable({",
+			"\tprovidedIn: 'root'",
+			"})",
+			"export class ${CanDeactivate}Guard implements CanDeactivate<${T}> {",
+			"\tcanDeactivate(",
+			"\t\tcomponent: ${T},",
+			"\t\troute: ActivatedRouteSnapshot,",
+			"\t\tstate: RouterStateSnapshot",
+			"\t): Observable<boolean> | Promise<boolean> | boolean {",
+			"\t\treturn true;$0",
+			"\t}",
+			"}"
+		]
+	},
+	"Angular Container": {
+		"types": "typescript, html",
+		"prefix": "ng-container",
+		"description": "Angular Container",
+		"body": [
+			"<ng-container>${1}</ng-container>",
+			"$0"
+		]
+	},
+	"Angular Container with *ngFor": {
+		"types": "typescript, html",
+		"prefix": "ng-container-ngfor",
+		"description": "Angular Container with *ngFor",
+		"body": [
+			"<ng-container *ngFor=\"let ${1:item} of ${2:items}\">",
+			"  ${3:content}",
+			"</ng-container>",
+			"$0"
+		]
+	},
+	"Angular Container with *ngTemplateOutlet": {
+		"types": "typescript, html",
+		"prefix": "ng-container-template",
+		"description": "Angular Container with *ngTemplateOutlet",
+		"body": [
+			"<ng-container *ngTemplateOutlet=\"${1}\"></ng-container>",
+			"$0"
+		]
+	},
+	"Angular Container with *ngContainerOutlet": {
+		"types": "typescript, html",
+		"prefix": "ng-container-component",
+		"description": "Angular Container with *ngContainerOutlet",
+		"body": [
+			"<ng-container *ngComponentOutlet=\"${1}\"></ng-container>",
+			"$0"
+		]
+	},
+	"Angular template": {
+		"types": "typescript, html",
+		"prefix": "ng-template",
+		"description": "Angular template",
+		"body": [
+			"<ng-template #${1:name}></ng-template>",
+			"$0"
+		]
+	},
+	"Angular ngModel Directive": {
+		"prefix": "ng-model",
+		"description": "ngModel directive: [(ngModel)]=\"name\"",
+		"types": "typescript, html",
+		"body": [
+			"[(ngModel)]=\"${name}\"$0"
+		]
+	},
+	"Angular If Directive": {
+		"prefix": "ng-if",
+		"description": "If directive: *ngIf=\"expression\"",
+		"types": "typescript, html",
+		"body": [
+			"*ngIf=\"${expression}\"$0"
+		]
+	},
+	"Angular If Else Directive": {
+		"prefix": "ng-if-else",
+		"description": "v4: If else directive: *ngIf=\"expression; else\"",
+		"types": "typescript, html",
+		"body": [
+			"<ng-container *ngIf=\"${expression}; else ${elseTemplate}\">",
+			"\t$1",
+			"</ng-container>",
+			"<ng-template #${elseTemplate}>",
+			"\t$2",
+			"</ng-template>",
+			"$0"
+		]
+	},
+	"Angular If Then Else Directive": {
+		"prefix": "ng-if-then-else",
+		"description": "v4: If then else directive: *ngIf=\"expression; then; else\"",
+		"types": "typescript, html",
+		"body": [
+			"<ng-container *ngIf=\"${expression}; then ${thenTemplate}; else ${elseTemplate}\"></ng-container>",
+			"<ng-template #${thenTemplate}>",
+			"\t$1",
+			"</ng-template>",
+			"<ng-template #${elseTemplate}>",
+			"\t$2",
+			"</ng-template>",
+			"$0"
+		]
+	},
+	"Angular For-loop Directive": {
+		"prefix": "ng-for",
+		"description": "For-loop directive",
+		"types": "typescript, html",
+		"body": [
+			"*ngFor=\"let ${item} of ${items}\"$0"
+		]
+	},
+	"Angular For-loop Directive with li element": {
+		"prefix": "ng-for-li",
+		"description": "For-loop directive with li element",
+		"types": "typescript, html",
+		"body": [
+			"<li *ngFor=\"let ${item} of ${items}\">$0</li>"
+		]
+	},
+	"Angular For-loop Directive with index": {
+		"prefix": "ng-for-index",
+		"description": "For-loop directive with index",
+		"types": "typescript, html",
+		"body": [
+			"*ngFor=\"let ${item} of ${items}; let i=index\"$0"
+		]
+	},
+	"Angular For-loop Directive with trackBy": {
+		"prefix": "ng-for-trackBy",
+		"description": "For-loop directive with trackBy",
+		"types": "typescript, html",
+		"body": [
+			"*ngFor=\"let ${item} of ${items}; trackBy:${item}.id\"$0"
+		]
+	},
+	"Angular Class": {
+		"prefix": "ng-class",
+		"description": "CSS class",
+		"types": "typescript, html",
+		"body": [
+			"[ngClass]=\"{'${class}': ${true}}\"$0"
+		]
+	},
+	"Angular Style": {
+		"prefix": "ng-style",
+		"description": "CSS style",
+		"types": "typescript, html",
+		"body": [
+			"[ngStyle]=\"{'${property}': ${expression}}\"$0"
+		]
+	},
+	"Angular Switch": {
+		"prefix": "ng-switch",
+		"description": "Switch template",
+		"types": "typescript, html",
+		"body": [
+			"<span [ngSwitch]=\"\">",
+			"<p *ngSwitchCase=\"true\">",
+			"",
+			"</p>",
+			"<p *ngSwitchCase=\"false\">",
+			"",
+			"</p>",
+			"<p *ngSwitchDefault>",
+			"",
+			"</p>",
+			"</span>"
+		]
+	},
+	"Angular Property": {
+		"prefix": "ng-property",
+		"description": "Property: [property]=\"expression\"",
+		"types": "typescript, html",
+		"body": [
+			"[${property}]=\"${expression}\"$0"
+		]
+	},
+	"Angular Event": {
+		"prefix": "ng-event",
+		"description": "Event: (event) = \"onEvent()\"",
+		"types": "typescript, html",
+		"body": [
+			"(${event}) = \"on${Event}()\"$0"
+		]
+	},
+	"Angular Oneway Binding": {
+		"prefix": "ng-binding-oneway",
+		"description": "Property: [property]=\"expression\"",
+		"types": "typescript, html",
+		"body": [
+			"[${property}]=\"${expression}\"$0"
+		]
+	},
+	"Angular Twoway Binding": {
+		"prefix": "ng-binding-twoway",
+		"description": "Two-way data binding with the NgModel",
+		"types": "typescript, html",
+		"body": [
+			"[(ngModel)]=\"${Name}\"$0"
+		]
+	},
+	"Angular Interpolation": {
+		"prefix": "ng-interpolation",
+		"description": "Interpolation: {{ interpolation }}",
+		"types": "typescript, html",
+		"body": [
+			"{{ ${interpolation} }}$0"
+		]
+	},
+	"Angular 1 Loop Directive": {
+		"prefix": "ng-repeat",
+		"description": "Use ngFor instead.",
+		"types": "typescript, html",
+		"body": [
+			"*ngFor=\"let ${item} of ${items}\"$0"
+		]
+	},
+	"Angular Click Event": {
+		"prefix": "ng-click",
+		"description": "Click event",
+		"types": "typescript, html",
+		"body": [
+			"(click)=\"${expression}\"$0"
+		]
+	},
+	"Angular 1 Show Directive": {
+		"prefix": "ng-show",
+		"description": "Usage: Bind to the hidden property.",
+		"types": "typescript, html",
+		"body": [
+			"[hidden]=\"!${expression}\"$0"
+		]
+	},
+	"Angular 1 Hide Directive": {
+		"prefix": "ng-hide",
+		"description": "Usage: Bind to the hidden property.",
+		"types": "typescript, html",
+		"body": [
+			"[hidden]=\"${expression}\"$0"
+		]
+	},
+	"Angular 1 Href Directive": {
+		"prefix": "ng-href",
+		"description": "Usage: Bind to the href property.",
+		"types": "typescript, html",
+		"body": [
+			"[href]=\"${url}\"$0"
+		]
+	},
+	"Angular 1 Src Directive": {
+		"prefix": "ng-src",
+		"description": "Usage: Bind to the src property.",
+		"types": "typescript, html",
+		"body": [
+			"[src]=\"${url}\"$0"
+		]
+	},
+	"Angular 1 OrderBy": {
+		"prefix": "ng-orderBy",
+		"description": "For performance reasons, no comparable pipe exists in Angular 2. Instead, use component code to order or sort results. If you need the same ordering or sorting code in several templates, consider building a custom pipe.",
+		"types": "typescript, html",
+		"body": [
+			"$0"
+		]
+	},
+	"Angular 1 Filter": {
+		"prefix": "ng-filter",
+		"description": "For performance reasons, no comparable pipe exists in Angular 2. Do all your filtering in the component. If you need the same filtering code in several templates, consider building a custom pipe.",
+		"types": "typescript, html",
+		"body": [
+			"$0"
+		]
+	},
+	"Submit Button": {
+		"prefix": "ng-button-submit",
+		"description": "A submit button element with a click event",
+		"types": "typescript, html",
+		"body": [
+			"<button type=\"submit\">${Submit}</button>",
+			"$0"
+		]
+	},
+	"Click Button": {
+		"prefix": "ng-button",
+		"description": "A button element with a click event",
+		"types": "typescript, html",
+		"body": [
+			"<button (click)=\"${1:onClick()}\">${2:name}</button>",
+			"$0"
+		]
+	},
+	"ng import": {
+		"prefix": "ng-import",
+		"description": "import module or component from path;",
+		"types": "typescript, html",
+		"body": [
+			"import { ${2:moduleOrComponent} } from '${1:path}';",
+			"$0"
+		]
+	},
+	"http get": {
+		"prefix": "ng-http-get",
+		"description": "Http observable get request",
+		"types": "typescript, html",
+		"body": [
+			"this.http.get('${url}')",
+			"\t.map((res: Response) => {",
+			"\t\tres.json();",
+			"})$0"
+		]
+	},
+	"httpClient get": {
+		"prefix": "ng-httpClient-get",
+		"description": "HttpClient observable get request",
+		"types": "typescript, html",
+		"body": [
+			"this.http.get('${url}')$0"
+		]
+	},
+	"http get post": {
+		"prefix": "ng-http-get-post",
+		"description": "Http observable get & post request",
+		"types": "typescript, html",
+		"body": [
+			"get${Type}(): Observable<I${Type}[]> {",
+			"\treturn this.http.get(${name})",
+			"\t\t.map((res: Response) => <I${Type}[]>res.json())",
+			"\t\t.catch(this.handleError);",
+			"}",
+			"",
+			"add${Type}(${name}: string): Observable<I${Type}> {",
+			"\tlet body = JSON.stringify({ ${name} });",
+			"\tlet headers = new Headers({ 'Content-Type': 'application/json'});",
+			"\tlet options = new RequestOptions({ headers: headers });",
+			"",
+			"\treturn this.http.post(this.${url}, body, options)",
+			"\t\t.map(this.handleResponse)",
+			"\t.catch(this.handleError);",
+			"}",
+			"private handleError(error: Response) {",
+			"\tconsole.error(error);",
+			"\treturn Observable.throw(error.json().error || 'Server error');",
+			"}",
+			"$0"
+		]
+	},
+	"Angular Debug": {
+		"prefix": "ng-debug",
+		"description": "pre obj pipe json",
+		"types": "typescript, html",
+		"body": [
+			"<pre>{{ ${obj} | json }}</pre>$0"
+		]
+	},
+	"Angular Debug Async": {
+		"prefix": "ng-debug-async",
+		"description": "pre obj pipe async pipe json",
+		"types": "typescript, html",
+		"body": [
+			"<pre>{{ ${obj} | async | json }}</pre>$0"
+		]
+	},
+	"Angular Flex Layout Import": {
+		"prefix": "fx-import",
+		"description": "Flex Layout Import",
+		"types": "typescript, html",
+		"body": [
+			"import { FlexLayoutModule } from '@angular/flex-layout';",
+			"// Add ${FlexLayoutModule.forRoot()} to the @NgModule imports section"
+		]
+	},
+	"Angular Flex Row": {
+		"prefix": "fx-row",
+		"description": "Flex Layout Row",
+		"types": "typescript, html",
+		"body": [
+			"<div fxLayout=\"row\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Layout": {
+		"prefix": "fx-layout",
+		"description": "Flex Layout Property",
+		"types": "typescript, html",
+		"body": [
+			"fxLayout=\"row\"$0"
+		]
+	},
+	"Angular Flex Layout Align": {
+		"prefix": "fx-layout-align",
+		"description": "Flex Layout Align Property",
+		"types": "typescript, html",
+		"body": [
+			"fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\"$0"
+		]
+	},
+	"Angular Flex Layout Gap": {
+		"prefix": "fx-layout-gap",
+		"description": "Flex Layout Gap Property",
+		"types": "typescript, html",
+		"body": [
+			"fxLayoutGap=\"${gap}px\"$0"
+		]
+	},
+	"Angular Flex Reverse Row": {
+		"prefix": "fx-row-reverse",
+		"description": "Flex Layout Reverse Row",
+		"types": "typescript, html",
+		"body": [
+			"<div fxLayout=\"row-reverse\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Column": {
+		"prefix": "fx-col",
+		"description": "Flex Layout Column",
+		"types": "typescript, html",
+		"body": [
+			"fxLayout=\"column\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">$0"
+		]
+	},
+	"Angular Flex Column with Element": {
+		"prefix": "fx-col-element",
+		"description": "Flex Layout Column with Element",
+		"types": "typescript, html",
+		"body": [
+			"<${1:div} fxLayout=\"column\" fxLayoutAlign=\"${2:|start,center,end,space-around,space-between|} ${4:|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
+			"\t$0",
+			"</${1:div}>"
+		]
+	},
+	"Angular Flex Reverse Column": {
+		"prefix": "fx-col-reverse",
+		"description": "Flex Layout Reverse Column",
+		"types": "typescript, html",
+		"body": [
+			"<div fxLayout=\"column-reverse\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Item": {
+		"prefix": "fx-item",
+		"description": "Flex Layout Item",
+		"types": "typescript, html",
+		"body": [
+			"<div fxFlex=\"${value}%\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Item Offset": {
+		"prefix": "fx-item-offset",
+		"description": "Flex Layout Item with fxFlexOffset",
+		"types": "typescript, html",
+		"body": [
+			"<div fxFlex=\"${value}%\" fxFlexOffset=\"${offset}px\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Item Order": {
+		"prefix": "fx-item-order",
+		"description": "Flex Layout Item with fxFlexOrder",
+		"types": "typescript, html",
+		"body": [
+			"<div fxFlex=\"${value}%\" fxFlexOrder=\"${order}\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Item Align": {
+		"prefix": "fx-item-align",
+		"description": "Flex Layout Item with fxFlexAlign",
+		"types": "typescript, html",
+		"body": [
+			"<div fxFlex=\"${value}%\" fxFlexAlign=\"${1|start,baseline,center,end|}\">",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Angular Flex Item Fill": {
+		"prefix": "fx-item-fill",
+		"description": "Flex Layout Item with fxFlexFill",
+		"types": "typescript, html",
+		"body": [
+			"<div fxFlex=\"${value}%\" fxFlexFill>",
+			"\t$0",
+			"</div>"
+		]
+	},
+	"Material drag drop box": {
+		"prefix": "m-drag-drop-box",
+		"description": "Material drag drop box",
+		"types": "typescript, html",
+		"body": [
+			"<div class=\"$1{drag-drop-box}\" cdkDrag>",
+			"</div>$0"
+		]
+	},
+	"Material toolbar": {
+		"prefix": "m-toolbar",
+		"description": "Material toolbar",
+		"types": "typescript, html",
+		"body": [
+			"<mat-toolbar>",
+			"\t<span>${FirstRow}</span>",
+			"</mat-toolbar>$0"
+		]
+	},
+	"Material toolbar row": {
+		"prefix": "m-toolbar-row",
+		"description": "Material toolbar row",
+		"types": "typescript, html",
+		"body": [
+			"<mat-toolbar-row>",
+			"\t<span>${FirstRow}</span>",
+			"</mat-toolbar-row>$0"
+		]
+	},
+	"Material toolbar-multiRow": {
+		"prefix": "m-toolbar-multiRow",
+		"description": "Material Toolbar with multiple rows",
+		"types": "typescript, html",
+		"body": [
+			"<mat-toolbar>",
+			"\t<span>${FirstRow}</span>",
+			"\t<mat-toolbar-row>",
+			"\t\t<span>${SecondRow}</span>",
+			"\t</mat-toolbar-row>",
+			"\t<mat-toolbar-row>",
+			"\t\t<span>${ThirdRow}</span>",
+			"\t</mat-toolbar-row>",
+			"</mat-toolbar>$0"
+		]
+	},
+	"Material FA Icon": {
+		"prefix": "m-icon-fontawesome",
+		"description": "Material Font Awesome Icon",
+		"types": "typescript, html",
+		"body": [
+			"<mat-icon mat-font-icon=\"fa-${icon}\" class=\"fa\"></mat-icon>$0"
+		]
+	},
+	"Material Button": {
+		"prefix": "m-button",
+		"description": "Rectangular Material button w/ no elevation.",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-button>${text}</button>$0"
+		]
+	},
+	"Material Raised Button": {
+		"prefix": "m-button-raised",
+		"description": "Rectangular Material button w/ elevation.",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-raised-button>${text}</button>$0"
+		]
+	},
+	"Material Icon Button": {
+		"prefix": "m-button-icon",
+		"description": "Circular Material button with a transparent background",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-icon-button><mat-icon>${icon_name}</mat-icon></button>$0"
+		]
+	},
+	"Material Round Button": {
+		"prefix": "m-button-fab",
+		"description": "Circular button w/ elevation.",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-fab><mat-icon>${icon_name}</mat-icon></button>$0"
+		]
+	},
+	"Material Round Small Button": {
+		"prefix": "m-button-fab-mini",
+		"description": "Small circular button w/ elevation.",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-mini-fab><mat-icon>${icon_name}</mat-icon></button>$0"
+		]
+	},
+	"Material Toggle Button": {
+		"prefix": "m-button-toggle",
+		"description": "Material toggle button",
+		"types": "typescript, html",
+		"body": [
+			"<mat-button-toggle>${text}</mat-button-toggle>$0"
+		]
+	},
+	"Material Basic Card": {
+		"prefix": "m-card",
+		"description": "Material Basic Card",
+		"types": "typescript, html",
+		"body": [
+			"<mat-card>",
+			"\t$1",
+			"</mat-card>$0"
+		]
+	},
+	"Material Card": {
+		"prefix": "m-card-full",
+		"description": "Material Card",
+		"types": "typescript, html",
+		"body": [
+			"<mat-card>",
+			"\t<mat-card-header>",
+			"\t\t<mat-card-title>${title}</mat-card-title>",
+			"\t\t<mat-card-subtitle>${subtitle}</mat-card-subtitle>",
+			"\t</mat-card-header>",
+			"\t<mat-card-content>",
+			"\t$1",
+			"\t</mat-card-content>",
+			"\t<mat-card-actions>",
+			"\t\t<button mat-button>${Ok}</button>",
+			"\t</mat-card-actions>",
+			"</mat-card>$0"
+		]
+	},
+	"Material Radio Button": {
+		"prefix": "m-radiobutton",
+		"description": "Material Radio Button",
+		"types": "typescript, html",
+		"body": [
+			"<mat-radio-group>",
+			"\t<mat-radio-button value=\"${value1}\">${Option1}</mat-radio-button>",
+			"\t<mat-radio-button value=\"${value2}\">${Option2}</mat-radio-button>",
+			"</mat-radio-group>$0"
+		]
+	},
+	"Material Radio Button Option": {
+		"prefix": "m-radiobutton-option",
+		"description": "Material Radio Button Option",
+		"types": "typescript, html",
+		"body": [
+			"<mat-radio-button value=\"${value}\">${Option}</mat-radio-button>$0"
+		]
+	},
+	"Material Checkbox ngmodel": {
+		"prefix": "m-checkbox-ngmodel",
+		"description": "Material Checkbox ngmodel",
+		"types": "typescript, html",
+		"body": [
+			"<mat-checkbox [(ngModel)]=\"${property.checkedOrUnchecked}\">${text}</mat-checkbox>$0"
+		]
+	},
+	"Material Checkbox": {
+		"prefix": "m-checkbox",
+		"description": "Material Checkbox",
+		"types": "typescript, html",
+		"body": [
+			"<mat-checkbox>${text}</mat-checkbox>$0"
+		]
+	},
+	"Material Datepicker": {
+		"prefix": "m-datepicker",
+		"description": "Material Datepicker",
+		"types": "typescript, html",
+		"body": [
+			"<mat-form-field>",
+			"\t<input matInput [matDatepicker]=\"${picker}\" placeholder=\"${title}\">",
+			"\t<mat-datepicker-toggle matSuffix [for]=\"${picker}\"></mat-datepicker-toggle>",
+			"\t<button matSuffix [matDatepickerToggle]=\"${picker}\"></button>",
+			"\t<mat-datepicker #${picker}></mat-datepicker>",
+			"</mat-form-field>",
+			"$0"
+		]
+	},
+	"Material Input Text": {
+		"prefix": "m-input",
+		"description": "Material Input Textbox",
+		"types": "typescript, html",
+		"body": [
+			"<mat-form-field>",
+			"\t<input matInput placeholder=\"${label}\" value=\"${value}\">",
+			"</mat-form-field>$0"
+		]
+	},
+	"Material Chip List": {
+		"prefix": "m-chip-list",
+		"description": "Material Chip List",
+		"types": "typescript, html",
+		"body": [
+			"<mat-chip-list>",
+			"\t<mat-chip>${text}</mat-chip>",
+			"</mat-chip-list>$0"
+		]
+	},
+	"Material Chip Stacked List": {
+		"prefix": "m-chip-list-stacked",
+		"description": "Material Chip Stacked List",
+		"types": "typescript, html",
+		"body": [
+			"<mat-chip-list class=\"mat-chip-list-stacked\">",
+			"\t<mat-chip>${text}</mat-chip>",
+			"</mat-chip-list>$0"
+		]
+	},
+	"Material Chip": {
+		"prefix": "m-chip",
+		"description": "Material Chip",
+		"types": "typescript, html",
+		"body": [
+			"<mat-chip>${text}</mat-chip>$0"
+		]
+	},
+	"Material Select": {
+		"prefix": "m-select",
+		"description": "Material Select",
+		"types": "typescript, html",
+		"body": [
+			"<mat-select placeholder=\"${Placeholder}\" [(ngModel)]=\"selectedValue\" name=\"${item}\">",
+			"\t<mat-option *ngFor=\"let ${item} of ${items}\" [value]=\"${item}.value\">",
+			"\t\t{{${item}.viewValue}}",
+			"\t</mat-option>",
+			"</mat-select>$0"
+		]
+	},
+	"Material SVG Icon": {
+		"prefix": "m-icon-svg",
+		"description": "Material SVG Icon",
+		"types": "typescript, html",
+		"body": [
+			"<mat-icon svgIcon=\"${src}\"></mat-icon>$0"
+		]
+	},
+	"Material Icon": {
+		"prefix": "m-icon",
+		"description": "Material Icon",
+		"types": "typescript, html",
+		"body": [
+			"<mat-icon>${icon}</mat-icon>$0"
+		]
+	},
+	"Material Icon with Badge": {
+		"prefix": "m-icon-badge",
+		"description": "Material Icon with a Badge",
+		"types": "typescript, html",
+		"body": [
+			"<mat-icon",
+			"\tcolor=\"primary\"",
+			"\tmatBadge=\"${number}\"",
+			"\tmatBadgePosition=\"${2|above,below|} ${3|after,before|}\"",
+			"\tmatBadgeColor=\"accent\">",
+			"\t\t${icon}",
+			"</mat-icon>$0"
+		]
+	},
+	"Material Slide Toggle": {
+		"prefix": "m-slide-toggle",
+		"description": "Material Slide toggle",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slide-toggle>${text}</mat-slide-toggle>$0"
+		]
+	},
+	"Material Slider": {
+		"prefix": "m-slider",
+		"description": "Material Slider",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slider min=\"${min}\" max=\"${max}\" step=\"${step}\" value=\"${value}\"></mat-slider>$0"
+		]
+	},
+	"Material Vertical Slider": {
+		"prefix": "m-slider-vertical",
+		"description": "Material Vertical Slider",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slider vertical min=\"${min}\" max=\"${max}\" step=\"${step}\" value=\"${value}\"></mat-slider>$0"
+		]
+	},
+	"Material Slider Thumblabel": {
+		"prefix": "m-slider-thumbLabel",
+		"description": "Material Slider thumbLabel",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slider thumbLabel tickInterval=\"${interval}\"></mat-slider>$0"
+		]
+	},
+	"Material Slider TickInterval": {
+		"prefix": "m-slider-tickInterval",
+		"description": "Material Slider tickInterval",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slider step=\"${step}\" tickInterval=\"${interval}\"></mat-slider>$0"
+		]
+	},
+	"Material Slider TickInterval Auto": {
+		"prefix": "m-slider-tickInterval-auto",
+		"description": "Material Slider tickInterval Auto",
+		"types": "typescript, html",
+		"body": [
+			"<mat-slider tickInterval=\"auto\"></mat-slider>$0"
+		]
+	},
+	"Material Menu": {
+		"prefix": "m-menu",
+		"description": "Material Menu",
+		"types": "typescript, html",
+		"body": [
+			"<button mat-icon-button [matMenuTriggerFor]=\"${menu}\" aria-label=\"Example icon-button with a menu\">",
+			"\t<mat-icon>more_vert</mat-icon>",
+			"</button>",
+			"<mat-menu #${menu}=\"matMenu\">",
+			"\t<button mat-menu-item>",
+			"\t\t<mat-icon>dialpad</mat-icon>",
+			"\t\t<span>Redial</span>",
+			"\t</button>",
+			"</mat-menu>"
+		]
+	},
+	"Material List": {
+		"prefix": "m-list",
+		"description": "Material List",
+		"types": "typescript, html",
+		"body": [
+			"<mat-list>",
+			"\t<mat-list-item>${item}</mat-list-item>$1",
+			"</mat-list>$0"
+		]
+	},
+	"Material List ngFor": {
+		"prefix": "m-list-ngfor",
+		"description": "Material List ngFor",
+		"types": "typescript, html",
+		"body": [
+			"<mat-list>",
+			"\t<mat-list-item *ngFor=\"let ${item} of ${items}\">{{ ${item} }}</mat-list-item>$1",
+			"</mat-list>$0"
+		]
+	},
+	"Material List Item": {
+		"prefix": "m-list-item",
+		"description": "Material List Item",
+		"types": "typescript, html",
+		"body": [
+			"<mat-list-item>${item}</mat-list-item>$0"
+		]
+	},
+	"Material Tab Group": {
+		"prefix": "m-tab-group",
+		"description": "Material Tab Group",
+		"types": "typescript, html",
+		"body": [
+			"<mat-tab-group>",
+			"\t<mat-tab label=\"${TabHeader1}\">$1</mat-tab>",
+			"\t<mat-tab label=\"${TabTabHeader2}\">$2</mat-tab>",
+			"</mat-tab-group>$0"
+		]
+	},
+	"Material Tab": {
+		"prefix": "m-tab",
+		"description": "Material Tab",
+		"types": "typescript, html",
+		"body": [
+			"<mat-tab label=\"${TabHeader}\">$1</mat-tab>$0"
+		]
+	},
+	"Material Tooltip": {
+		"prefix": "m-tooltip",
+		"description": "Material Tooltip",
+		"types": "typescript, html",
+		"body": [
+			"matTooltip=\"${text}\"$0"
+		]
+	},
+	"Material Tooltip Position": {
+		"prefix": "m-tooltip-position",
+		"description": "Material Tooltip position",
+		"types": "typescript, html",
+		"body": [
+			"[matTooltipPosition]=\"${1|above,below,left,right,before,after|}\"$0"
+		]
+	},
+	"Material Tooltip With Position": {
+		"prefix": "m-tooltip-with-position",
+		"description": "Material Tooltip with position",
+		"types": "typescript, html",
+		"body": [
+			"matTooltip=\"${text}\" [matTooltipPosition]=\"${1|above,below,left,right,before,after|}\"$0"
+		]
+	},
+	"Material Table": {
+		"prefix": "m-table",
+		"description": "Material Table",
+		"types": "typescript, html",
+		"body": [
+			"<table mat-table #table [dataSource]=\"${dataSource}\">",
+			"\t<ng-container matColumnDef=\"${column}\">",
+			"\t\t<th mat-header-cell *matHeaderCellDef> ${header} </th>",
+			"\t\t<td mat-cell *matCellDef=\"let row\"> {{row.${column}}} </td>",
+			"\t</ng-container>",
+			"\t<tr mat-header-row *matHeaderRowDef=\"['${column}']\"></tr>",
+			"\t<tr mat-row *matRowDef=\"let row; columns: ['${column}'];\"></tr>",
+			"</table>$0"
+		]
+	},
+	"Material Table Column": {
+		"prefix": "m-table-column",
+		"description": "Material Table Column",
+		"types": "typescript, html",
+		"body": [
+			"<ng-container matColumnDef=\"${column}\">",
+			"\t<th mat-header-cell *matHeaderCellDef> ${header} </th>",
+			"\t<td mat-cell *matCellDef=\"let row\"> {{row.${column}}} </td>",
+			"</ng-container>$0"
+		]
+	},
+	"Material Table Flex": {
+		"prefix": "m-table-flex",
+		"description": "Material Table Flex",
+		"types": "typescript, html",
+		"body": [
+			"<mat-table #table [dataSource]=\"${dataSource}\">",
+			"\t<ng-container matColumnDef=\"${column}\">",
+			"\t\t<mat-header-cell *matHeaderCellDef> ${header} </mat-header-cell>",
+			"\t\t<mat-cell *matCellDef=\"let row\"> {{row.${column}}} </mat-cell>",
+			"\t</ng-container>",
+			"\t<mat-header-row *matHeaderRowDef=\"['${column}']\"></mat-header-row>",
+			"\t<mat-row *matRowDef=\"let row; columns: ['${column}'];\"></mat-row>",
+			"</mat-table>$0"
+		]
+	},
+	"Material Table Column Flex": {
+		"prefix": "m-table-column-flex",
+		"description": "Material Table Column Flex",
+		"types": "typescript, html",
+		"body": [
+			"<ng-container matColumnDef=\"${column}\">",
+			"\t<mat-header-cell *matHeaderCellDef> ${header} </mat-header-cell>",
+			"\t<mat-cell *matCellDef=\"let row\"> {{row.${column}}} </mat-cell>",
+			"</ng-container>$0"
+		]
+	},
+	"Material Grid List": {
+		"prefix": "m-grid-list",
+		"description": "Material Grid List",
+		"types": "typescript, html",
+		"body": [
+			"<mat-grid-list cols=\"${cols}\" rowHeight=\"${height}px\">",
+			"\t<mat-grid-tile",
+			"\t\t*ngFor=\"let ${tile} of ${tiles}\"",
+			"\t\t[colspan]=\"${tile}.cols\"",
+			"\t\t[rowspan]=\"${tile}.rows\"",
+			"\t\t{{${tile}.text}}>",
+			"\t</mat-grid-tile>",
+			"</mat-grid-list>$0"
+		]
+	},
+	"Material Paginator": {
+		"prefix": "m-paginator",
+		"description": "Material Paginator",
+		"types": "typescript, html",
+		"body": [
+			"<mat-paginator [length]=\"${length}\"",
+			"\t[pageSize]=\"${pageSize}\"",
+			"\t[pageSizeOptions]=\"${pageSizeOptions}\"",
+			"\t(page)=\"pageEvent = $${event}\">",
+			"</mat-paginator>$0"
+		]
+	},
+	"Material Determinate Spinner": {
+		"prefix": "m-spinner",
+		"description": "Material Determinate Spinner",
+		"types": "typescript, html",
+		"body": [
+			"<mat-spinner",
+			"\t[value]=\"${value}\">",
+			"</mat-spinner>$0"
+		]
+	},
+	"Material Indeterminate Progress Bar": {
+		"prefix": "m-progress-bar-indeterminate",
+		"description": "Material indeterminate Progress Bar",
+		"types": "typescript, html",
+		"body": [
+			"<mat-progress-bar",
+			"\tmode=\"indeterminate\">",
+			"</mat-progress-bar>$0"
+		]
+	},
+	"Material Query Progress Bar": {
+		"prefix": "m-progress-bar-query",
+		"description": "Material Query Progress Bar",
+		"types": "typescript, html",
+		"body": [
+			"<mat-progress-bar",
+			"\tmode=\"query\">",
+			"</mat-progress-bar>$0"
+		]
+	},
+	"Material Buffer Progress Bar": {
+		"prefix": "m-progress-bar-buffer",
+		"description": "Material Buffer Progress Bar",
+		"types": "typescript, html",
+		"body": [
+			"<mat-progress-bar",
+			"\tmode=\"buffer\"",
+			"\t[color]=\"${color}\"",
+			"\t[value]=\"${value}\"",
+			"\t[bufferValue]=\"${bufferValue}\">",
+			"</mat-progress-bar>$0"
+		]
+	},
+	"Material Determinate Progress Bar": {
+		"prefix": "m-progress-bar",
+		"description": "Material Determinate Progress Bar",
+		"types": "typescript, html",
+		"body": [
+			"<mat-progress-bar",
+			"\tmode=\"determinate\"",
+			"\t[value]=\"${value}\">",
+			"</mat-progress-bar>$0"
+		]
+	},
+	"Material Expansion Panel ": {
+		"prefix": "m-expansion-panel",
+		"description": "Material Expansion Panel",
+		"types": "typescript, html",
+		"body": [
+			"<mat-expansion-panel>",
+			"\t<mat-expansion-panel-header>",
+			"\t\t${title}",
+			"\t</mat-expansion-panel-header>",
+			"\t${content}",
+			"</mat-expansion-panel>$0"
+		]
+	},
+	"Material Accordion Panel ": {
+		"prefix": "m-accordion>",
+		"description": "Material Accordion",
+		"types": "typescript, html",
+		"body": [
+			"<mat-accordion>",
+			"\t<mat-expansion-panel>",
+			"\t\t<mat-expansion-panel-header>",
+			"\t\t\t${title}",
+			"\t\t</mat-expansion-panel-header>",
+			"\t\t${content}",
+			"\t</mat-expansion-panel>",
+			"\t<mat-expansion-panel>",
+			"\t\t<mat-expansion-panel-header>",
+			"\t\t\t${title2}",
+			"\t\t</mat-expansion-panel-header>",
+			"\t\t${content2}",
+			"\t</mat-expansion-panel>",
+			"</mat-accordion>$0"
+		]
+	},
+	"Material Vertical Stepper": {
+		"prefix": "m-stepper-vertical",
+		"description": "Material Vertical Stepper",
+		"types": "typescript, html",
+		"body": [
+			"<mat-vertical-stepper>",
+			"\t<mat-step label=\"${label1}\">",
+			"\t\t$1",
+			"\t</mat-step>",
+			"\t<mat-step label=\"${label2}\">",
+			"\t\t$2",
+			"\t</mat-step>",
+			"</mat-vertical-stepper>$0"
+		]
+	},
+	"Material Horizontal Stepper": {
+		"prefix": "m-stepper-horizontal",
+		"description": "Material Horizontal Stepper",
+		"types": "typescript, html",
+		"body": [
+			"<mat-horizontal-stepper>",
+			"\t<mat-step label=\"${label1}\">",
+			"\t\t$1",
+			"\t</mat-step>",
+			"\t<mat-step label=\"${label2}\">",
+			"\t\t$2",
+			"\t</mat-step>",
+			"</mat-horizontal-stepper>$0"
+		]
+	},
+	"Material Stepper Step": {
+		"prefix": "m-step",
+		"description": "Material Vertical Stepper",
+		"types": "typescript, html",
+		"body": [
+			"<mat-step label=\"${label}\">",
+			"\t$1",
+			"</mat-step>",
+			"$0"
+		]
+	},
+	"Material Indeterminate Spinner": {
+		"prefix": "m-spinner-indeterminate",
+		"description": "Material Indeterminate Spinner",
+		"types": "typescript, html",
+		"body": [
+			"<mat-spinner",
+			"\t[mode]=\"indeterminate\">",
+			"</mat-spinner>$0"
+		]
+	},
+	"Material Divider": {
+		"prefix": "m-divider",
+		"description": "Material Divider",
+		"types": "typescript, html",
+		"body": [
+			"<mat-divider>",
+			"</mat-divider>$0"
+		]
+	},
+	"Material Inset Divider": {
+		"prefix": "m-divider-inset",
+		"description": "Material Inset Divider",
+		"types": "typescript, html",
+		"body": [
+			"<mat-divider",
+			"\t[inset]=\"true\">",
+			"</mat-divider>$0"
+		]
+	},
+	"Material Vertical Divider": {
+		"prefix": "m-divider-vertical",
+		"description": "Material Vertical Divider",
+		"types": "typescript, html",
+		"body": [
+			"<mat-divider",
+			"\t[vertical]=\"true\">",
+			"</mat-divider>$0"
+		]
+	},
+	"PWA Link manifest": {
+		"prefix": "pwa-link-manifest",
+		"description": "PWA Link Manifest",
+		"types": "html",
+		"body": [
+			"<link rel=\"manifest\" href=\"./manifest.json\">$0"
+		]
+	},
+	"Angular content": {
+		"types": "typescript, html",
+		"prefix": "ng-content",
+		"description": "Angular content",
+		"body": [
+			"<ng-content #${1:name}></ng-content>",
+			"$0"
+		]
+	},
+	"extend": {
+		"prefix": "extend",
+		"body": [
+			"{extend name='${1:public/base}'/}"
+		],
+		"description": "模板继承"
+	},
+	"block": {
+		"prefix": "block",
+		"body": [
+			"{block name='${1:block_name}'}",
+			"\t$0",
+			"{/block}"
+		],
+		"description": "模板区块"
+	},
+	"include": {
+		"prefix": "include",
+		"body": [
+			"{include file='${1:public/footer}'/}"
+		],
+		"description": "引入模板文件"
+	},
+	"volist": {
+		"prefix": "volist",
+		"body": [
+			"{volist name='${1:list_name}' id='${2:vo}'}",
+			"\t$0",
+			"{/volist}"
+		],
+		"description": "模板遍历 volist"
+	},
+	"foreach": {
+		"prefix": "foreach",
+		"body": [
+			"{foreach \\$${1:list_name} as \\$${2:key} => \\$${3:vo}}",
+			"\t$0",
+			"{/foreach}"
+		],
+		"description": "模板遍历 foreach"
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"{for start='${1:开始值}' end='${2:结束值}'}",
+			"\t{\\$i}$0",
+			"{/for}"
+		],
+		"description": "模板遍历 for"
+	},
+	"eq": {
+		"prefix": "eq",
+		"body": [
+			"{eq name='${1:name}' value='${2:value}'}$0{else/}{/eq}"
+		],
+		"description": "比较标签 =="
+	},
+	"neq": {
+		"prefix": "neq",
+		"body": [
+			"{neq name='${1:name}' value='${2:value}'}$0{else/}{/neq}"
+		],
+		"description": "比较标签 !="
+	},
+	"heq": {
+		"prefix": "heq",
+		"body": [
+			"{heq name='${1:name}' value='${2:value}'}$0{else/}{/heq}"
+		],
+		"description": "比较标签 ==="
+	},
+	"nheq": {
+		"prefix": "nheq",
+		"body": [
+			"{nheq name='${1:name}' value='${2:value}'}$0{else/}{/nheq}"
+		],
+		"description": "比较标签 !=="
+	},
+	"gt": {
+		"prefix": "gt",
+		"body": [
+			"{gt name='${1:name}' value='${2:value}'}$0{else/}{/gt}"
+		],
+		"description": "比较标签 >"
+	},
+	"egt": {
+		"prefix": "egt",
+		"body": [
+			"{egt name='${1:name}' value='${2:value}'}$0{else/}{/egt}"
+		],
+		"description": "比较标签 >="
+	},
+	"lt": {
+		"prefix": "lt",
+		"body": [
+			"{lt name='${1:name}' value='${2:value}'}$0{else/}{/lt}"
+		],
+		"description": "比较标签 <"
+	},
+	"elt": {
+		"prefix": "elt",
+		"body": [
+			"{elt name='${1:name}' value='${2:value}'}$0{else/}{/elt}"
+		],
+		"description": "比较标签 <="
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": [
+			"{switch ${1:变量} }",
+			"\t{case ${2:value1} }${3:输出内容1}{/case}",
+			"\t{default /}${4:默认情况}",
+			"{/switch}"
+		],
+		"description": "条件判断 switch"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"{if ${1:表达式} }",
+			"\t{elseif ${2:表达式} /}${3:输出内容1}",
+			"\t{else /}${4:默认情况}",
+			"{/if}"
+		],
+		"description": "条件判断 if"
+	},
+	"in": {
+		"prefix": "in",
+		"body": [
+			"{in name='${1:id}' value='${2:1,2,3}' }",
+			"\t${3:输出内容1}",
+			"{else /}",
+			"{/in}"
+		],
+		"description": "范围判断 in"
+	},
+	"notin": {
+		"prefix": "notin",
+		"body": [
+			"{notin name='${1:id}' value='${2:1,2,3}' }",
+			"\t${3:输出内容1}",
+			"{/notin}"
+		],
+		"description": "范围判断 notin"
+	},
+	"between": {
+		"prefix": "between",
+		"body": [
+			"{between name='${1:id}' value='${2:1,10}' }",
+			"\t${3:输出内容1}",
+			"{/between}"
+		],
+		"description": "范围判断 between"
+	},
+	"notbetween": {
+		"prefix": "notbetween",
+		"body": [
+			"{notbetween name='${1:id}' value='${2:1,10}' }",
+			"\t${3:输出内容1}",
+			"{/notbetween}"
+		],
+		"description": "范围判断 notbetween"
+	},
+	"present": {
+		"prefix": "present",
+		"body": [
+			"{present name='${1:id}'}",
+			"\t${2:输出内容1}",
+			"{/present}"
+		],
+		"description": "是否定义 present"
+	},
+	"notpresent": {
+		"prefix": "notpresent",
+		"body": [
+			"{notpresent name='${1:id}'}",
+			"\t${2:输出内容1}",
+			"{/notpresent}"
+		],
+		"description": "是否定义 notpresent"
+	},
+	"empty": {
+		"prefix": "empty",
+		"body": [
+			"{empty name='${1:id}'}",
+			"\t${2:输出内容1}",
+			"{else /}",
+			"{/empty}"
+		],
+		"description": "是否为空 empty"
+	},
+	"notempty": {
+		"prefix": "notempty",
+		"body": [
+			"{notempty name='${1:id}'}",
+			"\t${2:输出内容1}",
+			"{/notempty}"
+		],
+		"description": "是否为空 notempty"
+	},
+	"defined": {
+		"prefix": "defined",
+		"body": [
+			"{defined name='${1:NAME}'}",
+			"\t${2:输出内容1}",
+			"{/defined}"
+		],
+		"description": "判断常量是否定义 defined"
+	},
+	"load": {
+		"prefix": "load",
+		"body": [
+			"{load href='${1:resource_href}' /}"
+		],
+		"description": "资源文件加载 load"
+	},
+	"assign": {
+		"prefix": "assign",
+		"body": [
+			"{assign name='${1:name}' value='${2:value}' /}"
+		],
+		"description": "定义标签 assign"
+	},
+	"define": {
+		"prefix": "define",
+		"body": [
+			"{define name='${1:NAME}' value='${2:value}' /}"
+		],
+		"description": "定义标签 define"
+	}
+}

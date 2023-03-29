@@ -1,0 +1,3048 @@
+{
+	"import": {
+		"prefix": [
+			"imp",
+			"import"
+		],
+		"body": "import ${2:moduleName} from '${1:module}';$0",
+		"description": "import ... from ... \nImports entire module statement in ES6 syntax"
+	},
+	"importNoModuleName": {
+		"prefix": "imn",
+		"body": "import '${1:module}';$0",
+		"description": "Imports entire module in ES6 syntax without module name"
+	},
+	"importDestructing": {
+		"prefix": "imd",
+		"body": "import { $2 } from '${1:module}';$0",
+		"description": "Imports only a portion of the module in ES6 syntax"
+	},
+	"importEverything": {
+		"prefix": "ime",
+		"body": "import * as ${2:alias} from '${1:module}';$0",
+		"description": "Imports everything as alias from the module in ES6 syntax"
+	},
+	"importAs": {
+		"prefix": "ima",
+		"body": "import { ${2:originalName} as ${3:alias} } from '${1:module}';$0",
+		"description": "Imports a specific portion of the module by assigning a local alias in ES6 syntax"
+	},
+	"require": {
+		"prefix": "rqr",
+		"body": "require('${1:package}');",
+		"description": "Require a package"
+	},
+	"requireToConst": {
+		"prefix": "req",
+		"body": "const ${1:packageName} = require('${1:package}');$0",
+		"description": "Require a package to const"
+	},
+	"moduleExports": {
+		"prefix": "mde",
+		"body": "module.exports = {\n\t$0\n};\n",
+		"description": "Module exports from Common JS, node syntax at ES6"
+	},
+	"exportNamedVariable": {
+		"prefix": "env",
+		"body": "export const ${1:exportVariable} = ${2:localVariable};\n",
+		"description": "Export named variable in ES6 syntax"
+	},
+	"exportNamedFunction": {
+		"prefix": "enf",
+		"body": "export const ${1:functionName} = (${2:params}) => {\n\t$0\n};\n",
+		"description": "Export named function in ES6 syntax"
+	},
+	"exportDefaultFunction": {
+		"prefix": "edf",
+		"body": "export default function ${1:${TM_FILENAME_BASE}}(${2:params}) {\n\t$0\n};\n",
+		"description": "Export default function in ES6 syntax"
+	},
+	"exportClass": {
+		"prefix": "ecl",
+		"body": "export default class ${1:className} {\n\t$0\n};\n",
+		"description": "Export default class in ES6 syntax"
+	},
+	"exportClassExtends": {
+		"prefix": "ece",
+		"body": "export default class ${1:className} extends ${2:baseclassName} {\n\t$0\n};\n",
+		"description": "Export default class which extends a base one in ES6 syntax"
+	},
+	"propertyGet": {
+		"prefix": "pge",
+		"body": "get ${1:propertyName}() {\n\treturn this.${0};\n}",
+		"description": "Creates a getter property inside a class in ES6 syntax"
+	},
+	"propertyset": {
+		"prefix": "pse",
+		"body": "set ${1:propertyName}(${2:value}) {\n\t${0};\n}",
+		"description": "Creates a setter property inside a class in ES6 syntax"
+	},
+	"forOf": {
+		"prefix": "fof",
+		"body": "for (const ${1:item} of ${2:object}) {\n\t${0}\n}",
+		"description": "Iterating over property names of iterable objects"
+	},
+	"forIn": {
+		"prefix": "fin",
+		"body": "for (const ${1:item} in ${2:object}) {\n\t${0}\n}",
+		"description": "Iterating over property values of iterable objects"
+	},
+	"anonymousFunction": {
+		"prefix": "anfn",
+		"body": "(${1:params}) => {\n\t${2}\n}",
+		"description": "Creates an anonymous function in ES6 syntax"
+	},
+	"namedFunction": {
+		"prefix": "nfn",
+		"body": "const ${1:name} = (${2:params}) => {\n\t${3}\n}",
+		"description": "Creates a named function in ES6 syntax"
+	},
+	"destructingObject": {
+		"prefix": "dob",
+		"body": "const {${2:propertyName}} = ${1:objectToDestruct};",
+		"description": "Creates and assigns a local variable using object destructing"
+	},
+	"destructingArray": {
+		"prefix": "dar",
+		"body": "const [${2:propertyName}] = ${1:arrayToDestruct};",
+		"description": "Creates and assigns a local variable using array destructing"
+	},
+	"setTimeOut": {
+		"prefix": "sto",
+		"body": "setTimeout(() => {\n\t${2}\n}, ${1:delayInms});",
+		"description": "Executes the given function after the specified delay in ES6 syntax"
+	},
+	"promise": {
+		"prefix": "prom",
+		"body": "return new Promise((resolve, reject) => {\n\t${1}\n});",
+		"description": "Creates and returns a new Promise in the standard ES6 syntax"
+	},
+	"thenCatch": {
+		"prefix": "thenc",
+		"body": ".then((${1:result}) => {\n\t${2}\n}).catch((${3:err}) => {\n\t${4}\n});",
+		"description": "Add the .then and .catch methods to handle promises"
+	},
+	"consoleAssert": {
+		"prefix": "cas",
+		"body": "console.assert(${1:expression}, ${2:object});",
+		"description": "If the specified expression is false, the message is written to the console along with a stack trace"
+	},
+	"consoleClear": {
+		"prefix": "ccl",
+		"body": "console.clear();",
+		"description": "Clears the console"
+	},
+	"consoleCount": {
+		"prefix": "cco",
+		"body": "console.count(${1:label});",
+		"description": "Writes the the number of times that count() has been invoked at the same line and with the same label"
+	},
+	"consoleDebug": {
+		"prefix": "cdb",
+		"body": "console.debug(${1:object});",
+		"description": "Displays a message in the console. Also display a blue right arrow icon along with the logged message in Safari"
+	},
+	"consoleDir": {
+		"prefix": "cdi",
+		"body": "console.dir(${1:object});",
+		"description": "Prints a JavaScript representation of the specified object"
+	},
+	"consoleError": {
+		"prefix": "cer",
+		"body": "console.error(${1:object});",
+		"description": "Displays a message in the console and also includes a stack trace from where the method was called"
+	},
+	"consoleGroup": {
+		"prefix": "cgr",
+		"body": "console.group('${1:label}');",
+		"description": "Groups and indents all following output by an additional level, until console.groupEnd() is called."
+	},
+	"consoleGroupEnd": {
+		"prefix": "cge",
+		"body": "console.groupEnd();",
+		"description": "Closes out the corresponding console.group()."
+	},
+	"consoleLog": {
+		"prefix": "clg",
+		"body": "console.log(${1:object});",
+		"description": "Displays a message in the console"
+	},
+	"consoleLogObject": {
+		"prefix": "clo",
+		"body": "console.log('${1:object} :>> ', ${1:object});",
+		"description": "Displays an object in the console with its name"
+	},
+	"consoleTrace": {
+		"prefix": "ctr",
+		"body": "console.trace(${1:object});",
+		"description": "Prints a stack trace from the point where the method was called"
+	},
+	"consoleWarn": {
+		"prefix": "cwa",
+		"body": "console.warn(${1:object});",
+		"description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+	},
+	"consoleInfo": {
+		"prefix": "cin",
+		"body": "console.info(${1:object});",
+		"description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+	},
+	"consoleTable": {
+		"prefix": "clt",
+		"body": "console.table(${1:object});",
+		"description": "Displays tabular data as a table."
+	},
+	"consoleTime": {
+		"prefix": "cti",
+		"body": "console.time(${1:object});",
+		"description": "Sets starting point for execution time measurement"
+	},
+	"consoleTimeEnd": {
+		"prefix": "cte",
+		"body": "console.timeEnd(${1:object});",
+		"description": "Sets end point for execution time measurement"
+	},
+	"Node.js Express Server": {
+		"prefix": "ex-node-server-simple",
+		"description": "Node.js Express Server",
+		"body": [
+			"const express = require('express');",
+			"const app = express();",
+			"const port = process.env.PORT || ${1:port};",
+			"const www = process.env.WWW || '${2:./}';",
+			"app.use(express.static(www));",
+			"console.log(`serving \\${www}`);",
+			"app.get('*', (req, res) => {",
+			"\tres.sendFile(`index.html`, { root: www });",
+			"});",
+			"app.listen(port, () => console.log(`listening on http://localhost:\\${port}`));",
+			"$0"
+		]
+	},
+	"vue": {
+		"prefix": "newVue",
+		"body": [
+			"new Vue({",
+			"\t$1",
+			"})"
+		],
+		"description": "new Vue()"
+	},
+	"silent": {
+		"prefix": "VueConfigSilent",
+		"body": [
+			"Vue.config.silent = ${1:true}"
+		],
+		"description": "Vue.config.silent"
+	},
+	"optionMergeStrategies": {
+		"prefix": "VueConfigOptionMergeStrategies",
+		"body": [
+			"Vue.config.optionMergeStrategies$1"
+		],
+		"description": "Vue.config.optionMergeStrategies"
+	},
+	"devtools": {
+		"prefix": "VueConfigDevtools",
+		"body": [
+			"Vue.config.devtools = ${1:true}"
+		],
+		"description": "Vue.config.devtools"
+	},
+	"errorHandler": {
+		"prefix": "VueConfigErrorHandler",
+		"body": [
+			"Vue.config.errorHandler = function (err, vm, info) {",
+			"\t${1:// handle error}",
+			"}"
+		],
+		"description": "Vue.config.errorHandler"
+	},
+	"warnHandler": {
+		"prefix": "VueConfigWarnHandler",
+		"body": [
+			"Vue.config.warnHandler = function (msg, vm, trace) {",
+			"\t${1:// handle warn}",
+			"}"
+		],
+		"description": "Vue.config.warnHandler"
+	},
+	"ignoredElements": {
+		"prefix": "VueConfigIgnoredElements",
+		"body": [
+			"Vue.config.ignoredElements = [",
+			"\t'${1}'",
+			"]$0"
+		],
+		"description": "Vue.config.ignoredElements"
+	},
+	"keyCodes": {
+		"prefix": "VueConfigKeyCodes",
+		"body": [
+			"Vue.config.keyCodes = {",
+			"\t${1:// camelCase won`t work}",
+			"}"
+		],
+		"description": "Vue.config.keyCodes"
+	},
+	"performance": {
+		"prefix": "VueConfigPerformance",
+		"body": [
+			"Vue.config.performance = ${1:true}"
+		],
+		"description": "Vue.config.performance"
+	},
+	"productionTip": {
+		"prefix": "VueConfigProductionTip",
+		"body": [
+			"Vue.config.productionTip = ${1:false}"
+		],
+		"description": "Vue.config.productionTip"
+	},
+	"extend": {
+		"prefix": "vueExtend",
+		"body": [
+			"Vue.extend({",
+			"\ttemplate:${1:template}",
+			"})"
+		],
+		"description": "Vue.extend( options )"
+	},
+	"nextTick": {
+		"prefix": "VueNextTick",
+		"body": [
+			"Vue.nextTick({",
+			"\t$1",
+			"})"
+		],
+		"description": "Vue.nextTick( callback, [context] )"
+	},
+	"nextTickThen": {
+		"prefix": "VueNextTickThen",
+		"body": [
+			"Vue.nextTick({",
+			"\t$1",
+			"}).then(function ($2) {",
+			"\t$3",
+			"})"
+		],
+		"description": "Vue.nextTick( callback, [context] ).then(function(){ })"
+	},
+	"set": {
+		"prefix": "VueSet",
+		"body": [
+			"Vue.set(${1:target}, ${2:key}, ${3:value})"
+		],
+		"description": "Vue.set( target, key, value )"
+	},
+	"delete": {
+		"prefix": "VueDelete",
+		"body": [
+			"Vue.delete(${1:target}, ${2:key})"
+		],
+		"description": "Vue.delete( target, key )"
+	},
+	"directive": {
+		"prefix": "VueDirective",
+		"body": [
+			"Vue.directive(${1:id}${2:, [definition]})"
+		],
+		"description": "Vue.directive( id, [definition] )"
+	},
+	"component": {
+		"prefix": "VueComponent",
+		"body": [
+			"Vue.component(${1:id}${2:, [definition]})$0"
+		],
+		"description": "Vue.component( id, [definition] )"
+	},
+	"use": {
+		"prefix": "VueUse",
+		"body": [
+			"Vue.use(${1:plugin})$0"
+		],
+		"description": "Vue.use( plugin )"
+	},
+	"mixin": {
+		"prefix": "VueMixin",
+		"body": [
+			"Vue.mixin({${1:mixin}})"
+		],
+		"description": "Vue.mixin( mixin )"
+	},
+	"compile": {
+		"prefix": "VueCompile",
+		"body": [
+			"Vue.compile(${1:template})"
+		],
+		"description": "Vue.compile( template )"
+	},
+	"observable": {
+		"prefix": "VueObservable",
+		"body": [
+			"Vue.observable({${1:object}})"
+		],
+		"description": "Vue.observable( object )"
+	},
+	"version": {
+		"prefix": "VueVersion",
+		"body": [
+			"Vue.version$0"
+		],
+		"description": "Vue.version.split('.')[]"
+	},
+	"data": {
+		"prefix": "data",
+		"body": [
+			"data() {",
+			"\treturn {",
+			"\t\t$1",
+			"\t}",
+			"},$0"
+		],
+		"description": "The data object for the Vue instance."
+	},
+	"props": {
+		"prefix": "props",
+		"body": [
+			"props"
+		],
+		"description": "A list/hash of attributes that are exposed to accept data from the parent component. "
+	},
+	"propsData": {
+		"prefix": "propsData",
+		"body": [
+			"propsData"
+		],
+		"description": "Restriction: only respected in instance creation via `new`. Pass props to an instance during its creation. This is primarily intended to make unit testing easier."
+	},
+	"scopedSlots": {
+		"prefix": "scopedSlots",
+		"body": [
+			"scopedSlots"
+		],
+		"description": "just a word"
+	},
+	"computed": {
+		"prefix": "computed",
+		"body": [
+			"computed: {",
+			"\t$1",
+			"},$0"
+		],
+		"description": "Computed properties to be mixed into the Vue instance. "
+	},
+	"methods": {
+		"prefix": "methods",
+		"body": [
+			"methods: {",
+			"\t$1",
+			"},$0"
+		],
+		"description": "Methods to be mixed into the Vue instance."
+	},
+	"watch": {
+		"prefix": "watch",
+		"body": [
+			"watch: {",
+			"\t$1",
+			"},$0"
+		],
+		"description": "An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. Note that you should not use an arrow function to define a watcher."
+	},
+	"watchWithOptions": {
+		"prefix": "watchWithOptions",
+		"body": [
+			"${1:key}: {",
+			"\tdeep: ${2:true},",
+			"\timmediate: ${3:true},",
+			"\thandler: function (${4:val}, ${5:oldVal}) {",
+			"\t\t$6",
+			"\t}",
+			"},$0"
+		],
+		"description": "Vue Watcher with options."
+	},
+	"el": {
+		"prefix": "el",
+		"body": [
+			"el"
+		],
+		"description": "just a word"
+	},
+	"template": {
+		"prefix": "template",
+		"body": [
+			"template"
+		],
+		"description": "just a word"
+	},
+	"render": {
+		"prefix": "render",
+		"body": [
+			"render(h) {",
+			"\t$1",
+			"},"
+		],
+		"description": "An alternative to string templates allowing you to leverage the full programmatic power of JavaScript."
+	},
+	"renderError": {
+		"prefix": "renderError",
+		"body": [
+			"renderError(h, err) {",
+			"\t$1",
+			"},"
+		],
+		"description": "Provide an alternative render output when the default render function encounters an error."
+	},
+	"beforeCreate": {
+		"prefix": "beforeCreate",
+		"body": [
+			"beforeCreate() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"created": {
+		"prefix": "created",
+		"body": [
+			"created() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"beforeMount": {
+		"prefix": "beforeMount",
+		"body": [
+			"beforeMount() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"mounted": {
+		"prefix": "mounted",
+		"body": [
+			"mounted() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"beforeUpdate": {
+		"prefix": "beforeUpdate",
+		"body": [
+			"beforeUpdate() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"updated": {
+		"prefix": "updated",
+		"body": [
+			"updated() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"activated": {
+		"prefix": "activated",
+		"body": [
+			"activated() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"deactivated": {
+		"prefix": "deactivated",
+		"body": [
+			"deactivated() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"beforeDestroy": {
+		"prefix": "beforeDestroy",
+		"body": [
+			"beforeDestroy() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"destroyed": {
+		"prefix": "destroyed",
+		"body": [
+			"destroyed() {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"errorCaptured": {
+		"prefix": "errorCaptured",
+		"body": [
+			"errorCaptured: (err, vm, info) => {",
+			"\t$1",
+			"},"
+		],
+		"description": "Type: (err: Error, vm: Component, info: string) => ?boolean"
+	},
+	"directives": {
+		"prefix": "directives",
+		"body": [
+			"directives"
+		],
+		"description": "just a word"
+	},
+	"filters": {
+		"prefix": "filters",
+		"body": [
+			"filters"
+		],
+		"description": "just a word"
+	},
+	"componentWord": {
+		"prefix": "component",
+		"body": [
+			"component"
+		],
+		"description": "just a word"
+	},
+	"components": {
+		"prefix": "components",
+		"body": [
+			"components"
+		],
+		"description": "just a word"
+	},
+	"parent": {
+		"prefix": "parent",
+		"body": [
+			"parent"
+		],
+		"description": "just a word"
+	},
+	"mixins": {
+		"prefix": "mixins",
+		"body": [
+			"mixins"
+		],
+		"description": "just a word"
+	},
+	"extends": {
+		"prefix": "extends",
+		"body": [
+			"extends"
+		],
+		"description": "just a word"
+	},
+	"provide": {
+		"prefix": "provide",
+		"body": [
+			"provide"
+		],
+		"description": "just a word"
+	},
+	"inject": {
+		"prefix": "inject",
+		"body": [
+			"inject"
+		],
+		"description": "just a word"
+	},
+	"name": {
+		"prefix": "name",
+		"body": [
+			"name"
+		],
+		"description": "just a word"
+	},
+	"delimiters": {
+		"prefix": "delimiters",
+		"body": [
+			"delimiters"
+		],
+		"description": "just a word"
+	},
+	"functional": {
+		"prefix": "functional",
+		"body": [
+			"functional"
+		],
+		"description": "just a word"
+	},
+	"model": {
+		"prefix": "model",
+		"body": [
+			"model"
+		],
+		"description": "just a word"
+	},
+	"inheritAttrs": {
+		"prefix": "inheritAttrs",
+		"body": [
+			"inheritAttrs"
+		],
+		"description": "just a word"
+	},
+	"comments": {
+		"prefix": "comments",
+		"body": [
+			"comments"
+		],
+		"description": "just a word"
+	},
+	"deep": {
+		"prefix": "deep",
+		"body": [
+			"deep"
+		],
+		"description": "just a word"
+	},
+	"immediate": {
+		"prefix": "immediate",
+		"body": [
+			"immediate"
+		],
+		"description": "just a word"
+	},
+	"vm.$data": {
+		"prefix": "vmData",
+		"body": [
+			"${1|this,vm|}.\\$data$2"
+		],
+		"description": "Type: Object. Read only."
+	},
+	"vm.$props": {
+		"prefix": "vmProps",
+		"body": [
+			"${1|this,vm|}.\\$props$2"
+		],
+		"description": "Type: Object. Read only."
+	},
+	"vm.$el": {
+		"prefix": "vmEl",
+		"body": [
+			"${1|this,vm|}.\\$el$2"
+		],
+		"description": "Type: HTMLElement. Read only."
+	},
+	"vm.$options": {
+		"prefix": "vmOptions",
+		"body": [
+			"${1|this,vm|}.\\$options$2"
+		],
+		"description": "Type: Object. Read only."
+	},
+	"vm.$parent": {
+		"prefix": "vmParent",
+		"body": [
+			"${1|this,vm|}.\\$parent$2"
+		],
+		"description": "Type: Vue instance. Read only."
+	},
+	"vm.$root": {
+		"prefix": "vmRoot",
+		"body": [
+			"${1|this,vm|}.\\$root$2"
+		],
+		"description": "Type: Vue instance. Read only."
+	},
+	"vm.$children": {
+		"prefix": "vmChildren",
+		"body": [
+			"${1|this,vm|}.\\$children$2"
+		],
+		"description": "Type: Array<Vue instance>. Read only."
+	},
+	"vm.$slots": {
+		"prefix": "vmSlots",
+		"body": [
+			"${1|this,vm|}.\\$slots$2"
+		],
+		"description": "Type: Object. Read only."
+	},
+	"vm.$scopedSlots": {
+		"prefix": "vmScopedSlots",
+		"body": [
+			"${1|this,vm|}.\\$scopedSlots.default({",
+			"\t$2",
+			"})"
+		],
+		"description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only."
+	},
+	"vm.$refs": {
+		"prefix": "vmRefs",
+		"body": [
+			"${1|this,vm|}.\\$refs$2"
+		],
+		"description": "Type: Object. Read only."
+	},
+	"vm.$isServer": {
+		"prefix": "vmIsServer",
+		"body": [
+			"${1|this,vm|}.\\$isServer$2"
+		],
+		"description": "Type: boolean. Read only."
+	},
+	"vm.$attrs": {
+		"prefix": "vmAttrs",
+		"body": [
+			"${1|this,vm|}.\\$attrs$2"
+		],
+		"description": "Type: { [key: string]: string }. Read only."
+	},
+	"vm.$listeners": {
+		"prefix": "vmListeners",
+		"body": [
+			"${1|this,vm|}.\\$listeners$2"
+		],
+		"description": "Type: { [key: string]: Function | Array<Function> }. Read only."
+	},
+	"vm.$watch": {
+		"prefix": "vmWatch",
+		"body": [
+			"${1|this,vm|}.\\$watch(${2:expOrFn}, ${3:callback}${4:, [options]})"
+		],
+		"description": "vm.$watch( expOrFn, callback, [options] )\n Arguments:\n {string | Function} expOrFn\n {Function | Object} callback\n {Object} [options]\n {boolean} [options.deep]\n\t {boolean} [options.immediate]"
+	},
+	"vm.$set": {
+		"prefix": "vmSet",
+		"body": [
+			"${1|this,vm|}.\\$set(${2:target}, ${3:key}, ${4:value})"
+		],
+		"description": "vm.$set( target, key, value ). This is the alias of the global Vue.set."
+	},
+	"vm.$delete": {
+		"prefix": "vmDelete",
+		"body": [
+			"${1|this,vm|}.\\$delete(${2:target}, ${3:key}). This is the alias of the global Vue.delete."
+		],
+		"description": "vm.$delete( target, key )"
+	},
+	"vm.$on": {
+		"prefix": "vmOn",
+		"body": [
+			"${1|this,vm|}.\\$on('${2:event}', ${3:callback})$4"
+		],
+		"description": "vm.$on( event, callback )"
+	},
+	"vm.$once": {
+		"prefix": "vmOnce",
+		"body": [
+			"${1|this,vm|}.\\$once('${2:event}', ${3:callback})$4"
+		],
+		"description": "vm.$once( event, callback )"
+	},
+	"vm.$off": {
+		"prefix": "vmOff",
+		"body": [
+			"${1|this,vm|}.\\$off('${2:event}', ${3:callback})$4"
+		],
+		"description": "vm.$off( [event, callback] )"
+	},
+	"vm.$emit": {
+		"prefix": "vmEmit",
+		"body": [
+			"${1|this,vm|}.\\$emit('${2:event}'${3:, […args]})$4"
+		],
+		"description": "vm.$emit( event, […args] )"
+	},
+	"vm.$mount": {
+		"prefix": "vmMount",
+		"body": [
+			"${1|this,vm|}.\\$mount('$2')"
+		],
+		"description": "vm.$mount( [elementOrSelector] )"
+	},
+	"vm.$forceUpdate": {
+		"prefix": "vmForceUpdate",
+		"body": [
+			"${1|this,vm|}.\\$forceUpdate()"
+		],
+		"description": "vm.$forceUpdate()"
+	},
+	"vm.$nextTick": {
+		"prefix": "vmNextTick",
+		"body": [
+			"${1|this,vm|}.\\$nextTick(${2:callback})"
+		],
+		"description": "vm.$nextTick( callback )"
+	},
+	"vm.$destroy": {
+		"prefix": "vmDestroy",
+		"body": [
+			"${1|this,vm|}.\\$destroy()$2"
+		],
+		"description": "vm.$destroy()"
+	},
+	"renderer": {
+		"prefix": "renderer",
+		"body": [
+			"const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+		],
+		"description": "require('vue-server-renderer').createRenderer()"
+	},
+	"createRenderer": {
+		"prefix": "createRenderer",
+		"body": [
+			"createRenderer({",
+			"\t$1",
+			"})"
+		],
+		"description": "createRenderer({ })"
+	},
+	"renderToString": {
+		"prefix": "renderToString",
+		"body": [
+			"renderToString"
+		],
+		"description": "just a word"
+	},
+	"renderToStream": {
+		"prefix": "renderToStream",
+		"body": [
+			"renderToStream"
+		],
+		"description": "just a word"
+	},
+	"createBundleRenderer": {
+		"prefix": "createBundleRenderer",
+		"body": [
+			"createBundleRenderer"
+		],
+		"description": "just a word"
+	},
+	"bundleRenderer.renderToString": {
+		"prefix": "bundleRendererRenderToString",
+		"body": [
+			"bundleRenderer.renderToString"
+		],
+		"description": "just a word"
+	},
+	"bundleRenderer.renderToStream": {
+		"prefix": "bundleRendererRenderToStream",
+		"body": [
+			"bundleRenderer.renderToStream"
+		],
+		"description": "just a word"
+	},
+	"preventDefault": {
+		"prefix": "preventDefault",
+		"body": [
+			"preventDefault();",
+			"$1"
+		],
+		"description": "preventDefault()"
+	},
+	"stopPropagation": {
+		"prefix": "stopPropagation",
+		"body": [
+			"stopPropagation();",
+			"$1"
+		],
+		"description": "stopPropagation()"
+	},
+	"importVueRouter": {
+		"prefix": "importVueRouter",
+		"body": [
+			"import VueRouter from 'vue-router'"
+		],
+		"description": "import VueRouter from 'vue-router'"
+	},
+	"newVueRouter": {
+		"prefix": "newVueRouter",
+		"body": [
+			"const ${1:router} = new VueRouter({",
+			"\t$2",
+			"})$0"
+		],
+		"description": "const router = newVueRouter({ })"
+	},
+	"routerBeforeEach": {
+		"prefix": "routerBeforeEach",
+		"body": [
+			"${1:router}.beforeEach((to, from, next) => {",
+			"\t${2:// to and from are both route objects. must call `next`.}",
+			"})$0"
+		],
+		"description": "router.beforeEach"
+	},
+	"routerBeforeResolve": {
+		"prefix": "routerBeforeResolve",
+		"body": [
+			"${1:router}.beforeResolve((to, from, next) => {",
+			"\t${2:// to and from are both route objects. must call `next`.}",
+			"})$0"
+		],
+		"description": "router.beforeResolve"
+	},
+	"routerAfterEach": {
+		"prefix": "routerAfterEach",
+		"body": [
+			"${1:router}.afterEach((to, from) => {",
+			"\t${2:// to and from are both route objects.}",
+			"})$0"
+		],
+		"description": "router.afterEach"
+	},
+	"routerPush": {
+		"prefix": "routerPush",
+		"body": [
+			"${1:router}.push($2)$0"
+		],
+		"description": "router.push()"
+	},
+	"routerReplace": {
+		"prefix": "routerReplace",
+		"body": [
+			"${1:router}.replace($2)$0"
+		],
+		"description": "router.replace()"
+	},
+	"routerGo": {
+		"prefix": "routerGo",
+		"body": [
+			"${1:router}.go($2)$0"
+		],
+		"description": "router.go()"
+	},
+	"routerBack": {
+		"prefix": "routerBack",
+		"body": [
+			"${1:router}.back($2)$0"
+		],
+		"description": "router.back()"
+	},
+	"routerForward": {
+		"prefix": "routerForward",
+		"body": [
+			"${1:router}.forward($2)$0"
+		],
+		"description": "router.forward()"
+	},
+	"routerGetMatchedComponents": {
+		"prefix": "routerGetMatchedComponents",
+		"body": [
+			"${1:router}.getMatchedComponents($2)$0"
+		],
+		"description": "router.getMatchedComponents()"
+	},
+	"routerResolve": {
+		"prefix": "routerResolve",
+		"body": [
+			"${1:router}.resolve($2)$0"
+		],
+		"description": "router.resolve()"
+	},
+	"routerAddRoutes": {
+		"prefix": "routerAddRoutes",
+		"body": [
+			"${1:router}.addRoutes($2)$0"
+		],
+		"description": "router.addRoutes()"
+	},
+	"routerOnReady": {
+		"prefix": "routerOnReady",
+		"body": [
+			"${1:router}.onReady($2)$0"
+		],
+		"description": "router.onReady()"
+	},
+	"routerOnError": {
+		"prefix": "routerOnError",
+		"body": [
+			"${1:router}.onError($2)$0"
+		],
+		"description": "router.onError()"
+	},
+	"routes": {
+		"prefix": "routes",
+		"body": [
+			"routes: [$1]$0"
+		],
+		"description": "routes: []"
+	},
+	"beforeEnter": {
+		"prefix": "beforeEnter",
+		"body": [
+			"beforeEnter: (to, from, next) => {",
+			"\t${1:// ...}",
+			"}"
+		],
+		"description": "beforeEnter: (to, from, next) => { }"
+	},
+	"beforeRouteEnter": {
+		"prefix": "beforeRouteEnter",
+		"body": [
+			"beforeRouteEnter (to, from, next) {",
+			"\t${1:// ...}",
+			"}"
+		],
+		"description": "beforeRouteEnter (to, from, next) { }"
+	},
+	"beforeRouteLeave": {
+		"prefix": "beforeRouteLeave",
+		"body": [
+			"beforeRouteLeave (to, from, next) {",
+			"\t${1:// ...}",
+			"}"
+		],
+		"description": "beforeRouteLeave (to, from, next) { }"
+	},
+	"scrollBehavior": {
+		"prefix": "scrollBehavior",
+		"body": [
+			"scrollBehavior (to, from, savedPosition) {",
+			"\t${1:// ...}",
+			"}"
+		],
+		"description": "scrollBehavior (to, from, savedPosition) { }"
+	},
+	"path": {
+		"prefix": "path",
+		"body": [
+			"path"
+		],
+		"description": "just a word"
+	},
+	"alias": {
+		"prefix": "alias",
+		"body": [
+			"alias"
+		],
+		"description": "just a word"
+	},
+	"mode": {
+		"prefix": "mode",
+		"body": [
+			"mode"
+		],
+		"description": "just a word"
+	},
+	"children": {
+		"prefix": "children",
+		"body": [
+			"children"
+		],
+		"description": "just a word"
+	},
+	"meta": {
+		"prefix": "meta",
+		"body": [
+			"meta"
+		],
+		"description": "just a word"
+	},
+	"newVuexStore": {
+		"prefix": "newVuexStore",
+		"body": [
+			"const ${1:store} = new Vuex.Store({",
+			"\t${2:// ...}",
+			"})"
+		],
+		"description": "const store = new Vuex.Store({ })"
+	},
+	"state": {
+		"prefix": "state",
+		"body": [
+			"state"
+		],
+		"description": "just a word"
+	},
+	"getters": {
+		"prefix": "getters",
+		"body": [
+			"getters"
+		],
+		"description": "just a word"
+	},
+	"mutations": {
+		"prefix": "mutations",
+		"body": [
+			"mutations"
+		],
+		"description": "just a word"
+	},
+	"actions": {
+		"prefix": "actions",
+		"body": [
+			"actions"
+		],
+		"description": "just a word"
+	},
+	"modules": {
+		"prefix": "modules",
+		"body": [
+			"modules"
+		],
+		"description": "just a word"
+	},
+	"plugins": {
+		"prefix": "plugins",
+		"body": [
+			"plugins"
+		],
+		"description": "just a word"
+	},
+	"commit": {
+		"prefix": "commit",
+		"body": [
+			"commit"
+		],
+		"description": "just a word"
+	},
+	"dispatch": {
+		"prefix": "dispatch",
+		"body": [
+			"dispatch"
+		],
+		"description": "just a word"
+	},
+	"replaceState": {
+		"prefix": "replaceState",
+		"body": [
+			"replaceState"
+		],
+		"description": "just a word"
+	},
+	"subscribe": {
+		"prefix": "subscribe",
+		"body": [
+			"subscribe"
+		],
+		"description": "just a word"
+	},
+	"registerModule": {
+		"prefix": "registerModule",
+		"body": [
+			"registerModule"
+		],
+		"description": "just a word"
+	},
+	"unregisterModule": {
+		"prefix": "unregisterModule",
+		"body": [
+			"unregisterModule"
+		],
+		"description": "just a word"
+	},
+	"hotUpdate": {
+		"prefix": "hotUpdate",
+		"body": [
+			"hotUpdate"
+		],
+		"description": "just a word"
+	},
+	"mapState": {
+		"prefix": "mapState",
+		"body": [
+			"mapState"
+		],
+		"description": "just a word"
+	},
+	"mapGetters": {
+		"prefix": "mapGetters",
+		"body": [
+			"mapGetters"
+		],
+		"description": "just a word"
+	},
+	"mapActions": {
+		"prefix": "mapActions",
+		"body": [
+			"mapActions"
+		],
+		"description": "just a word"
+	},
+	"mapMutations": {
+		"prefix": "mapMutations",
+		"body": [
+			"mapMutations"
+		],
+		"description": "just a word"
+	},
+	"asyncData": {
+		"prefix": "asyncData",
+		"body": [
+			"asyncData({${1:isDev}${2:, route}${3:, store}${4:, env}${5:, params}${6:, query}${7:, req}${8:, res}${9:, redirect}${10:, error}}) {",
+			"\t$11",
+			"},"
+		],
+		"description": "Type: Function."
+	},
+	"Ajax": {
+		"prefix": "vajax",
+		"body": [
+			"// Must be scoped in an async function",
+			"try {",
+			"   const data = await api.fetch(${reqUrl})",
+			"} catch {",
+			"   console.log('error', error)",
+			"}"
+		],
+		"description": "Provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses."
+	},
+	"FadeIn": {
+		"prefix": "vfadeIn",
+		"body": [
+			"const fadeIn = el => {",
+			"   el.style.opacity = 0",
+			"   let last = +new Date()",
+			"   const tick = () => {",
+			"       el.style.opacity = +el.style.opacity + (new Date() - last) / 400",
+			"       last = +new Date()",
+			"       if (+el.style.opacity < 1) {",
+			"           (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)",
+			"       }",
+			"   }",
+			"   tick()",
+			"}",
+			"fadeIn(${el})"
+		],
+		"description": "Display the matched elements by fading them using opacity."
+	},
+	"Hide": {
+		"prefix": "vhide",
+		"body": [
+			"${el}.style.display = 'none'"
+		],
+		"description": "Hide the matched elements."
+	},
+	"Show": {
+		"prefix": "vshow",
+		"body": [
+			"${el}.style.display = ''"
+		],
+		"description": "Show the matched elements."
+	},
+	"AddClass": {
+		"prefix": "vaddClass",
+		"body": [
+			"if (${el}.classList) {",
+			"   ${el}.classList.add(${className})",
+			"}"
+		],
+		"description": "Adds the specified class(es) to each of the set of matched elements."
+	},
+	"After": {
+		"prefix": "vafter",
+		"body": [
+			"${el}.insertAdjacentHTML('afterend', ${htmlString})"
+		],
+		"description": "Insert content, specified by the parameter, after each element in the set of matched elements."
+	},
+	"Append": {
+		"prefix": "vappend",
+		"body": [
+			"${parent}.appendChild(${el})"
+		],
+		"description": "Insert content, specified by the parameter, to the end of each element in the set of matched elements."
+	},
+	"Before": {
+		"prefix": "vbefore",
+		"body": [
+			"${el}.insertAdjacentHTML('beforebegin', ${htmlString})"
+		],
+		"description": "Insert content, specified by the parameter, before each element in the set of matched elements."
+	},
+	"Children": {
+		"prefix": "vchildren",
+		"body": [
+			"${el}.children"
+		],
+		"description": "Get the children of each element in the set of matched elements, optionally filtered by a selector."
+	},
+	"Clone": {
+		"prefix": "vclone",
+		"body": [
+			"${el}.cloneNode(true)"
+		],
+		"description": "Create a deep copy of the set of matched elements."
+	},
+	"Contains": {
+		"prefix": "vcontains",
+		"body": [
+			"if (${el} !== ${child} && ${el}.contains(${child})) {",
+			"   $0",
+			"}"
+		],
+		"description": "Check to see if a DOM element is a descendant of another DOM element."
+	},
+	"ContainsSelector": {
+		"prefix": "vcontainsSelector",
+		"body": [
+			"if (${el}.querySelector(${selector}) !== null) {",
+			"   $0",
+			"}"
+		],
+		"description": "Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element."
+	},
+	"Each": {
+		"prefix": "veach",
+		"body": [
+			"const ${elements} = document.querySelectorAll(${selector})",
+			"${elements}.forEach(${element} => {",
+			"   $0",
+			"}"
+		],
+		"description": "Iterate over a jQuery object, executing a function for each matched element."
+	},
+	"Empty": {
+		"prefix": "vempty",
+		"body": [
+			"${el}.innerHTML = ''"
+		],
+		"description": "Remove all child nodes of the set of matched elements from the DOM."
+	},
+	"Filter": {
+		"prefix": "vfilter",
+		"body": [
+			"Array.prototype.filter.call(document.querySelectorAll(${selector}), ${filterFn})"
+		],
+		"description": "Reduce the set of matched elements to those that match the selector or pass the function's test."
+	},
+	"Find Children": {
+		"prefix": "vfindChild",
+		"body": [
+			"${el}.querySelectorAll(${selector})"
+		],
+		"description": "Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element."
+	},
+	"Find Elements": {
+		"prefix": "vfind",
+		"body": [
+			"document.querySelectorAll(${selector})"
+		],
+		"description": "Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element."
+	},
+	"GetAttributes": {
+		"prefix": "vgetAttr",
+		"body": [
+			"${el}.getAttribute(${attribute})"
+		],
+		"description": "Get the value of an attribute for the first element in the set of matched elements."
+	},
+	"Html": {
+		"prefix": "vgetHtml",
+		"body": [
+			"${el}.innerHTML"
+		],
+		"description": "Get the HTML contents of the first element in the set of matched elements."
+	},
+	"Outer Html": {
+		"prefix": "vouterHtml",
+		"body": [
+			"${el}.outerHTML"
+		],
+		"description": "Get the outer HTML contents of the first element in the set of matched elements."
+	},
+	"Css": {
+		"prefix": "vcss",
+		"body": [
+			"getComputedStyle(${el})[${ruleName}]"
+		],
+		"description": "Get the computed style properties for the first element in the set of matched elements."
+	},
+	"Text": {
+		"prefix": "vtext",
+		"body": [
+			"${el}.textContent"
+		],
+		"description": "Get the combined text contents of each element in the set of matched elements, including their descendants."
+	},
+	"HasClass": {
+		"prefix": "vhasClass",
+		"body": [
+			"${el}.classList.contains(${class})"
+		],
+		"description": "Determine whether any of the matched elements are assigned the given class."
+	},
+	"Is": {
+		"prefix": "vis",
+		"body": [
+			"if (${el} === ${otherEl}) {",
+			"   $0",
+			"}"
+		],
+		"description": "Check the current matched set of elements against a selector, element, or jQuery object and return true if at least one of these elements matches the given arguments."
+	},
+	"Next": {
+		"prefix": "vnext",
+		"body": [
+			"${el}.nextElementSibling"
+		],
+		"description": "Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector."
+	},
+	"Offset": {
+		"prefix": "voffset",
+		"body": [
+			"const rect = ${el}.getBoundingClientRect()",
+			"const offset = {",
+			"   top: rect.top + document.body.scrollTop,",
+			"   left: rect.left + document.body.scrollLeft",
+			"}"
+		],
+		"description": "Get the current coordinates of the first element in the set of matched elements, relative to the document."
+	},
+	"Offset Parent": {
+		"prefix": "voffsetParent",
+		"body": [
+			"if (${el}.offsetParent || ${el}) {",
+			"   $0",
+			"}"
+		],
+		"description": "Get the closest ancestor element that is positioned."
+	},
+	"OuterHeight": {
+		"prefix": "vouterHeight",
+		"body": [
+			"${el}.offsetHeight"
+		],
+		"description": "Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements."
+	},
+	"OuterHeight With Margin": {
+		"prefix": "vouterHeightMargin",
+		"body": [
+			"const outerHeight = el => {",
+			"   let height = el.offsetHeight",
+			"   const style = getComputedStyle(el)",
+			"   height += parseInt(style.marginTop) + parseInt(style.marginBottom)",
+			"   return height",
+			"}",
+			"outerHeight(${el})"
+		],
+		"description": "Get the current computed outer height (including padding, border, and optionally margin) for the first element in the set of matched elements."
+	},
+	"OuterWidth": {
+		"prefix": "vouterWidth",
+		"body": [
+			"${el}.offsetWidth"
+		],
+		"description": "Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements."
+	},
+	"OuterWidth With Margin": {
+		"prefix": "vouterWidthMargin",
+		"body": [
+			"const outerWidth = el => {",
+			"   let width = el.offsetWidth",
+			"   const style = getComputedStyle(el)",
+			"   width += parseInt(style.marginLeft) + parseInt(style.marginRight)",
+			"   return width",
+			"}",
+			"outerWidth(${el})"
+		],
+		"description": "Get the current computed outer width (including padding, border, and optionally margin) for the first element in the set of matched elements."
+	},
+	"Parent": {
+		"prefix": "vparent",
+		"body": [
+			"${el}.parentNode"
+		],
+		"description": "Get the parent of each element in the current set of matched elements, optionally filtered by a selector."
+	},
+	"Position": {
+		"prefix": "vposition",
+		"body": [
+			"const position = { left: ${el}.offsetLeft, top: ${el}.offsetTop }"
+		],
+		"description": "Get the current coordinates of the first element in the set of matched elements, relative to the offset parent."
+	},
+	"Position relative to viewport": {
+		"prefix": "vpositionvp",
+		"body": [
+			"const position = ${el}.getBoundingClientRect()"
+		],
+		"description": "Get the current coordinates of the first element in the set of matched elements, relative to viewport."
+	},
+	"Prepend": {
+		"prefix": "vprepend",
+		"body": [
+			"${parent}.insertBefore(${el}, ${parent}.firstChild)"
+		],
+		"description": "Insert content, specified by the parameter, to the beginning of each element in the set of matched elements."
+	},
+	"Prev": {
+		"prefix": "vprev",
+		"body": [
+			"${el}.previousElementSibling"
+		],
+		"description": "Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector."
+	},
+	"Remove": {
+		"prefix": "vremove",
+		"body": [
+			"${el}.parentNode.removeChild(${el})"
+		],
+		"description": "Remove the set of matched elements from the DOM."
+	},
+	"RemoveClass": {
+		"prefix": "vremoveClass",
+		"body": [
+			"if (${el}.classList) {",
+			"   ${el}.classList.remove(className)",
+			"}"
+		],
+		"description": "Remove a single class, multiple classes, or all classes from each element in the set of matched elements."
+	},
+	"Replace": {
+		"prefix": "vreplace",
+		"body": [
+			"${el}.outerHTML = ${string}"
+		],
+		"description": "Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed."
+	},
+	"Set Attributes": {
+		"prefix": "vsetAttr",
+		"body": [
+			"${el}.setAttribute(${attribute}, ${val})"
+		],
+		"description": "Set one or more attributes for the set of matched elements."
+	},
+	"Set Html": {
+		"prefix": "vsetHtml",
+		"body": [
+			"${el}.innerHTML = ${string}"
+		],
+		"description": "Set the HTML contents of each element in the set of matched elements."
+	},
+	"Set Style": {
+		"prefix": "vsetStyle",
+		"body": [
+			"${el}.style.${rulename} = ${val}"
+		],
+		"description": "Set one or more CSS properties for the set of matched elements."
+	},
+	"Siblings": {
+		"prefix": "vsiblings",
+		"body": [
+			"Array.prototype.filter.call(${el}.parentNode.children, child => child !== ${el})"
+		],
+		"description": "Get the siblings of each element in the set of matched elements, optionally filtered by a selector."
+	},
+	"Toggle Class": {
+		"prefix": "vtoggleClass",
+		"body": [
+			"if (${el}.classList) {",
+			"   ${el}.classList.toggle(${className})",
+			"}"
+		],
+		"description": "Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the state argument."
+	},
+	"Off": {
+		"prefix": "voff",
+		"body": [
+			"${el}.removeEventListener(${eventName}, ${eventHandler})"
+		],
+		"description": "Remove an event handler."
+	},
+	"On": {
+		"prefix": "von",
+		"body": [
+			"${el}.addEventListener(${eventName}, ${eventHandler})"
+		],
+		"description": "Bind an event handler."
+	},
+	"Ready": {
+		"prefix": "vready",
+		"body": [
+			"document.addEventListener('DOMContentLoaded', ${fn})"
+		],
+		"description": "Specify a function to execute when the DOM is fully loaded."
+	},
+	"Trigger": {
+		"prefix": "vtrigger",
+		"body": [
+			"const event = document.createEvent('HTMLEvents')",
+			"event.initEvent(${eventType}, true, false)",
+			"${el}.dispatchEvent(event)"
+		],
+		"description": "Execute all handlers and behaviors attached to the matched elements for the given event type."
+	},
+	"Bind": {
+		"prefix": "vbind",
+		"body": [
+			"${fn}.bind(${context})"
+		],
+		"description": "Takes a function and returns a new one that will always have a particular context."
+	},
+	"In Array": {
+		"prefix": "vinArray",
+		"body": [
+			"if (${array}.indexOf(${item}) !== -1) {",
+			"   $0",
+			"}"
+		],
+		"description": "Search for a specified value within an array and return its index (or -1 if not found)."
+	},
+	"Is Array": {
+		"prefix": "visArray",
+		"body": [
+			"Array.isArray(${arr})"
+		],
+		"description": "Determine whether the argument is an array."
+	},
+	"Map": {
+		"prefix": "vmap",
+		"body": [
+			"${array}.map(${val} => $0}"
+		],
+		"description": "Translate all items in an array or object to new array of items."
+	},
+	"Now": {
+		"prefix": "vnow",
+		"body": [
+			"Date.now()"
+		],
+		"description": "Return a number representing the current time."
+	},
+	"Parse Html": {
+		"prefix": "vparseHtml",
+		"body": [
+			"const parseHTML = str => {",
+			"const tmp = document.implementation.createHTMLDocument()",
+			"tmp.body.innerHTML = str",
+			"return tmp.body.children",
+			"}",
+			"parseHTML(${htmlString})"
+		],
+		"description": "Parses a string into an array of DOM nodes."
+	},
+	"Parse Json": {
+		"prefix": "vparseJson",
+		"body": [
+			"JSON.parse(${string})"
+		],
+		"description": "Takes a well-formed JSON string and returns the resulting JavaScript value."
+	},
+	"Trim": {
+		"prefix": "vtrim",
+		"body": [
+			"${string}.trim()"
+		],
+		"description": "Remove the whitespace from the beginning and end of a string."
+	},
+	"Type": {
+		"prefix": "vtype",
+		"body": [
+			"Object.prototype.toString.call(${obj}).replace(/^\\[object (.+)\\]$/, '$1').toLowerCase()"
+		],
+		"description": "Determine the internal JavaScript [[Class]] of an object."
+	},
+	"Import external module.": {
+		"prefix": "import statement",
+		"body": [
+			"import { $0 } from \"${1:module}\";"
+		],
+		"description": "Import external module."
+	},
+	"setImmediate": {
+		"prefix": "sim",
+		"body": "setImmediate(() => {\n\t${0}\n})"
+	},
+	"await": {
+		"prefix": "a",
+		"body": "await ${0}"
+	},
+	"await Promise.all": {
+		"prefix": "apa",
+		"body": "await Promise.all(${1:value})"
+	},
+	"await Promise.all with destructuring": {
+		"prefix": "apad",
+		"body": "const [${0}] = await Promise.all(${1:value})"
+	},
+	"await Promise.all map": {
+		"prefix": "apm",
+		"body": "await Promise.all(${1:array}.map(async (${2:value}) => {\n\t${0}\n}))"
+	},
+	"await sleep": {
+		"prefix": "ast",
+		"body": "await new Promise((r) => setTimeout(r, ${0}))"
+	},
+	"Node callback": {
+		"prefix": "cb",
+		"body": "function (err, ${1:value}) {\n\tif (err) throw err\n\t${0}\n}"
+	},
+	"process.env": {
+		"prefix": "pe",
+		"body": "process.env"
+	},
+	"Promise.all": {
+		"prefix": "pa",
+		"body": "Promise.all(${1:value})"
+	},
+	"Promise.resolve": {
+		"prefix": "prs",
+		"body": "Promise.resolve(${1:value})"
+	},
+	"Promise.reject": {
+		"prefix": "prj",
+		"body": "Promise.reject(${1:value})"
+	},
+	"Promise": {
+		"prefix": "p",
+		"body": "Promise"
+	},
+	"Promise.then": {
+		"prefix": "pt",
+		"body": "${1:promise}.then((${2:value}) => {\n\t${0}\n})"
+	},
+	"Promise.catch": {
+		"prefix": "pc",
+		"body": "${1:promise}.catch(error => {\n\t${0}\n})"
+	},
+	"describe": {
+		"prefix": "desc",
+		"body": "describe('${1:description}', () => {\n\t${0}\n})"
+	},
+	"describe top level": {
+		"prefix": "dt",
+		"body": "describe('${TM_FILENAME_BASE}', () => {\n\t${0}\n})"
+	},
+	"it asynchronous": {
+		"prefix": "it",
+		"body": "it('${1:description}', async () => {\n\t${0}\n})"
+	},
+	"it.todo": {
+		"prefix": "itt",
+		"body": "it.todo('${1:description}')"
+	},
+	"it with a callback": {
+		"prefix": "itd",
+		"body": "it('${1:description}', (done) => {\n\t${0}\n})"
+	},
+	"it synchronous": {
+		"prefix": "its",
+		"body": "it('${1:description}', () => {\n\t${0}\n})"
+	},
+	"before": {
+		"prefix": "bf",
+		"body": "before(async () => {\n\t${0}\n})"
+	},
+	"beforeAll": {
+		"prefix": "ba",
+		"body": "beforeAll(async () => {\n\t${0}\n})"
+	},
+	"beforeEach": {
+		"prefix": "bfe",
+		"body": "beforeEach(async () => {\n\t${0}\n})"
+	},
+	"after": {
+		"prefix": "aft",
+		"body": "after(() => {\n\t${0}\n})"
+	},
+	"afterEach": {
+		"prefix": "afe",
+		"body": "afterEach(() => {\n\t${0}\n})"
+	},
+	"const module = require('module')": {
+		"prefix": "cr",
+		"body": "const ${1:module} = require('${1:module}')"
+	},
+	"exports.member": {
+		"prefix": "em",
+		"body": "exports.${1:member} = ${2:value}"
+	},
+	"module.exports": {
+		"prefix": "me",
+		"body": "module.exports = ${1:name}"
+	},
+	"module as class": {
+		"prefix": "mec",
+		"body": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}\n\nmodule.exports = ${1:name}\n"
+	},
+	"event handler": {
+		"prefix": "on",
+		"body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n})"
+	},
+	"dom event cancel default and propagation": {
+		"prefix": "evc",
+		"body": "ev.preventDefault()\nev.stopPropagation()\nreturn false"
+	},
+	"removeEventListener": {
+		"prefix": "rel",
+		"body": "${1:document}.removeEventListener('${2:event}', ${3:listener})"
+	},
+	"forEach loop": {
+		"prefix": "fe",
+		"body": "${1:iterable}.forEach((${2:item}) => {\n\t${0}\n})"
+	},
+	"map": {
+		"prefix": "map",
+		"body": "${1:iterable}.map((${2:item}) => {\n\t${0}\n})"
+	},
+	"map single desctructured argument": {
+		"prefix": "mapsd",
+		"body": "${1:iterable}.map(({${2:item}}) => ${2:item})"
+	},
+	"reduce": {
+		"prefix": "reduce",
+		"body": "${1:iterable}.reduce((${2:previous}, ${3:current}) => {\n\t${0}\n}${4:, initial})"
+	},
+	"filter": {
+		"prefix": "filter",
+		"body": "${1:iterable}.filter((${2:item}) => {\n\t${0}\n})"
+	},
+	"find": {
+		"prefix": "find",
+		"body": "${1:iterable}.find((${2:item}) => {\n\t${0}\n})"
+	},
+	"every": {
+		"prefix": "every",
+		"body": "${1:iterable}.every((${2:item}) => {\n\t${0}\n})"
+	},
+	"some": {
+		"prefix": "some",
+		"body": "${1:iterable}.some((${2:item}) => {\n\t${0}\n})"
+	},
+	"var statement": {
+		"prefix": "v",
+		"body": "var ${1:name}"
+	},
+	"var assignment": {
+		"prefix": "va",
+		"body": "var ${1:name} = ${2:value}"
+	},
+	"let statement": {
+		"prefix": "l",
+		"body": "let ${1:name}"
+	},
+	"const statement": {
+		"prefix": "c",
+		"body": "const ${1:name}"
+	},
+	"const statement from destructuring": {
+		"prefix": "cd",
+		"body": "const { ${2:prop} } = ${1:value}"
+	},
+	"const statement from array destructuring": {
+		"prefix": "cad",
+		"body": "const [ ${2:prop} ] = ${1:value}"
+	},
+	"const assignment awaited": {
+		"prefix": "ca",
+		"body": "const ${1:name} = await ${2:value}"
+	},
+	"const destructuring assignment awaited": {
+		"prefix": "cda",
+		"body": "const { ${1:name} } = await ${2:value}"
+	},
+	"const arrow function assignment": {
+		"prefix": "cf",
+		"body": "const ${1:name} = (${2:arguments}) => {\n\treturn ${0}\n}"
+	},
+	"let assignment awaited": {
+		"prefix": "la",
+		"body": "let ${1:name} = await ${2:value}"
+	},
+	"const assignment yielded": {
+		"prefix": "cy",
+		"body": "const ${1:name} = yield ${2:value}"
+	},
+	"let assignment yielded": {
+		"prefix": "ly",
+		"body": "let ${1:name} = yield ${2:value}"
+	},
+	"const object": {
+		"prefix": "co",
+		"body": "const ${1:name} = {\n\t${0}\n}"
+	},
+	"const array": {
+		"prefix": "car",
+		"body": "const ${1:name} = [\n\t${0}\n]"
+	},
+	"generate array of integers starting with 1": {
+		"prefix": "gari",
+		"body": "Array.from({ length: ${1:length} }, (v, k) => k + 1)"
+	},
+	"generate array of integers starting with 0": {
+		"prefix": "gari0",
+		"body": "[...Array(${1:length}).keys()]"
+	},
+	"class": {
+		"prefix": "cs",
+		"body": "class ${1:name} {\n\tconstructor (${2:arguments}) {\n\t\t${0}\n\t}\n}"
+	},
+	"class extends": {
+		"prefix": "csx",
+		"body": "class ${1:name} extends ${2:base} {\n\tconstructor (${3:arguments}) {\n\t\tsuper(${3:arguments})\n\t\t${0}\n\t}\n}"
+	},
+	"module export": {
+		"prefix": "e",
+		"body": "export ${1:member}"
+	},
+	"module export const": {
+		"prefix": "ec",
+		"body": "export const ${1:member} = ${2:value}"
+	},
+	"export named function": {
+		"prefix": "ef",
+		"body": "export function ${1:member} (${2:arguments}) {\n\t${0}\n}"
+	},
+	"module default export": {
+		"prefix": "ed",
+		"body": "export default ${1:member}"
+	},
+	"module default export function": {
+		"prefix": "edf",
+		"body": "export default function ${1:name} (${2:arguments}) {\n\t${0}\n}"
+	},
+	"import module": {
+		"prefix": "im",
+		"body": "import ${2:*} from '${1:module}'"
+	},
+	"import module as": {
+		"prefix": "ia",
+		"body": "import ${2:*} as ${3:name} from '${1:module}'"
+	},
+	"import module destructured": {
+		"prefix": "imd",
+		"body": "import {$2} from '${1:module}'"
+	},
+	"typeof": {
+		"prefix": "to",
+		"body": "typeof ${1:source} === '${2:undefined}'"
+	},
+	"this": {
+		"prefix": "t",
+		"body": "this."
+	},
+	"instanceof": {
+		"prefix": "iof",
+		"body": "${1:source} instanceof ${2:Object}"
+	},
+	"Array.isArray()": {
+		"prefix": "ia",
+		"body": "Array.isArray(${1:source})"
+	},
+	"let and if statement": {
+		"prefix": "lif",
+		"body": "let ${0} \n if (${2:condition}) {\n\t${1}\n}"
+	},
+	"if statement": {
+		"prefix": "i",
+		"body": "if (${1:condition}) {\n\t${0}\n}"
+	},
+	"else statement": {
+		"prefix": "el",
+		"body": "else {\n\t${0}\n}"
+	},
+	"if/else statement": {
+		"prefix": "ife",
+		"body": "if (${1:condition}) {\n\t${0}\n} else {\n\t\n}"
+	},
+	"else if statement": {
+		"prefix": "ei",
+		"body": "else if (${1:condition}) {\n\t${0}\n}"
+	},
+	"for loop": {
+		"prefix": "fl",
+		"body": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}"
+	},
+	"for in loop": {
+		"prefix": "fi",
+		"body": "for (let ${1:key} in ${2:source}) {\n\tif (${2:source}.hasOwnProperty(${1:key})) {\n\t\t${0}\n\t}\n}"
+	},
+	"for of loop": {
+		"prefix": "fo",
+		"body": "for (const ${1:key} of ${2:source}) {\n\t${0}\n}"
+	},
+	"while iteration decrementing": {
+		"prefix": "wid",
+		"body": "let ${1:array}Index = ${1:array}.length\nwhile (${1:array}Index--) {\n\t${0}\n}"
+	},
+	"while loop": {
+		"prefix": "wl",
+		"body": "while (${1:condition}) {\n\t${0}\n}"
+	},
+	"throw new Error": {
+		"prefix": "tn",
+		"body": "throw new ${0:error}"
+	},
+	"try/catch": {
+		"prefix": "tc",
+		"body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n}"
+	},
+	"try/finally": {
+		"prefix": "tf",
+		"body": "try {\n\t${0}\n} finally {\n\t\n}"
+	},
+	"try/catch/finally": {
+		"prefix": "tcf",
+		"body": "try {\n\t${0}\n} catch (${1:err}) {\n\t\n} finally {\n\t\n}"
+	},
+	"named function": {
+		"prefix": "fn",
+		"body": "function ${1:name} (${2:arguments}) {\n\t${0}\n}"
+	},
+	"async function": {
+		"prefix": "asf",
+		"body": "async function (${1:arguments}) {\n\t${0}\n}"
+	},
+	"async arrow function": {
+		"prefix": "aa",
+		"body": "async (${1:arguments}) => {\n\t${0}\n}"
+	},
+	"async immediately-invoked function expression": {
+		"prefix": "aiife",
+		"body": ";(async (${1:arguments}) => {\n\t${0}\n})(${2})"
+	},
+	"arrow function": {
+		"prefix": "af",
+		"body": "(${1:arguments}) => ${2:statement}"
+	},
+	"identity arrow function": {
+		"prefix": "afi",
+		"body": "(v) => v"
+	},
+	"arrow function with destructuring": {
+		"prefix": "fd",
+		"body": "({${1:arguments}}) => ${2:statement}"
+	},
+	"arrow function with destructuring returning destructured": {
+		"prefix": "fdr",
+		"body": "({${1:arguments}}) => ${1:arguments}"
+	},
+	"arrow function with body": {
+		"prefix": "f",
+		"body": "(${1:arguments}) => {\n\t${0}\n}"
+	},
+	"arrow function returning single object": {
+		"prefix": "fro",
+		"body": "(${1:arguments}) => ({\n\t${0}\n})"
+	},
+	"arrow function with return": {
+		"prefix": "fr",
+		"body": "(${1:arguments}) => {\n\treturn ${0}\n}"
+	},
+	"generator function": {
+		"prefix": "gf",
+		"body": "function* (${1:arguments}) {\n\t${0}\n}"
+	},
+	"named generator": {
+		"prefix": "gfn",
+		"body": "function* ${1:name}(${2:arguments}) {\n\t${0}\n}"
+	},
+	"console.log a variable": {
+		"prefix": "cv",
+		"body": "console.log('${0}:', ${0})"
+	},
+	"constructor": {
+		"prefix": "cn",
+		"body": "constructor () {\n\t${0}\n}"
+	},
+	"JSON.stringify()": {
+		"prefix": "js",
+		"body": "JSON.stringify($0)"
+	},
+	"JSON.parse()": {
+		"prefix": "jp",
+		"body": "JSON.parse($0)"
+	},
+	"method": {
+		"prefix": "m",
+		"body": "${1:method} (${2:arguments}) {\n\t${0}\n}"
+	},
+	"getter": {
+		"prefix": "get",
+		"body": "get ${1:property} () {\n\t${0}\n}"
+	},
+	"setter": {
+		"prefix": "set",
+		"body": "set ${1:property} (${2:value}) {\n\t${0}\n}"
+	},
+	"getter + setter": {
+		"prefix": "gs",
+		"body": "get ${1:property} () {\n\t${0}\n}\nset ${1:property} (${2:value}) {\n\t\n}"
+	},
+	"prototype method": {
+		"prefix": "proto",
+		"body": "${1:Class}.prototype.${2:method} = function (${3:arguments}) {\n\t${0}\n}"
+	},
+	"Object.assign": {
+		"prefix": "oa",
+		"body": "Object.assign(${1:dest}, ${2:source})"
+	},
+	"Object.create": {
+		"prefix": "oc",
+		"body": "Object.create(${1:obj})"
+	},
+	"Object.getOwnPropertyDescriptor": {
+		"prefix": "og",
+		"body": "Object.getOwnPropertyDescriptor(${1:obj}, '${2:prop}')"
+	},
+	"ternary": {
+		"prefix": "te",
+		"body": "${1:cond} ? ${2:true} : ${3:false}"
+	},
+	"ternary assignment": {
+		"prefix": "ta",
+		"body": "const ${0} = ${1:cond} ? ${2:true} : ${3:false}"
+	},
+	"Object.defineProperty": {
+		"prefix": "od",
+		"body": "Object.defineProperty(${1:dest}, '${2:prop}', {\n\t${0}\n})"
+	},
+	"Object.keys": {
+		"prefix": "ok",
+		"body": "Object.keys(${1:obj})"
+	},
+	"Object.values": {
+		"prefix": "ov",
+		"body": "Object.values(${1:obj})"
+	},
+	"Object.entries": {
+		"prefix": "oe",
+		"body": "Object.entries(${1:obj})"
+	},
+	"return": {
+		"prefix": "ret",
+		"body": "return ${1};$0"
+	},
+	"return arrow function": {
+		"prefix": "rf",
+		"body": "return (${1:arguments}) => ${2:statement}"
+	},
+	"yield": {
+		"prefix": "y",
+		"body": "yield ${0}"
+	},
+	"return this": {
+		"prefix": "rt",
+		"body": "return this"
+	},
+	"return null": {
+		"prefix": "rn",
+		"body": "return null"
+	},
+	"return new object": {
+		"prefix": "ro",
+		"body": "return {\n\t${0}\n}"
+	},
+	"return new array": {
+		"prefix": "ra",
+		"body": "return [\n\t${0}\n]"
+	},
+	"return promise": {
+		"prefix": "rp",
+		"body": "return new Promise((resolve, reject) => {\n\t${0}\n})"
+	},
+	"wrap selection in arrow function": {
+		"prefix": "wrap selection in arrow function",
+		"body": "() => {\n\t{$TM_SELECTED_TEXT}\n}",
+		"description": "wraps text in arrow function"
+	},
+	"wrap selection in async arrow function": {
+		"prefix": "wrap selection in async arrow function",
+		"body": "async () => {\n\t{$TM_SELECTED_TEXT}\n}",
+		"description": "wraps text in arrow function"
+	},
+	"RxJS Import Observable": {
+		"prefix": "rx-import-observable",
+		"description": "RxJS Import Observable",
+		"types": "typescript, javascript",
+		"body": [
+			"import { Observable } from 'rxjs';",
+			"$0"
+		]
+	},
+	"RxJS Import Subject": {
+		"prefix": "rx-import-subject",
+		"description": "RxJS Import Subject",
+		"types": "typescript, javascript",
+		"body": [
+			"import { Subject } from 'rxjs';",
+			"$0"
+		]
+	},
+	"RxJS Import an Operator": {
+		"prefix": "rx-import-operator",
+		"description": "RxJS Import an Operator",
+		"types": "typescript, javascript",
+		"body": [
+			"import { ${1:switchMap} } from 'rxjs/operators';",
+			"$0"
+		]
+	},
+	"RxJS MergeMap Example": {
+		"prefix": "rx-mergeMap",
+		"description": "RxJS MergeMap Example",
+		"types": "typescript, javascript",
+		"body": [
+			"getItems(ids: number[]): Observable<Item> {",
+			"\treturn from(ids).pipe(",
+			"\t\tmergeMap(id => <Observable<Item>> this.httpClient.get(`item/${id}`))",
+			"\t);",
+			"}",
+			"$0"
+		]
+	},
+	"Register Service Worker": {
+		"prefix": "sw-register",
+		"description": "Register Service Worker",
+		"types": "typescript, javascript",
+		"body": [
+			"if ('serviceWorker' in navigator) {",
+			"\twindow.addEventListener('load', () => {",
+			"\tnavigator.serviceWorker.register('/sw.js');",
+			"});",
+			"}$0"
+		]
+	},
+	"Register Service Worker and Check": {
+		"prefix": "sw-register-and-check",
+		"description": "Register Service Worker and Check",
+		"types": "typescript, javascript",
+		"body": [
+			"if ('serviceWorker' in navigator) {",
+			"if('serviceWorker' in window.navigator) {",
+			"\twindow.addEventListener('load', () => {",
+			"\t\twindow.navigator.serviceWorker.register('/sw.js', { scope: '/' }).then((registration) => {",
+			"\t\t\tconsole.log('ServiceWorker registration successful with scope: ', registration.scope);",
+			"\t\t}).catch((error) => {",
+			"\t\t\tconsole.error('ServiceWorker registration failed: ', error);",
+			"\t\t});",
+			"\t});",
+			"}$0"
+		]
+	},
+	"console.dir": {
+		"prefix": "cd",
+		"body": [
+			"console.dir($1);"
+		],
+		"description": "Code snippet for \"console.dir\""
+	},
+	"console.error": {
+		"prefix": "ce",
+		"body": [
+			"console.error($1);"
+		],
+		"description": "Code snippet for \"console.error\""
+	},
+	"console.info": {
+		"prefix": "ci",
+		"body": [
+			"console.info($1);"
+		],
+		"description": "Code snippet for \"console.info\""
+	},
+	"console.log": {
+		"prefix": "cl",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "Code snippet for \"console.log\""
+	},
+	"console.warn": {
+		"prefix": "cw",
+		"body": [
+			"console.warn($1);"
+		],
+		"description": "Code snippet for \"console.warn\""
+	},
+	"debugger": {
+		"prefix": "de",
+		"body": [
+			"debugger;$1"
+		],
+		"description": "Code snippet for \"debugger\""
+	},
+	"addEventListener": {
+		"prefix": "ae",
+		"body": [
+			"${1:document}.addEventListener('${2:load}', function (e) {",
+			"\t${3:// body}",
+			"});"
+		],
+		"description": "Code snippet for \"addEventListener\""
+	},
+	"appendChild": {
+		"prefix": "ac",
+		"body": [
+			"${1:document}.appendChild(${2:elem});"
+		],
+		"description": "Code snippet for \"appendChild\""
+	},
+	"removeChild": {
+		"prefix": "rc",
+		"body": [
+			"${1:document}.removeChild(${2:elem});"
+		],
+		"description": "Code snippet for \"removeChild\""
+	},
+	"createElement": {
+		"prefix": "cel",
+		"body": [
+			"${1:document}.createElement(${2:elem});"
+		],
+		"description": "Code snippet for \"createElement\""
+	},
+	"createDocumentFragment": {
+		"prefix": "cdf",
+		"body": [
+			"${1:document}.createDocumentFragment();$2"
+		],
+		"description": "Code snippet for \"createDocumentFragment\""
+	},
+	"classList.add": {
+		"prefix": "ca",
+		"body": [
+			"${1:document}.classList.add('${2:class}');"
+		],
+		"description": "Code snippet for \"classList.add\""
+	},
+	"classList.toggle": {
+		"prefix": "ct",
+		"body": [
+			"${1:document}.classList.toggle('${2:class}');"
+		],
+		"description": "Code snippet for \"classList.toggle\""
+	},
+	"classList.remove": {
+		"prefix": "cr",
+		"body": [
+			"${1:document}.classList.remove('${2:class}');"
+		],
+		"description": "Code snippet for \"classList.remove\""
+	},
+	"getAttribute": {
+		"prefix": "ga",
+		"body": [
+			"${1:document}.getAttribute('${2:attr}');"
+		],
+		"description": "Code snippet for \"getAttribute\""
+	},
+	"setAttribute": {
+		"prefix": "sa",
+		"body": [
+			"${1:document}.setAttribute('${2:attr}', ${3:value});"
+		],
+		"description": "Code snippet for \"setAttribute\""
+	},
+	"removeAttribute": {
+		"prefix": "ra",
+		"body": [
+			"${1:document}.removeAttribute('${2:attr}');"
+		],
+		"description": "Code snippet for \"removeAttribute\""
+	},
+	"innerHTML": {
+		"prefix": "ih",
+		"body": [
+			"${1:document}.innerHTML = '${2:elem}';"
+		],
+		"description": "Code snippet for \"innerHTML\""
+	},
+	"textContent": {
+		"prefix": "tc",
+		"body": [
+			"${1:document}.textContent = '${2:content}';"
+		],
+		"description": "Code snippet for \"textContent\""
+	},
+	"forEach": {
+		"prefix": "fe",
+		"body": [
+			"${1:array}.forEach(function(item) {",
+			"\t${2:// body}",
+			"});"
+		],
+		"description": "Code snippet for \"forEach\""
+	},
+	"function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:methodName} (${2:arguments}) {",
+			"\t${3:// body}",
+			"}"
+		],
+		"description": "Code snippet for function"
+	},
+	"anonymous function": {
+		"prefix": "afn",
+		"body": [
+			"function(${1:arguments}) {",
+			"\t${2:// body}",
+			"}"
+		],
+		"description": "Code snippet for anonymous function"
+	},
+	"prototype": {
+		"prefix": "pr",
+		"body": [
+			"${1:object}.prototype.${2:method} = function(${3:arguments}) {",
+			"\t${4:// body}",
+			"}"
+		],
+		"description": "Code snippet for prototype"
+	},
+	"immediately-invoked function expression": {
+		"prefix": "iife",
+		"body": [
+			"(function(${1:window}, ${2:document}) {",
+			"\t${3:// body}",
+			"})(${1:window}, ${2:document});"
+		],
+		"description": "Code snippet for immediately-invoked function expression"
+	},
+	"function call": {
+		"prefix": "call",
+		"body": [
+			"${1:method}.call(${2:context}, ${3:arguments});"
+		],
+		"description": "Code snippet for function call"
+	},
+	"function apply": {
+		"prefix": "apply",
+		"body": [
+			"${1:method}.apply(${2:context}, [${3:arguments}]);"
+		],
+		"description": "Code snippet for function apply"
+	},
+	"function as a property of an object": {
+		"prefix": "ofn",
+		"body": [
+			"${1:functionName}: function(${2:arguments}) {",
+			"\t${3:// body}",
+			"}"
+		],
+		"description": "Code snippet for function as a property of an object"
+	},
+	"JSON.parse": {
+		"prefix": "jp",
+		"body": [
+			"JSON.parse(${1:obj});"
+		],
+		"description": "Code snippet for 'JSON.parse'"
+	},
+	"JSON.stringify": {
+		"prefix": "js",
+		"body": [
+			"JSON.stringify(${1:obj});"
+		],
+		"description": "Code snippet for 'JSON.stringify'"
+	},
+	"setInterval": {
+		"prefix": "si",
+		"body": [
+			"setInterval(function() {",
+			"\t${0:// body}",
+			"}, ${1:1000});"
+		],
+		"description": "Code snippet for 'setInterval'"
+	},
+	"setTimeout": {
+		"prefix": "st",
+		"body": [
+			"setTimeout(function() {",
+			"\t${0:// body}",
+			"}, ${1:1000});"
+		],
+		"description": "Code snippet for 'setTimeout'"
+	},
+	"use strict": {
+		"prefix": "us",
+		"body": [
+			"'use strict';"
+		],
+		"description": "Code snippet for 'use strict'"
+	},
+	"alert": {
+		"prefix": "al",
+		"body": [
+			"alert('${1:msg}');"
+		],
+		"description": "Code snippet for 'alert'"
+	},
+	"confirm": {
+		"prefix": "co",
+		"body": [
+			"confirm('${1:msg}');"
+		],
+		"description": "Code snippet for 'confirm'"
+	},
+	"prompt": {
+		"prefix": "pm",
+		"body": [
+			"prompt('${1:msg}');"
+		],
+		"description": "Code snippet for 'prompt'"
+	},
+	"define module": {
+		"prefix": "define",
+		"body": [
+			"define([",
+			"\t'require',",
+			"\t'${1:dependency}'",
+			"], function(require, ${2:factory}) {",
+			"\t'use strict';",
+			"\t$0",
+			"});"
+		],
+		"description": "define module"
+	},
+	"For Loop": {
+		"prefix": "for",
+		"body": [
+			"for (let ${1:index} = 0; ${1:index} < ${2:array}.length; ${1:index}++) {",
+			"\tconst ${3:element} = ${2:array}[${1:index}];",
+			"\t$TM_SELECTED_TEXT$0",
+			"}"
+		],
+		"description": "For Loop"
+	},
+	"For-Each Loop": {
+		"prefix": "foreach",
+		"body": [
+			"${1:array}.forEach(${2:element} => {",
+			"\t$TM_SELECTED_TEXT$0",
+			"});"
+		],
+		"description": "For-Each Loop"
+	},
+	"For-In Loop": {
+		"prefix": "forin",
+		"body": [
+			"for (const ${1:key} in ${2:object}) {",
+			"\tif (Object.hasOwnProperty.call(${2:object}, ${1:key})) {",
+			"\t\tconst ${3:element} = ${2:object}[${1:key}];",
+			"\t\t$TM_SELECTED_TEXT$0",
+			"\t}",
+			"}"
+		],
+		"description": "For-In Loop"
+	},
+	"For-Of Loop": {
+		"prefix": "forof",
+		"body": [
+			"for (const ${1:iterator} of ${2:object}) {",
+			"\t$TM_SELECTED_TEXT$0",
+			"}"
+		],
+		"description": "For-Of Loop"
+	},
+	"Function Statement": {
+		"prefix": "function",
+		"body": [
+			"function ${1:name}(${2:params}) {",
+			"\t$TM_SELECTED_TEXT$0",
+			"}"
+		],
+		"description": "Function Statement"
+	},
+	"If-Else Statement": {
+		"prefix": "ifelse",
+		"body": [
+			"if (${1:condition}) {",
+			"\t$TM_SELECTED_TEXT$0",
+			"} else {",
+			"\t",
+			"}"
+		],
+		"description": "If-Else Statement"
+	},
+	"New Statement": {
+		"prefix": "new",
+		"body": [
+			"const ${1:name} = new ${2:type}(${3:arguments});$0"
+		],
+		"description": "New Statement"
+	},
+	"Switch Statement": {
+		"prefix": "switch",
+		"body": [
+			"switch (${1:key}) {",
+			"\tcase ${2:value}:",
+			"\t\t$0",
+			"\t\tbreak;",
+			"",
+			"\tdefault:",
+			"\t\tbreak;",
+			"}"
+		],
+		"description": "Switch Statement"
+	},
+	"While Statement": {
+		"prefix": "while",
+		"body": [
+			"while (${1:condition}) {",
+			"\t$TM_SELECTED_TEXT$0",
+			"}"
+		],
+		"description": "While Statement"
+	},
+	"Do-While Statement": {
+		"prefix": "dowhile",
+		"body": [
+			"do {",
+			"\t$TM_SELECTED_TEXT$0",
+			"} while (${1:condition});"
+		],
+		"description": "Do-While Statement"
+	},
+	"Try-Catch Statement": {
+		"prefix": "trycatch",
+		"body": [
+			"try {",
+			"\t$TM_SELECTED_TEXT$0",
+			"} catch (${1:error}) {",
+			"\t",
+			"}"
+		],
+		"description": "Try-Catch Statement"
+	},
+	"Set Timeout Function": {
+		"prefix": "settimeout",
+		"body": [
+			"setTimeout(() => {",
+			"\t$TM_SELECTED_TEXT$0",
+			"}, ${1:timeout});"
+		],
+		"description": "Set Timeout Function"
+	},
+	"Set Interval Function": {
+		"prefix": "setinterval",
+		"body": [
+			"setInterval(() => {",
+			"\t$TM_SELECTED_TEXT$0",
+			"}, ${1:interval});"
+		],
+		"description": "Set Interval Function"
+	},
+	"Import Statement": {
+		"prefix": "import",
+		"body": [
+			"import { $0 } from \"${1:module}\";"
+		],
+		"description": "Import external module"
+	},
+	"Region Start": {
+		"prefix": "#region",
+		"body": [
+			"//#region $0"
+		],
+		"description": "Folding Region Start"
+	},
+	"Region End": {
+		"prefix": "#endregion",
+		"body": [
+			"//#endregion"
+		],
+		"description": "Folding Region End"
+	},
+	"Log to the console": {
+		"prefix": "log",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "Log to the console"
+	},
+	"Log warning to console": {
+		"prefix": "warn",
+		"body": [
+			"console.warn($1);"
+		],
+		"description": "Log warning to the console"
+	},
+	"Log error to console": {
+		"prefix": "error",
+		"body": [
+			"console.error($1);"
+		],
+		"description": "Log error to the console"
+	},
+	"Object Method": {
+		"prefix": "kf",
+		"body": [
+			"${1:methodName}: function (${2:attribute}) {",
+			"\t$3",
+			"}${4:,}"
+		]
+	},
+	"Object key — key: \"value\"": {
+		"prefix": "kv",
+		"body": "${1:key}: ${2:'${3:value}'}${4:, }"
+	},
+	"Prototype": {
+		"prefix": "proto",
+		"body": [
+			"${1:ClassName}.prototype.${2:methodName} = function ($3) {",
+			"\t$0",
+			"};"
+		]
+	},
+	"do": {
+		"prefix": "do",
+		"body": [
+			"do {",
+			"\t$2",
+			"} while (${1:true});"
+		]
+	},
+	"condition ? true : false": {
+		"prefix": "tern",
+		"body": "${1:condition} ? ${2:true} : ${3:false}"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if (${1:true}) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"if … else": {
+		"prefix": "ife",
+		"body": [
+			"if (${1:true}) {",
+			"\t$2",
+			"} else {",
+			"\t$3",
+			"}"
+		]
+	},
+	"else": {
+		"prefix": "else",
+		"body": [
+			"else {",
+			"\t$1",
+			"}"
+		]
+	},
+	"else if": {
+		"prefix": "elseif",
+		"body": [
+			"else if (${1:true}) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"for (var ${2:i} = 0; ${2:i} < ${1:array}.length; ${2:i}++) {",
+			"\t${1:array}[${2:i}]$3",
+			"}"
+		]
+	},
+	"for in": {
+		"prefix": "forin",
+		"body": [
+			"for (var ${1:key} in ${2:object}) {",
+			"\t${3:if (${2:object}.hasOwnProperty(${1:key})) {",
+			"\t\t$4",
+			"\t\\}}",
+			"}"
+		]
+	},
+	"for of": {
+		"prefix": "forof",
+		"body": [
+			"for (${1:variable} of ${2:iterable}) {",
+			"\t$3",
+			"}"
+		]
+	},
+	"Function": {
+		"prefix": "fun",
+		"body": [
+			"function ${1:functionName}($2) {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Anonymous Function": {
+		"prefix": "f",
+		"body": [
+			"function ($1) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"Arrow Function": {
+		"prefix": "af",
+		"body": [
+			"($1) => {",
+			"\t$2",
+			"}"
+		]
+	},
+	"Generator": {
+		"prefix": "gen",
+		"body": [
+			"function* ${1:functionName}($2) {",
+			"\t$0",
+			"}"
+		]
+	},
+	"Anonymous Generator": {
+		"prefix": "g",
+		"body": [
+			"function* ($1) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"getElementsByClassName": {
+		"prefix": "get",
+		"body": "getElementsByClassName(${1:'${2:className}'})$3"
+	},
+	"getElementsByName": {
+		"prefix": "getn",
+		"body": "getElementsByName(${1:'${2:name}'})$3"
+	},
+	"getElementsByTagName": {
+		"prefix": "gett",
+		"body": "getElementsByTagName(${1:'${2:tagName}'})$3"
+	},
+	"getElementById": {
+		"prefix": "gi",
+		"body": [
+			"${1:document}.getElementById('${2:id}');"
+		],
+		"description": "Code snippet for \"getElementById\""
+	},
+	"querySelector": {
+		"prefix": "qs",
+		"body": "querySelector(${1:'${2:query}'})$3"
+	},
+	"querySelectorAll": {
+		"prefix": "qsa",
+		"body": "querySelectorAll(${1:'${2:query}'})$3"
+	},
+	"Immediately-Invoked Function Expression": {
+		"prefix": "iife",
+		"body": [
+			"(function() {",
+			"\t${1:'use strict';\n}\t$2",
+			"}());"
+		]
+	},
+	"log": {
+		"prefix": "log",
+		"body": "console.log($1);$0"
+	},
+	"dir": {
+		"prefix": "dir",
+		"body": "console.dir($1);$0"
+	},
+	"warn": {
+		"prefix": "warn",
+		"body": "console.warn($1);$0"
+	},
+	"error": {
+		"prefix": "error",
+		"body": "console.error($1);$0"
+	},
+	"inspect": {
+		"prefix": "inspect",
+		"body": "console.log(require('util').inspect($0, { depth: null }));"
+	},
+	"new Promise": {
+		"prefix": "prom",
+		"body": [
+			"new Promise(function(resolve, reject) {",
+			"\t$1",
+			"});$0"
+		]
+	},
+	"setInterval function": {
+		"prefix": "interval",
+		"body": [
+			"setInterval(${2:function () {",
+			"\t$3",
+			"\\}}, ${1:10});"
+		]
+	},
+	"setTimeout function": {
+		"prefix": "timeout",
+		"body": [
+			"setTimeout(${2:function () {",
+			"\t$3",
+			"\\}}, ${1:10});"
+		]
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": [
+			"switch (${1:expression}) {",
+			"\tcase ${2:expression}:",
+			"\t\t$4",
+			"\t\tbreak;$5",
+			"\tdefault:",
+			"\t\t$3",
+			"}"
+		]
+	},
+	"case": {
+		"prefix": "case",
+		"body": [
+			"case ${1:expression}:",
+			"\t$2",
+			"\tbreak;"
+		]
+	},
+	"try": {
+		"prefix": "try",
+		"body": [
+			"try {",
+			"\t$1",
+			"} catch (${2:e}) {",
+			"\t$3",
+			"}${4: finally {",
+			"\t$5",
+			"\\}}"
+		]
+	},
+	"while": {
+		"prefix": "while",
+		"body": [
+			"while (${1:true}) {",
+			"\t$2",
+			"}"
+		]
+	},
+	"Start Docblock": {
+		"prefix": "/**",
+		"body": [
+			"/**",
+			" * $1",
+			" */$0"
+		]
+	},
+	"CommonJS require": {
+		"prefix": "req",
+		"body": "const ${1:module} = require('${1:module}');"
+	},
+	"Class": {
+		"prefix": "class",
+		"body": [
+			"class ${1:ClassName} {",
+			"\tconstructor($2) {",
+			"\t\t$3",
+			"\t}",
+			"}"
+		]
+	},
+	"export function": {
+		"prefix": "expfun",
+		"body": [
+			"exports.${1:functionName} = function ($2) {",
+			"\t${3:// body...}",
+			"};"
+		]
+	},
+	"export module": {
+		"prefix": "expmod",
+		"body": "module.exports = ${1:name};"
+	}
+}

@@ -1,0 +1,693 @@
+{
+	"css-comment-block": {
+		"description": "Comment block",
+		"scope": "",
+		"prefix": "css-comment-block",
+		"body": "/***** ${1:Section} *****/\n$2$0\n/***** End ${1:Section} *****/$0"
+	},
+	"align-items": {
+		"prefix": "ai",
+		"body": "align-items: ${1|flex-start,flex-end,center,baseline,stretch,start,end,self-start,self-end|};",
+		"description": "initial value: stretch"
+	},
+	"align-items: baseline": {
+		"prefix": "aib",
+		"body": "align-items: baseline;"
+	},
+	"align-items: center": {
+		"prefix": "aic",
+		"body": "align-items: center;"
+	},
+	"align-items: flex-start": {
+		"prefix": "aifs",
+		"body": "align-items: flex-start;"
+	},
+	"align-items: flex-end": {
+		"prefix": "aife",
+		"body": "align-items: flex-end;"
+	},
+	"align-items: stretch": {
+		"prefix": "ais",
+		"body": "align-items: stretch;"
+	},
+	"align-self": {
+		"prefix": "as",
+		"body": "align-items: ${1|flex-start,flex-end,center,baseline,stretch,auto|};",
+		"description": "initial value: auto"
+	},
+	"animation": {
+		"prefix": "ani",
+		"body": "animation: ${1:name} ${2:1s} ${3|linear,ease-in-out,ease,ease-in,ease-out,step-start,step-end,steps,cubic-bezier|};",
+		"description": "animation: name duration timing-function delay direction count fill-mode play-state"
+	},
+	"animation-delay": {
+		"prefix": "anide",
+		"body": "animation-delay: ${0:1s};"
+	},
+	"animation-direction": {
+		"prefix": "anidi",
+		"body": "animation-direction: ${1|alternate,alternate-reverse,reverse,normal|};",
+		"description": "initial value: normal"
+	},
+	"animation-duratuion": {
+		"prefix": "anidu",
+		"body": "animation-duration: ${0:1s};"
+	},
+	"animation-fill-mode": {
+		"prefix": "anifm",
+		"body": "animation-fill-mode: ${1|forwards,backwards,both,none|};",
+		"description": "initial value: none"
+	},
+	"animation-iteration-count": {
+		"prefix": "aniic",
+		"body": "animation-iteration-count: ${0:infinite};",
+		"description": "initial value: 1"
+	},
+	"animation-name": {
+		"prefix": "anin",
+		"body": "animation-name: ${0:name};"
+	},
+	"animation-play-state": {
+		"prefix": "anips",
+		"body": "animation-play-state: ${1|paused,running|};",
+		"description": "initial value: running"
+	},
+	"animation-timing-function": {
+		"prefix": "anitf",
+		"body": "animation-timing-function: ${1|linear,ease,ease-in-out,ease-in,ease-out,step-start,step-end,steps,cubic-bezier|};",
+		"description": "initial value: ease"
+	},
+	"background": {
+		"prefix": "bg",
+		"body": "background: ${0:#fff};",
+		"description": "background: image position/size repeat attachment box box"
+	},
+	"background-attachment": {
+		"prefix": "bga",
+		"body": "background-attachment: ${1|fixed,scroll,local|};",
+		"description": "initial value: scroll"
+	},
+	"background-color": {
+		"prefix": "bgc",
+		"body": "background-color: ${0:#fff};"
+	},
+	"background-clip": {
+		"prefix": "bgcl",
+		"body": "background-clip: ${1|border-box,padding-box,content-box,text|};",
+		"description": "initial value: border-box"
+	},
+	"background-image": {
+		"prefix": "bgi",
+		"body": "background-image: url('${0:background.jpg}');"
+	},
+	"background-origin": {
+		"prefix": "bgo",
+		"body": "background-origin: ${1|border-box,padding-box,content-box|};",
+		"description": "initial value: padding-box"
+	},
+	"background-position": {
+		"prefix": "bgp",
+		"body": "background-position: ${1:left} ${2:top};"
+	},
+	"background-repeat": {
+		"prefix": "bgr",
+		"body": "background-repeat: ${1|no-repeat,repeat-x,repeat-y,repeat,space,round|};",
+		"description": "initial value: repeat"
+	},
+	"background-repeat: repeat": {
+		"prefix": "bgrr",
+		"body": "background-repeat: repeat;"
+	},
+	"background-repeat: repeat-x": {
+		"prefix": "bgrx",
+		"body": "background-repeat: repeat-x;"
+	},
+	"background-repeat: repeat-y": {
+		"prefix": "bgry",
+		"body": "background-repeat: repeat-y;"
+	},
+	"background-repeat: no-repeat": {
+		"prefix": "bgrn",
+		"body": "background-repeat: no-repeat;"
+	},
+	"background-size": {
+		"prefix": "bgs",
+		"body": "background-size: ${0:cover};"
+	},
+	"border": {
+		"prefix": "bor",
+		"body": "border: ${1:1px} ${2|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|} ${0:#000};"
+	},
+	"border: none": {
+		"prefix": "born",
+		"body": "border: none;"
+	},
+	"border-color": {
+		"prefix": "borc",
+		"body": "border-color: ${0:#000};"
+	},
+	"border-style": {
+		"prefix": "bors",
+		"body": "border-style: ${1|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|};"
+	},
+	"border-width": {
+		"prefix": "borw",
+		"body": "border-width: ${0:1px};"
+	},
+	"border-bottom": {
+		"prefix": "borb",
+		"body": "border-bottom: ${1:1px} ${2|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|} ${0:#000};"
+	},
+	"border-left": {
+		"prefix": "borl",
+		"body": "border-left: ${1:1px} ${2|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|} ${0:#000};"
+	},
+	"border-right": {
+		"prefix": "borr",
+		"body": "border-right: ${1:1px} ${2|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|} ${0:#000};"
+	},
+	"border-top": {
+		"prefix": "bort",
+		"body": "border-top: ${1:1px} ${2|solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden|} ${0:#000};"
+	},
+	"border-radius": {
+		"prefix": "br",
+		"body": "border-radius: ${0:2px};"
+	},
+	"bottom": {
+		"prefix": "bot",
+		"body": "bottom: ${0:0};"
+	},
+	"box-shadow": {
+		"prefix": "bos",
+		"body": "box-shadow: ${1:1px} ${2:1px} ${3:1px} ${4:1px} ${0:rgba(0, 0, 0, .5)};",
+		"description": "box-shadow: x-offset y-offset blur spread color"
+	},
+	"box-sizing": {
+		"prefix": "boz",
+		"body": "box-sizing: ${1|border-box,content-box|};",
+		"description": "initial value: content-box"
+	},
+	"clear": {
+		"prefix": "clr",
+		"body": "clear: ${1|both,left,right,none|};"
+	},
+	"color": {
+		"prefix": "col",
+		"body": "color: ${0:#000};"
+	},
+	"content": {
+		"prefix": "con",
+		"body": "content: '$0';"
+	},
+	"cursor": {
+		"prefix": "cur",
+		"body": "cursor: ${1|auto,default,alias,cell,copy,crosshair,context-menu,help,grab,grabbing,move,none,no-drop,not-allowed,pointer,progress,e-resize,all-scroll,text,wait,vertical-text,zoom-in,zoom-out|};",
+		"description": "initial value: auto"
+	},
+	"cursor: pointer": {
+		"prefix": "curp",
+		"body": "cursor: pointer;"
+	},
+	"cursor: default": {
+		"prefix": "curd",
+		"body": "cursor: default;"
+	},
+	"display": {
+		"prefix": "dis",
+		"body": "display: ${1|none,block,inline,inline-block,flex,inline-flex,list-item,table,inline-table,table-caption,table-cell,table-row,table-row-group,table-column|};"
+	},
+	"display: block": {
+		"prefix": "disb",
+		"body": "display: block;"
+	},
+	"display: inline-block": {
+		"prefix": "disi",
+		"body": "display: inline-block;"
+	},
+	"display: none": {
+		"prefix": "disn",
+		"body": "display: none;"
+	},
+	"display: flex": {
+		"prefix": "disf",
+		"body": "display: flex;"
+	},
+	"flex": {
+		"prefix": "flex",
+		"body": "flex: ${1:1} ${2:1} ${3:auto};",
+		"description": "flex: grow shrink basis"
+	},
+	"flex (alt)": {
+		"prefix": "fle",
+		"body": "flex: ${1:1} ${2:1} ${3:auto};"
+	},
+	"flex-direction": {
+		"prefix": "fld",
+		"body": "flex-direction: ${1|row,row-reverse,column,column-reverse|};",
+		"description": "initial value: row"
+	},
+	"flex-direction: row": {
+		"prefix": "fldr",
+		"body": "flex-direction: row;"
+	},
+	"flex-direction: column": {
+		"prefix": "fldc",
+		"body": "flex-direction: column;"
+	},
+	"flex-flow": {
+		"prefix": "flf",
+		"body": "flex-flow: ${1|row,row-reverse,column,column-reverse|} ${2|wrap,wrap-reverse,nowrap|};"
+	},
+	"flex-wrap": {
+		"prefix": "flw",
+		"body": "flex-wrap: ${1|wrap,wrap-reverse,nowrap|};",
+		"description": "initial value: nowrap"
+	},
+	"float": {
+		"prefix": "fl",
+		"body": "float: ${1|left,right,none|};"
+	},
+	"float: left": {
+		"prefix": "fll",
+		"body": "float: left;"
+	},
+	"float: right": {
+		"prefix": "flr",
+		"body": "float: right;"
+	},
+	"float: none": {
+		"prefix": "fln",
+		"body": "float: none;"
+	},
+	"font-family": {
+		"prefix": "ff",
+		"body": "font-family: ${0:arial};"
+	},
+	"font-size": {
+		"prefix": "fz",
+		"body": "font-size: ${0:12px};"
+	},
+	"font-style": {
+		"prefix": "fst",
+		"body": "font-style: ${1|italic,oblique,normal|};"
+	},
+	"font-style: italic": {
+		"prefix": "fsti",
+		"body": "font-style: italic;"
+	},
+	"font-style: normal": {
+		"prefix": "fstn",
+		"body": "font-style: normal;"
+	},
+	"font-style: oblique": {
+		"prefix": "fsto",
+		"body": "font-style: oblique;"
+	},
+	"font-weight": {
+		"prefix": "fw",
+		"body": "font-weight: ${0:bold};"
+	},
+	"font-weight: bold": {
+		"prefix": "fwb",
+		"body": "font-weight: bold;"
+	},
+	"font-weight: light": {
+		"prefix": "fwl",
+		"body": "font-weight: light;"
+	},
+	"font-weight: normal": {
+		"prefix": "fwn",
+		"body": "font-weight: normal;"
+	},
+	"font": {
+		"prefix": "ft",
+		"body": "font: ${0:12px/1.5};",
+		"description": "font: [weight style variant stretch] size/line-height family"
+	},
+	"height": {
+		"prefix": "hei",
+		"body": "height: ${0:1px};"
+	},
+	"justify-content": {
+		"prefix": "jc",
+		"body": "justify-content: ${1|flex-start,flex-end,center,space-between,space-around|};",
+		"description": "initial value: flex-start"
+	},
+	"justify-content: flex-start": {
+		"prefix": "jcfs",
+		"body": "justify-content: flex-start;"
+	},
+	"justify-content: flex-end": {
+		"prefix": "jcfe",
+		"body": "justify-content: flex-end;"
+	},
+	"justify-content: center": {
+		"prefix": "jcc",
+		"body": "justify-content: center;"
+	},
+	"justify-content: space-around": {
+		"prefix": "jcsa",
+		"body": "justify-content: space-around;"
+	},
+	"justify-content: space-between": {
+		"prefix": "jcsb",
+		"body": "justify-content: space-between;"
+	},
+	"list-style": {
+		"prefix": "lis",
+		"body": "list-style: ${1|disc,circle,square,decimal,lower-roman,upper-roman,lower-alpha,upper-alpha,none,armenian,cjk-ideographic,georgian,lower-greek,hebrew,hiragana,hiragana-iroha,katakana,katakana-iroha,lower-latin,upper-latin|} ${2|outside,inside|};",
+		"description": "list-style: type position image"
+	},
+	"list-style-position": {
+		"prefix": "lisp",
+		"body": "${1|outside,inside|}",
+		"description": "initial value: outside"
+	},
+	"list-style-type": {
+		"prefix": "list",
+		"body": "list-style-type: ${1|disc,circle,square,decimal,lower-roman,upper-roman,lower-alpha,upper-alpha,none,armenian,cjk-ideographic,georgian,lower-greek,hebrew,hiragana,hiragana-iroha,katakana,katakana-iroha,lower-latin,upper-latin|};",
+		"description": "initial value: disc"
+	},
+	"list-style-type: circle": {
+		"prefix": "listc",
+		"body": "list-style-type: circle;"
+	},
+	"list-style-type: disc": {
+		"prefix": "listd",
+		"body": "list-style-type: disc;"
+	},
+	"list-style-type: none": {
+		"prefix": "listn",
+		"body": "list-style-type: none;"
+	},
+	"list-style-type: square": {
+		"prefix": "lists",
+		"body": "list-style-type: square;"
+	},
+	"list-style-type: lower-roman": {
+		"prefix": "listlr",
+		"body": "list-style-type: lower-roman;"
+	},
+	"list-style-type: upper-roman": {
+		"prefix": "listur",
+		"body": "list-style-type: upper-roman;"
+	},
+	"left": {
+		"prefix": "lef",
+		"body": "left: ${0:0};"
+	},
+	"line-height": {
+		"prefix": "lh",
+		"body": "line-height: ${0:1.5};"
+	},
+	"letter-spacing": {
+		"prefix": "ls",
+		"body": "letter-spacing: ${0:2px};"
+	},
+	"letter-spacing: normal": {
+		"prefix": "lsn",
+		"body": "letter-spacing: normal;"
+	},
+	"margin": {
+		"prefix": "mar",
+		"body": "margin: ${0:0};"
+	},
+	"margin-bottom": {
+		"prefix": "marb",
+		"body": "margin-bottom: ${0:0};"
+	},
+	"margin-left": {
+		"prefix": "marl",
+		"body": "margin-left: ${0:0};"
+	},
+	"margin-right": {
+		"prefix": "marr",
+		"body": "margin-right: ${0:0};"
+	},
+	"margin-top": {
+		"prefix": "mart",
+		"body": "margin-top: ${0:0};"
+	},
+	"margin: 0 auto": {
+		"prefix": "mara",
+		"body": "margin: 0 auto;"
+	},
+	"min-height": {
+		"prefix": "mih",
+		"body": "min-height: ${0:1px};"
+	},
+	"min-width": {
+		"prefix": "miw",
+		"body": "min-width: ${0:1px};"
+	},
+	"max-height": {
+		"prefix": "mah",
+		"body": "max-height: ${0:1px};"
+	},
+	"max-width": {
+		"prefix": "maw",
+		"body": "max-width: ${0:1px};"
+	},
+	"opacity": {
+		"prefix": "opa",
+		"body": "opacity: ${0:0};"
+	},
+	"overflow": {
+		"prefix": "ov",
+		"body": "overflow: ${1|visible,hidden,scroll,auto,clip|};"
+	},
+	"overflow: auto": {
+		"prefix": "ova",
+		"body": "overflow: auto;"
+	},
+	"overflow: hidden": {
+		"prefix": "ovh",
+		"body": "overflow: hidden;"
+	},
+	"overflow: scroll": {
+		"prefix": "ovs",
+		"body": "overflow: scroll;"
+	},
+	"overflow: visible": {
+		"prefix": "ovv",
+		"body": "overflow: visible;"
+	},
+	"padding": {
+		"prefix": "pad",
+		"body": "padding: ${0:0};"
+	},
+	"padding-bottom": {
+		"prefix": "padb",
+		"body": "padding-bottom: ${0:0};"
+	},
+	"padding-left": {
+		"prefix": "padl",
+		"body": "padding-left: ${0:0};"
+	},
+	"padding-right": {
+		"prefix": "padr",
+		"body": "padding-right: ${0:0};"
+	},
+	"padding-top": {
+		"prefix": "padt",
+		"body": "padding-top: ${0:0};"
+	},
+	"position": {
+		"prefix": "pos",
+		"body": "position: ${1|relative,absolute,fixed,sticky,static|};"
+	},
+	"position absolute": {
+		"prefix": "posa",
+		"body": "position: absolute;"
+	},
+	"position fixed": {
+		"prefix": "posf",
+		"body": "position: fixed;"
+	},
+	"position relative": {
+		"prefix": "posr",
+		"body": "position: relative;"
+	},
+	"position sticky": {
+		"prefix": "poss",
+		"body": "position: sticky;"
+	},
+	"right": {
+		"prefix": "rig",
+		"body": "right: ${0:0};"
+	},
+	"text-align": {
+		"prefix": "ta",
+		"body": "text-align: ${1|center,left,right,justify,start,end|};"
+	},
+	"text-align: center": {
+		"prefix": "tac",
+		"body": "text-align: center;"
+	},
+	"text-align: left": {
+		"prefix": "tal",
+		"body": "text-align: left;"
+	},
+	"text-align: right": {
+		"prefix": "tar",
+		"body": "text-align: right;"
+	},
+	"text-decoration": {
+		"prefix": "td",
+		"body": "text-decoration: ${1|none,underline,overline,line-through|};"
+	},
+	"text-decoration: underline": {
+		"prefix": "tdu",
+		"body": "text-decoration: underline;"
+	},
+	"text-decoration: none": {
+		"prefix": "tdn",
+		"body": "text-decoration: none;"
+	},
+	"text-decoration: line-through": {
+		"prefix": "tdl",
+		"body": "text-decoration: line-through;"
+	},
+	"text-indent": {
+		"prefix": "ti",
+		"body": "text-indent: ${0:2em};"
+	},
+	"text-shadow": {
+		"prefix": "ts",
+		"body": "text-shadow: ${1:1px} ${2:1px} ${3:1px} ${4:1px} ${0:rgba(0, 0, 0, .5)};",
+		"description": "text-shadow: x-offset y-offset blur spread color"
+	},
+	"text-transform": {
+		"prefix": "tt",
+		"body": "text-transform: ${1|capitalize,uppercase,lowercase,full-width,none|};"
+	},
+	"top": {
+		"prefix": "top",
+		"body": "top: ${0:0};"
+	},
+	"vertical-align": {
+		"prefix": "va",
+		"body": "vertical-align: ${1|baseline,middle,top,bottom,sub,super,text-top,text-bottom|};"
+	},
+	"vertical-align: bottom": {
+		"prefix": "vab",
+		"body": "vertical-align: bottom;"
+	},
+	"vertical-align: middle": {
+		"prefix": "vam",
+		"body": "vertical-align: middle;"
+	},
+	"vertical-align: top": {
+		"prefix": "vat",
+		"body": "vertical-align: top;"
+	},
+	"visibility": {
+		"prefix": "vis",
+		"body": "visibility: ${1|visible,hidden,collapse|};"
+	},
+	"visibility: visible": {
+		"prefix": "visv",
+		"body": "visibility: visible;"
+	},
+	"visibility: hidden": {
+		"prefix": "vish",
+		"body": "visibility: hidden;"
+	},
+	"word-break": {
+		"prefix": "wb",
+		"body": "word-break: ${1|break-all,keep-all,break-word,normal|};"
+	},
+	"width": {
+		"prefix": "wid",
+		"body": "width: ${0:0};"
+	},
+	"width: auto": {
+		"prefix": "wida",
+		"body": "width: auto;"
+	},
+	"white-space": {
+		"prefix": "ws",
+		"body": "white-space: ${1|nowrap,pre,pre-wrap,pre-line,normal|};"
+	},
+	"white-space: nowrap": {
+		"prefix": "wsn",
+		"body": "white-space: nowrap;"
+	},
+	"white-space: pre": {
+		"prefix": "wsp",
+		"body": "white-space: pre;"
+	},
+	"word-wrap": {
+		"prefix": "ww",
+		"body": "word-wrap: ${1|break-word,break-spaces,normal|};"
+	},
+	"z-index": {
+		"prefix": "zi",
+		"body": "z-index: ${0:-1};"
+	},
+	"@import": {
+		"prefix": "imp",
+		"body": "@import '${0:filename}';"
+	},
+	"@mixin": {
+		"prefix": "mix",
+		"body": "@mixin ${1:name} {\n  $0\n}"
+	},
+	"@include": {
+		"prefix": "inc",
+		"body": "@include ${0:mixin};"
+	},
+	"@keyframes": {
+		"prefix": "key",
+		"body": "@keyframes ${1:name} {\n  $0\n}"
+	},
+	"@media": {
+		"prefix": "med",
+		"body": "@media screen and (${1:max-width: 300px}) {\n  $0\n}"
+	},
+	"!important": {
+		"prefix": "!",
+		"body": "!important"
+	},
+	"!important (alt)": {
+		"prefix": "i",
+		"body": "!important"
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"accordion with plus and minus icons": {
+		"prefix": "accordion",
+		"body": ".accordion .card-header:after {\n  font-family: 'FontAwesome';\n  content: \"\f068\";\n  float: right;\n}\n.accordion .card-header.collapsed:after {\n  /* symbol for \"collapsed\" panels */\n  content: \"\f067\";\n}"
+	},
+	"carousel with indicators,controls and captions": {
+		"prefix": "carousel-slider",
+		"body": ".carousel-inner img {\n  width: 100%;\n  height: 100%;\n}"
+	},
+	"timeline with responsive": {
+		"prefix": "timeline-r",
+		"body": ".timeline {\n  list-style: none;\n  padding: 20px 0 20px;\n  position: relative;\n}\n.timeline:before {\n  top: 0;\n  bottom: 0;\n  position: absolute;\n  content: \" \";\n  width: 3px;\n  background-color: #eeeeee;\n  left: 50%;\n  margin-left: -1.5px;\n}\n.timeline > li {\n  margin-bottom: 20px;\n  position: relative;\n}\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table;\n}\n.timeline > li:after {\n  clear: both;\n}\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table;\n}\n.timeline > li:after {\n    clear: both;\n}\n.timeline > li > .timeline-panel {\n  width: 46%;\n  float: left;\n  border: 1px solid #d4d4d4;\n  border-radius: 2px;\n  padding: 20px;\n  position: relative;\n  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);\n}\n.timeline > li > .timeline-panel:before {\n  position: absolute;\n  top: 26px;\n  right: -15px;\n  display: inline-block;\n  border-top: 15px solid transparent;\n  border-left: 15px solid #ccc;\n  border-right: 0 solid #ccc;\n  border-bottom: 15px solid transparent;\n  content: \" \";\n}\n.timeline > li > .timeline-panel:after {\n  position: absolute;\n  top: 27px;\n  right: -14px;\n  display: inline-block;\n  border-top: 14px solid transparent;\n  border-left: 14px solid #fff;\n  border-right: 0 solid #fff;\n  border-bottom: 14px solid transparent;\n  content: \" \";\n}\n.timeline > li > .timeline-badge {\n  color: #fff;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  font-size: 1.4em;\n  text-align: center;\n  position: absolute;\n  top: 16px;\n  left: 50%;\n  margin-left: -25px;\n  background-color: #999999;\n  z-index: 100;\n  border-top-right-radius: 50%;\n  border-top-left-radius: 50%;\n  border-bottom-right-radius: 50%;\n  border-bottom-left-radius: 50%;\n}\n.timeline > li.timeline-inverted > .timeline-panel {\n  float: right;\n}\n.timeline > li.timeline-inverted > .timeline-panel:before {\n  border-left-width: 0;\n  border-right-width: 15px;\n  left: -15px;\n  right: auto;\n}\n.timeline > li.timeline-inverted > .timeline-panel:after {\n  border-left-width: 0;\n  border-right-width: 14px;\n  left: -14px;\n  right: auto;\n}\n@media (max-width: 767px) {\n  ul.timeline:before {\n    left: 40px;\n  }\n  ul.timeline > li > .timeline-panel {\n    width: calc(100% - 90px);\n    width: -moz-calc(100% - 90px);\n    width: -webkit-calc(100% - 90px);\n  }\n  ul.timeline > li > .timeline-badge {\n    left: 15px;\n    margin-left: 0;\n    top: 16px;\n  }\n  ul.timeline > li > .timeline-panel {\n    float: right;\n  }\n  ul.timeline > li > .timeline-panel:before {\n    border-left-width: 0;\n    border-right-width: 15px;\n    left: -15px;\n    right: auto;\n  }\n  ul.timeline > li > .timeline-panel:after {\n    border-left-width: 0;\n    border-right-width: 14px;\n    left: -14px;\n    right: auto;\n  }\n}"
+	},
+	"Basic footer": {
+		"prefix": "footer",
+		"body": ".footer-v1.bg-img {\n  background-color: black;\n  background-repeat: repeat;\n}\n.headline {\n\tdisplay: block;\n\tmargin: 10px 0 25px 0;\n\tborder-bottom: 1px dotted #e4e9f0;\n  color: white;\n  font-size: 20px;\n}\n.headline p {\n\tmargin: 0 0 -2px 0;\n\tpadding-bottom: 5px;\n\tdisplay: inline-block;\n\tborder-bottom: 2px solid #7e57c2;\n}\n.link-list > li{\n  padding: 7px 0px;\n}\n.link-list > li > a , .link-list > li> i{\n  color:#eee;\n  font-size: 16px;\n}"
+	},
+	"Flip card on hover": {
+		"prefix": "flip-card",
+		"body": ".flip-card {\n  background-color: transparent;\n  width: 200px;\n  height: 200px;\n  perspective: 1000px;\n}\n.flip-card-inner {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  transition: transform 0.6s;\n  transform-style: preserve-3d;\n  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);\n}\n.flip-card:hover .flip-card-inner {\n  transform: rotateY(180deg);\n}\n.flip-card-front, .flip-card-back {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  backface-visibility: hidden;\n}\n.flip-card-front {\n  background-color: #bbb;\n  color: black;\n  z-index: 2;\n}\n.flip-card-back {\n  background-color: #2980b9;\n  color: white;\n  transform: rotateY(180deg);\n  z-index: 1;\n}"
+	},
+	"sticky sidebar collapse to icons with responsive": {
+		"prefix": "sidebar-icons",
+		"body": "#wrapper {\n  padding-left: 0;\n  -webkit-transition: all 0.6s ease;\n  -moz-transition: all 0.6s ease;\n  -o-transition: all 0.6s ease;\n  transition: all 0.6s ease;\n}\n#wrapper.toggled {\n  padding-left: 200px;\n}\n#sidebar-wrapper {\n  z-index: 1000;\n  position: fixed;\n  left: 250px;\n  width: 0;\n  height: 100%;\n  margin-left: -250px;\n  overflow-y: auto;\n  background-color:#312A25 !Important;\n  -webkit-transition: all 0.5s ease;\n  -moz-transition: all 0.5s ease;\n  -o-transition: all 0.5s ease;\n  transition: all 0.5s ease;\n}\n#wrapper.toggled #sidebar-wrapper {\n   width: 0;\n}\n#page-content-wrapper {\n   width: 100%;\n   position: absolute;\n   padding: 10px;\n}\n#wrapper.toggled #page-content-wrapper {\n   position: absolute;\n   margin-left:-250px;\n}\n.sidebar-nav {\n   position: absolute;\n   top: 0;\n   right:15px;\n   width: 200px;\n   margin: 0;\n   padding: 0;\n   list-style: none;\n}\n.sidebar-nav li {\n   text-indent: 20px;\n   line-height: 40px;\n}\n.sidebar-nav li a {\n   display: block;\n   text-decoration: none;\n   color: #999999;\n}\n.sidebar-nav li a:hover {\n   text-decoration: none;\n   color: #fff;\n   background: #312A25;\n}\n.sidebar-nav li a:active,\n.sidebar-nav li a:focus {\n   text-decoration: none;\n}\n.sidebar-nav > .sidebar-brand {\n   height: 60px;\n   font-size: 18px;\n}\n.sidebar-nav > .sidebar-brand a {\n   color: #999999;\n}\n.sidebar-nav > .sidebar-brand a:hover {\n   color: #fff;\n   background: none;\n}\n@media(min-width:768px) {\n  #wrapper {\n    padding-left: 220px;\n  }\n  #wrapper.toggled {\n    padding-left: 0;\n  }\n  #sidebar-wrapper {\n    width: 200px;\n  }\n  #wrapper.toggled #sidebar-wrapper {\n    width: 40px;\n  }\n  #wrapper.toggled span {\n    visibility:hidden;\n  }\n  #wrapper.toggled   i {\n    float:right;\n  }\n  #page-content-wrapper {\n    padding: 20px;\n    position: relative;\n  }\n   #wrapper.toggled #page-content-wrapper {\n     position: relative;\n     margin-right: 0;\n   }\n}\n@media(max-width:414px) {\n  #wrapper.toggled #page-content-wrapper {\n    position: absolute;\n    margin-right:60px;\n  }\n  #wrapper.toggled {\n    padding-right: 60px;\n  }\n  #wrapper {\n    padding-left: 20px;\n  }\n  #wrapper.toggled {\n    padding-left: 0;\n  }\n  #sidebar-wrapper {\n    width: 50px;\n  }\n  #wrapper.toggled #sidebar-wrapper {\n     width: 140px;\n  }\n  #wrapper.toggled span {\n     visibility:visible;\n     position:relative;\n     left:70px;\n     bottom:13px;\n  }\n  #wrapper span {\n     visibility:hidden;\n   }\n  #wrapper.toggled   i {\n    float:right;\n  }\n  #wrapper i {\n    float:right;\n  }\n  #page-content-wrapper {\n    padding: 5px;\n    position: relative;\n  }\n  #wrapper.toggled #page-content-wrapper {\n    position: relative;\n    margin-right: 0;\n  }\n}"
+	},
+	"icon with blocks": {
+		"prefix": "icon-blocks",
+		"body": ".icon-circle{\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  display: flex;\n  background-color: #eee;\n}"
+	}
+}

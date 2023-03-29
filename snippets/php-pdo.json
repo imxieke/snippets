@@ -1,0 +1,188 @@
+{
+	"Connect to database via PDO": {
+		"prefix": "p-PDOConnect",
+		"body": [
+			"  try {",
+			"    $$dbconn = new PDO(\"mysql:host=localhost;dbname=db1;charset=utf8\", \"user\", \"password\");",
+			"    $$dbconn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);",
+			"    $$stmt = $$dbconn->prepare(\"sql\");",
+			"",
+			"    $$stmt->bindValue(\":var\", $$var);",
+			"",
+			"    $$stmt->execute();",
+			"} catch (PDOException $$e) {",
+			"    echo \"Error: \" . $$e->getMessage();",
+			"}"
+		],
+		"description": "connect to database via PDO "
+	},
+	"INSERT SQL Statement": {
+		"prefix": "p-SQLInsert",
+		"body": [
+			"INSERT INTO `table1`(`col1`, `col2`) VALUES (:var1, :var2)"
+		],
+		"description": "SQL Insert Statement"
+	},
+	"DELETE SQL Statement": {
+		"prefix": "p-SQLDelete",
+		"body": [
+			"DELETE FROM `table1` WHERE `col1`=:var1"
+		],
+		"description": "SQL Delete Statement"
+	},
+	"UPDATE SQL Statement": {
+		"prefix": "p-SQLUpdate",
+		"body": [
+			"UPDATE `table1` SET col1=:var1 WHERE `col2`=:var2"
+		],
+		"description": "SQL Delete Statement"
+	},
+	"Copyright Notice PHP": {
+		"prefix": "p-PHPCopyright",
+		"body": [
+			"<?=\"Copyright &copy; \" . date(\"Y\") . \". All Rights Reserved.\"?>"
+		],
+		"description": "SQL Delete Statement"
+	},
+	"Fontawesome CDN": {
+		"prefix": "p-CDNFontAwesome5.8.2",
+		"body": [
+			"<script defer src=\"https://use.fontawesome.com/releases/v5.8.2/js/all.js\" integrity=\"sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH\" crossorigin=\"anonymous\"></script>"
+		],
+		"description": "FontAwesome CDN Snippet"
+	},
+	"Fontawesome Twitter": {
+		"prefix": "p-FATwitter",
+		"body": [
+			"<i class=\"fab fa-twitter\"></i>"
+		],
+		"description": "FontAwesome Twitter Icon"
+	},
+	"Fontawesome Facebook": {
+		"prefix": "p-FAFacebook",
+		"body": [
+			"<i class=\"fab fa-facebook\"></i>"
+		],
+		"description": "FontAwesome Facebook Icon"
+	},
+	"Fontawesome Yelp": {
+		"prefix": "p-FAYelp",
+		"body": [
+			"<i class=\"fab fa-yelp\"></i>"
+		],
+		"description": "FontAwesome Yelp Icon"
+	},
+	"Filter Html": {
+		"prefix": "p-FilterHtml",
+		"body": [
+			"$$var=htmlspecialchars($$var)"
+		],
+		"description": "Filters Html from malicious javascript etc"
+	},
+	"Validate Email": {
+		"prefix": "p-FilterEmail",
+		"body": [
+			"filter_var($email, FILTER_VALIDATE_EMAIL)"
+		],
+		"description": "validated if correct email address"
+	},
+	"MySQLi SELECT": {
+		"prefix": "gmysqliSELECT",
+		"body": [
+			"$$sql = 'SELECT ${1:columns} FROM ${2:tables}';",
+			"$$result = $$mysqli->query($$sql);",
+			"while($$row = $$result->fetch_assoc())",
+			"{",
+			"\techo $$row['${3:column}'];",
+			"}"
+		],
+		"description": "Writes out a SELECT statement"
+	},
+	"MySQLi SELECT PREPARED": {
+		"prefix": "gmysqliSELECTPREPARED",
+		"body": [
+			"$$sql = 'SELECT ${1:columns} FROM ${2:tables}';",
+			"$$stmt = $$mysqli->prepare($$sql);",
+			"$$stmt->bind_param('s', ${3:$$variable});",
+			"${3:$$variable} = 'variable';",
+			"$$stmt->execute();",
+			"",
+			"$$stmt->bind_result(${4:$$resultVariable});",
+			"",
+			"while ($$stmt->fetch())",
+			"{",
+			"\techo ${4:$$resultVariable};",
+			"}"
+		],
+		"description": "Writes out a PREPARED SELECT statement"
+	},
+	"MySQLi INSERT": {
+		"prefix": "gmysqliINSERT",
+		"body": [
+			"$$sql = 'INSERT INTO ${1:columns} VALUES (${2:$$value})';",
+			"$$stmt->execute($$sql);"
+		],
+		"description": "Writes out an INSERT statement"
+	},
+	"MySQLi INSERT PREPARED": {
+		"prefix": "gmysqliINSERTPREPARED",
+		"body": [
+			"$$sql = 'INSERT INTO ${1:columns} VALUES (?)';",
+			"$$stmt = $$mysqli->prepare($$sql);",
+			"$$stmt->bind_param('s', ${2:$$variable});",
+			"${2:$$variable} = '${3:variable}';",
+			"$$stmt->execute();"
+		],
+		"description": "Writes out a PREPARED INSERT statement"
+	},
+	"MySQLi UPDATE": {
+		"prefix": "gmysqliUPDATE",
+		"body": [
+			"$$sql = 'UPDATE ${1:table} SET ${2:column}='${3:$$variable}' WHERE ${4:condition}';",
+			"$$mysqli->query($$sql);"
+		],
+		"description": "Writes out an UPDATE statement"
+	},
+	"MySQLi UPDATE PREPARED": {
+		"prefix": "gmysqliUPDATEPREPARED",
+		"body": [
+			"$$sql = 'UPDATE ${1:table} SET ${2:column}=? WHERE ${3:condition}';",
+			"$$stmt = $$mysqli->prepare($$sql);",
+			"$$stmt->bind_param('s', ${4:$$variable});",
+			"${4:$$variable} = '${5:variable}';",
+			"$$stmt->execute();"
+		],
+		"description": "Writes out a PREPARED UPDATE statement"
+	},
+	"MySQLi DELETE": {
+		"prefix": "gmysqliDELETE",
+		"body": [
+			"$$sql = 'DELETE FROM ${1:table} WHERE ${2:condition}';",
+			"$$mysqli->query($$sql);"
+		],
+		"description": "Writes out a DELETE statement"
+	},
+	"MySQLi DELETE PREPARED": {
+		"prefix": "gmysqliDELETEPREPARED",
+		"body": [
+			"$$sql = 'DELETE FROM ${1:table} WHERE ${2:condition}';",
+			"$$stmt = $$mysqli->prepare($$sql);",
+			"$$stmt->bind_param('s', ${3:$$variable});",
+			"${3:$$variable} = '${4:variable}';",
+			"$$stmt->execute();"
+		],
+		"description": "Writes out a PREPARED DELETE statement"
+	},
+	"MySQLi CONNECT to a database": {
+		"prefix": "gmysqliCONNECT",
+		"body": [
+			"CONST HOST = '${1:localhost}';",
+			"CONST USER = '${2:root}';",
+			"CONST PASSWORD = '${3:}';",
+			"CONST DATABASE = '${4:database}';",
+			"",
+			"$$mysqli = new mysqli(HOST,USER,PASSWORD,DATABASE);"
+		],
+		"description": "Creates a connection to a database"
+	}
+}

@@ -1,0 +1,4703 @@
+{
+	"Blade Directives - @if (Laravel snippet)": {
+		"prefix": "@if",
+		"body": [
+			"@if ()"
+		],
+		"description": "Blade Directives - @if (Laravel snippet)"
+	},
+	"Blade Directives - @elseif (Laravel snippet)": {
+		"prefix": "@elseif",
+		"body": [
+			"@elseif ()"
+		],
+		"description": "Blade Directives - @elseif (Laravel snippet)"
+	},
+	"Blade Directives - @else (Laravel snippet)": {
+		"prefix": "@else",
+		"body": [
+			"@else"
+		],
+		"description": "Blade Directives - @else (Laravel snippet)"
+	},
+	"Blade Directives - @endif (Laravel snippet)": {
+		"prefix": "@endif",
+		"body": [
+			"@endif"
+		],
+		"description": "Blade Directives - @endif (Laravel snippet)"
+	},
+	"Blade Directives - @unless (Laravel snippet)": {
+		"prefix": "@unless",
+		"body": [
+			"@unless ()"
+		],
+		"description": "Blade Directives - @unless (Laravel snippet)"
+	},
+	"Blade Directives - @endunless (Laravel snippet)": {
+		"prefix": "@endunless",
+		"body": [
+			"@endunless"
+		],
+		"description": "Blade Directives - @endunless (Laravel snippet)"
+	},
+	"Blade Directives - @isset (Laravel snippet)": {
+		"prefix": "@isset",
+		"body": [
+			"@isset()"
+		],
+		"description": "Blade Directives - @isset (Laravel snippet)"
+	},
+	"Blade Directives - @endisset (Laravel snippet)": {
+		"prefix": "@endisset",
+		"body": [
+			"@endisset"
+		],
+		"description": "Blade Directives - @endisset (Laravel snippet)"
+	},
+	"Blade Directives - @empty (Laravel snippet)": {
+		"prefix": "@empty",
+		"body": [
+			"@empty()"
+		],
+		"description": "Blade Directives - @empty (Laravel snippet)"
+	},
+	"Blade Directives - @endempty (Laravel snippet)": {
+		"prefix": "@endempty",
+		"body": [
+			"@endempty"
+		],
+		"description": "Blade Directives - @endempty (Laravel snippet)"
+	},
+	"Authentication Directives - @auth (Laravel snippet)": {
+		"prefix": "@auth",
+		"body": [
+			"@auth"
+		],
+		"description": "Authentication Directives - @auth (Laravel snippet)"
+	},
+	"Authentication Directives - @endauth (Laravel snippet)": {
+		"prefix": "@endauth",
+		"body": [
+			"@endauth"
+		],
+		"description": "Authentication Directives - @endauth (Laravel snippet)"
+	},
+	"Authentication Directives - @guest (Laravel snippet)": {
+		"prefix": "@guest",
+		"body": [
+			"@guest"
+		],
+		"description": "Authentication Directives - @guest (Laravel snippet)"
+	},
+	"Authentication Directives - @endguest (Laravel snippet)": {
+		"prefix": "@endguest",
+		"body": [
+			"@endguest"
+		],
+		"description": "Authentication Directives - @endguest (Laravel snippet)"
+	},
+	"Environment Directives - @production (Laravel snippet)": {
+		"prefix": "@production",
+		"body": [
+			"@production"
+		],
+		"description": "Environment Directives - @production (Laravel snippet)"
+	},
+	"Environment Directives - @endproduction (Laravel snippet)": {
+		"prefix": "@endproduction",
+		"body": [
+			"@endproduction"
+		],
+		"description": "Environment Directives - @endproduction (Laravel snippet)"
+	},
+	"Environment Directives - @env (Laravel snippet)": {
+		"prefix": "@env",
+		"body": [
+			"@env()"
+		],
+		"description": "Environment Directives - @env (Laravel snippet)"
+	},
+	"Environment Directives - @endenv (Laravel snippet)": {
+		"prefix": "@endenv",
+		"body": [
+			"@endenv"
+		],
+		"description": "Environment Directives - @endenv (Laravel snippet)"
+	},
+	"Section Directives - @hasSection (Laravel snippet)": {
+		"prefix": "@hasSection",
+		"body": [
+			"@hasSection()"
+		],
+		"description": "Section Directives - @hasSection (Laravel snippet)"
+	},
+	"Section Directives - @sectionMissing (Laravel snippet)": {
+		"prefix": "@sectionMissing",
+		"body": [
+			"@sectionMissing()"
+		],
+		"description": "Section Directives - @sectionMissing (Laravel snippet)"
+	},
+	"Switch Statements - @switch (Laravel snippet)": {
+		"prefix": "@switch",
+		"body": [
+			"@switch()"
+		],
+		"description": "Switch Statements - @switch (Laravel snippet)"
+	},
+	"Switch Statements - @case (Laravel snippet)": {
+		"prefix": "@case",
+		"body": [
+			"@case()"
+		],
+		"description": "Switch Statements - @case (Laravel snippet)"
+	},
+	"Switch Statements - @break (Laravel snippet)": {
+		"prefix": "@break",
+		"body": [
+			"@break"
+		],
+		"description": "Switch Statements - @break (Laravel snippet)"
+	},
+	"Switch Statements - @default (Laravel snippet)": {
+		"prefix": "@default",
+		"body": [
+			"@default"
+		],
+		"description": "Switch Statements - @default (Laravel snippet)"
+	},
+	"Switch Statements - @endswitch (Laravel snippet)": {
+		"prefix": "@endswitch",
+		"body": [
+			"@endswitch"
+		],
+		"description": "Switch Statements - @endswitch (Laravel snippet)"
+	},
+	"Loops - @for (Laravel snippet)": {
+		"prefix": "@for",
+		"body": [
+			"@for ()"
+		],
+		"description": "Loops - @for (Laravel snippet)"
+	},
+	"Loops - @endfor (Laravel snippet)": {
+		"prefix": "@endfor",
+		"body": [
+			"@endfor"
+		],
+		"description": "Loops - @endfor (Laravel snippet)"
+	},
+	"Loops - @foreach (Laravel snippet)": {
+		"prefix": "@foreach",
+		"body": [
+			"@foreach ()"
+		],
+		"description": "Loops - @foreach (Laravel snippet)"
+	},
+	"Loops - @endforeach (Laravel snippet)": {
+		"prefix": "@endforeach",
+		"body": [
+			"@endforeach"
+		],
+		"description": "Loops - @endforeach (Laravel snippet)"
+	},
+	"Loops - @forelse (Laravel snippet)": {
+		"prefix": "@forelse",
+		"body": [
+			"@forelse ()"
+		],
+		"description": "Loops - @forelse (Laravel snippet)"
+	},
+	"Loops - @empty (Laravel snippet)": {
+		"prefix": "@empty",
+		"body": [
+			"@empty"
+		],
+		"description": "Loops - @empty (Laravel snippet)"
+	},
+	"Loops - @endforelse (Laravel snippet)": {
+		"prefix": "@endforelse",
+		"body": [
+			"@endforelse"
+		],
+		"description": "Loops - @endforelse (Laravel snippet)"
+	},
+	"Loops - @while (Laravel snippet)": {
+		"prefix": "@while",
+		"body": [
+			"@while ()"
+		],
+		"description": "Loops - @while (Laravel snippet)"
+	},
+	"Loops - @endwhile (Laravel snippet)": {
+		"prefix": "@endwhile",
+		"body": [
+			"@endwhile"
+		],
+		"description": "Loops - @endwhile (Laravel snippet)"
+	},
+	"Including Subviews - @include (Laravel snippet)": {
+		"prefix": "@include",
+		"body": [
+			"@include()"
+		],
+		"description": "Including Subviews - @include (Laravel snippet)"
+	},
+	"Including Subviews - @includeIf (Laravel snippet)": {
+		"prefix": "@includeIf",
+		"body": [
+			"@includeIf()"
+		],
+		"description": "Including Subviews - @includeIf (Laravel snippet)"
+	},
+	"Including Subviews - @includeWhen (Laravel snippet)": {
+		"prefix": "@includeWhen",
+		"body": [
+			"@includeWhen()"
+		],
+		"description": "Including Subviews - @includeWhen (Laravel snippet)"
+	},
+	"Including Subviews - @includeUnless (Laravel snippet)": {
+		"prefix": "@includeUnless",
+		"body": [
+			"@includeUnless()"
+		],
+		"description": "Including Subviews - @includeUnless (Laravel snippet)"
+	},
+	"Including Subviews - @includeFirst (Laravel snippet)": {
+		"prefix": "@includeFirst",
+		"body": [
+			"@includeFirst()"
+		],
+		"description": "Including Subviews - @includeFirst (Laravel snippet)"
+	},
+	"Including Subviews - @extends (Laravel snippet)": {
+		"prefix": "@extends",
+		"body": [
+			"@extends()"
+		],
+		"description": "Including Subviews - @extends (Laravel snippet)"
+	},
+	"Rendering Views For Collections - @each (Laravel snippet)": {
+		"prefix": "@each",
+		"body": [
+			"@each()"
+		],
+		"description": "Rendering Views For Collections - @each (Laravel snippet)"
+	},
+	"The Once Directive - @once (Laravel snippet)": {
+		"prefix": "@once",
+		"body": [
+			"@once"
+		],
+		"description": "The Once Directive - @once (Laravel snippet)"
+	},
+	"The Once Directive - @endonce (Laravel snippet)": {
+		"prefix": "@endonce",
+		"body": [
+			"@endonce"
+		],
+		"description": "The Once Directive - @endonce (Laravel snippet)"
+	},
+	"Defining A Layout - @section (Laravel snippet)": {
+		"prefix": "@section",
+		"body": [
+			"@section()"
+		],
+		"description": "Defining A Layout - @section (Laravel snippet)"
+	},
+	"Defining A Layout - @endsection (Laravel snippet)": {
+		"prefix": "@endsection",
+		"body": [
+			"@endsection"
+		],
+		"description": "Defining A Layout - @endsection (Laravel snippet)"
+	},
+	"Defining A Layout - @parent (Laravel snippet)": {
+		"prefix": "@parent",
+		"body": [
+			"@parent"
+		],
+		"description": "Defining A Layout - @parent (Laravel snippet)"
+	},
+	"Defining A Layout - @yield (Laravel snippet)": {
+		"prefix": "@yield",
+		"body": [
+			"@yield()"
+		],
+		"description": "Defining A Layout - @yield (Laravel snippet)"
+	},
+	"CSRF Field - @csrf (Laravel snippet)": {
+		"prefix": "@csrf",
+		"body": [
+			"@csrf"
+		],
+		"description": "CSRF Field - @csrf (Laravel snippet)"
+	},
+	"Method Field - @method (Laravel snippet)": {
+		"prefix": "@method",
+		"body": [
+			"@method()"
+		],
+		"description": "Method Field - @method (Laravel snippet)"
+	},
+	"Validation Errors - @error (Laravel snippet)": {
+		"prefix": "@error",
+		"body": [
+			"@error()"
+		],
+		"description": "Validation Errors - @error (Laravel snippet)"
+	},
+	"Validation Errors - @enderror (Laravel snippet)": {
+		"prefix": "@enderror",
+		"body": [
+			"@enderror"
+		],
+		"description": "Validation Errors - @enderror (Laravel snippet)"
+	},
+	"Raw PHP - @php & @endphp(Laravel snippet)": {
+		"prefix": "@php",
+		"body": [
+			"@php",
+			"@endphp"
+		],
+		"description": "Raw PHP - @php & @endphp(Laravel snippet)"
+	},
+	"Available Collection Methods - first() (Laravel snippet)": {
+		"prefix": "->first",
+		"body": [
+			"->first()"
+		],
+		"description": "Available Collection Methods - first() (Laravel snippet)"
+	},
+	"Available Collection Methods - get() (Laravel snippet)": {
+		"prefix": "->get",
+		"body": [
+			"->get()"
+		],
+		"description": "Available Collection Methods - get() (Laravel snippet)"
+	},
+	"Available Collection Methods - all() (Laravel snippet)": {
+		"prefix": "->all",
+		"body": [
+			"->all()"
+		],
+		"description": "Available Collection Methods - all() (Laravel snippet)"
+	},
+	"Available Collection Methods - has() (Laravel snippet)": {
+		"prefix": "->has",
+		"body": [
+			"->has()"
+		],
+		"description": "Available Collection Methods - has() (Laravel snippet)"
+	},
+	"Available Collection Methods - average() (Laravel snippet)": {
+		"prefix": "->average",
+		"body": [
+			"->average()"
+		],
+		"description": "Available Collection Methods - average() (Laravel snippet)"
+	},
+	"Available Collection Methods - chunk() (Laravel snippet)": {
+		"prefix": "->chunk",
+		"body": [
+			"->chunk()"
+		],
+		"description": "Available Collection Methods - chunk() (Laravel snippet)"
+	},
+	"Available Collection Methods - chunkWhile() (Laravel snippet)": {
+		"prefix": "->chunkWhile",
+		"body": [
+			"->chunkWhile()"
+		],
+		"description": "Available Collection Methods - chunkWhile() (Laravel snippet)"
+	},
+	"Available Collection Methods - collapse() (Laravel snippet)": {
+		"prefix": "->collapse",
+		"body": [
+			"->collapse()"
+		],
+		"description": "Available Collection Methods - collapse() (Laravel snippet)"
+	},
+	"Available Collection Methods - combine() (Laravel snippet)": {
+		"prefix": "->combine",
+		"body": [
+			"->combine()"
+		],
+		"description": "Available Collection Methods - combine() (Laravel snippet)"
+	},
+	"Available Collection Methods - collect() (Laravel snippet)": {
+		"prefix": "->collect",
+		"body": [
+			"->collect()"
+		],
+		"description": "Available Collection Methods - collect() (Laravel snippet)"
+	},
+	"Available Collection Methods - concat() (Laravel snippet)": {
+		"prefix": "->concat",
+		"body": [
+			"->concat()"
+		],
+		"description": "Available Collection Methods - concat() (Laravel snippet)"
+	},
+	"Available Collection Methods - contains() (Laravel snippet)": {
+		"prefix": "->contains",
+		"body": [
+			"->contains()"
+		],
+		"description": "Available Collection Methods - contains() (Laravel snippet)"
+	},
+	"Available Collection Methods - count() (Laravel snippet)": {
+		"prefix": "->count",
+		"body": [
+			"->count()"
+		],
+		"description": "Available Collection Methods - count() (Laravel snippet)"
+	},
+	"Available Collection Methods - countBy() (Laravel snippet)": {
+		"prefix": "->countBy",
+		"body": [
+			"->countBy()"
+		],
+		"description": "Available Collection Methods - countBy() (Laravel snippet)"
+	},
+	"Available Collection Methods - crossJoin() (Laravel snippet)": {
+		"prefix": "->crossJoin",
+		"body": [
+			"->crossJoin()"
+		],
+		"description": "Available Collection Methods - crossJoin() (Laravel snippet)"
+	},
+	"Available Collection Methods - dd() (Laravel snippet)": {
+		"prefix": "->dd",
+		"body": [
+			"->dd()"
+		],
+		"description": "Available Collection Methods - dd() (Laravel snippet)"
+	},
+	"Available Collection Methods - diff() (Laravel snippet)": {
+		"prefix": "->diff",
+		"body": [
+			"->diff()"
+		],
+		"description": "Available Collection Methods - diff() (Laravel snippet)"
+	},
+	"Available Collection Methods - diffAssoc() (Laravel snippet)": {
+		"prefix": "->diffAssoc",
+		"body": [
+			"->diffAssoc()"
+		],
+		"description": "Available Collection Methods - diffAssoc() (Laravel snippet)"
+	},
+	"Available Collection Methods - diffKeys() (Laravel snippet)": {
+		"prefix": "->diffKeys",
+		"body": [
+			"->diffKeys()"
+		],
+		"description": "Available Collection Methods - diffKeys() (Laravel snippet)"
+	},
+	"Available Collection Methods - dump() (Laravel snippet)": {
+		"prefix": "->dump",
+		"body": [
+			"->dump()"
+		],
+		"description": "Available Collection Methods - dump() (Laravel snippet)"
+	},
+	"Available Collection Methods - duplicates() (Laravel snippet)": {
+		"prefix": "->duplicates",
+		"body": [
+			"->duplicates()"
+		],
+		"description": "Available Collection Methods - duplicates() (Laravel snippet)"
+	},
+	"Available Collection Methods - each() (Laravel snippet)": {
+		"prefix": "->each",
+		"body": [
+			"->each()"
+		],
+		"description": "Available Collection Methods - each() (Laravel snippet)"
+	},
+	"Available Collection Methods - eachSpread() (Laravel snippet)": {
+		"prefix": "->eachSpread",
+		"body": [
+			"->eachSpread()"
+		],
+		"description": "Available Collection Methods - eachSpread() (Laravel snippet)"
+	},
+	"Available Collection Methods - every() (Laravel snippet)": {
+		"prefix": "->every",
+		"body": [
+			"->every()"
+		],
+		"description": "Available Collection Methods - every() (Laravel snippet)"
+	},
+	"Available Collection Methods - except() (Laravel snippet)": {
+		"prefix": "->except",
+		"body": [
+			"->except()"
+		],
+		"description": "Available Collection Methods - except() (Laravel snippet)"
+	},
+	"Available Collection Methods - filter() (Laravel snippet)": {
+		"prefix": "->filter",
+		"body": [
+			"->filter()"
+		],
+		"description": "Available Collection Methods - filter() (Laravel snippet)"
+	},
+	"Available Collection Methods - firstWhere() (Laravel snippet)": {
+		"prefix": "->firstWhere",
+		"body": [
+			"->firstWhere()"
+		],
+		"description": "Available Collection Methods - firstWhere() (Laravel snippet)"
+	},
+	"Available Collection Methods - flatMap() (Laravel snippet)": {
+		"prefix": "->flatMap",
+		"body": [
+			"->flatMap()"
+		],
+		"description": "Available Collection Methods - flatMap() (Laravel snippet)"
+	},
+	"Available Collection Methods - flatten() (Laravel snippet)": {
+		"prefix": "->flatten",
+		"body": [
+			"->flatten()"
+		],
+		"description": "Available Collection Methods - flatten() (Laravel snippet)"
+	},
+	"Available Collection Methods - flip() (Laravel snippet)": {
+		"prefix": "->flip",
+		"body": [
+			"->flip()"
+		],
+		"description": "Available Collection Methods - flip() (Laravel snippet)"
+	},
+	"Available Collection Methods - forget() (Laravel snippet)": {
+		"prefix": "->forget",
+		"body": [
+			"->forget()"
+		],
+		"description": "Available Collection Methods - forget() (Laravel snippet)"
+	},
+	"Available Collection Methods - forPage() (Laravel snippet)": {
+		"prefix": "->forPage",
+		"body": [
+			"->forPage()"
+		],
+		"description": "Available Collection Methods - forPage() (Laravel snippet)"
+	},
+	"Available Collection Methods - groupBy() (Laravel snippet)": {
+		"prefix": "->groupBy",
+		"body": [
+			"->groupBy()"
+		],
+		"description": "Available Collection Methods - groupBy() (Laravel snippet)"
+	},
+	"Available Collection Methods - implode() (Laravel snippet)": {
+		"prefix": "->implode",
+		"body": [
+			"->implode()"
+		],
+		"description": "Available Collection Methods - implode() (Laravel snippet)"
+	},
+	"Available Collection Methods - intersect() (Laravel snippet)": {
+		"prefix": "->intersect",
+		"body": [
+			"->intersect()"
+		],
+		"description": "Available Collection Methods - intersect() (Laravel snippet)"
+	},
+	"Available Collection Methods - intersectByKeys() (Laravel snippet)": {
+		"prefix": "->intersectByKeys",
+		"body": [
+			"->intersectByKeys()"
+		],
+		"description": "Available Collection Methods - intersectByKeys() (Laravel snippet)"
+	},
+	"Available Collection Methods - isEmpty() (Laravel snippet)": {
+		"prefix": "->isEmpty",
+		"body": [
+			"->isEmpty()"
+		],
+		"description": "Available Collection Methods - isEmpty() (Laravel snippet)"
+	},
+	"Available Collection Methods - isNotEmpty() (Laravel snippet)": {
+		"prefix": "->isNotEmpty",
+		"body": [
+			"->isNotEmpty()"
+		],
+		"description": "Available Collection Methods - isNotEmpty() (Laravel snippet)"
+	},
+	"Available Collection Methods - join() (Laravel snippet)": {
+		"prefix": "->join",
+		"body": [
+			"->join()"
+		],
+		"description": "Available Collection Methods - join() (Laravel snippet)"
+	},
+	"Available Collection Methods - keyBy() (Laravel snippet)": {
+		"prefix": "->keyBy",
+		"body": [
+			"->keyBy()"
+		],
+		"description": "Available Collection Methods - keyBy() (Laravel snippet)"
+	},
+	"Available Collection Methods - keys() (Laravel snippet)": {
+		"prefix": "->keys",
+		"body": [
+			"->keys()"
+		],
+		"description": "Available Collection Methods - keys() (Laravel snippet)"
+	},
+	"Available Collection Methods - last() (Laravel snippet)": {
+		"prefix": "->last",
+		"body": [
+			"->last()"
+		],
+		"description": "Available Collection Methods - last() (Laravel snippet)"
+	},
+	"Available Collection Methods - map() (Laravel snippet)": {
+		"prefix": "->map",
+		"body": [
+			"->map()"
+		],
+		"description": "Available Collection Methods - map() (Laravel snippet)"
+	},
+	"Available Collection Methods - mapInto() (Laravel snippet)": {
+		"prefix": "->mapInto",
+		"body": [
+			"->mapInto()"
+		],
+		"description": "Available Collection Methods - mapInto() (Laravel snippet)"
+	},
+	"Available Collection Methods - mapSpread() (Laravel snippet)": {
+		"prefix": "->mapSpread",
+		"body": [
+			"->mapSpread()"
+		],
+		"description": "Available Collection Methods - mapSpread() (Laravel snippet)"
+	},
+	"Available Collection Methods - mapToGroups() (Laravel snippet)": {
+		"prefix": "->mapToGroups",
+		"body": [
+			"->mapToGroups()"
+		],
+		"description": "Available Collection Methods - mapToGroups() (Laravel snippet)"
+	},
+	"Available Collection Methods - mapWithKeys() (Laravel snippet)": {
+		"prefix": "->mapWithKeys",
+		"body": [
+			"->mapWithKeys()"
+		],
+		"description": "Available Collection Methods - mapWithKeys() (Laravel snippet)"
+	},
+	"Available Collection Methods - max() (Laravel snippet)": {
+		"prefix": "->max",
+		"body": [
+			"->max()"
+		],
+		"description": "Available Collection Methods - max() (Laravel snippet)"
+	},
+	"Available Collection Methods - median() (Laravel snippet)": {
+		"prefix": "->median",
+		"body": [
+			"->median()"
+		],
+		"description": "Available Collection Methods - median() (Laravel snippet)"
+	},
+	"Available Collection Methods - merge() (Laravel snippet)": {
+		"prefix": "->merge",
+		"body": [
+			"->merge()"
+		],
+		"description": "Available Collection Methods - merge() (Laravel snippet)"
+	},
+	"Available Collection Methods - mergeRecursive() (Laravel snippet)": {
+		"prefix": "->mergeRecursive",
+		"body": [
+			"->mergeRecursive()"
+		],
+		"description": "Available Collection Methods - mergeRecursive() (Laravel snippet)"
+	},
+	"Available Collection Methods - min() (Laravel snippet)": {
+		"prefix": "->min",
+		"body": [
+			"->min()"
+		],
+		"description": "Available Collection Methods - min() (Laravel snippet)"
+	},
+	"Available Collection Methods - mode() (Laravel snippet)": {
+		"prefix": "->mode",
+		"body": [
+			"->mode()"
+		],
+		"description": "Available Collection Methods - mode() (Laravel snippet)"
+	},
+	"Available Collection Methods - nth() (Laravel snippet)": {
+		"prefix": "->nth",
+		"body": [
+			"->nth()"
+		],
+		"description": "Available Collection Methods - nth() (Laravel snippet)"
+	},
+	"Available Collection Methods - only() (Laravel snippet)": {
+		"prefix": "->only",
+		"body": [
+			"->only()"
+		],
+		"description": "Available Collection Methods - only() (Laravel snippet)"
+	},
+	"Available Collection Methods - pad() (Laravel snippet)": {
+		"prefix": "->pad",
+		"body": [
+			"->pad()"
+		],
+		"description": "Available Collection Methods - pad() (Laravel snippet)"
+	},
+	"Available Collection Methods - partition() (Laravel snippet)": {
+		"prefix": "->partition",
+		"body": [
+			"->partition()"
+		],
+		"description": "Available Collection Methods - partition() (Laravel snippet)"
+	},
+	"Available Collection Methods - pipe() (Laravel snippet)": {
+		"prefix": "->pipe",
+		"body": [
+			"->pipe()"
+		],
+		"description": "Available Collection Methods - pipe() (Laravel snippet)"
+	},
+	"Available Collection Methods - pipeInto() (Laravel snippet)": {
+		"prefix": "->pipeInto",
+		"body": [
+			"->pipeInto()"
+		],
+		"description": "Available Collection Methods - pipeInto() (Laravel snippet)"
+	},
+	"Available Collection Methods - pluck() (Laravel snippet)": {
+		"prefix": "->pluck",
+		"body": [
+			"->pluck()"
+		],
+		"description": "Available Collection Methods - pluck() (Laravel snippet)"
+	},
+	"Available Collection Methods - pop() (Laravel snippet)": {
+		"prefix": "->pop",
+		"body": [
+			"->pop()"
+		],
+		"description": "Available Collection Methods - pop() (Laravel snippet)"
+	},
+	"Available Collection Methods - prepend() (Laravel snippet)": {
+		"prefix": "->prepend",
+		"body": [
+			"->prepend()"
+		],
+		"description": "Available Collection Methods - prepend() (Laravel snippet)"
+	},
+	"Available Collection Methods - pull() (Laravel snippet)": {
+		"prefix": "->pull",
+		"body": [
+			"->pull()"
+		],
+		"description": "Available Collection Methods - pull() (Laravel snippet)"
+	},
+	"Available Collection Methods - push() (Laravel snippet)": {
+		"prefix": "->push",
+		"body": [
+			"->push()"
+		],
+		"description": "Available Collection Methods - push() (Laravel snippet)"
+	},
+	"Available Collection Methods - put() (Laravel snippet)": {
+		"prefix": "->put",
+		"body": [
+			"->put()"
+		],
+		"description": "Available Collection Methods - put() (Laravel snippet)"
+	},
+	"Available Collection Methods - random() (Laravel snippet)": {
+		"prefix": "->random",
+		"body": [
+			"->random()"
+		],
+		"description": "Available Collection Methods - random() (Laravel snippet)"
+	},
+	"Available Collection Methods - reduce() (Laravel snippet)": {
+		"prefix": "->reduce",
+		"body": [
+			"->reduce()"
+		],
+		"description": "Available Collection Methods - reduce() (Laravel snippet)"
+	},
+	"Available Collection Methods - reject() (Laravel snippet)": {
+		"prefix": "->reject",
+		"body": [
+			"->reject()"
+		],
+		"description": "Available Collection Methods - reject() (Laravel snippet)"
+	},
+	"Available Collection Methods - replace() (Laravel snippet)": {
+		"prefix": "->replace",
+		"body": [
+			"->replace()"
+		],
+		"description": "Available Collection Methods - replace() (Laravel snippet)"
+	},
+	"Available Collection Methods - replaceRecursive() (Laravel snippet)": {
+		"prefix": "->replaceRecursive",
+		"body": [
+			"->replaceRecursive()"
+		],
+		"description": "Available Collection Methods - replaceRecursive() (Laravel snippet)"
+	},
+	"Available Collection Methods - reverse() (Laravel snippet)": {
+		"prefix": "->reverse",
+		"body": [
+			"->reverse()"
+		],
+		"description": "Available Collection Methods - reverse() (Laravel snippet)"
+	},
+	"Available Collection Methods - search() (Laravel snippet)": {
+		"prefix": "->search",
+		"body": [
+			"->search()"
+		],
+		"description": "Available Collection Methods - search() (Laravel snippet)"
+	},
+	"Available Collection Methods - shift() (Laravel snippet)": {
+		"prefix": "->shift",
+		"body": [
+			"->shift()"
+		],
+		"description": "Available Collection Methods - shift() (Laravel snippet)"
+	},
+	"Available Collection Methods - shuffle() (Laravel snippet)": {
+		"prefix": "->shuffle",
+		"body": [
+			"->shuffle()"
+		],
+		"description": "Available Collection Methods - shuffle() (Laravel snippet)"
+	},
+	"Available Collection Methods - skip() (Laravel snippet)": {
+		"prefix": "->skip",
+		"body": [
+			"->skip()"
+		],
+		"description": "Available Collection Methods - skip() (Laravel snippet)"
+	},
+	"Available Collection Methods - skipUntil() (Laravel snippet)": {
+		"prefix": "->skipUntil",
+		"body": [
+			"->skipUntil()"
+		],
+		"description": "Available Collection Methods - skipUntil() (Laravel snippet)"
+	},
+	"Available Collection Methods - skipWhile() (Laravel snippet)": {
+		"prefix": "->skipWhile",
+		"body": [
+			"->skipWhile()"
+		],
+		"description": "Available Collection Methods - skipWhile() (Laravel snippet)"
+	},
+	"Available Collection Methods - slice() (Laravel snippet)": {
+		"prefix": "->slice",
+		"body": [
+			"->slice()"
+		],
+		"description": "Available Collection Methods - slice() (Laravel snippet)"
+	},
+	"Available Collection Methods - sort() (Laravel snippet)": {
+		"prefix": "->sort",
+		"body": [
+			"->sort()"
+		],
+		"description": "Available Collection Methods - sort() (Laravel snippet)"
+	},
+	"Available Collection Methods - sortBy() (Laravel snippet)": {
+		"prefix": "->sortBy",
+		"body": [
+			"->sortBy()"
+		],
+		"description": "Available Collection Methods - sortBy() (Laravel snippet)"
+	},
+	"Available Collection Methods - sortDesc() (Laravel snippet)": {
+		"prefix": "->sortDesc",
+		"body": [
+			"->sortDesc()"
+		],
+		"description": "Available Collection Methods - sortDesc() (Laravel snippet)"
+	},
+	"Available Collection Methods - sortKeys() (Laravel snippet)": {
+		"prefix": "->sortKeys",
+		"body": [
+			"->sortKeys()"
+		],
+		"description": "Available Collection Methods - sortKeys() (Laravel snippet)"
+	},
+	"Available Collection Methods - splice() (Laravel snippet)": {
+		"prefix": "->splice",
+		"body": [
+			"->splice()"
+		],
+		"description": "Available Collection Methods - splice() (Laravel snippet)"
+	},
+	"Available Collection Methods - split() (Laravel snippet)": {
+		"prefix": "->split",
+		"body": [
+			"->split()"
+		],
+		"description": "Available Collection Methods - split() (Laravel snippet)"
+	},
+	"Available Collection Methods - splitIn() (Laravel snippet)": {
+		"prefix": "->splitIn",
+		"body": [
+			"->splitIn()"
+		],
+		"description": "Available Collection Methods - splitIn() (Laravel snippet)"
+	},
+	"Available Collection Methods - sum() (Laravel snippet)": {
+		"prefix": "->sum",
+		"body": [
+			"->sum()"
+		],
+		"description": "Available Collection Methods - sum() (Laravel snippet)"
+	},
+	"Available Collection Methods - take() (Laravel snippet)": {
+		"prefix": "->take",
+		"body": [
+			"->take()"
+		],
+		"description": "Available Collection Methods - take() (Laravel snippet)"
+	},
+	"Available Collection Methods - takeUntil() (Laravel snippet)": {
+		"prefix": "->takeUntil",
+		"body": [
+			"->takeUntil()"
+		],
+		"description": "Available Collection Methods - takeUntil() (Laravel snippet)"
+	},
+	"Available Collection Methods - takeWhile() (Laravel snippet)": {
+		"prefix": "->takeWhile",
+		"body": [
+			"->takeWhile()"
+		],
+		"description": "Available Collection Methods - takeWhile() (Laravel snippet)"
+	},
+	"Database: Query Builder - get (Laravel snippet)": {
+		"prefix": "get",
+		"body": [
+			"get()"
+		],
+		"description": "Database: Query Builder - get (Laravel snippet)"
+	},
+	"Database: Query Builder - where (Laravel snippet)": {
+		"prefix": "where",
+		"body": [
+			"where()"
+		],
+		"description": "Database: Query Builder - where (Laravel snippet)"
+	},
+	"Database: Query Builder - first (Laravel snippet)": {
+		"prefix": "first",
+		"body": [
+			"first()"
+		],
+		"description": "Database: Query Builder - first (Laravel snippet)"
+	},
+	"Database: Query Builder - find (Laravel snippet)": {
+		"prefix": "find",
+		"body": [
+			"find()"
+		],
+		"description": "Database: Query Builder - find (Laravel snippet)"
+	},
+	"Database: Query Builder - pluck (Laravel snippet)": {
+		"prefix": "pluck",
+		"body": [
+			"pluck()"
+		],
+		"description": "Database: Query Builder - pluck (Laravel snippet)"
+	},
+	"Database: Query Builder - orderBy (Laravel snippet)": {
+		"prefix": "orderBy",
+		"body": [
+			"orderBy()"
+		],
+		"description": "Database: Query Builder - orderBy (Laravel snippet)"
+	},
+	"Database: Query Builder - chunk (Laravel snippet)": {
+		"prefix": "chunk",
+		"body": [
+			"chunk()"
+		],
+		"description": "Database: Query Builder - chunk (Laravel snippet)"
+	},
+	"Database: Query Builder - chunkById (Laravel snippet)": {
+		"prefix": "chunkById",
+		"body": [
+			"chunkById()"
+		],
+		"description": "Database: Query Builder - chunkById (Laravel snippet)"
+	},
+	"Database: Query Builder - update (Laravel snippet)": {
+		"prefix": "update",
+		"body": [
+			"update()"
+		],
+		"description": "Database: Query Builder - update (Laravel snippet)"
+	},
+	"Database: Query Builder - avg (Laravel snippet)": {
+		"prefix": "avg",
+		"body": [
+			"avg()"
+		],
+		"description": "Database: Query Builder - avg (Laravel snippet)"
+	},
+	"Database: Query Builder - exists (Laravel snippet)": {
+		"prefix": "exists",
+		"body": [
+			"exists()"
+		],
+		"description": "Database: Query Builder - exists (Laravel snippet)"
+	},
+	"Database: Query Builder - doesntExist (Laravel snippet)": {
+		"prefix": "exists",
+		"body": [
+			"doesntExist()"
+		],
+		"description": "Database: Query Builder - doesntExist (Laravel snippet)"
+	},
+	"Database: Query Builder - select (Laravel snippet)": {
+		"prefix": "select",
+		"body": [
+			"select()"
+		],
+		"description": "Database: Query Builder - select (Laravel snippet)"
+	},
+	"Database: Query Builder - distinct (Laravel snippet)": {
+		"prefix": "distinct",
+		"body": [
+			"distinct()"
+		],
+		"description": "Database: Query Builder - distinct (Laravel snippet)"
+	},
+	"Database: Query Builder - addSelect (Laravel snippet)": {
+		"prefix": "addSelect",
+		"body": [
+			"addSelect()"
+		],
+		"description": "Database: Query Builder - addSelect (Laravel snippet)"
+	},
+	"Database: Query Builder - groupBy (Laravel snippet)": {
+		"prefix": "groupBy",
+		"body": [
+			"groupBy()"
+		],
+		"description": "Database: Query Builder - groupBy (Laravel snippet)"
+	},
+	"Database: Query Builder - selectRaw (Laravel snippet)": {
+		"prefix": "selectRaw",
+		"body": [
+			"selectRaw()"
+		],
+		"description": "Database: Query Builder - selectRaw (Laravel snippet)"
+	},
+	"Database: Query Builder - whereRaw (Laravel snippet)": {
+		"prefix": "whereRaw",
+		"body": [
+			"whereRaw()"
+		],
+		"description": "Database: Query Builder - whereRaw (Laravel snippet)"
+	},
+	"Database: Query Builder - havingRaw (Laravel snippet)": {
+		"prefix": "havingRaw",
+		"body": [
+			"havingRaw()"
+		],
+		"description": "Database: Query Builder - havingRaw (Laravel snippet)"
+	},
+	"Database: Query Builder - orderByRaw (Laravel snippet)": {
+		"prefix": "orderByRaw",
+		"body": [
+			"orderByRaw()"
+		],
+		"description": "Database: Query Builder - orderByRaw (Laravel snippet)"
+	},
+	"Database: Query Builder - groupByRaw (Laravel snippet)": {
+		"prefix": "groupByRaw",
+		"body": [
+			"groupByRaw()"
+		],
+		"description": "Database: Query Builder - groupByRaw (Laravel snippet)"
+	},
+	"Database: Query Builder - join (Laravel snippet)": {
+		"prefix": "join",
+		"body": [
+			"join()"
+		],
+		"description": "Database: Query Builder - join (Laravel snippet)"
+	},
+	"Database: Query Builder - leftJoin (Laravel snippet)": {
+		"prefix": "leftJoin",
+		"body": [
+			"leftJoin()"
+		],
+		"description": "Database: Query Builder - leftJoin (Laravel snippet)"
+	},
+	"Database: Query Builder - rightJoin (Laravel snippet)": {
+		"prefix": "rightJoin",
+		"body": [
+			"rightJoin()"
+		],
+		"description": "Database: Query Builder - rightJoin (Laravel snippet)"
+	},
+	"Database: Query Builder - crossJoin (Laravel snippet)": {
+		"prefix": "crossJoin",
+		"body": [
+			"crossJoin()"
+		],
+		"description": "Database: Query Builder - crossJoin (Laravel snippet)"
+	},
+	"Database: Query Builder - on (Laravel snippet)": {
+		"prefix": "on",
+		"body": [
+			"on()"
+		],
+		"description": "Database: Query Builder - on (Laravel snippet)"
+	},
+	"Database: Query Builder - joinSub (Laravel snippet)": {
+		"prefix": "joinSub",
+		"body": [
+			"joinSub()"
+		],
+		"description": "Database: Query Builder - joinSub (Laravel snippet)"
+	},
+	"Database: Query Builder - whereNull (Laravel snippet)": {
+		"prefix": "whereNull",
+		"body": [
+			"whereNull()"
+		],
+		"description": "Database: Query Builder - whereNull (Laravel snippet)"
+	},
+	"Database: Query Builder - union (Laravel snippet)": {
+		"prefix": "union",
+		"body": [
+			"union()"
+		],
+		"description": "Database: Query Builder - union (Laravel snippet)"
+	},
+	"Database: Query Builder - orWhere (Laravel snippet)": {
+		"prefix": "orWhere",
+		"body": [
+			"orWhere()"
+		],
+		"description": "Database: Query Builder - orWhere (Laravel snippet)"
+	},
+	"Database: Query Builder - whereJsonContains (Laravel snippet)": {
+		"prefix": "whereJsonContains",
+		"body": [
+			"whereJsonContains()"
+		],
+		"description": "Database: Query Builder - whereJsonContains (Laravel snippet)"
+	},
+	"Database: Query Builder - whereJsonLength (Laravel snippet)": {
+		"prefix": "whereJsonLength",
+		"body": [
+			"whereJsonLength()"
+		],
+		"description": "Database: Query Builder - whereJsonLength (Laravel snippet)"
+	},
+	"Database: Query Builder - whereBetween (Laravel snippet)": {
+		"prefix": "whereBetween",
+		"body": [
+			"whereBetween()"
+		],
+		"description": "Database: Query Builder - whereBetween (Laravel snippet)"
+	},
+	"Database: Query Builder - whereNotBetween (Laravel snippet)": {
+		"prefix": "whereNotBetween",
+		"body": [
+			"whereNotBetween()"
+		],
+		"description": "Database: Query Builder - whereNotBetween (Laravel snippet)"
+	},
+	"Database: Query Builder - whereIn (Laravel snippet)": {
+		"prefix": "whereIn",
+		"body": [
+			"whereIn()"
+		],
+		"description": "Database: Query Builder - whereIn (Laravel snippet)"
+	},
+	"Database: Query Builder - whereNotIn (Laravel snippet)": {
+		"prefix": "whereNotIn",
+		"body": [
+			"whereNotIn()"
+		],
+		"description": "Database: Query Builder - whereNotIn (Laravel snippet)"
+	},
+	"Database: Query Builder - whereDate (Laravel snippet)": {
+		"prefix": "whereDate",
+		"body": [
+			"whereDate()"
+		],
+		"description": "Database: Query Builder - whereDate (Laravel snippet)"
+	},
+	"Database: Query Builder - whereMonth (Laravel snippet)": {
+		"prefix": "whereMonth",
+		"body": [
+			"whereMonth()"
+		],
+		"description": "Database: Query Builder - whereMonth (Laravel snippet)"
+	},
+	"Database: Query Builder - whereDay (Laravel snippet)": {
+		"prefix": "whereDay",
+		"body": [
+			"whereDay()"
+		],
+		"description": "Database: Query Builder - whereDay (Laravel snippet)"
+	},
+	"Database: Query Builder - whereYear (Laravel snippet)": {
+		"prefix": "whereYear",
+		"body": [
+			"whereYear()"
+		],
+		"description": "Database: Query Builder - whereYear (Laravel snippet)"
+	},
+	"Database: Query Builder - whereTime (Laravel snippet)": {
+		"prefix": "whereTime",
+		"body": [
+			"whereTime()"
+		],
+		"description": "Database: Query Builder - whereTime (Laravel snippet)"
+	},
+	"Database: Query Builder - whereColumn (Laravel snippet)": {
+		"prefix": "whereColumn",
+		"body": [
+			"whereColumn()"
+		],
+		"description": "Database: Query Builder - whereColumn (Laravel snippet)"
+	},
+	"Database: Query Builder - latest (Laravel snippet)": {
+		"prefix": "latest",
+		"body": [
+			"latest()"
+		],
+		"description": "Database: Query Builder - latest (Laravel snippet)"
+	},
+	"Database: Query Builder - inRandomOrder (Laravel snippet)": {
+		"prefix": "inRandomOrder",
+		"body": [
+			"inRandomOrder()"
+		],
+		"description": "Database: Query Builder - inRandomOrder (Laravel snippet)"
+	},
+	"Database: Query Builder - reorder (Laravel snippet)": {
+		"prefix": "reorder",
+		"body": [
+			"reorder()"
+		],
+		"description": "Database: Query Builder - reorder (Laravel snippet)"
+	},
+	"Database: Query Builder - having (Laravel snippet)": {
+		"prefix": "having",
+		"body": [
+			"having()"
+		],
+		"description": "Database: Query Builder - having (Laravel snippet)"
+	},
+	"Database: Query Builder - offset (Laravel snippet)": {
+		"prefix": "offset",
+		"body": [
+			"offset()"
+		],
+		"description": "Database: Query Builder - offset (Laravel snippet)"
+	},
+	"Database: Query Builder - limit (Laravel snippet)": {
+		"prefix": "limit",
+		"body": [
+			"limit()"
+		],
+		"description": "Database: Query Builder - limit (Laravel snippet)"
+	},
+	"Database: Query Builder - insert (Laravel snippet)": {
+		"prefix": "insert",
+		"body": [
+			"insert()"
+		],
+		"description": "Database: Query Builder - insert (Laravel snippet)"
+	},
+	"Database: Query Builder - insertOrIgnore (Laravel snippet)": {
+		"prefix": "insertOrIgnore",
+		"body": [
+			"insertOrIgnore()"
+		],
+		"description": "Database: Query Builder - insertOrIgnore (Laravel snippet)"
+	},
+	"Database: Query Builder - insertGetId (Laravel snippet)": {
+		"prefix": "insertGetId",
+		"body": [
+			"insertGetId()"
+		],
+		"description": "Database: Query Builder - insertGetId (Laravel snippet)"
+	},
+	"Database: Query Builder - upsert (Laravel snippet)": {
+		"prefix": "upsert",
+		"body": [
+			"upsert()"
+		],
+		"description": "Database: Query Builder - upsert (Laravel snippet)"
+	},
+	"Database: Query Builder - increment (Laravel snippet)": {
+		"prefix": "increment",
+		"body": [
+			"increment()"
+		],
+		"description": "Database: Query Builder - increment (Laravel snippet)"
+	},
+	"Database: Query Builder - decrement (Laravel snippet)": {
+		"prefix": "decrement",
+		"body": [
+			"decrement()"
+		],
+		"description": "Database: Query Builder - decrement (Laravel snippet)"
+	},
+	"Database: Query Builder - delete (Laravel snippet)": {
+		"prefix": "delete",
+		"body": [
+			"delete()"
+		],
+		"description": "Database: Query Builder - delete (Laravel snippet)"
+	},
+	"Database: Query Builder - truncate (Laravel snippet)": {
+		"prefix": "truncate",
+		"body": [
+			"truncate()"
+		],
+		"description": "Database: Query Builder - truncate (Laravel snippet)"
+	},
+	"Database: Query Builder - sharedLock (Laravel snippet)": {
+		"prefix": "sharedLock",
+		"body": [
+			"sharedLock()"
+		],
+		"description": "Database: Query Builder - sharedLock (Laravel snippet)"
+	},
+	"Database: Query Builder - lockForUpdate (Laravel snippet)": {
+		"prefix": "lockForUpdate",
+		"body": [
+			"lockForUpdate()"
+		],
+		"description": "Database: Query Builder - lockForUpdate (Laravel snippet)"
+	},
+	"Database: Query Builder - dd (Laravel snippet)": {
+		"prefix": "dd",
+		"body": [
+			"dd()"
+		],
+		"description": "Database: Query Builder - dd (Laravel snippet)"
+	},
+	"Database: Query Builder - dump (Laravel snippet)": {
+		"prefix": "dump",
+		"body": [
+			"dump()"
+		],
+		"description": "Database: Query Builder - dump (Laravel snippet)"
+	},
+	"Eloquent - ->fresh (Laravel snippet)": {
+		"prefix": "->fresh",
+		"body": [
+			"->fresh()"
+		],
+		"description": "Eloquent - ->fresh (Laravel snippet)"
+	},
+	"Eloquent - ->reject (Laravel snippet)": {
+		"prefix": "->reject",
+		"body": [
+			"->reject()"
+		],
+		"description": "Eloquent - ->reject (Laravel snippet)"
+	},
+	"Eloquent - ->chunkById (Laravel snippet)": {
+		"prefix": "->chunkById",
+		"body": [
+			"->chunkById()"
+		],
+		"description": "Eloquent - ->chunkById (Laravel snippet)"
+	},
+	"Eloquent - ->lazyById (Laravel snippet)": {
+		"prefix": "->lazyById",
+		"body": [
+			"->lazyById()"
+		],
+		"description": "Eloquent - ->lazyById (Laravel snippet)"
+	},
+	"Eloquent - ->each (Laravel snippet)": {
+		"prefix": "->each",
+		"body": [
+			"->each"
+		],
+		"description": "Eloquent - ->each (Laravel snippet)"
+	},
+	"Eloquent - ->update (Laravel snippet)": {
+		"prefix": "->update",
+		"body": [
+			"->update()"
+		],
+		"description": "Eloquent - ->update (Laravel snippet)"
+	},
+	"Eloquent - ->filter (Laravel snippet)": {
+		"prefix": "->filter",
+		"body": [
+			"->filter()"
+		],
+		"description": "Eloquent - ->filter (Laravel snippet)"
+	},
+	"Eloquent - ->whereColumn (Laravel snippet)": {
+		"prefix": "->whereColumn",
+		"body": [
+			"->whereColumn()"
+		],
+		"description": "Eloquent - ->whereColumn (Laravel snippet)"
+	},
+	"Eloquent - ->orderByDesc (Laravel snippet)": {
+		"prefix": "->orderByDesc",
+		"body": [
+			"->orderByDesc()"
+		],
+		"description": "Eloquent - ->orderByDesc (Laravel snippet)"
+	},
+	"Eloquent - ->limit (Laravel snippet)": {
+		"prefix": "->limit",
+		"body": [
+			"->limit()"
+		],
+		"description": "Eloquent - ->limit (Laravel snippet)"
+	},
+	"Eloquent - ->save (Laravel snippet)": {
+		"prefix": "->save",
+		"body": [
+			"->save()"
+		],
+		"description": "Eloquent - ->save (Laravel snippet)"
+	},
+	"Eloquent - ->isDirty (Laravel snippet)": {
+		"prefix": "->isDirty",
+		"body": [
+			"->isDirty()"
+		],
+		"description": "Eloquent - ->isDirty (Laravel snippet)"
+	},
+	"Eloquent - ->isClean (Laravel snippet)": {
+		"prefix": "->isClean",
+		"body": [
+			"->isClean()"
+		],
+		"description": "Eloquent - ->isClean (Laravel snippet)"
+	},
+	"Eloquent - ->wasChanged  (Laravel snippet)": {
+		"prefix": "->wasChanged",
+		"body": [
+			"->wasChanged()"
+		],
+		"description": "Eloquent - ->wasChanged  (Laravel snippet)"
+	},
+	"Eloquent - ->getOriginal (Laravel snippet)": {
+		"prefix": "->getOriginal",
+		"body": [
+			"->getOriginal()"
+		],
+		"description": "Eloquent - ->getOriginal (Laravel snippet)"
+	},
+	"Eloquent - ->delete (Laravel snippet)": {
+		"prefix": "->delete",
+		"body": [
+			"->delete()"
+		],
+		"description": "Eloquent - ->delete (Laravel snippet)"
+	},
+	"Eloquent - ->softDeletes (Laravel snippet)": {
+		"prefix": "->softDeletes",
+		"body": [
+			"->softDeletes()"
+		],
+		"description": "Eloquent - ->softDeletes (Laravel snippet)"
+	},
+	"Eloquent - ->dropSoftDeletes (Laravel snippet)": {
+		"prefix": "->dropSoftDeletes",
+		"body": [
+			"->dropSoftDeletes()"
+		],
+		"description": "Eloquent - ->dropSoftDeletes (Laravel snippet)"
+	},
+	"Eloquent - ->trashed (Laravel snippet)": {
+		"prefix": "->trashed",
+		"body": [
+			"->trashed()"
+		],
+		"description": "Eloquent - ->trashed (Laravel snippet)"
+	},
+	"Eloquent - ->restore (Laravel snippet)": {
+		"prefix": "->restore",
+		"body": [
+			"->restore()"
+		],
+		"description": "Eloquent - ->restore (Laravel snippet)"
+	},
+	"Eloquent - ->history (Laravel snippet)": {
+		"prefix": "->history",
+		"body": [
+			"->history()"
+		],
+		"description": "Eloquent - ->history (Laravel snippet)"
+	},
+	"Eloquent - ->forceDelete (Laravel snippet)": {
+		"prefix": "->forceDelete",
+		"body": [
+			"->forceDelete()"
+		],
+		"description": "Eloquent - ->forceDelete (Laravel snippet)"
+	},
+	"Eloquent ORM - fresh (Laravel snippet)": {
+		"prefix": "fresh",
+		"body": [
+			"fresh()"
+		],
+		"description": "Eloquent ORM - fresh (Laravel snippet)"
+	},
+	"Eloquent ORM - reject (Laravel snippet)": {
+		"prefix": "reject",
+		"body": [
+			"reject()"
+		],
+		"description": "Eloquent ORM - reject (Laravel snippet)"
+	},
+	"Eloquent ORM - cursor (Laravel snippet)": {
+		"prefix": "cursor",
+		"body": [
+			"cursor()"
+		],
+		"description": "Eloquent ORM - cursor (Laravel snippet)"
+	},
+	"Eloquent ORM - findOrFail (Laravel snippet)": {
+		"prefix": "findOrFail",
+		"body": [
+			"findOrFail()"
+		],
+		"description": "Eloquent ORM - findOrFail (Laravel snippet)"
+	},
+	"Eloquent ORM - firstOrCreate (Laravel snippet)": {
+		"prefix": "firstOrCreate",
+		"body": [
+			"firstOrCreate()"
+		],
+		"description": "Eloquent ORM - firstOrCreate (Laravel snippet)"
+	},
+	"Eloquent ORM - firstOrNew (Laravel snippet)": {
+		"prefix": "firstOrNew",
+		"body": [
+			"firstOrNew()"
+		],
+		"description": "Eloquent ORM - firstOrNew (Laravel snippet)"
+	},
+	"Eloquent ORM - create (Laravel snippet)": {
+		"prefix": "create",
+		"body": [
+			"create()"
+		],
+		"description": "Eloquent ORM - create (Laravel snippet)"
+	},
+	"Eloquent ORM - isDirty (Laravel snippet)": {
+		"prefix": "isDirty",
+		"body": [
+			"isDirty()"
+		],
+		"description": "Eloquent ORM - isDirty (Laravel snippet)"
+	},
+	"Eloquent ORM - isClean (Laravel snippet)": {
+		"prefix": "isClean",
+		"body": [
+			"isClean()"
+		],
+		"description": "Eloquent ORM - isClean (Laravel snippet)"
+	},
+	"Eloquent ORM - wasChanged (Laravel snippet)": {
+		"prefix": "wasChanged",
+		"body": [
+			"wasChanged()"
+		],
+		"description": "Eloquent ORM - wasChanged (Laravel snippet)"
+	},
+	"Eloquent ORM - getOriginal (Laravel snippet)": {
+		"prefix": "getOriginal",
+		"body": [
+			"getOriginal()"
+		],
+		"description": "Eloquent ORM - getOriginal (Laravel snippet)"
+	},
+	"Eloquent ORM - softDeletes (Laravel snippet)": {
+		"prefix": "softDeletes",
+		"body": [
+			"softDeletes()"
+		],
+		"description": "Eloquent ORM - softDeletes (Laravel snippet)"
+	},
+	"Eloquent ORM - dropSoftDeletes (Laravel snippet)": {
+		"prefix": "dropSoftDeletes",
+		"body": [
+			"dropSoftDeletes()"
+		],
+		"description": "Eloquent ORM - dropSoftDeletes (Laravel snippet)"
+	},
+	"Eloquent ORM - trashed (Laravel snippet)": {
+		"prefix": "trashed",
+		"body": [
+			"trashed()"
+		],
+		"description": "Eloquent ORM - trashed (Laravel snippet)"
+	},
+	"Eloquent ORM - restore (Laravel snippet)": {
+		"prefix": "restore",
+		"body": [
+			"restore()"
+		],
+		"description": "Eloquent ORM - restore (Laravel snippet)"
+	},
+	"Eloquent ORM - history (Laravel snippet)": {
+		"prefix": "history",
+		"body": [
+			"history()"
+		],
+		"description": "Eloquent ORM - history (Laravel snippet)"
+	},
+	"Eloquent ORM - forceDelete (Laravel snippet)": {
+		"prefix": "forceDelete",
+		"body": [
+			"forceDelete()"
+		],
+		"description": "Eloquent ORM - forceDelete (Laravel snippet)"
+	},
+	"Eloquent ORM - withTrashed (Laravel snippet)": {
+		"prefix": "withTrashed",
+		"body": [
+			"withTrashed()"
+		],
+		"description": "Eloquent ORM - withTrashed (Laravel snippet)"
+	},
+	"Eloquent ORM - onlyTrashed (Laravel snippet)": {
+		"prefix": "onlyTrashed",
+		"body": [
+			"onlyTrashed()"
+		],
+		"description": "Eloquent ORM - onlyTrashed (Laravel snippet)"
+	},
+	"Eloquent ORM - replicate (Laravel snippet)": {
+		"prefix": "replicate",
+		"body": [
+			"replicate()"
+		],
+		"description": "Eloquent ORM - replicate (Laravel snippet)"
+	},
+	"Eloquent ORM - fill (Laravel snippet)": {
+		"prefix": "fill",
+		"body": [
+			"fill()"
+		],
+		"description": "Eloquent ORM - fill (Laravel snippet)"
+	},
+	"Eloquent ORM - addGlobalScope (Laravel snippet)": {
+		"prefix": "addGlobalScope",
+		"body": [
+			"addGlobalScope()"
+		],
+		"description": "Eloquent ORM - addGlobalScope (Laravel snippet)"
+	},
+	"Eloquent ORM - withoutGlobalScope (Laravel snippet)": {
+		"prefix": "withoutGlobalScope",
+		"body": [
+			"withoutGlobalScope()"
+		],
+		"description": "Eloquent ORM - withoutGlobalScope (Laravel snippet)"
+	},
+	"Eloquent ORM - popular (Laravel snippet)": {
+		"prefix": "popular",
+		"body": [
+			"popular()"
+		],
+		"description": "Eloquent ORM - popular (Laravel snippet)"
+	},
+	"Eloquent ORM - ofType (Laravel snippet)": {
+		"prefix": "ofType",
+		"body": [
+			"ofType()"
+		],
+		"description": "Eloquent ORM - ofType (Laravel snippet)"
+	},
+	"Eloquent ORM - save (Laravel snippet)": {
+		"prefix": "save",
+		"body": [
+			"save()"
+		],
+		"description": "Eloquent ORM - save (Laravel snippet)"
+	},
+	"Eloquent ORM - User::all (Laravel snippet)": {
+		"prefix": "::all",
+		"body": [
+			"::all()"
+		],
+		"description": "Eloquent ORM - User::all (Laravel snippet)"
+	},
+	"Eloquent ORM - User::find (Laravel snippet)": {
+		"prefix": "::find",
+		"body": [
+			"::find()"
+		],
+		"description": "Eloquent ORM - User::find (Laravel snippet)"
+	},
+	"Eloquent ORM - User::::where (Laravel snippet)": {
+		"prefix": "::where",
+		"body": [
+			"::where()"
+		],
+		"description": "Eloquent ORM - User::::where (Laravel snippet)"
+	},
+	"The $loop variable - $loop->index (Laravel snippet)": {
+		"prefix": "$loop->index",
+		"body": [
+			"\\$loop->index"
+		],
+		"description": "The $loop variable - $loop->index (Laravel snippet)"
+	},
+	"The $loop variable - $loop->iteration (Laravel snippet)": {
+		"prefix": "$loop->iteration",
+		"body": [
+			"\\$loop->iteration"
+		],
+		"description": "The $loop variable - $loop->iteration (Laravel snippet)"
+	},
+	"The $loop variable - $loop->remaining (Laravel snippet)": {
+		"prefix": "$loop->remaining",
+		"body": [
+			"\\$loop->remaining"
+		],
+		"description": "The $loop variable - $loop->remaining (Laravel snippet)"
+	},
+	"The $loop variable - $loop->count (Laravel snippet)": {
+		"prefix": "$loop->count",
+		"body": [
+			"\\$loop->count"
+		],
+		"description": "The $loop variable - $loop->count (Laravel snippet)"
+	},
+	"The $loop variable - $loop->first (Laravel snippet)": {
+		"prefix": "$loop->first",
+		"body": [
+			"\\$loop->first"
+		],
+		"description": "The $loop variable - $loop->first (Laravel snippet)"
+	},
+	"The $loop variable - $loop->last (Laravel snippet)": {
+		"prefix": "$loop->last",
+		"body": [
+			"\\$loop->last"
+		],
+		"description": "The $loop variable - $loop->last (Laravel snippet)"
+	},
+	"The $loop variable - $loop->even (Laravel snippet)": {
+		"prefix": "$loop->even",
+		"body": [
+			"\\$loop->even"
+		],
+		"description": "The $loop variable - $loop->even (Laravel snippet)"
+	},
+	"The $loop variable - $loop->odd (Laravel snippet)": {
+		"prefix": "$loop->odd",
+		"body": [
+			"\\$loop->odd"
+		],
+		"description": "The $loop variable - $loop->odd (Laravel snippet)"
+	},
+	"The $loop variable - $loop->depth (Laravel snippet)": {
+		"prefix": "$loop->depth",
+		"body": [
+			"\\$loop->depth"
+		],
+		"description": "The $loop variable - $loop->depth (Laravel snippet)"
+	},
+	"The $loop variable - $loop->parent (Laravel snippet)": {
+		"prefix": "$loop->parent",
+		"body": [
+			"\\$loop->parent"
+		],
+		"description": "The $loop variable - $loop->parent (Laravel snippet)"
+	},
+	"Router Methods - Route::get (Laravel snippet)": {
+		"prefix": "Route::get",
+		"body": [
+			"Route::get()"
+		],
+		"description": "Router Methods - Route::get (Laravel snippet)"
+	},
+	"Router Methods - Route::post (Laravel snippet)": {
+		"prefix": "Route::post",
+		"body": [
+			"Route::post()"
+		],
+		"description": "Router Methods - Route::post (Laravel snippet)"
+	},
+	"Router Methods - Route::put (Laravel snippet)": {
+		"prefix": "Route::put",
+		"body": [
+			"Route::put()"
+		],
+		"description": "Router Methods - Route::put (Laravel snippet)"
+	},
+	"Router Methods - Route::patch (Laravel snippet)": {
+		"prefix": "Route::patch",
+		"body": [
+			"Route::patch()"
+		],
+		"description": "Router Methods - Route::patch (Laravel snippet)"
+	},
+	"Router Methods - Route::delete (Laravel snippet)": {
+		"prefix": "Route::delete",
+		"body": [
+			"Route::delete()"
+		],
+		"description": "Router Methods - Route::delete (Laravel snippet)"
+	},
+	"Router Methods - Route::options (Laravel snippet)": {
+		"prefix": "Route::options",
+		"body": [
+			"Route::options()"
+		],
+		"description": "Router Methods - Route::options (Laravel snippet)"
+	},
+	"Redirect Routes - Route::redirect (Laravel snippet)": {
+		"prefix": "Route::redirect",
+		"body": [
+			"Route::redirect()"
+		],
+		"description": "Redirect Routes - Route::redirect (Laravel snippet)"
+	},
+	"Redirect Routes - Route::permanentRedirect (Laravel snippet)": {
+		"prefix": "Route::permanentRedirect",
+		"body": [
+			"Route::permanentRedirect()"
+		],
+		"description": "Redirect Routes - Route::permanentRedirect (Laravel snippet)"
+	},
+	"View Routes - Route::view (Laravel snippet)": {
+		"prefix": "Route::view",
+		"body": [
+			"Route::view()"
+		],
+		"description": "View Routes - Route::view (Laravel snippet)"
+	},
+	"Fallback Routes - Route::fallback (Laravel snippet)": {
+		"prefix": "Route::fallback",
+		"body": [
+			"Route::fallback()"
+		],
+		"description": "Fallback Routes - Route::fallback (Laravel snippet)"
+	},
+	"Accessing The Current Route - Route::current (Laravel snippet)": {
+		"prefix": "Route::current",
+		"body": [
+			"Route::current()"
+		],
+		"description": "Accessing The Current Route - Route::current (Laravel snippet)"
+	},
+	"Accessing The Current Route - Route::currentRouteName (Laravel snippet)": {
+		"prefix": "Route::currentRouteName",
+		"body": [
+			"Route::currentRouteName()"
+		],
+		"description": "Accessing The Current Route - Route::currentRouteName (Laravel snippet)"
+	},
+	"Accessing The Current Route - Route::currentRouteAction (Laravel snippet)": {
+		"prefix": "Route::currentRouteAction",
+		"body": [
+			"Route::currentRouteAction()"
+		],
+		"description": "Accessing The Current Route - Route::currentRouteAction (Laravel snippet)"
+	},
+	"URLs For Named Routes - (Laravel snippet)": {
+		"prefix": "uses-as",
+		"body": [
+			"'uses' => '',",
+			"'as' => ''"
+		],
+		"description": "URLs For Named Routes - (Laravel snippet)"
+	},
+	"URLs For Named Routes with middleware - (Laravel snippet)": {
+		"prefix": "uses-as-middleware",
+		"body": [
+			"'uses' => '',",
+			"'as' => '',",
+			"'middleware' => []"
+		],
+		"description": "URLs For Named Routes with middleware - (Laravel snippet)"
+	},
+	"Available Column Types - bigIncrements (Laravel snippet)": {
+		"prefix": "->bigIncrements",
+		"body": [
+			"->bigIncrements"
+		],
+		"description": "Available Column Types - bigIncrements (Laravel snippet)"
+	},
+	"Available Column Types - bigInteger (Laravel snippet)": {
+		"prefix": "->bigInteger",
+		"body": [
+			"->bigInteger"
+		],
+		"description": "Available Column Types - bigInteger (Laravel snippet)"
+	},
+	"Available Column Types - binary (Laravel snippet)": {
+		"prefix": "->binary",
+		"body": [
+			"->binary"
+		],
+		"description": "Available Column Types - binary (Laravel snippet)"
+	},
+	"Available Column Types - boolean (Laravel snippet)": {
+		"prefix": "->boolean",
+		"body": [
+			"->boolean"
+		],
+		"description": "Available Column Types - boolean (Laravel snippet)"
+	},
+	"Available Column Types - char (Laravel snippet)": {
+		"prefix": "->char",
+		"body": [
+			"->char"
+		],
+		"description": "Available Column Types - char (Laravel snippet)"
+	},
+	"Available Column Types - dateTimeTz (Laravel snippet)": {
+		"prefix": "->dateTimeTz",
+		"body": [
+			"->dateTimeTz"
+		],
+		"description": "Available Column Types - dateTimeTz (Laravel snippet)"
+	},
+	"Available Column Types - dateTime (Laravel snippet)": {
+		"prefix": "->dateTime",
+		"body": [
+			"->dateTime"
+		],
+		"description": "Available Column Types - dateTime (Laravel snippet)"
+	},
+	"Available Column Types - date (Laravel snippet)": {
+		"prefix": "->date",
+		"body": [
+			"->date"
+		],
+		"description": "Available Column Types - date (Laravel snippet)"
+	},
+	"Available Column Types - decimal (Laravel snippet)": {
+		"prefix": "->decimal",
+		"body": [
+			"->decimal"
+		],
+		"description": "Available Column Types - decimal (Laravel snippet)"
+	},
+	"Available Column Types - double (Laravel snippet)": {
+		"prefix": "->double",
+		"body": [
+			"->double"
+		],
+		"description": "Available Column Types - double (Laravel snippet)"
+	},
+	"Available Column Types - float (Laravel snippet)": {
+		"prefix": "->float",
+		"body": [
+			"->float"
+		],
+		"description": "Available Column Types - float (Laravel snippet)"
+	},
+	"Available Column Types - foreignId (Laravel snippet)": {
+		"prefix": "->foreignId",
+		"body": [
+			"->foreignId"
+		],
+		"description": "Available Column Types - foreignId (Laravel snippet)"
+	},
+	"Available Column Types - id (Laravel snippet)": {
+		"prefix": "->id",
+		"body": [
+			"->id"
+		],
+		"description": "Available Column Types - id (Laravel snippet)"
+	},
+	"Available Column Types - integer (Laravel snippet)": {
+		"prefix": "->integer",
+		"body": [
+			"->integer"
+		],
+		"description": "Available Column Types - integer (Laravel snippet)"
+	},
+	"Available Column Types - lineString (Laravel snippet)": {
+		"prefix": "->lineString",
+		"body": [
+			"->lineString"
+		],
+		"description": "Available Column Types - lineString (Laravel snippet)"
+	},
+	"Available Column Types - longText (Laravel snippet)": {
+		"prefix": "->longText",
+		"body": [
+			"->longText"
+		],
+		"description": "Available Column Types - longText (Laravel snippet)"
+	},
+	"Available Column Types - mediumIncrements (Laravel snippet)": {
+		"prefix": "->mediumIncrements",
+		"body": [
+			"->mediumIncrements"
+		],
+		"description": "Available Column Types - mediumIncrements (Laravel snippet)"
+	},
+	"Available Column Types - mediumInteger (Laravel snippet)": {
+		"prefix": "->mediumInteger",
+		"body": [
+			"->mediumInteger"
+		],
+		"description": "Available Column Types - mediumInteger (Laravel snippet)"
+	},
+	"Available Column Types - mediumText (Laravel snippet)": {
+		"prefix": "->mediumText",
+		"body": [
+			"->mediumText"
+		],
+		"description": "Available Column Types - mediumText (Laravel snippet)"
+	},
+	"Available Column Types - smallIncrements (Laravel snippet)": {
+		"prefix": "->smallIncrements",
+		"body": [
+			"->smallIncrements"
+		],
+		"description": "Available Column Types - smallIncrements (Laravel snippet)"
+	},
+	"Available Column Types - smallInteger (Laravel snippet)": {
+		"prefix": "->smallInteger",
+		"body": [
+			"->smallInteger"
+		],
+		"description": "Available Column Types - smallInteger (Laravel snippet)"
+	},
+	"Available Column Types - string (Laravel snippet)": {
+		"prefix": "->string",
+		"body": [
+			"->string"
+		],
+		"description": "Available Column Types - string (Laravel snippet)"
+	},
+	"Available Column Types - text (Laravel snippet)": {
+		"prefix": "->text",
+		"body": [
+			"->text"
+		],
+		"description": "Available Column Types - text (Laravel snippet)"
+	},
+	"Available Column Types - time (Laravel snippet)": {
+		"prefix": "->time",
+		"body": [
+			"->time"
+		],
+		"description": "Available Column Types - time (Laravel snippet)"
+	},
+	"Available Column Types - timestamp (Laravel snippet)": {
+		"prefix": "->timestamp",
+		"body": [
+			"->timestamp"
+		],
+		"description": "Available Column Types - timestamp (Laravel snippet)"
+	},
+	"Available Column Types - timestamps (Laravel snippet)": {
+		"prefix": "->timestamps",
+		"body": [
+			"->timestamps"
+		],
+		"description": "Available Column Types - timestamps (Laravel snippet)"
+	},
+	"Available Column Types - tinyIncrements (Laravel snippet)": {
+		"prefix": "->tinyIncrements",
+		"body": [
+			"->tinyIncrements"
+		],
+		"description": "Available Column Types - tinyIncrements (Laravel snippet)"
+	},
+	"Available Column Types - tinyInteger (Laravel snippet)": {
+		"prefix": "->tinyInteger",
+		"body": [
+			"->tinyInteger"
+		],
+		"description": "Available Column Types - tinyInteger (Laravel snippet)"
+	},
+	"Session Methods - Session::get (Laravel snippet)": {
+		"prefix": "Session::get",
+		"body": [
+			"Session::get()"
+		],
+		"description": "Session Methods - Session::get (Laravel snippet)"
+	},
+	"Session Methods - Session::put (Laravel snippet)": {
+		"prefix": "Session::put",
+		"body": [
+			"Session::put()"
+		],
+		"description": "Session Methods - Session::put (Laravel snippet)"
+	},
+	"Session Methods - Session::push (Laravel snippet)": {
+		"prefix": "Session::push",
+		"body": [
+			"Session::push()"
+		],
+		"description": "Session Methods - Session::push (Laravel snippet)"
+	},
+	"Session Methods - Session::pull (Laravel snippet)": {
+		"prefix": "Session::pull",
+		"body": [
+			"Session::pull()"
+		],
+		"description": "Session Methods - Session::pull (Laravel snippet)"
+	},
+	"Session Methods - Session::all (Laravel snippet)": {
+		"prefix": "Session::all",
+		"body": [
+			"Session::all()"
+		],
+		"description": "Session Methods - Session::all (Laravel snippet)"
+	},
+	"Session Methods - Session::has (Laravel snippet)": {
+		"prefix": "Session::has",
+		"body": [
+			"Session::has()"
+		],
+		"description": "Session Methods - Session::has (Laravel snippet)"
+	},
+	"Session Methods - Session::forget (Laravel snippet)": {
+		"prefix": "Session::forget",
+		"body": [
+			"Session::forget()"
+		],
+		"description": "Session Methods - Session::forget (Laravel snippet)"
+	},
+	"Session Methods - Session::flush (Laravel snippet)": {
+		"prefix": "Session::flush",
+		"body": [
+			"Session::flush()"
+		],
+		"description": "Session Methods - Session::flush (Laravel snippet)"
+	},
+	"Session Methods - Session::regenerate (Laravel snippet)": {
+		"prefix": "Session::regenerate",
+		"body": [
+			"Session::regenerate()"
+		],
+		"description": "Session Methods - Session::regenerate (Laravel snippet)"
+	},
+	"Session Methods - Session::flash (Laravel snippet)": {
+		"prefix": "Session::flash",
+		"body": [
+			"Session::flash()"
+		],
+		"description": "Session Methods - Session::flash (Laravel snippet)"
+	},
+	"Session Methods - Session::reflash (Laravel snippet)": {
+		"prefix": "Session::reflash",
+		"body": [
+			"Session::reflash()"
+		],
+		"description": "Session Methods - Session::reflash (Laravel snippet)"
+	},
+	"Session Methods - Session::keep (Laravel snippet)": {
+		"prefix": "Session::keep",
+		"body": [
+			"Session::keep()"
+		],
+		"description": "Session Methods - Session::keep (Laravel snippet)"
+	},
+	"Validation Rules  - date (Laravel snippet)": {
+		"prefix": "|date",
+		"body": [
+			"|date"
+		],
+		"description": "Validation Rules  - date (Laravel snippet)"
+	},
+	"Validation Rules  - accepted (Laravel snippet)": {
+		"prefix": "|accepted",
+		"body": [
+			"|accepted"
+		],
+		"description": "Validation Rules  - accepted (Laravel snippet)"
+	},
+	"Validation Rules  - active_url (Laravel snippet)": {
+		"prefix": "|active_url",
+		"body": [
+			"|active_url"
+		],
+		"description": "Validation Rules  - active_url (Laravel snippet)"
+	},
+	"Validation Rules  - after (Laravel snippet)": {
+		"prefix": "|after",
+		"body": [
+			"|after"
+		],
+		"description": "Validation Rules  - after (Laravel snippet)"
+	},
+	"Validation Rules  - after_or_equal (Laravel snippet)": {
+		"prefix": "|after_or_equal",
+		"body": [
+			"|after_or_equal"
+		],
+		"description": "Validation Rules  - after_or_equal (Laravel snippet)"
+	},
+	"Validation Rules  - alpha (Laravel snippet)": {
+		"prefix": "|alpha",
+		"body": [
+			"|alpha"
+		],
+		"description": "Validation Rules  - alpha (Laravel snippet)"
+	},
+	"Validation Rules  - alpha_dash (Laravel snippet)": {
+		"prefix": "|alpha_dash",
+		"body": [
+			"|alpha_dash"
+		],
+		"description": "Validation Rules  - alpha_dash (Laravel snippet)"
+	},
+	"Validation Rules  - alpha_num (Laravel snippet)": {
+		"prefix": "|alpha_num",
+		"body": [
+			"|alpha_num"
+		],
+		"description": "Validation Rules  - alpha_num (Laravel snippet)"
+	},
+	"Validation Rules  - array (Laravel snippet)": {
+		"prefix": "|array",
+		"body": [
+			"|array"
+		],
+		"description": "Validation Rules  - array (Laravel snippet)"
+	},
+	"Validation Rules  - bail (Laravel snippet)": {
+		"prefix": "|bail",
+		"body": [
+			"|bail"
+		],
+		"description": "Validation Rules  - bail (Laravel snippet)"
+	},
+	"Validation Rules  - before (Laravel snippet)": {
+		"prefix": "|before",
+		"body": [
+			"|before"
+		],
+		"description": "Validation Rules  - before (Laravel snippet)"
+	},
+	"Validation Rules  - before_or_equal (Laravel snippet)": {
+		"prefix": "|before_or_equal",
+		"body": [
+			"|before_or_equal"
+		],
+		"description": "Validation Rules  - before_or_equal (Laravel snippet)"
+	},
+	"Validation Rules  - between (Laravel snippet)": {
+		"prefix": "|between",
+		"body": [
+			"|between"
+		],
+		"description": "Validation Rules  - between (Laravel snippet)"
+	},
+	"Validation Rules  - confirmed (Laravel snippet)": {
+		"prefix": "|confirmed",
+		"body": [
+			"|confirmed"
+		],
+		"description": "Validation Rules  - confirmed (Laravel snippet)"
+	},
+	"Validation Rules  - date_equals (Laravel snippet)": {
+		"prefix": "|date_equals",
+		"body": [
+			"|date_equals"
+		],
+		"description": "Validation Rules  - date_equals (Laravel snippet)"
+	},
+	"Validation Rules  - date_format (Laravel snippet)": {
+		"prefix": "|date_format",
+		"body": [
+			"|date_format"
+		],
+		"description": "Validation Rules  - date_format (Laravel snippet)"
+	},
+	"Validation Rules  - digits (Laravel snippet)": {
+		"prefix": "|digits",
+		"body": [
+			"|digits"
+		],
+		"description": "Validation Rules  - digits (Laravel snippet)"
+	},
+	"Validation Rules  - digits_between (Laravel snippet)": {
+		"prefix": "|digits_between",
+		"body": [
+			"|digits_between"
+		],
+		"description": "Validation Rules  - digits_between (Laravel snippet)"
+	},
+	"Validation Rules  - dimensions (Laravel snippet)": {
+		"prefix": "|dimensions",
+		"body": [
+			"|dimensions"
+		],
+		"description": "Validation Rules  - dimensions (Laravel snippet)"
+	},
+	"Validation Rules  - max (Laravel snippet)": {
+		"prefix": "|max",
+		"body": [
+			"|max"
+		],
+		"description": "Validation Rules  - max (Laravel snippet)"
+	},
+	"Validation Rules  - min (Laravel snippet)": {
+		"prefix": "|min",
+		"body": [
+			"|min"
+		],
+		"description": "Validation Rules  - min (Laravel snippet)"
+	},
+	"The $errors variable  - $errors (Laravel snippet)": {
+		"prefix": "$errors",
+		"body": [
+			"\\$errors"
+		],
+		"description": "The $errors variable  - $errors (Laravel snippet)"
+	},
+	"The $errors variable  - any() (Laravel snippet)": {
+		"prefix": "->any",
+		"body": [
+			"->any()"
+		],
+		"description": "The $errors variable  - any() (Laravel snippet)"
+	},
+	"Views - view (Laravel snippet)": {
+		"prefix": "view",
+		"body": [
+			"view()"
+		],
+		"description": "Views - view (Laravel snippet)"
+	},
+	"Views - View::make (Laravel snippet)": {
+		"prefix": "View::make",
+		"body": [
+			"View::make()"
+		],
+		"description": "Views - View::make (Laravel snippet)"
+	},
+	"Views - View::first (Laravel snippet)": {
+		"prefix": "View::first",
+		"body": [
+			"View::first()"
+		],
+		"description": "Views - View::first (Laravel snippet)"
+	},
+	"Views - View::exists (Laravel snippet)": {
+		"prefix": "View::exists",
+		"body": [
+			"View::exists()"
+		],
+		"description": "Views - View::exists (Laravel snippet)"
+	},
+	"Views - View::share (Laravel snippet)": {
+		"prefix": "View::share",
+		"body": [
+			"View::share()"
+		],
+		"description": "Views - View::share (Laravel snippet)"
+	},
+	"Views - View::composer (Laravel snippet)": {
+		"prefix": "View::composer",
+		"body": [
+			"View::composer()"
+		],
+		"description": "Views - View::composer (Laravel snippet)"
+	},
+	"Views - View::creator (Laravel snippet)": {
+		"prefix": "View::creator",
+		"body": [
+			"View::creator()"
+		],
+		"description": "Views - View::creator (Laravel snippet)"
+	},
+	"Blade-component": {
+		"prefix": "Blade::component",
+		"body": "Blade::component('${1:package-name}', ${2:PackageNameComponent}::class);",
+		"description": "Registering Package Components (AppServiceProvider boot method)"
+	},
+	"Blade-include": {
+		"prefix": "Blade::include",
+		"body": "Blade::include('${1:includes.input}', '${2:input}');",
+		"description": "Aliasing Includes (AppServiceProvider boot method)"
+	},
+	"Blade-if": {
+		"prefix": "Blade::if",
+		"body": [
+			"Blade::if('${1:env}', function ($${2:environment}) {",
+			"    ${3:return app()->environment($$environment);}",
+			"});"
+		],
+		"description": "Custom If Statements (AppServiceProvider boot method)"
+	},
+	"Blade-directive": {
+		"prefix": "Blade::directive",
+		"body": [
+			"Blade::directive('${1:datetime}', function ($${2:expression}) {",
+			"    ${3:return \"<?php echo ($$expression)->format('m/d/Y H:i'); ?>\";}",
+			"});"
+		],
+		"description": "Custom directive (AppServiceProvider boot method)"
+	},
+	"Blade-stringable": {
+		"prefix": "Blade::stringable",
+		"body": [
+			"Blade::stringable(function (${1:Money} $${2:money}) {",
+			"    ${3:return $$money->formatTo('en_GB');}",
+			"});"
+		],
+		"description": "Custom echo handlers (AppServiceProvider boot method)"
+	},
+	"Blade-render": {
+		"prefix": "Blade::render",
+		"body": "Blade::render(${1:'Blade template string'}, ${2:\\$data});",
+		"description": "Transform a raw Blade template string into valid HTML (Laravel 9.x)"
+	},
+	"Blade-renderComponent": {
+		"prefix": "Blade::renderComponent",
+		"body": "Blade::renderComponent(new ${1:HelloComponent}(${2:\\$params}));",
+		"description": "Render a given class component by passing the component instance to the method  (Laravel 9.x)"
+	},
+	"Path-elixir": {
+		"prefix": "lv:elixir",
+		"body": "{{ elixir('${1:file}') }}",
+		"description": "(deprecated) elixir path"
+	},
+	"Path-mix": {
+		"prefix": "lv:mix",
+		"body": "{{ mix('${1:file}') }}",
+		"description": "mix path"
+	},
+	"String-trans": {
+		"prefix": "lv:trans",
+		"body": "{{ trans('$1') }}",
+		"description": "trans"
+	},
+	"URL-action": {
+		"prefix": "lv:action",
+		"body": "{{ action('${1:ControllerName}', [${2:'id'=>1}]) }}",
+		"description": "URL-action"
+	},
+	"URL-secure-asset": {
+		"prefix": "lv:secure-asset",
+		"body": "{{ secure_asset('$1', ${2:\\$title}, ${3:\\$attributes=[]}) }}",
+		"description": "URL-secure-asset"
+	},
+	"URL-url": {
+		"prefix": "lv:url",
+		"body": "{{ url('${1:url}', [$2]) }}",
+		"description": "URL-url"
+	},
+	"URL-asset": {
+		"prefix": "lv:asset",
+		"body": "{{ asset('$1') }}",
+		"description": "URL-asset"
+	},
+	"URL-route": {
+		"prefix": "lv:route",
+		"body": "{{ route('${1:routeName}', [${2:'id'=>1}]) }}",
+		"description": "URL-route"
+	},
+	"Form-csrf-field": {
+		"prefix": "lv:csrf-field",
+		"body": "{{ csrf_field() }}",
+		"description": "CSRF hidden field"
+	},
+	"csrf-token": {
+		"prefix": "lv:csrf-token",
+		"body": "{{ csrf_token() }}",
+		"description": "CSRF token"
+	},
+	"Paginate-links": {
+		"prefix": "lv:pagination-links",
+		"body": "{{ \\$${1:collection}->links() }}",
+		"description": "pagination links"
+	},
+	"livewireStyles": {
+		"prefix": "livewire:styles",
+		"body": "@livewireStyles",
+		"description": "Livewire Styles directive"
+	},
+	"livewireScripts": {
+		"prefix": "livewire:scripts",
+		"body": "@livewireScripts",
+		"description": "Livewire Scripts directive"
+	},
+	"livewire-component": {
+		"prefix": "livewire:component",
+		"body": "@livewire('${1:component}', ['${2:user}' => \\$${3:user}]${4:, key(\\$$3->id)})",
+		"description": "Livewire nesting components"
+	},
+	"Extend layout": {
+		"prefix": "b:extends",
+		"body": "@extends('${1:name}')",
+		"description": "extends view layout"
+	},
+	"Yield content": {
+		"prefix": "b:yield",
+		"body": "@yield('${1:name}')",
+		"description": "yield content section"
+	},
+	"Content Section": {
+		"prefix": "b:section",
+		"body": [
+			"@section('${1:name}')",
+			"    $2",
+			"@endsection"
+		],
+		"description": "content section"
+	},
+	"Content Section Show": {
+		"prefix": "b:section-show",
+		"body": [
+			"@section('$1')",
+			"    $2",
+			"@show"
+		],
+		"description": "content section show"
+	},
+	"Include view": {
+		"prefix": "b:include",
+		"body": "@include('${1:name}')",
+		"description": "include view"
+	},
+	"If-block": {
+		"prefix": "b:if",
+		"body": [
+			"@if ($1)",
+			"    $2",
+			"@endif"
+		],
+		"description": "@if block"
+	},
+	"If-else-block": {
+		"prefix": "b:if-else",
+		"body": [
+			"@if ($1)",
+			"    $2",
+			"@else",
+			"    $3",
+			"@endif"
+		],
+		"description": "if-else block"
+	},
+	"Has Section": {
+		"prefix": "b:has-section",
+		"body": [
+			"@hasSection ('${1:name}')",
+			"    $2",
+			"@else",
+			"    $3",
+			"@endif"
+		],
+		"description": "@hasSection condition"
+	},
+	"Unless-block": {
+		"prefix": "b:unless",
+		"body": [
+			"@unless ($1)",
+			"    $2",
+			"@endunless"
+		],
+		"description": "@unless block"
+	},
+	"For-block": {
+		"prefix": "b:for",
+		"body": [
+			"@for (\\$i = ${1:0}; \\$i < ${2:\\$count}; \\$i++)",
+			"    $3",
+			"@endfor"
+		],
+		"description": "@for block"
+	},
+	"Foreach-block": {
+		"prefix": "b:foreach",
+		"body": [
+			"@foreach (${1:\\$collection} as ${2:\\$item})",
+			"    $3",
+			"@endforeach"
+		],
+		"description": "@foreach block"
+	},
+	"forelse-block": {
+		"prefix": "b:forelse",
+		"body": [
+			"@forelse (${1:\\$collection} as ${2:\\$item})",
+			"    $3",
+			"@empty",
+			"    $4",
+			"@endforelse"
+		],
+		"description": "@forelse block"
+	},
+	"while-block": {
+		"prefix": "b:while",
+		"body": [
+			"@while ($1)",
+			"    $2",
+			"@endwhile"
+		],
+		"description": "@while block"
+	},
+	"each loop": {
+		"prefix": "b:each",
+		"body": "@each('${1:view.name}', ${2:\\$collection}, '${3:variable}', '${4:view.empty}')",
+		"description": "@each loop"
+	},
+	"blade comment": {
+		"prefix": "b:comment",
+		"body": "{{-- ${1:comment} --}}",
+		"description": "comment block"
+	},
+	"blade echo-data": {
+		"prefix": "b:echo",
+		"body": "{{ ${1:\\$data} }}",
+		"description": "echo data"
+	},
+	"blade echo-unescaped-data": {
+		"prefix": "b:echo-html",
+		"body": "{!! ${1:\\$html_data} !!}",
+		"description": "echo unescaped data (allow html outputs)"
+	},
+	"blade echo-untouch": {
+		"prefix": "b:echo-raw",
+		"body": "@{{ ${1:variable} }}",
+		"description": "echo untouched data (allow javascript expression)"
+	},
+	"blade verbatim": {
+		"prefix": "b:verbatim",
+		"body": [
+			"@verbatim",
+			"{{ ${1:variable} }}",
+			"@endverbatim"
+		],
+		"description": "displaying JavaScript variables in a large portion of your template"
+	},
+	"Push stack": {
+		"prefix": "b:push",
+		"body": [
+			"@push('${1:name}')",
+			"    $2",
+			"@endpush"
+		],
+		"description": "@push stack"
+	},
+	"Stack": {
+		"prefix": "b:stack",
+		"body": "@stack('${1:name}')",
+		"description": "@stack"
+	},
+	"inject service": {
+		"prefix": "b:inject",
+		"body": "@inject('${1:name}', '${2:class}')",
+		"description": "@inject Service"
+	},
+	"can": {
+		"prefix": "b:can",
+		"body": [
+			"@can('${1:update}', ${2:\\$post})",
+			"    $3",
+			"@endcan"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"can-elsecan": {
+		"prefix": "b:can-elsecan",
+		"body": [
+			"@can('${1:update}', ${2:\\$post})",
+			"    $3",
+			"@elsecan('create', App\\Models\\\\${4:Post}::class)",
+			"    $5",
+			"@endcan"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"canany": {
+		"prefix": "b:canany",
+		"body": [
+			"@canany(['update', 'view', 'delete'], ${1:\\$post})",
+			"    $2",
+			"@endcanany"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"canany-elsecanany": {
+		"prefix": "b:canany-elsecanany",
+		"body": [
+			"@canany(['update', 'view', 'delete'], ${1:\\$post})",
+			"    $2",
+			"@elsecanany(['create'], App\\Models\\\\${3:Post}::class)",
+			"    $4",
+			"@endcanany"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"cannot": {
+		"prefix": "b:cannot",
+		"body": [
+			"@cannot('${1:update}', ${2:\\$post})",
+			"    $3",
+			"@endcannot"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"cannot-elsecannot": {
+		"prefix": "b:cannot-elsecannot",
+		"body": [
+			"@cannot('${1:update}', ${2:\\$post})",
+			"    $3",
+			"@elsecannot('create', App\\Models\\\\${5:Post}::class)",
+			"    $6",
+			"@endcannot"
+		],
+		"description": "display a portion of the page only if the user is authorized to perform a given action."
+	},
+	"loop": {
+		"prefix": "b:loop",
+		"body": [
+			"\\$loop->${1:first}"
+		],
+		"description": "$loop->(index|remaining|count|first|last|depth|parent)"
+	},
+	"loop first": {
+		"prefix": "b:loop-first",
+		"body": [
+			"@if (\\$loop->first)",
+			"    ${1:{{-- This is the first iteration --\\}\\}}",
+			"@endif"
+		],
+		"description": "$loop->first"
+	},
+	"loop last": {
+		"prefix": "b:loop-last",
+		"body": [
+			"@if (\\$loop->last)",
+			"    ${1:{{-- This is the last iteration --\\}\\}}",
+			"@endif"
+		],
+		"description": "$loop->last"
+	},
+	"php": {
+		"prefix": "b:php",
+		"body": [
+			"@php",
+			"    $1",
+			"@endphp"
+		],
+		"description": "@php block code in view"
+	},
+	"includeIf": {
+		"prefix": "b:includeIf",
+		"body": "@includeIf('${1:view.name}'${2:, ['some' => 'data']})",
+		"description": "include a view that may or may not be present, you should use the @includeIf directive"
+	},
+	"component": {
+		"prefix": "b:component",
+		"body": [
+			"@component('$1')",
+			"    $2",
+			"@endcomponent"
+		],
+		"description": "component"
+	},
+	"slot": {
+		"prefix": "b:slot",
+		"body": [
+			"@slot('$1')",
+			"    $2",
+			"@endslot"
+		],
+		"description": "slot"
+	},
+	"isset": {
+		"prefix": "b:isset",
+		"body": [
+			"@isset(${1:\\$record})",
+			"    $2",
+			"@endisset"
+		],
+		"description": "isset"
+	},
+	"empty": {
+		"prefix": "b:empty",
+		"body": [
+			"@empty(${1:\\$record})",
+			"    $2",
+			"@endempty"
+		],
+		"description": "empty"
+	},
+	"error": {
+		"prefix": "b:error",
+		"body": [
+			"@error('${1:record}')",
+			"    $2",
+			"@enderror"
+		],
+		"description": "error"
+	},
+	"includeWhen": {
+		"prefix": "b:includeWhen",
+		"body": "@includeWhen(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])",
+		"description": "includeWhen"
+	},
+	"auth": {
+		"prefix": "b:auth",
+		"body": [
+			"@auth",
+			"    $1",
+			"@endauth"
+		],
+		"description": "auth"
+	},
+	"guest": {
+		"prefix": "b:guest",
+		"body": [
+			"@guest",
+			"    $1",
+			"@endguest"
+		],
+		"description": "guest"
+	},
+	"switch": {
+		"prefix": "b:switch",
+		"body": [
+			"@switch(${1:\\$type})",
+			"    @case(${2:1})",
+			"        $3",
+			"        @break",
+			"    @case(${4:2})",
+			"        $5",
+			"        @break",
+			"    @default",
+			"        $6",
+			"@endswitch"
+		],
+		"description": "switch"
+	},
+	"includeFirst": {
+		"prefix": "b:includeFirst",
+		"body": "@includeFirst(['${1:view.name}', '${2:variable}'], [${3:'some' => 'data'}])",
+		"description": "includeFirst"
+	},
+	"csrf": {
+		"prefix": "b:csrf",
+		"body": "@csrf",
+		"description": "form csrf field"
+	},
+	"method": {
+		"prefix": "b:method",
+		"body": "@method($1)",
+		"description": "form method field"
+	},
+	"dump": {
+		"prefix": "b:dump",
+		"body": "@dump($1)",
+		"description": "dump"
+	},
+	"lang": {
+		"prefix": "b:lang",
+		"body": "@lang('${1:messages.welcome}')",
+		"description": "lang"
+	},
+	"includeUnless": {
+		"prefix": "b:includeUnless",
+		"body": "@includeUnless(${1:\\$boolean}, '${2:view.name}', [${3:'some' => 'data'}])",
+		"description": "includeUnless"
+	},
+	"props": {
+		"prefix": "b:props",
+		"body": "@props(['${1:propName}'])",
+		"description": "Blade component data properties"
+	},
+	"env": {
+		"prefix": "b:env",
+		"body": [
+			"@env('${1:staging}')",
+			"    $2",
+			"@endenv"
+		],
+		"description": "env"
+	},
+	"production": {
+		"prefix": "b:production",
+		"body": [
+			"@production",
+			"    $1",
+			"@endproduction"
+		],
+		"description": "production"
+	},
+	"once": {
+		"prefix": "b:once",
+		"body": [
+			"@once",
+			"    $1",
+			"@endonce"
+		],
+		"description": "define a portion of template that will only be evaluated once per rendering cycle"
+	},
+	"aware": {
+		"prefix": "b:aware",
+		"body": "@aware(['${1:propName}'])",
+		"description": "Accessing data from a parent component (Laravel 8.64)"
+	},
+	"js": {
+		"prefix": "b:js",
+		"body": "@js(${1:\\$data})",
+		"description": "This directive is useful to properly escape JSON within HTML quotes"
+	},
+	"class": {
+		"prefix": "b:class",
+		"body": "@class(['${1:p-4}', ${2:'font-bold' => true}])",
+		"description": "conditionally compiles a CSS class string. (Laravel 8.51)"
+	},
+	"checked": {
+		"prefix": "b:checked",
+		"body": "@checked(${1:true})",
+		"description": "This directive will echo checked if the provided condition evaluates to true (Laravel 9.x)"
+	},
+	"selected": {
+		"prefix": "b:selected",
+		"body": "@selected(${1:true})",
+		"description": "The @selected directive may be used to indicate if a given select option should be \"selected\" (Laravel 9.x)"
+	},
+	"disabled": {
+		"prefix": "b:disabled",
+		"body": "@disabled(${1:true})",
+		"description": "The @disabled directive may be used to indicate if a given element should be \"disabled\" (Laravel 9.x)"
+	},
+	"Laravel Model: Table": {
+		"prefix": "Model::t",
+		"body": [
+			"/**",
+			" * The table associated with the model.",
+			" *",
+			" * @var string",
+			" */",
+			"protected \\$table = '$0';"
+		],
+		"description": "Protected Table: The table associated with the model."
+	},
+	"Laravel Model: Primary Key": {
+		"prefix": "Model::pk",
+		"body": [
+			"/**",
+			" * The primary key associated with the table.",
+			" *",
+			" * @var string",
+			" */",
+			"protected \\$primaryKey = '$0';"
+		],
+		"description": "Primary Key: The primary key associated with the table."
+	},
+	"Laravel Model: Timestamps": {
+		"prefix": "Model::ts",
+		"body": [
+			"/**",
+			" * Indicates if the model should be timestamped.",
+			" *",
+			" * @var bool",
+			" */",
+			"public \\$timestamps = ${1:false};"
+		],
+		"description": "Timestamps: Indicates if the model should be timestamped."
+	},
+	"Laravel Model: Date Format": {
+		"prefix": "Model::df",
+		"body": [
+			"/**",
+			" * The storage format of the model's date columns.",
+			" *",
+			" * @var string",
+			" */",
+			"protected \\$dateFormat = '$0';"
+		],
+		"description": "Date Format: The storage format of the model's date columns."
+	},
+	"Laravel Model: Database Connection": {
+		"prefix": "Model::con",
+		"body": [
+			"/**",
+			" * The connection name for the model.",
+			" *",
+			" * @var string",
+			" */",
+			"protected \\$connection = '$0';"
+		],
+		"description": "Datebase Connection: The connection name for the model."
+	},
+	"Laravel Model: Attribute Casting": {
+		"prefix": "Model::c",
+		"body": [
+			"/**",
+			" * The attributes that should be cast to native types.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$casts = [",
+			"\t'$1' => '${0:type}',",
+			"];"
+		],
+		"description": "Attribute Casting: he attributes that should be cast to native types within your model."
+	},
+	"Laravel Model: Mass Assignment (Fillable) ": {
+		"prefix": "Model::f",
+		"body": [
+			"/**",
+			" * The attributes that are mass assignable.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$fillable = ['$0'];"
+		],
+		"description": "Mass Assignment (Fillable): The attributes that are mass assignable."
+	},
+	"Laravel Model: Guard Attributes": {
+		"prefix": "Model::g",
+		"body": [
+			"/**",
+			" * The attributes that aren't mass assignable.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$guarded = [$0];"
+		],
+		"description": "Guard Attributes: The attributes that aren't mass assignable."
+	},
+	"Laravel Model: Dates": {
+		"prefix": "Model::d",
+		"body": [
+			"/**",
+			" * The attributes that should be mutated to dates.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$dates = ['created_at', 'updated_at', '${0:deleted_at}'];"
+		],
+		"description": "Dates: The attributes that should be mutated to dates."
+	},
+	"Laravel Model: Boot": {
+		"prefix": "Model::b",
+		"body": [
+			"/**",
+			" * The \"booting\" method of the model.",
+			" *",
+			" * @return void",
+			" */",
+			"protected static function boot()",
+			"{",
+			"\tparent::boot();",
+			"\t",
+			"\t$0",
+			"}"
+		],
+		"description": "Boot: The \"booting\" method of the model."
+	},
+	"Laravel Model: Local Scope": {
+		"prefix": "Model::s",
+		"body": [
+			"/**",
+			" * Scope a query to only include $1",
+			" *",
+			" * @param  \\Illuminate\\Database\\Eloquent\\Builder \\$query",
+			" * @return \\Illuminate\\Database\\Eloquent\\Builder",
+			" */",
+			"public function scope$2(\\$query)",
+			"{",
+			"\treturn \\$query->where('$3'$0);",
+			"}"
+		],
+		"description": "Local Scope: Query a local scope within your model."
+	},
+	"Laravel Model: One to One Relationship": {
+		"prefix": "Model::oo",
+		"body": [
+			"/**",
+			" * Get the $1 associated with the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasOne",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->hasOne($0::class);",
+			"}"
+		],
+		"description": "One to One: Define a One to One relationship within your model."
+	},
+	"Laravel Model: Belongs To Relationship": {
+		"prefix": "Model::bt",
+		"body": [
+			"/**",
+			" * Get the $1 that owns the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\BelongsTo",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->belongsTo($0::class);",
+			"}"
+		],
+		"description": "Belongs To: Define a Belongs To relationship within your model."
+	},
+	"Laravel Model: One to Many": {
+		"prefix": "Model::om",
+		"body": [
+			"/**",
+			" * Get all of the $1 for the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasMany",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->hasMany($0::class);",
+			"}"
+		],
+		"description": "One to Many: Define a One to Many relationship within your model."
+	},
+	"Laravel Model: Many to Many": {
+		"prefix": "Model::mm",
+		"body": [
+			"/**",
+			" * The $1 that belong to the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->belongsToMany($0::class);",
+			"}"
+		],
+		"description": "Many to Many: Define a Many to Many relationship within your model."
+	},
+	"Laravel Model: Belongs to Many": {
+		"prefix": "Model::btm",
+		"body": [
+			"/**",
+			" * The $1 that belong to the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->belongsToMany($0::class);",
+			"}"
+		],
+		"description": "Belongs to Many: Define a Belongs to Many relationship within your model."
+	},
+	"Laravel Model: Has Many Through": {
+		"prefix": "Model::hmt",
+		"body": [
+			"/**",
+			" * Get all of the $1 for the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasManyThrough",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->hasManyThrough($0::class);",
+			"}"
+		],
+		"description": "Has Many Through: Define a Has Many Through relationship within your model."
+	},
+	"Laravel Model: Has One Through": {
+		"prefix": "Model::hot",
+		"body": [
+			"/**",
+			" * Get the $1 associated with the ${TM_FILENAME_BASE}",
+			" *",
+			" * @return \\Illuminate\\Database\\Eloquent\\Relations\\HasOneThrough",
+			" */",
+			"public function $1()",
+			"{",
+			"\treturn \\$this->hasOneThrough($2::class, $3::class);",
+			"}"
+		],
+		"description": "Has One Through: Define a Has One Through relationship within your model. (5.8+)"
+	},
+	"Laravel Model: Hidden": {
+		"prefix": "Model::h",
+		"body": [
+			"/**",
+			" * The attributes that should be hidden for arrays.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$hidden = ['$0'];"
+		],
+		"description": "Hidden: The attributes that should be hidden for arrays."
+	},
+	"Laravel Model: Visible": {
+		"prefix": "Model::v",
+		"body": [
+			"/**",
+			" * The attributes that should be visible in arrays.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$visible = ['$0'];"
+		],
+		"description": "Visible: The attributes that should be visible in arrays."
+	},
+	"Laravel Model: Appends": {
+		"prefix": "Model::ap",
+		"body": [
+			"/**",
+			" * The accessors to append to the model's array form.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$appends = ['$0'];"
+		],
+		"description": "Appends: The accessors to append to the model's array form."
+	},
+	"Laravel Model: Touches": {
+		"prefix": "Model::tc",
+		"body": [
+			"/**",
+			" * The relationships that should be touched on save.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$touches = [$0];"
+		],
+		"description": "Touches: The relationships that should be touched on save."
+	},
+	"Laravel Model: Incrementing": {
+		"prefix": "Model::i",
+		"body": [
+			"/**",
+			" * Indicates if the IDs are auto-incrementing.",
+			" *",
+			" * @var bool",
+			" */",
+			"public \\$incrementing = ${1:false};"
+		],
+		"description": "Incrementing: Indicates if the IDs are auto-incrementing."
+	},
+	"Laravel Model: KeyType": {
+		"prefix": "Model::kt",
+		"body": [
+			"/**",
+			" * The \"type\" of the auto-incrementing ID.",
+			" *",
+			" * @var string",
+			" */",
+			"protected \\$keyType = '${1:int}';"
+		],
+		"description": "KeyType: The \"type\" of the auto-incrementing ID."
+	},
+	"Laravel Model: PerPage": {
+		"prefix": "Model::pp",
+		"body": [
+			"/**",
+			" * The number of models to return for pagination.",
+			" *",
+			" * @var int",
+			" */",
+			"protected \\$perPage = $0;"
+		],
+		"description": "PerPage: The number of models to return for pagination."
+	},
+	"Laravel Model: Created At": {
+		"prefix": "Model::cat",
+		"body": [
+			"/**",
+			" * The name of the \"created at\" column.",
+			" *",
+			" * @var string",
+			" */",
+			"const CREATED_AT = '${1:created_at}';$0"
+		],
+		"description": "Created At: The name of the \"created at\" column."
+	},
+	"Laravel Model: Updated At": {
+		"prefix": "Model::uat",
+		"body": [
+			"/**",
+			" * The name of the \"updated at\" column.",
+			" *",
+			" * @var string",
+			" */",
+			"const UPDATED_AT = '${1:updated_at}';$0"
+		],
+		"description": "Updated At: The name of the \"updated at\" column."
+	},
+	"Laravel Model: Deleted At": {
+		"prefix": "Model::dat",
+		"body": [
+			"/**",
+			" * The name of the \"deleted at\" column.",
+			" *",
+			" * @var string",
+			" */",
+			"const DELETED_AT = '${1:deleted_at}';$0"
+		],
+		"description": "Deleted At: The name of the \"deleted at\" column."
+	},
+	"Laravel Model: Dispatches Events": {
+		"prefix": "Model::de",
+		"body": [
+			"/**",
+			" * The event map for the model.",
+			" *",
+			" * @var array",
+			" */",
+			"protected \\$dispatchesEvents = [",
+			"\t'$1' => $2,",
+			"];"
+		],
+		"description": "Dispatches Events: The event map for the model."
+	},
+	"Laravel Model: Accessor": {
+		"prefix": "Model::ac",
+		"body": [
+			"/**",
+			" * Get the $1",
+			" *",
+			" * @param  string  \\$value",
+			" * @return ${4:string}",
+			" */",
+			"public function get$2Attribute(\\$value)",
+			"{",
+			"\treturn ${3:\\$value};",
+			"}"
+		],
+		"description": "Accessors: Define an accessor for the model."
+	},
+	"Laravel Model: Mutator": {
+		"prefix": "Model::mu",
+		"body": [
+			"/**",
+			" * Set the $1",
+			" *",
+			" * @param  string  \\$value",
+			" * @return ${5:void}",
+			" */",
+			"public function set$2Attribute(\\$value)",
+			"{",
+			"\treturn \\$this->attributes['$3'] = ${4:\\$value};",
+			"}"
+		],
+		"description": "Mutators: Define a mutator for the model."
+	},
+	"A hasOne relationship function": {
+		"prefix": "hasOne",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->hasOne(${2:class});",
+			"}"
+		],
+		"description": "A hasOne relationship function"
+	},
+	"A belongsTo relationship function": {
+		"prefix": "belongsTo",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->belongsTo(${2:class});",
+			"}"
+		],
+		"description": "A belongsTo relationship function"
+	},
+	"A hasMany relationship function": {
+		"prefix": "hasMany",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->hasMany(${2:class});",
+			"}"
+		],
+		"description": "A hasMany relationship function"
+	},
+	"A BelongsToMany relationship function": {
+		"prefix": "belongsToMany",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->belongsToMany(${2:class});",
+			"}"
+		],
+		"description": "A belongsToMany relationship function"
+	},
+	"A HasManyThrough relationship function": {
+		"prefix": "hasManyThrough",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->hasManyThrough(${2:relatedClass}, ${3:throughClass});",
+			"}"
+		],
+		"description": "A hasManyThrough relationship function"
+	},
+	"A HasOneThrough relationship function": {
+		"prefix": "hasOneThrough",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->hasOneThrough(${2:relatedClass}, ${3:throughClass});",
+			"}"
+		],
+		"description": "A hasOneThrough relationship function"
+	},
+	"A MorphOne relationship function": {
+		"prefix": "morphOne",
+		"body": [
+			"public function ${1:name}()\n{",
+			"    return \\$this->morphOne(${2:class}, '${1:name}able');",
+			"}"
+		],
+		"description": "A morphOne relationship function"
+	},
+	"A MorphTo relationship function": {
+		"prefix": "morphTo",
+		"body": [
+			"public function ${1:nameable}()\n{",
+			"    return \\$this->morphTo(${2:class});",
+			"}"
+		],
+		"description": "A morphTo relationship function"
+	},
+	"A MorphMany relationship function": {
+		"prefix": "morphMany",
+		"body": [
+			"public function ${1:names}()\n{",
+			"    return \\$this->morphMany(${2:class}, '${3:nameable}');",
+			"}"
+		],
+		"description": "A morphMany relationship function"
+	},
+	"A MorphToMany relationship function": {
+		"prefix": "morphToMany",
+		"body": [
+			"public function ${1:names}()\n{",
+			"    return \\$this->morphToMany(${2:class}, '${3:nameable}');",
+			"}"
+		],
+		"description": "A morphOne relationship function"
+	},
+	"A MorphedByMany relationship function": {
+		"prefix": "morphedByMany",
+		"body": [
+			"public function ${1:names}()\n{",
+			"    return \\$this->morphedByMany(${2:class}, '${3:nameable}');",
+			"}"
+		],
+		"description": "A morphedByMany relationship function"
+	},
+	"Auth-once": {
+		"prefix": "pl.auth-once",
+		"body": [
+			"Auth::once($credentials);$0"
+		],
+		"description": "To log a user into the application for a single request."
+	},
+	"AuthAuthUserId": {
+		"prefix": "pl.auth-uid",
+		"body": [
+			"Auth::id();$0"
+		],
+		"description": "Get the currently authenticated user's ID."
+	},
+	"AuthLoginUsingId": {
+		"prefix": "pl.auth-loginUsingId",
+		"body": [
+			"Auth::loginUsingId($1);$0"
+		],
+		"description": "To log a user into the application by their ID."
+	},
+	"AuthViaRemember": {
+		"prefix": "pl.auth-viaRemember",
+		"body": [
+			"Auth::viaRemember();$0"
+		],
+		"description": "Determine if the user was authenticated using the \"remember me\" cookie."
+	},
+	"LaravelAuthAttempt": {
+		"prefix": "pl.auth-attempt",
+		"body": [
+			"Auth::attempt([${1:'email' => \\$email, 'password' => \\$password}]);$0"
+		],
+		"description": "Log by passing an array with key-value."
+	},
+	"LaravelAuthCheck": {
+		"prefix": "pl.auth-check",
+		"body": [
+			"Auth::check();$0"
+		],
+		"description": "Determine if the current user is authenticated."
+	},
+	"LaravelAuthGuard": {
+		"prefix": "pl.auth-guard",
+		"body": [
+			"Auth::guard('${1:guardName}');$0"
+		],
+		"description": "Customize the \"guard\" that is used to authenticate and register users."
+	},
+	"LaravelAuthGuest": {
+		"prefix": "pl.auth-guest",
+		"body": [
+			"Auth::guest();$0"
+		],
+		"description": "Determine if the current user is a guest."
+	},
+	"LaravelAuthLogin": {
+		"prefix": "pl.auth-login",
+		"body": [
+			"Auth::login(${1:\\$user});$0"
+		],
+		"description": "Log an existing user instance into your application."
+	},
+	"LaravelAuthLogout": {
+		"prefix": "pl.auth-logout",
+		"body": [
+			"Auth::logout();$0"
+		],
+		"description": "Log the user out of the application."
+	},
+	"LaravelAuthUser": {
+		"prefix": "pl.auth-user",
+		"body": [
+			"Auth::user();$0"
+		],
+		"description": "Get the currently authenticated user."
+	},
+	"LaravelCacheAdd": {
+		"prefix": "pl.cache-add",
+		"body": [
+			"\\$$1 = now()->${2:addMinutes(${3:10})};",
+			"\\$${4:result} = Cache::add('${5:key}', \\$${6:value}, \\$$1);$0"
+		],
+		"description": "Add an item to the cache if not present."
+	},
+	"LaravelCacheDescrement": {
+		"prefix": "pl.cache-descrement",
+		"body": [
+			"Cache::descrement('${1:key}'${2:, ${3:\\$amount}});$0"
+		],
+		"description": "Descrement the value of integer item in the cache."
+	},
+	"LaravelCacheFlush": {
+		"prefix": "pl.cache-flush",
+		"body": [
+			"Cache::flush();$0"
+		],
+		"description": "Remove all items from the cache."
+	},
+	"LaravelCacheForever": {
+		"prefix": "pl.cache-forever",
+		"body": [
+			"\\$${1:result} = Cache::forever('${2:key}', \\$${3:value});$0"
+		],
+		"description": "Add an item to the cache."
+	},
+	"LaravelCacheForget": {
+		"prefix": "pl.cache-forget",
+		"body": [
+			"Cache::forget(\\$${1:key});$0"
+		],
+		"description": "Remove an item from the cache."
+	},
+	"LaravelCacheGet": {
+		"prefix": "pl.cache-get",
+		"body": [
+			"\\$${1:values} = Cache::get('${2:key}', '${3:default}');$0"
+		],
+		"description": "Retrieve an item from the cache"
+	},
+	"LaravelCacheHas": {
+		"prefix": "pl.cache-has",
+		"body": [
+			"if (Cache::has('${1:key}')) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Determine if an item exists in the cache."
+	},
+	"LaravelCacheIncrement": {
+		"prefix": "pl.cache-increment",
+		"body": [
+			"Cache::increment('${1:key}'${2:, ${3:\\$amount}});$0"
+		],
+		"description": "Increment the value of integer item in the cache."
+	},
+	"LaravelCacheLock": {
+		"prefix": "pl.cache-lockManualRelease",
+		"body": [
+			"if (Cache::lock('$1'${2:, ${3:10}})->get()) {",
+			"\t\/\/ Lock acquired for 10 seconds...",
+			"\tCache::lock('$1')->release();$4",
+			"}$0"
+		],
+		"description": "Manual creation and management of locks."
+	},
+	"LaravelCacheLockAuto": {
+		"prefix": "pl.cache-lockAutoRelease",
+		"body": [
+			"Cache::lock('${1:foo}')->get(function () {",
+			"\t\/\/ Lock acquired indefinitely and automatically released...",
+			"\t$2",
+			"});$0"
+		],
+		"description": "Auto creation and management of locks."
+	},
+	"LaravelCacheLockBlock": {
+		"prefix": "pl.cache-lockBlock",
+		"body": [
+			"Cache::lock('${1:foo}', ${2:10})->block(${3:5}, function () {",
+			"\t\/\/ Lock acquired after waiting maximum of 5 seconds...",
+			"\t$4",
+			"});$0"
+		],
+		"description": "Block until the lock becomes available."
+	},
+	"LaravelCachePull": {
+		"prefix": "pl.cache-pull",
+		"body": [
+			"\\$${1:value} = Cache::pull('${2:key}');$0"
+		],
+		"description": "Retrieve an item from the cache and then delete the item."
+	},
+	"LaravelCachePut": {
+		"prefix": "pl.cache-put",
+		"body": [
+			"\\$$1 = now()->${2:addMinutes(${3:10})};",
+			"\\$${4:result} = Cache::put('${5:key}', \\$${6:value}, \\$$1);$0"
+		],
+		"description": "Store an item in the cache."
+	},
+	"LaravelCacheRemember": {
+		"prefix": "pl.cache-remember",
+		"body": [
+			"\\$${1:value} = Cache::remember('${2:key}', \\$${3:minutes}, function () {",
+			"\t$4",
+			"});$0"
+		],
+		"description": "Retrieve an item or store a default value if it doesn't exist."
+	},
+	"LaravelCacheRememberForever": {
+		"prefix": "pl.cache-rememberForever",
+		"body": [
+			"\\$${1:value} = Cache::rememberForever('${2:key}', \\$${3:minutes}, function () {",
+			"\t$4",
+			"});$0"
+		],
+		"description": "Retrieve an item from the cache or store it forever."
+	},
+	"LaravelConfigAll": {
+		"prefix": "pl.config-all",
+		"body": [
+			"\\$${1:all} = Config::all();$0"
+		],
+		"description": "Get all of the configuration items for the application."
+	},
+	"LaravelConfigGet": {
+		"prefix": "pl.config-get",
+		"body": [
+			"\\$${1:value} = Config::get('${2:key}', '${3:default}');$0"
+		],
+		"description": "Get the specified configuration value."
+	},
+	"LaravelConfigGetMany": {
+		"prefix": "pl.config-getMany",
+		"body": [
+			"\\$${1:value} = Config::getMany(\\$${2:keys});$0"
+		],
+		"description": "Get many configuration values."
+	},
+	"LaravelConfigHas": {
+		"prefix": "pl.config-has",
+		"body": [
+			"if (Config::has('${1:key}')) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Determine if the given configuration value exists."
+	},
+	"LaravelConfigSet": {
+		"prefix": "pl.config-set",
+		"body": [
+			"Config::set('${1:key}', \\$${2:value});$0"
+		],
+		"description": "Set a given configuration value."
+	},
+	"LaravelConfigSetMany": {
+		"prefix": "pl.config-setMany",
+		"body": [
+			"Config::set([",
+			"\t'${1:key}' => \\$${2:value},$3",
+			"]);$0"
+		],
+		"description": "Set many configuration values."
+	},
+	"LaravelCookieAttachResponse": {
+		"prefix": "pl.cookie-attach-response",
+		"body": [
+			"return response('${1:Hello World}')->cookie(",
+			"\t'${2:name}', '${3:value}', \\$${4:minutes}",
+			");$0"
+		],
+		"description": "Attach a cookie to an outgoing Illuminate\\Http\\Response instance."
+	},
+	"LaravelCookieAttachResponseByFacade": {
+		"prefix": "pl.cookie-attach-response-facade",
+		"body": [
+			"Cookie::queue(Cookie::make('${1:name}', '${2:value}', \\$${3:minutes}));$0"
+		],
+		"description": "Use the Cookie facade to 'queue' cookies for attachment to the outgoing response from your application."
+	},
+	"LaravelCookieForever": {
+		"prefix": "pl.cookie-forever",
+		"body": [
+			"\\$${1:response}->withCookie(cookie()->forever('${2:key}', \\$${3:value}));$0"
+		],
+		"description": "Create a cookie that lasts 'forever' (five years)."
+	},
+	"LaravelCookieGeneratingInstance": {
+		"prefix": "pl.cookie-generate-instance",
+		"body": [
+			"\\$cookie = cookie('${1:name}', '${2:value}', \\$${3:minutes});",
+			"return response('${4:Hello World}')->cookie($cookie);$0"
+		],
+		"description": "Generating cookie instances."
+	},
+	"LaravelCookieGet": {
+		"prefix": "pl.cookie-get",
+		"body": [
+			"\\$${1:request}->cookie('${2:key}');$0"
+		],
+		"description": "Retrieve a cookie value."
+	},
+	"LaravelCookieGetByFacade": {
+		"prefix": "pl.cookie-get-facade",
+		"body": [
+			"\\$${1:value} = Cookie::get('${2:name}');$0"
+		],
+		"description": "Cookie facade to access cookie value."
+	},
+	"LaravelCookieSet": {
+		"prefix": "pl.cookie-set",
+		"body": [
+			"\\$${1:response}->withCookie(cookie('${2:key}', \\$${3:value}));$0"
+		],
+		"description": "Attach a cookie to a response."
+	},
+	"LaravelCryptDecrypt": {
+		"prefix": "pl.crypt-decrypt",
+		"body": [
+			"\\$${1:decrypted} = Crypt::decrypt(\\$${2:encrypted});$0"
+		],
+		"description": "Decrypt a value."
+	},
+	"LaravelCryptDecryptString": {
+		"prefix": "pl.crypt-decrypt-string",
+		"body": [
+			"\\$${1:decrypted} = Crypt::decryptString(\\$${2:encrypted});$0"
+		],
+		"description": "Decrypt values without serialization."
+	},
+	"LaravelCryptDecryptThrow": {
+		"prefix": "pl.crypt-decrypt-throw",
+		"body": [
+			"try {",
+			"\t\\$${1:decrypted} = decrypt(\\$${2:encryptedValue});",
+			"} catch (\\Illuminate\\Contracts\\Encryption\\DecryptException) {",
+			"\t$3",
+			"}$0"
+		],
+		"description": "if the value can not be properly decrypted, an exception will be thrown."
+	},
+	"LaravelCryptEncrypt": {
+		"prefix": "pl.crypt-encrypt",
+		"body": [
+			"\\$${1:encrypted} = Crypt::encrypt(\\$${2:value});$0"
+		],
+		"description": "Encrypt a value."
+	},
+	"LaravelCryptEncryptString": {
+		"prefix": "pl.crypt-encrypt-string",
+		"body": [
+			"\\$${1:encrypted} = Crypt::encryptString(\\$${2:value});$0"
+		],
+		"description": "Encrypt values without serialization."
+	},
+	"LaravelDBAutoTransaction": {
+		"prefix": "pl.db-auto-transaction",
+		"body": [
+			"DB::transaction(function () {",
+			"\t$1",
+			"});$0"
+		],
+		"description": "Run a set of operations within a database transaction."
+	},
+	"LaravelDBDecrement": {
+		"prefix": "pl.db-decrement",
+		"body": [
+			"\\$${1:result} = DB::table(${2:'users'})->decrement(${3:'votes'}${4:, 1});$0"
+		],
+		"description": "Decrement the value of a given column."
+	},
+	"LaravelDBDelete": {
+		"prefix": "pl.db-delete",
+		"body": [
+			"\\$${1:result} = DB::table('${2:users}')",
+			"\t->where(${3:'id', '>', '100'})",
+			"\t->delete();$0"
+		],
+		"description": "Delete records from the table."
+	},
+	"LaravelDBIncrement": {
+		"prefix": "pl.db-increment",
+		"body": [
+			"\\$${1:result} = DB::table(${2:'users'})->increment(${3:'votes'}${4:, 1});$0"
+		],
+		"description": "Increment the value of a given column."
+	},
+	"LaravelDBInsert": {
+		"prefix": "pl.db-insert",
+		"body": [
+			"\\$${1:result} = DB::table('${2:users}')->insert(",
+			"\t[${3:'email' => 'john@example.com'}],$4",
+			");$0"
+		],
+		"description": "Insert records into the table."
+	},
+	"LaravelDBJoinClause": {
+		"prefix": "pl.db-advanced-join-clause",
+		"body": [
+			"\\$${1:result} = DB::table('$2')",
+			"\t->join('$3', function (\\$join) {",
+			"\t\t\\$join->on('$2.$4', '=', '$3.$5')",
+			"\t\t\t->where('$3.$5'${6:, '>', 100});",
+			"\t})",
+			"\t->get();$0"
+		],
+		"description": "Advanced join clauses."
+	},
+	"LaravelDBManualTransaction": {
+		"prefix": "pl.db-manual-transaction",
+		"body": [
+			"DB::beginTransaction();",
+			"$1",
+			"DB::commit();$0"
+		],
+		"description": "Begin a transaction manually and have complete control over rollbacks and commits."
+	},
+	"LaravelDBSelect": {
+		"prefix": "pl.db-select",
+		"body": [
+			"\\$${1:result} = DB::table('${2:users}')",
+			"\t->where(${3:'id', '>', '100'})",
+			"\t->get();$0"
+		],
+		"description": "Update records into the table."
+	},
+	"LaravelDBUpdate": {
+		"prefix": "pl.db-update",
+		"body": [
+			"\\$${1:result} = DB::table('${2:users}')",
+			"\t->where(${3:'id', '100'})",
+			"\t->update([${4:'votes' => 1}]);$0"
+		],
+		"description": "Update records into the table."
+	},
+	"LaravelHashCheck": {
+		"prefix": "pl.hash-check",
+		"body": [
+			"if (Hash::check(\\$${1:value}, \\$${2:hashedValue})) {",
+			"\t$3",
+			"}$0"
+		],
+		"description": "Verify that a given plain-text string corresponds to a given hash."
+	},
+	"LaravelHashMake": {
+		"prefix": "pl.hash-make",
+		"body": [
+			"\\$${1:value} = Hash::make(\\$${2:password});$0"
+		],
+		"description": "Hash a given value."
+	},
+	"LaravelHashNeedsRehash": {
+		"prefix": "pl.hash-needsRehash",
+		"body": [
+			"if (Hash::needsRehash(\\$$1)) {",
+			"\t\\$$1 = Hash::make(\\$${2:value});",
+			"}$0"
+		],
+		"description": "Determine if the work factor used by the hasher has changed since the password was hashed."
+	},
+	"LaravelLogAlert": {
+		"prefix": "pl.log-alert",
+		"body": [
+			"Log::alert(\\$${1:message});$0"
+		],
+		"description": "Log an alert message."
+	},
+	"LaravelLogCritical": {
+		"prefix": "pl.log-critical",
+		"body": [
+			"Log::critical(\\$${1:message});$0"
+		],
+		"description": "Log a critical message."
+	},
+	"LaravelLogDebug": {
+		"prefix": "pl.log-debug",
+		"body": [
+			"Log::debug(\\$${1:message});$0"
+		],
+		"description": "Log a debug message."
+	},
+	"LaravelLogEmergency": {
+		"prefix": "pl.log-emergency",
+		"body": [
+			"Log::emergency(\\$${1:message});$0"
+		],
+		"description": "Log an emergency message."
+	},
+	"LaravelLogError": {
+		"prefix": "pl.log-error",
+		"body": [
+			"Log::error(\\$${1:message});$0"
+		],
+		"description": "Log an error message."
+	},
+	"LaravelLogInfo": {
+		"prefix": "pl.log-info",
+		"body": [
+			"Log::info(\\$${1:message});$0"
+		],
+		"description": "Log an informational message."
+	},
+	"LaravelLogLog": {
+		"prefix": "pl.log-log",
+		"body": [
+			"Log::log(\\$${1:message});$0"
+		],
+		"description": "Log a message."
+	},
+	"LaravelLogNotice": {
+		"prefix": "pl.log-notice",
+		"body": [
+			"Log::notice(\\$${1:message});$0"
+		],
+		"description": "Log a notice message."
+	},
+	"LaravelLogUseDailyFiles": {
+		"prefix": "pl.log-useDailyFiles",
+		"body": [
+			"Log::useDailyFiles(\\$${1:path}, \\$${2:days}, \\$${3:level});$0"
+		],
+		"description": "Register a daily file log handler."
+	},
+	"LaravelLogUseFiles": {
+		"prefix": "pl.log-useFiles",
+		"body": [
+			"Log::useFiles(\\$${1:path}, \\$${2:level});$0"
+		],
+		"description": "Register a file log handler."
+	},
+	"LaravelLogWarning": {
+		"prefix": "pl.log-warning",
+		"body": [
+			"Log::warning(\\$${1:message});$0"
+		],
+		"description": "Log a warning message."
+	},
+	"LaravelRedirectAction": {
+		"prefix": "pl.redirect-action",
+		"body": [
+			"return redirect()->action('${1:HomeController@index}'${2:, [${3:'id' => 10}]});$0"
+		],
+		"description": "Redirect to controller action, with parameters."
+	},
+	"LaravelRedirectBack": {
+		"prefix": "pl.redirect-back",
+		"body": [
+			"return redirect()->back()${1:->withErrors(\\$validator)}${2:->withInput()};$0"
+		],
+		"description": "Redirect to previous location."
+	},
+	"LaravelRedirectRoute": {
+		"prefix": "pl.redirect-route",
+		"body": [
+			"return redirect()->route('${1:profile}'${2:, [${3:'id' => 10}]});$0"
+		],
+		"description": "Redirect to named route, with parameters."
+	},
+	"LaravelRedirectWith": {
+		"prefix": "pl.redirect-with",
+		"body": [
+			"return redirect()->with('${1:status}'${2:, '${3:Profile updated}'});$0"
+		],
+		"description": "Redirect with flashed session data."
+	},
+	"LaravelRequestAll": {
+		"prefix": "pl.request-all",
+		"body": [
+			"\\$${1:all} = \\$request->all();$0"
+		],
+		"description": "Retrieve all of the input data."
+	},
+	"LaravelRequestExcept": {
+		"prefix": "pl.request-except",
+		"body": [
+			"\\$${1:input} = \\$request->except('${2:username}');$0"
+		],
+		"description": "Retrieve except a subset of the input data."
+	},
+	"LaravelRequestFile": {
+		"prefix": "pl.request-file",
+		"body": [
+			"\\$file = \\$request->file('${1:photo}');$0"
+		],
+		"description": "Retrieve uploaded files."
+	},
+	"LaravelRequestFileExtension": {
+		"prefix": "pl.request-file-extension",
+		"body": [
+			"\\$${1:extension} = \\$request->${2:photo}->extension();$0"
+		],
+		"description": "Get uploaded file extension."
+	},
+	"LaravelRequestFileHas": {
+		"prefix": "pl.request-file-has",
+		"body": [
+			"if (\\$request->hasFile('${1:photo}')) {",
+			"\t\/\/$2",
+			"}$0"
+		],
+		"description": "Checking if the file is present."
+	},
+	"LaravelRequestFilePath": {
+		"prefix": "pl.request-file-path",
+		"body": [
+			"\\$${1:path} = \\$request->${2:photo}->path();$0"
+		],
+		"description": "Get uploaded file path."
+	},
+	"LaravelRequestFileStore": {
+		"prefix": "pl.request-file-store",
+		"body": [
+			"\\$${1:path} = \\$request->${2:photo}->store('${3:images}');$0"
+		],
+		"description": "Store uploaded file."
+	},
+	"LaravelRequestFileStoreAs": {
+		"prefix": "pl.request-file-store-as",
+		"body": [
+			"\\$${1:path} = \\$request->${2:photo}->storeAs('${3:images}', '${4:filename.jpg}');$0"
+		],
+		"description": "Store alias uploaded file."
+	},
+	"LaravelRequestFilled": {
+		"prefix": "pl.request-filled",
+		"body": [
+			"if (\\$request->filled('${1:name}')) {",
+			"\t\/\/$2",
+			"}$0"
+		],
+		"description": "Determine if a value is present on the request and is not empty."
+	},
+	"LaravelRequestFlash": {
+		"prefix": "pl.request-flash",
+		"body": [
+			"\\$request->flash();$0"
+		],
+		"description": "Flash input to the session."
+	},
+	"LaravelRequestFlashExcept": {
+		"prefix": "pl.request-flashExcept",
+		"body": [
+			"\\$request->flashExcept();$0"
+		],
+		"description": "Flash except a subset of the request data to the session."
+	},
+	"LaravelRequestFlashOnly": {
+		"prefix": "pl.request-flashOnly",
+		"body": [
+			"\\$request->flashOnly();$0"
+		],
+		"description": "Flash only a subset of the request data to the session."
+	},
+	"LaravelRequestFullUrl": {
+		"prefix": "pl.request-fullUrl",
+		"body": [
+			"\\$${1:url} = \\$request->fullUrl();$0"
+		],
+		"description": "Retrieve the full URL for the incoming request wit query string."
+	},
+	"LaravelRequestHas": {
+		"prefix": "pl.request-has",
+		"body": [
+			"if (\\$request->has('${1:name}')) {",
+			"\t\/\/$2",
+			"}$0"
+		],
+		"description": "Determine if a value is present on the request."
+	},
+	"LaravelRequestInput": {
+		"prefix": "pl.request-input",
+		"body": [
+			"\\$${1:name} = \\$request->input('${2:name}'${3:, 'default'});$0"
+		],
+		"description": "Retrieve an input value."
+	},
+	"LaravelRequestIs": {
+		"prefix": "pl.request-is",
+		"body": [
+			"if (\\$request->is('${1:admin\/*}')) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Allows you to verify that the incoming request path matches a given pattern."
+	},
+	"LaravelRequestIsMethod": {
+		"prefix": "pl.request-is",
+		"body": [
+			"if (\\$request->isMethod('${1:post}')) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "Return the HTTP verb for the request."
+	},
+	"LaravelRequestMethod": {
+		"prefix": "pl.request-method",
+		"body": [
+			"\\$${1:method} = \\$request->method();$0"
+		],
+		"description": "Return the HTTP verb for the request."
+	},
+	"LaravelRequestOld": {
+		"prefix": "pl.request-old",
+		"body": [
+			"\\$${1:username} = \\$request->old('${2:username}');$0"
+		],
+		"description": "Flash input to the session and then redirect to the previous page."
+	},
+	"LaravelRequestOnly": {
+		"prefix": "pl.request-only",
+		"body": [
+			"\\$${1:input} = \\$request->only('${2:username}'${3:, '${4:password}'});$0"
+		],
+		"description": "Retrieve only a subset of the input data."
+	},
+	"LaravelRequestPath": {
+		"prefix": "pl.request-path",
+		"body": [
+			"\\$${1:uri} = \\$request->path();$0"
+		],
+		"description": "Return the request's path information."
+	},
+	"LaravelRequestQuery": {
+		"prefix": "pl.request-query",
+		"body": [
+			"\\$${1:$name} = \\$request->query('${2:name}'${3:, 'defalut'});$0"
+		],
+		"description": "Retrieve input from the query string."
+	},
+	"LaravelRequestUrl": {
+		"prefix": "pl.request-url",
+		"body": [
+			"\\$${1:url} = \\$request->url();$0"
+		],
+		"description": "Retrieve the full URL for the incoming request without query string."
+	},
+	"LaravelRequestWithInput": {
+		"prefix": "pl.request-withInput",
+		"body": [
+			"return redirect('${1:form}')->withInput(",
+			"\t\\$request->except('${2:password}')",
+			");$0"
+		],
+		"description": "Flash input to the session and then redirect to the previous page."
+	},
+	"LaravelResponseCookie": {
+		"prefix": "pl.response-cookie",
+		"body": [
+			"return response(\\$${1:content})->header('Content-Type', \\$${2:type})",
+			"\t->cookie('${3:name}', '${4:value}', \\$${5:minutes});$0"
+		],
+		"description": "Attach cookie to response."
+	},
+	"LaravelResponseDownload": {
+		"prefix": "pl.response-download",
+		"body": [
+			"return response()->download(\\$${1:pathToFile}${2:, \\$${3:name}, \\$${4:headers}});$0"
+		],
+		"description": "Generate a response that forces the user's browser to download the file at the given path."
+	},
+	"LaravelResponseHeader": {
+		"prefix": "pl.response-header",
+		"body": [
+			"return response(\\$${1:content})->withHeaders([",
+			"\t'Content-Type' => \\$${2:type},",
+			"\t'${3:X-Header-One}' => '${4:Header Value}',$5",
+			"]);$0"
+		],
+		"description": "Attach header to response."
+	},
+	"LaravelResponseJson": {
+		"prefix": "pl.response-json",
+		"body": [
+			"return response()->json([",
+			"\t'${1:name}' => '${2:value}',$3",
+			"]);$0"
+		],
+		"description": "Create a JSON response."
+	},
+	"LaravelResponseJsonp": {
+		"prefix": "pl.response-jsonp",
+		"body": [
+			"return response()",
+			"\t->json(['${1:name}' => '${2:Abigail}'${3:, '$4'}])",
+			"\t->withCallback(\\$request->input('${5:callback}'));$0"
+		],
+		"description": "Create a JSONP response."
+	},
+	"LaravelResponseMake": {
+		"prefix": "pl.response-make",
+		"body": [
+			"return Response::make(\\$${1:value});$0"
+		],
+		"description": "Define a custom response."
+	},
+	"LaravelRouteAny": {
+		"prefix": "pl.route-any",
+		"body": [
+			"Route::any('${1:foo}', function () {",
+			"\t\/\/$3",
+			"});$0"
+		],
+		"description": "Match all of HTTP verbs."
+	},
+	"LaravelRouteDelete": {
+		"prefix": "pl.route-delete",
+		"body": [
+			"Route::delete('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of delete."
+	},
+	"LaravelRouteGet": {
+		"prefix": "pl.route-get",
+		"body": [
+			"Route::get('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of get."
+	},
+	"LaravelRouteMatch": {
+		"prefix": "pl.route-match",
+		"body": [
+			"Route::match([${1:'get', 'post'}], '${2:\/}', function () {",
+			"\t\/\/$3",
+			"});$0"
+		],
+		"description": "Match the specified HTTP verbs."
+	},
+	"LaravelRouteOptions": {
+		"prefix": "pl.route-options",
+		"body": [
+			"Route::options('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of options."
+	},
+	"LaravelRoutePatch": {
+		"prefix": "pl.route-patch",
+		"body": [
+			"Route::patch('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of patch."
+	},
+	"LaravelRoutePost": {
+		"prefix": "pl.route-post",
+		"body": [
+			"Route::post('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of post."
+	},
+	"LaravelRoutePut": {
+		"prefix": "pl.route-put",
+		"body": [
+			"Route::put('${1:user\/profile}', '${2:UsersController@show}')${3:->name('${4:user.profile}')};$0"
+		],
+		"description": "Available router method of put."
+	},
+	"LaravelSessionAll": {
+		"prefix": "pl.session-all",
+		"body": [
+			"\\$${1:data} = \\$request->session()->all();$0"
+		],
+		"description": "Retrieve all session data."
+	},
+	"LaravelSessionExists": {
+		"prefix": "pl.session-exists",
+		"body": [
+			"if (\\$request->session()->exists('${1:users}')) {",
+			"\t\/\/$2",
+			"}$0"
+		],
+		"description": "Determine if an item is present in the session."
+	},
+	"LaravelSessionFlash": {
+		"prefix": "pl.session-flash",
+		"body": [
+			"\\$request->session()->flash('${1:status}'${2:, '${3:Task was successful!}'});$0"
+		],
+		"description": "Store items in the session only for the next request."
+	},
+	"LaravelSessionFlush": {
+		"prefix": "pl.session-flush",
+		"body": [
+			"\\$request->session()->flush();$0"
+		],
+		"description": "Remove all data from the session."
+	},
+	"LaravelSessionForget": {
+		"prefix": "pl.session-forget",
+		"body": [
+			"\\$request->session()->forget('${1:key}');$0"
+		],
+		"description": "Remove all data from the session."
+	},
+	"LaravelSessionGet": {
+		"prefix": "pl.session-get",
+		"body": [
+			"\\$${1:value} = \\$request->session()->get('${2:key}'${3:, '${4:default}'});$0"
+		],
+		"description": "Retrieve an item from the session."
+	},
+	"LaravelSessionHas": {
+		"prefix": "pl.session-has",
+		"body": [
+			"if (\\$request->session()->has('${1:users}')) {",
+			"\t\/\/$2",
+			"}$0"
+		],
+		"description": "Determine if an item is present in the session."
+	},
+	"LaravelSessionKeep": {
+		"prefix": "pl.session-keep",
+		"body": [
+			"\\$request->session()->keep(['${1:username}'${2:, '${3:email}']});$0"
+		],
+		"description": "Keep specific flash data."
+	},
+	"LaravelSessionPull": {
+		"prefix": "pl.session-pull",
+		"body": [
+			"\\$${1:value} = \\$request->session()->pull('${2:key}'${3:, '${4:default}'});$0"
+		],
+		"description": "Retrieve and delete an item from the session in a single statement."
+	},
+	"LaravelSessionPush": {
+		"prefix": "pl.session-push",
+		"body": [
+			"\\$request->session()->push('${1:user.teams}', '${2:developers}');$0"
+		],
+		"description": "Push a new value onto a session value that is an array."
+	},
+	"LaravelSessionPut": {
+		"prefix": "pl.session-put",
+		"body": [
+			"\\$request->session()->put('${1:key}', '${2:value}');$0"
+		],
+		"description": "Store data in the session."
+	},
+	"LaravelSessionReflash": {
+		"prefix": "pl.session-flash",
+		"body": [
+			"\\$request->session()->reflash();$0"
+		],
+		"description": "Keep your flash data around for several requests."
+	},
+	"LaravelSessionRegenerate": {
+		"prefix": "pl.session-regenerate",
+		"body": [
+			"\\$request->session()->regenerate();$0"
+		],
+		"description": "Regenerating the session ID."
+	},
+	"LaravelStorageAllDirectories": {
+		"prefix": "pl.storage-all-directories",
+		"body": [
+			"\\$${1:directories} = Storage::allDirectories(\\$${2:directory});$0"
+		],
+		"description": "Get a list of all directories within a given directory and all of its sub-directories."
+	},
+	"LaravelStorageAllFiles": {
+		"prefix": "pl.storage-all-files",
+		"body": [
+			"\\$${1:files} = Storage::allFiles(\\$${2:directory});$0"
+		],
+		"description": "Retrieve a list of all files within a given directory including all sub-directories."
+	},
+	"LaravelStorageAppend": {
+		"prefix": "pl.storage-append",
+		"body": [
+			"Storage::append('${1:file.log}', '${2:Appended Text}');$0"
+		],
+		"description": "Allow you to write to the end of a file."
+	},
+	"LaravelStorageCopy": {
+		"prefix": "pl.storage-copy",
+		"body": [
+			"Storage::copy(\\$${1:oldFile}, \\$${2:newFile});$0"
+		],
+		"description": "Copy an existing file to a new location on the disk."
+	},
+	"LaravelStorageDeleteDirectory": {
+		"prefix": "pl.storage-delete-directory",
+		"body": [
+			"Storage::deleteDirectory(\\$${1:directory});$0"
+		],
+		"description": "Remove a directory and all of its files."
+	},
+	"LaravelStorageDirectories": {
+		"prefix": "pl.storage-directories",
+		"body": [
+			"\\$${1:directories} = Storage::directories(\\$${2:directory});$0"
+		],
+		"description": "Returns an array of all the directories within a given directory."
+	},
+	"LaravelStorageDiskExists": {
+		"prefix": "pl.storage-disk-exists",
+		"body": [
+			"\\$${1:exists} = Storage::disk('${2:s3}')->exists(\\$${3:filename});$0"
+		],
+		"description": "Determine if a file exists on the disk."
+	},
+	"LaravelStorageDownload": {
+		"prefix": "pl.storage-download",
+		"body": [
+			"\\$${1:download} = Storage::download(\\$${2:filename});$0"
+		],
+		"description": "Download the file at the given path."
+	},
+	"LaravelStorageFileStore": {
+		"prefix": "pl.storage-file-store",
+		"body": [
+			"\\$${1:path} = \\$request->file('${2:avatar}')->store(",
+			"\t'${3:avatars\/}' . \\$request->user()->id, '${4:s3}'",
+			");$0"
+		],
+		"description": "Specifying a disk to your stored file."
+	},
+	"LaravelStorageFileStoreAs": {
+		"prefix": "pl.storage-file-storeAs",
+		"body": [
+			"\\$${1:path} = \\$request->file('${2:avatar}')->storeAs(",
+			"\t'${3:avatars}', \\$request->user()->id",
+			");$0"
+		],
+		"description": "Specifying a file name to your stored file."
+	},
+	"LaravelStorageFiles": {
+		"prefix": "pl.storage-files",
+		"body": [
+			"\\$${1:files} = Storage::files(\\$${2:directory});$0"
+		],
+		"description": "Returns an array of all of the files in a given directory."
+	},
+	"LaravelStorageGet": {
+		"prefix": "pl.storage-get",
+		"body": [
+			"\\$${1:contents} = Storage::get(\\$${2:filename});$0"
+		],
+		"description": " Retrieve the contents of a file."
+	},
+	"LaravelStorageGetVisibility": {
+		"prefix": "pl.storage-getVisibility",
+		"body": [
+			"\\$${1:visibility} = Storage::getVisibility(\\$${2:filename});$0"
+		],
+		"description": "Get the file visibility."
+	},
+	"LaravelStorageLastModified": {
+		"prefix": "pl.storage-lastModified",
+		"body": [
+			"\\$${1:time} = Storage::lastModified(\\$${2:filename});$0"
+		],
+		"description": "Returns the UNIX timestamp of the last time the file was modified."
+	},
+	"LaravelStorageMakeDirectory": {
+		"prefix": "pl.storage-make-directory",
+		"body": [
+			"Storage::makeDirectory(\\$${1:directory});$0"
+		],
+		"description": "Create the given directory."
+	},
+	"LaravelStorageMove": {
+		"prefix": "pl.storage-move",
+		"body": [
+			"Storage::move(\\$${1:oldFile}, \\$${2:newFile});$0"
+		],
+		"description": "Rename or move an existing file to a new location."
+	},
+	"LaravelStorageMultiDelete": {
+		"prefix": "pl.storage-multi-delete",
+		"body": [
+			"Storage::delete([\\$${1:file1}, \\$${2:file2}]);$0"
+		],
+		"description": "Remove multi files from the disk."
+	},
+	"LaravelStoragePrepend": {
+		"prefix": "pl.storage-prepend",
+		"body": [
+			"Storage::prepend('${1:file.log}', '${2:Prepended Text}');$0"
+		],
+		"description": "Allow you to write to the beginning of a file."
+	},
+	"LaravelStoragePut": {
+		"prefix": "pl.storage-put",
+		"body": [
+			"Storage::put(\\$${1:filename}, \\$${2:contents}${3:, '${4:public}'});$0"
+		],
+		"description": "Store raw file contents on a disk."
+	},
+	"LaravelStoragePutFile": {
+		"prefix": "pl.storage-putFile",
+		"body": [
+			"\\$${1:path} = Storage::putFile('${2:avatars}', \\$request->file('${3:avatar}'));$0"
+		],
+		"description": "The path at which you wish to store the uploaded file."
+	},
+	"LaravelStoragePutFileAs": {
+		"prefix": "pl.storage-putFileAs",
+		"body": [
+			"\\$${1:path} = Storage::putFileAs(",
+			"\t'${2:avatars}', \\$request->file('${3:avatar}'), \\$request->user()->id",
+			");$0"
+		],
+		"description": "Specifying a file name to your stored file."
+	},
+	"LaravelStoragePutFileAsVisibility": {
+		"prefix": "pl.storage-putFileAsVisibility",
+		"body": [
+			"Storage::putFileAs(\\$${1:filename}, new File(\\$${2:path}), '${3:public}');$0"
+		],
+		"description": "Specify the 'visibility' of the stored file."
+	},
+	"LaravelStoragePutFileVisibility": {
+		"prefix": "pl.storage-putFileVisibility",
+		"body": [
+			"Storage::putFile(\\$${1:filename}, new File(\\$${2:path}), '${3:public}');$0"
+		],
+		"description": "Specify the 'visibility' of the stored file."
+	},
+	"LaravelStorageSetVisibility": {
+		"prefix": "pl.storage-setVisibility",
+		"body": [
+			"Storage::setVisibility(\\$${1:filename}, '${2:public}');$0"
+		],
+		"description": "Set the file visibility."
+	},
+	"LaravelStorageSingleDelete": {
+		"prefix": "pl.storage-single-delete",
+		"body": [
+			"Storage::delete(\\$${2:filename});$0"
+		],
+		"description": "Remove single file from the disk."
+	},
+	"LaravelStorageSize": {
+		"prefix": "pl.storage-size",
+		"body": [
+			"\\$${1:size} = Storage::size(\\$${2:filename});$0"
+		],
+		"description": "Get the size of the file in bytes."
+	},
+	"LaravelStorageTemporaryUrl": {
+		"prefix": "pl.storage-temporaryUrl",
+		"body": [
+			"\\$${1:url} = Storage::temporaryUrl(",
+			"\t\\$${2:filename}, now()->addMinutes(${3:5})",
+			");$0"
+		],
+		"description": "Create a temporary URL to a given file."
+	},
+	"LaravelStorageUrl": {
+		"prefix": "pl.storage-url",
+		"body": [
+			"\\$${1:url} = Storage::url(\\$${2:filename});$0"
+		],
+		"description": "Get the URL for the given file."
+	},
+	"LaravelValidationAttribute": {
+		"prefix": "pl.validation-attribute",
+		"body": [
+			"\/**",
+			" * Get custom attributes for validator errors.",
+			" *",
+			" * @return array",
+			" *\/",
+			"public function attributes()",
+			"{",
+			"\treturn [",
+			"\t\t'${1:email}' => '${2:email address}',$3",
+			"\t];",
+			"}$0"
+		],
+		"description": "Customizing the validation attributes."
+	},
+	"LaravelValidationMake": {
+		"prefix": "pl.validation-make",
+		"body": [
+			"\\$validator = Validator::make(\\$request->all(), [",
+			"\t'${1:title}' => '${2:required|unique:posts|max:255}',$3",
+			"]);",
+			"",
+			"if (\\$validator->fails()) {",
+			"\treturn redirect('${4:post\/create}')->withErrors(\\$validator)->withInput();",
+			"}$0"
+		],
+		"description": "The make method on the facade generates a new validator instance."
+	},
+	"LaravelValidationMessage": {
+		"prefix": "pl.validation-message",
+		"body": [
+			"\/**",
+			" * Get the error messages for the defined validation rules.",
+			" *",
+			" * @return array",
+			" *\/",
+			"public function messages()",
+			"{",
+			"\treturn [",
+			"\t\t'${1:title.required}' => '${2:A title is required}',$3",
+			"\t];",
+			"}$0"
+		],
+		"description": "Customizing the error messages."
+	},
+	"LaravelValidationRule": {
+		"prefix": "pl.validation-rule",
+		"body": [
+			"\/**",
+			" * Get the validation rules that apply to the request.",
+			" *",
+			" * @return array",
+			" *\/",
+			"public function rules()",
+			"{",
+			"\treturn [",
+			"\t\t'${1:title}' => '${2:required|unique:posts|max:255}',$3",
+			"\t];",
+			"}$0"
+		],
+		"description": "Form request validation."
+	}
+}

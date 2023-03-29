@@ -1,2 +1,1 @@
-# snippets
-VSCode Snippets
+## Snippets extension for VSCode

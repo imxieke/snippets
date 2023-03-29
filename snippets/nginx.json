@@ -1,0 +1,1294 @@
+{
+	"ngx.OK": {
+		"description": "系统常量 (0) 可用于 ngx.exit",
+		"prefix": "ngx.OK",
+		"body": [
+			"ngx.OK"
+		]
+	},
+	"ngx.ERROR": {
+		"description": "系统常量 (-1) 可用于 ngx.exit",
+		"prefix": "ngx.ERROR",
+		"body": [
+			"ngx.ERROR"
+		]
+	},
+	"ngx.AGAIN": {
+		"description": "系统常量 (-2)",
+		"prefix": "ngx.AGAIN",
+		"body": [
+			"ngx.AGAIN"
+		]
+	},
+	"ngx.DONE": {
+		"description": "（完成）系统常量 (-4)",
+		"prefix": "ngx.DONE",
+		"body": [
+			"ngx.DONE"
+		]
+	},
+	"ngx.DECLINED": {
+		"description": "系统常量 (-5) 可用于 ngx.exit",
+		"prefix": "ngx.DECLINED",
+		"body": [
+			"ngx.DECLINED"
+		]
+	},
+	"ngx.null": {
+		"description": "系统常量, 用于判断调用 ngx 中的方法返回的值是否为空",
+		"prefix": "ngx.null",
+		"body": [
+			"ngx.null"
+		]
+	},
+	"ngx.shared.DICT": {
+		"description": "获取已定义的字典表",
+		"prefix": "ngx.shared.DICT",
+		"body": [
+			"ngx.shared.$dict"
+		]
+	},
+	"ngx.shared.DICT.get": {
+		"description": "根据 key 获取字典表中的值, 如果 key 不存在或过期，返回 nil",
+		"prefix": "ngx.shared.DICT.get",
+		"body": [
+			"local value, flags = ngx.shared.$dict:get($key)"
+		]
+	},
+	"ngx.shared.DICT.get_stale": {
+		"description": "根据 key 获取字典表中的值, 如果 key 不存在或过期，返回 nil",
+		"prefix": "ngx.shared.DICT.get_stale",
+		"body": [
+			"local value, flags, stale = ngx.shared.$dict:get_stale($key)"
+		]
+	},
+	"ngx.shared.DICT.set": {
+		"description": "保存字典表中 key 的值（可以设置过期时间）",
+		"prefix": "ngx.shared.DICT.set",
+		"body": [
+			"local success, err, forcible = ngx.shared.$dict:set($key, $value, $exptime?, $flags?)"
+		]
+	},
+	"ngx.shared.DICT.safe_set": {
+		"description": "保存字典表中 key 的值（可以设置过期时间）",
+		"prefix": "ngx.shared.DICT.safe_set",
+		"body": [
+			"loca ok, err = ngx.shared.$dict:safe_set($key, $value, $exptime?, $flags?)"
+		]
+	},
+	"ngx.shared.DICT.add": {
+		"description": "添加字典表中 key 的值，如 key 值存在返回失败",
+		"prefix": "ngx.shared.DICT.add",
+		"body": [
+			"local success, err, forcible = ngx.shared.$dict:add($key, $value, $exptime?, $flags?)"
+		]
+	},
+	"ngx.shared.DICT.safe_add": {
+		"description": "添加字典表中 key 的值，如 key 值存在返回失败",
+		"prefix": "ngx.shared.DICT.safe_add",
+		"body": [
+			"local ok, err = ngx.shared.$dict:safe_add($key, $value, $exptime?, $flags?)"
+		]
+	},
+	"ngx.shared.DICT.replace": {
+		"description": "修改字典表中 key 的值，如 key 值不存在返回失败",
+		"prefix": "ngx.shared.DICT.replace",
+		"body": [
+			"local success, err, forcible = ngx.shared.$dict:replace($key, $value, $exptime?, $flags?)"
+		]
+	},
+	"ngx.shared.DICT.delete": {
+		"description": "删除字典表中的 key ",
+		"prefix": "ngx.shared.DICT.delete",
+		"body": [
+			"ngx.shared.$1:delete($key)"
+		]
+	},
+	"ngx.shared.DICT.incr": {
+		"description": "增添 key 中的值， newval 为原值加上新的值",
+		"prefix": "ngx.shared.DICT.incr",
+		"body": [
+			"local newval, err, forcible? = ngx.shared.$dict:incr($key, $value, $init?)"
+		]
+	},
+	"ngx.shared.DICT.lpush": {
+		"description": "向字典头部增添 key ，返回 key 的数量",
+		"prefix": "ngx.shared.DICT.lpush",
+		"body": [
+			"local length, err = ngx.shared.$dict:lpush($key, $value)"
+		]
+	},
+	"ngx.shared.DICT.rpush": {
+		"description": "向字典尾部增添 key ，返回 key 的数量",
+		"prefix": "ngx.shared.DICT.rpush",
+		"body": [
+			"local length, err = ngx.shared.$dict:rpush($kye, $value)"
+		]
+	},
+	"ngx.shared.DICT.lpop": {
+		"description": "从字典中获取和一个 key 值，并删除 key ",
+		"prefix": "ngx.shared.DICT.lpop",
+		"body": [
+			"local val, err = ngx.shared.$dict:lpop($key)"
+		]
+	},
+	"ngx.shared.DICT.rpop": {
+		"description": "从字典中获取最后一个 key 值，并删除 key ",
+		"prefix": "ngx.shared.DICT.rpop",
+		"body": [
+			"local val, err = ngx.shared.$dict:rpop($key)"
+		]
+	},
+	"ngx.shared.DICT.llen": {
+		"description": "返回 key 值的个数",
+		"prefix": "ngx.shared.DICT.llen",
+		"body": [
+			"local len, err = ngx.shared.$dict:llen($key)"
+		]
+	},
+	"ngx.shared.DICT.flush_all": {
+		"description": "清除字典里面的所有数据",
+		"prefix": "ngx.shared.DICT.flush_all",
+		"body": [
+			"ngx.shared.$dict:flush_all()"
+		]
+	},
+	"ngx.shared.DICT.flush_expired": {
+		"description": "清除字典里面的所有已过期的数据",
+		"prefix": "ngx.shared.DICT.flush_expired",
+		"body": [
+			"ngx.shared.$dict:flush_expired()"
+		]
+	},
+	"ngx.shared.DICT.get_keys": {
+		"description": "清除字典里面的所有已过期的数据",
+		"prefix": "ngx.shared.DICT.get_keys",
+		"body": [
+			"local keys = ngx.shared.$dict:get_keys()"
+		]
+	},
+	"ngx.HTTP_GET": {
+		"description": "系统常量, HTTP GET 方法",
+		"prefix": "ngx.http.method.get",
+		"body": [
+			"ngx.HTTP_GET"
+		]
+	},
+	"ngx.HTTP_HEAD": {
+		"description": "系统常量, HTTP HEAD 方法",
+		"prefix": "ngx.http.method.head",
+		"body": [
+			"ngx.HTTP_HEAD"
+		]
+	},
+	"ngx.HTTP_PUT": {
+		"description": "系统常量, HTTP PUT 方法",
+		"prefix": "ngx.http.method.put",
+		"body": [
+			"ngx.HTTP_PUT"
+		]
+	},
+	"ngx.HTTP_POST": {
+		"description": "系统常量, HTTP POST 方法",
+		"prefix": "ngx.http.method.post",
+		"body": [
+			"ngx.HTTP_POST"
+		]
+	},
+	"ngx.HTTP_DELETE": {
+		"description": "系统常量, HTTP DELETE 方法",
+		"prefix": "ngx.http.method.delete",
+		"body": [
+			"ngx.HTTP_DELETE"
+		]
+	},
+	"ngx.HTTP_OPTIONS": {
+		"description": "系统常量, HTTP OPTIONS 方法",
+		"prefix": "ngx.http.method.options",
+		"body": [
+			"ngx.HTTP_OPTIONS"
+		]
+	},
+	"ngx.HTTP_MKCOL": {
+		"description": "系统常量, HTTP MKCOL 方法",
+		"prefix": "ngx.http.method.mkcol",
+		"body": [
+			"ngx.HTTP_MKCOL"
+		]
+	},
+	"ngx.HTTP_COPY": {
+		"description": "系统常量, HTTP COPY 方法",
+		"prefix": "ngx.http.method.copy",
+		"body": [
+			"ngx.HTTP_COPY"
+		]
+	},
+	"ngx.HTTP_MOVE": {
+		"description": "系统常量, HTTP MOVE 方法",
+		"prefix": "ngx.http.method.move",
+		"body": [
+			"ngx.HTTP_MOVE"
+		]
+	},
+	"ngx.HTTP_PROPFIND": {
+		"description": "系统常量, HTTP PROPFIND 方法",
+		"prefix": "ngx.propfind",
+		"body": [
+			"ngx.HTTP_PROPFIND"
+		]
+	},
+	"ngx.HTTP_PROPPATCH": {
+		"description": "系统常量, HTTP PROPPATCH 方法",
+		"prefix": "ngx.http.method.proppatch",
+		"body": [
+			"ngx.HTTP_PROPPATCH"
+		]
+	},
+	"ngx.HTTP_LOCK": {
+		"description": "系统常量, HTTP LOCK 方法",
+		"prefix": "ngx.http.method.lock",
+		"body": [
+			"ngx.HTTP_LOCK"
+		]
+	},
+	"ngx.HTTP_UNLOCK": {
+		"description": "系统常量, HTTP UNLOCK 方法",
+		"prefix": "ngx.http.method.unlock",
+		"body": [
+			"ngx.HTTP_UNLOCK"
+		]
+	},
+	"ngx.HTTP_PATCH": {
+		"description": "系统常量, HTTP PATCH 方法",
+		"prefix": "ngx.http.method.patch",
+		"body": [
+			"ngx.HTTP_PATCH"
+		]
+	},
+	"ngx.HTTP_TRACE": {
+		"description": "系统常量, HTTP TRACE 方法",
+		"prefix": "ngx.http.method.trace",
+		"body": [
+			"ngx.HTTP_TRACE"
+		]
+	},
+	"ngx.HTTP_CONTINUE": {
+		"description": "HTTP 状态码 (100) 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。",
+		"prefix": "ngx.http.status.continue",
+		"body": [
+			"ngx.HTTP_CONTINUE"
+		]
+	},
+	"ngx.HTTP_SWITCHING_PROTOCOLS": {
+		"description": "HTTP 状态码 (101) 请求者已要求服务器切换协议，服务器已确认并准备切换。",
+		"prefix": "ngx.http.status.switching_protocols",
+		"body": [
+			"ngx.HTTP_SWITCHING_PROTOCOLS"
+		]
+	},
+	"ngx.HTTP_OK": {
+		"description": "HTTP 状态码 (200) 服务器成功处理了请求",
+		"prefix": "ngx.http.status.ok",
+		"body": [
+			"ngx.HTTP_OK"
+		]
+	},
+	"ngx.HTTP_CREATED": {
+		"description": "HTTP 状态码 (201) Created（已创建）对于那些要服务器创建对象的请求来说，资源已创建完毕。",
+		"prefix": "ngx.http.status.created",
+		"body": [
+			"ngx.HTTP_CREATED"
+		]
+	},
+	"ngx.HTTP_ACCEPTED": {
+		"description": "HTTP 状态码 (202) 请求已接受， 但服务器尚未处理",
+		"prefix": "ngx.http.status.accepted",
+		"body": [
+			"ngx.HTTP_ACCEPTED"
+		]
+	},
+	"ngx.HTTP_NO_CONTENT": {
+		"description": "HTTP 状态码 (204) Response中包含一些Header和一个状态行， 但不包括实体的主题内容",
+		"prefix": "ngx.http.status.no_content",
+		"body": [
+			"ngx.HTTP_NO_CONTENT"
+		]
+	},
+	"ngx.HTTP_PARTIAL_CONTENT": {
+		"description": "HTTP 状态码 (206) 部分请求成功",
+		"prefix": "ngx.http.status.parital_content",
+		"body": [
+			"ngx.HTTP_PARTIAL_CONTENT"
+		]
+	},
+	"ngx.HTTP_SPECIAL_RESPONSE": {
+		"description": "HTTP 状态码 (300) 客户端请求了实际指向多个资源的URL。这个代码是和一个选项列表一起返回的，然后用户就可以选择他希望的选项了",
+		"prefix": "ngx.http.status.special_response",
+		"body": [
+			"ngx.HTTP_SPECIAL_RESPONSE"
+		]
+	},
+	"ngx.HTTP_MOVED_PERMANENTLY": {
+		"description": "HTTP 状态码 (301) 请求的URL已移走。Response中应该包含一个Location URL, 说明资源现在所处的位置",
+		"prefix": "ngx.http.status.moved_permanently",
+		"body": [
+			"ngx.HTTP_MOVED_PERMANENTLY"
+		]
+	},
+	"ngx.HTTP_MOVED_TEMPORARILY": {
+		"description": "HTTP 状态码 (302) 与状态码301类似。但这里的移除是临时的。 客户端会使用Location中给出的URL，重新发送新的HTTP request",
+		"prefix": "ngx.http.status.moved_temporarily",
+		"body": [
+			"ngx.HTTP_MOVED_TEMPORARILY"
+		]
+	},
+	"ngx.HTTP_SEE_OTHER": {
+		"description": "HTTP 状态码 (303) 参见其他，与状态码302类似",
+		"prefix": "ngx.http.status.see_other",
+		"body": [
+			"ngx.HTTP_SEE_OTHER"
+		]
+	},
+	"ngx.HTTP_NOT_MODIFIED": {
+		"description": "HTTP 状态码 (304) 客户的缓存资源是最新的， 要客户端使用缓存",
+		"prefix": "ngx.http.status.not_modified",
+		"body": [
+			"ngx.HTTP_NOT_MODIFIED"
+		]
+	},
+	"ngx.HTTP_TEMPORARY_REDIRECT": {
+		"description": "HTTP 状态码 (307) 临时重定向 类似 302",
+		"prefix": "ngx.http.status.temporary_redirect",
+		"body": [
+			"ngx.HTTP_TEMPORARY_REDIRECT"
+		]
+	},
+	"ngx.HTTP_BAD_REQUEST": {
+		"description": "HTTP 状态码 (400) 错误的请求， 告诉客户端，它发送了一个错误的请求",
+		"prefix": "ngx.http.status.bad_request",
+		"body": [
+			"ngx.HTTP_BAD_REQUEST"
+		]
+	},
+	"ngx.HTTP_UNAUTHORIZED": {
+		"description": "HTTP 状态码 (401)",
+		"prefix": "ngx.http.status.unauthorized",
+		"body": [
+			"ngx.HTTP_UNAUTHORIZED"
+		]
+	},
+	"ngx.HTTP_PAYMENT_REQUIRED": {
+		"description": "HTTP 状态码 (402) 未授权， 需要客户端对自己认证",
+		"prefix": "ngx.http.status.payment_required",
+		"body": [
+			"ngx.HTTP_PAYMENT_REQUIRED"
+		]
+	},
+	"ngx.HTTP_FORBIDDEN": {
+		"description": "HTTP 状态码 (403) 禁止请求，请求被服务器拒绝了",
+		"prefix": "ngx.http.status.forbidden",
+		"body": [
+			"ngx.HTTP_FORBIDDEN"
+		]
+	},
+	"ngx.HTTP_NOT_FOUND": {
+		"description": "HTTP 状态码 (404) 未找到，未找到资源 ",
+		"prefix": "ngx.http.status.not_found",
+		"body": [
+			"ngx.HTTP_NOT_FOUND"
+		]
+	},
+	"ngx.HTTP_NOT_ALLOWED": {
+		"description": "HTTP 状态码 (405) 不允许使用的方法",
+		"prefix": "ngx.http.status.not_allowed",
+		"body": [
+			"ngx.HTTP_NOT_ALLOWED"
+		]
+	},
+	"ngx.HTTP_NOT_ACCEPTABLE": {
+		"description": "HTTP 状态码 (406) 无法接受",
+		"prefix": "ngx.http.status.not_acceptable",
+		"body": [
+			"ngx.HTTP_NOT_ACCEPTABLE"
+		]
+	},
+	"ngx.HTTP_REQUEST_TIMEOUT": {
+		"description": "HTTP 状态码 (408) 请求超时",
+		"prefix": "ngx.http.status.request_timeout",
+		"body": [
+			"ngx.HTTP_REQUEST_TIMEOUT"
+		]
+	},
+	"ngx.HTTP_CONFLICT": {
+		"description": "HTTP 状态码 (409) 冲突, 发出的请求在资源上造成了一些冲突",
+		"prefix": "ngx.http.status.conflict",
+		"body": [
+			"ngx.HTTP_CONFLICT"
+		]
+	},
+	"ngx.HTTP_GONE": {
+		"description": "HTTP 状态码 (410) 消失了, 服务器曾经有这个资源，现在没有了， 与状态码404类似",
+		"prefix": "ngx.http.status.gone",
+		"body": [
+			"ngx.HTTP_GONE"
+		]
+	},
+	"ngx.HTTP_UPGRADE_REQUIRED": {
+		"description": "HTTP 状态码 (426) 客户端应当切换到TLS/1.0",
+		"prefix": "ngx.http.status.upgrade_required",
+		"body": [
+			"ngx.HTTP_UPGRADE_REQUIRED"
+		]
+	},
+	"ngx.HTTP_TOO_MANY_REQUESTS": {
+		"description": "HTTP 状态码 (429) 用户已经发送了太多的请求在指定的时间里。用于限制速率。",
+		"prefix": "ngx.http.status.to_many_requests",
+		"body": [
+			"ngx.HTTP_TOO_MANY_REQUESTS"
+		]
+	},
+	"ngx.HTTP_CLOSE": {
+		"description": "HTTP 状态码 (444) HTTP关闭",
+		"prefix": "ngx.http.status.close",
+		"body": [
+			"ngx.HTTP_CLOSE"
+		]
+	},
+	"ngx.HTTP_ILLEGAL": {
+		"description": "HTTP 状态码 (451) 由于法律原因而无效",
+		"prefix": "ngx.http.status.illegal",
+		"body": [
+			"ngx.HTTP_ILLEGAL"
+		]
+	},
+	"ngx.HTTP_INTERNAL_SERVER_ERROR": {
+		"description": "HTTP 状态码 (500) 服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理",
+		"prefix": "ngx.http.status.internal_server_error",
+		"body": [
+			"ngx.HTTP_INTERNAL_SERVER_ERROR"
+		]
+	},
+	"ngx.HTTP_METHOD_NOT_IMPLEMENTED": {
+		"description": "HTTP 状态码 (501) 服务器不支持当前请求所需要的某个功能",
+		"prefix": "ngx.http.status.method_not_implemented",
+		"body": [
+			"ngx.HTTP_METHOD_NOT_IMPLEMENTED"
+		]
+	},
+	"ngx.HTTP_BAD_GATEWAY": {
+		"description": "HTTP 状态码 (502) 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。",
+		"prefix": "ngx.http.status.bad_geteway",
+		"body": [
+			"ngx.HTTP_BAD_GATEWAY"
+		]
+	},
+	"ngx.HTTP_SERVICE_UNAVAILABLE": {
+		"description": "HTTP 状态码 (503) 由于临时的服务器维护或者过载，服务器当前无法处理请求。",
+		"prefix": "ngx.http.status.service_unavailable",
+		"body": [
+			"ngx.HTTP_SERVICE_UNAVAILABLE"
+		]
+	},
+	"ngx.HTTP_GATEWAY_TIMEOUT": {
+		"description": "HTTP 状态码 (504) 作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器或者辅助服务器（例如DNS）收到响应",
+		"prefix": "ngx.http.status.gateway_timeout",
+		"body": [
+			"ngx.HTTP_GATEWAY_TIMEOUT"
+		]
+	},
+	"ngx.HTTP_VERSION_NOT_SUPPORTED": {
+		"description": "HTTP 状态码 (505) 服务器不支持，或者拒绝支持在请求中使用的 HTTP 版本",
+		"prefix": "ngx.http.status.version_not_supported",
+		"body": [
+			"ngx.HTTP_VERSION_NOT_SUPPORTED"
+		]
+	},
+	"ngx.HTTP_INSUFFICIENT_STORAGE": {
+		"description": "HTTP 状态码 (507) 服务器无法存储完成请求所必须的内容。这个状况被认为是临时的。",
+		"prefix": "ngx.http.status.insufficient_storage",
+		"body": [
+			"ngx.HTTP_INSUFFICIENT_STORAGE"
+		]
+	},
+	"ngx.STDERR": {
+		"description": "输出 STDERR 级别日志",
+		"prefix": "ngx.log.STDERR",
+		"body": [
+			"ngx.STDERR"
+		]
+	},
+	"ngx.EMERG": {
+		"description": "输出 EMERG 级别日志",
+		"prefix": "ngx.log.EMERG",
+		"body": [
+			"ngx.EMERG"
+		]
+	},
+	"ngx.ALERT": {
+		"description": "输出 ALERT 级别日志",
+		"prefix": "ngx.log.ALERT",
+		"body": [
+			"ngx.ALERT"
+		]
+	},
+	"ngx.CRIT": {
+		"description": "输出 CRIT 级别日志",
+		"prefix": "ngx.log.CRIT",
+		"body": [
+			"ngx.CRIT"
+		]
+	},
+	"ngx.ERR": {
+		"description": "输出 ERR 级别日志",
+		"prefix": "ngx.log.ERR",
+		"body": [
+			"ngx.ERR"
+		]
+	},
+	"ngx.WARN": {
+		"description": "输出 WARN 级别日志",
+		"prefix": "ngx.log.WARN",
+		"body": [
+			"ngx.WARN"
+		]
+	},
+	"ngx.NOTICE": {
+		"description": "输出 NOTICE 级别日志",
+		"prefix": "ngx.log.NOTICE",
+		"body": [
+			"ngx.NOTICE"
+		]
+	},
+	"ngx.INFO": {
+		"description": "输出 INFO 级别日志",
+		"prefix": "ngx.log.INFO",
+		"body": [
+			"ngx.INFO"
+		]
+	},
+	"ngx.DEBUG": {
+		"description": "输出 DEBUG 级别日志",
+		"prefix": "ngx.log.DEBUG",
+		"body": [
+			"ngx.DEBUG"
+		]
+	},
+	"print": {
+		"description": "输出 NOTICE 级别日志",
+		"prefix": "print",
+		"body": [
+			"print($str)"
+		]
+	},
+	"ngx.log": {
+		"description": "在 error.log 中输出日志信息",
+		"prefix": "ngx.log",
+		"body": [
+			"ngx.log($log_level, $...)"
+		]
+	},
+	"ngx.arg": {
+		"description": "获取 nginx 中传入的变量， set_by_lua*, body_filter_by_lua*",
+		"prefix": "ngx.arg",
+		"body": [
+			"local $val = ngx.arg[$index]"
+		]
+	},
+	"ngx.var.VARIABLE.get": {
+		"description": "读取 Nginx 变量值",
+		"prefix": "ngx.var.get",
+		"body": [
+			"local $value = ngx.var.$name"
+		]
+	},
+	"ngx.var.VARIABLE.set": {
+		"description": "修改 Nginx 变量值",
+		"prefix": "ngx.var.set",
+		"body": [
+			"ngx.var.$name = $value"
+		]
+	},
+	"ngx.ctx.set": {
+		"description": "获取 nginx 请求上下文中的数据",
+		"prefix": "ngx.ctx.get",
+		"body": [
+			"lcoal $value = ngx.ctx.$name"
+		]
+	},
+	"ngx.ctx.get": {
+		"description": "设置 nginx 请求上下文中的数据",
+		"prefix": "ngx.ctx.set",
+		"body": [
+			"ngx.ctx.$name = $value"
+		]
+	},
+	"ngx.location.capture": {
+		"description": "创建一个同步非阻塞 nginx 的子请求, 并返回响应结果",
+		"prefix": "ngx.location.capture",
+		"body": [
+			"local $res = ngx.location.capture($uri, $options?)"
+		]
+	},
+	"ngx.location.capture_multi": {
+		"description": "创建多个同步非阻塞 nginx 的子请求, 并返回响应结果",
+		"prefix": "ngx.location.capture_multi",
+		"body": [
+			"lcoal $res1, $res2 = ngx.location.capture_multi({{ $uri, $options?}, { $uri, $options? }})"
+		]
+	},
+	"ngx.status.get": {
+		"description": "获取当前请求的响应状态",
+		"prefix": "ngx.status.get",
+		"body": [
+			"local $status = ngx.status"
+		]
+	},
+	"ngx.status.set": {
+		"description": "设置当前请求的响应状态",
+		"prefix": "ngx.status.set",
+		"body": [
+			"ngx.status = $status"
+		]
+	},
+	"ngx.header.HEADER.get": {
+		"description": "获取当前请求的响应头",
+		"prefix": "ngx.header.get",
+		"body": [
+			"local $value = ngx.header[$header]"
+		]
+	},
+	"ngx.header.HEADER.set": {
+		"description": "设置当前请求的响应头",
+		"prefix": "ngx.header.set",
+		"body": [
+			"ngx.header[$header] = $value"
+		]
+	},
+	"ngx.resp.get_headers": {
+		"description": "获取当前请求的响应头",
+		"prefix": "ngx.resp.get_headers",
+		"body": [
+			"local headers = ngx.resp.get_headers()"
+		]
+	},
+	"ngx.exec": {
+		"description": "用 args 对 uri 进行内部重定向，类似于 echo-nginx-module 模块的 echo_exec 指令。 ngx.exec(uri, args?)",
+		"prefix": "ngx.exec",
+		"body": [
+			"ngx.exec(${1:uri}', {$2:args})"
+		]
+	},
+	"ngx.redirect": {
+		"description": "重定向 uri, ngx.redirect(uri, status?)",
+		"prefix": "ngx.redirect",
+		"body": [
+			" return ngx.redirect(${1:uri}, ${2:status})"
+		]
+	},
+	"ngx.send_headers": {
+		"description": "显示的发送响应头,  ok, err = ngx.send_headers()",
+		"prefix": "ngx.send_headers",
+		"body": [
+			"local ok, err = ngx.send_headers()"
+		]
+	},
+	"ngx.headers_sent": {
+		"description": "判断 header 头是否已经发送，true 已发送，否则返回 false",
+		"prefix": "ngx.headers_sent",
+		"body": [
+			"local sent = ngx.headers_sent()"
+		]
+	},
+	"ngx.print": {
+		"description": "向客户端输出数据，如果响应头未发出，则先发送头部信息，再发送数据内容",
+		"prefix": "ngx.print",
+		"body": [
+			"ngx.print($...)"
+		]
+	},
+	"ngx.say": {
+		"description": "类似 ngx.print ，但为在结尾加上换行符",
+		"prefix": "ngx.say",
+		"body": [
+			"ngx.say($...)"
+		]
+	},
+	"ngx.flush": {
+		"description": "将响应输出流到客户端。ok, err = ngx.flush(wait?)",
+		"prefix": "ngx.flush",
+		"body": [
+			"ngx.flush()"
+		]
+	},
+	"ngx.exit": {
+		"description": "退出请求,当状态 >=200 时，会中断当前请求的执行,  == 0 时, 只会退出当前处理程序。ngx.exit(status)",
+		"prefix": "ngx.exit",
+		"body": [
+			"ngx.exit($1)"
+		]
+	},
+	"ngx.eof": {
+		"description": "显式地指定响应输出流的结束",
+		"prefix": "ngx.eof",
+		"body": [
+			"local ok, err = ngx.eof()"
+		]
+	},
+	"ngx.sleep": {
+		"description": "非阻塞式休眠指定的秒数",
+		"prefix": "ngx.sleep",
+		"body": [
+			"ngx.sleep($seconds)"
+		]
+	},
+	"ngx.unescape_uri": {
+		"description": "反转义一个 uri 字符串。newstr = ngx.unescape_uri(str)",
+		"prefix": "ngx.unescape_uri",
+		"body": [
+			"local $newstr = ngx.unescape_uri($str)"
+		]
+	},
+	"ngx.encode_args": {
+		"description": "根据URI编码的规则将 table 编码为 url 查询字符串",
+		"prefix": "ngx.encode_args",
+		"body": [
+			"local $str = ngx.encode_args($table)"
+		]
+	},
+	"ngx.decode_args": {
+		"description": "将 url 参数字符串转换为 table",
+		"prefix": "ngx.decode_args",
+		"body": [
+			"local $table = ngx.decode_args($str, $max_args?)"
+		]
+	},
+	"ngx.encode_base64": {
+		"description": "将字符串转换为 base64 编码格式字符串",
+		"prefix": "ngx.encode_base64",
+		"body": [
+			"local $newstr = ngx.encode_base64($str, $no_padding?)"
+		]
+	},
+	"ngx.decode_base64": {
+		"description": "将 base64 编码格式转换为 str 。",
+		"prefix": "ngx.decode_base64",
+		"body": [
+			"local $str = ngx.decode_base64($str, $no_padding?)"
+		]
+	},
+	"ngx.crc32_short": {
+		"description": "计算一个字符串的短 CRC 值",
+		"prefix": "ngx.crc32_short",
+		"body": [
+			"local $intval = ngx.crc32_short($str)"
+		]
+	},
+	"ngx.crc32_long": {
+		"description": "计算一个字符串的长 CRC 值",
+		"prefix": "ngx.crc32_long",
+		"body": [
+			"local $intval = ngx.crc32_long($str)"
+		]
+	},
+	"ngx.hmac_sha1": {
+		"description": "使用 secret_key 通过 HMAC-SHA1 算法加密字符串",
+		"prefix": "ngx.hmac_sha1",
+		"body": [
+			"local $digest = ngx.hmac_sha1($secret_key, $str)"
+		]
+	},
+	"ngx.md5": {
+		"description": "获取一个字符串的 MD5 值。 digest = ngx.md5(str)",
+		"prefix": "ngx.md5",
+		"body": [
+			"local $digest = ngx.md5($str)"
+		]
+	},
+	"ngx.md5_bin": {
+		"description": "获取一个字符串的 MD5 值(返回二进制)",
+		"prefix": "ngx.md5_bin",
+		"body": [
+			"local $digest = ngx.md5_bin($str)"
+		]
+	},
+	"ngx.sha1_bin": {
+		"description": "获取一个字符串的 SHA-1 值(返回二进制)",
+		"prefix": "ngx.sha1_bin",
+		"body": [
+			"local $digest = ngx.sha1_bin($str)"
+		]
+	},
+	"ngx.quote_sql_str": {
+		"description": "根据MySQL引用规则返回一个引用的SQL字符串文字",
+		"prefix": "ngx.quote_sql_str",
+		"body": [
+			"local $quoted_value = ngx.quote_sql_str($raw_value)"
+		]
+	},
+	"ngx.today": {
+		"description": "从nginx 时间缓存中返回一个本地当前时间，格式为 yyyy-mm-dd",
+		"prefix": "ngx.today",
+		"body": [
+			"local $str = ngx.today()"
+		]
+	},
+	"ngx.time": {
+		"description": "从 nginx 时间缓存中获取当前时间戳(秒)",
+		"prefix": "ngx.time",
+		"body": [
+			"local $secs = ngx.time()"
+		]
+	},
+	"ngx.now": {
+		"description": "从 nginx 时间缓存中获取当前时间戳(毫秒), 毫秒以小数点后表示",
+		"prefix": "ngx.now",
+		"body": [
+			"local $secs = ngx.now()"
+		]
+	},
+	"ngx.update_time": {
+		"description": "更新 nginx 时间缓存。ngx.update_time()",
+		"prefix": "ngx.update_time",
+		"body": [
+			"ngx.update_time()"
+		]
+	},
+	"ngx.localtime": {
+		"description": "从 nginx 时间缓存中获取当前本地时间，格式为：yyyy-mm-dd hh:mm:ss",
+		"prefix": "ngx.localtime",
+		"body": [
+			"local $str = ngx.localtime()"
+		]
+	},
+	"ngx.utctime": {
+		"description": "从 nginx 时间缓存中获取当前 utc 时间，格式为：yyyy-mm-dd hh:mm:ss",
+		"prefix": "ngx.utctime",
+		"body": [
+			"local $str = ngx.utctime()"
+		]
+	},
+	"ngx.cookie_time": {
+		"description": "返回一个格式化的字符串, 可以作为cookie过期时间",
+		"prefix": "ngx.cookie_time",
+		"body": [
+			"local $str = ngx.cookie_time($sec)"
+		]
+	},
+	"ngx.http_time": {
+		"description": "返回格式化字符串可以用作http头时间,如 Last-Modified 头",
+		"prefix": "ngx.http_time",
+		"body": [
+			"local $头。str = ngx.http_time($sec)"
+		]
+	},
+	"ngx.parse_http_time": {
+		"description": "将字符串转换成时间戳",
+		"prefix": "ngx.parse_http_time",
+		"body": [
+			"local $sec = ngx.parse_http_time($str)"
+		]
+	},
+	"ngx.is_subrequest": {
+		"description": "判断当前处理程序是否 nginx 的一个子请求，如果是则返回true，否则将返回false",
+		"prefix": "ngx.is_subrequest",
+		"body": [
+			"local $value = ngx.is_subrequest()"
+		]
+	},
+	"ngx.get_phase": {
+		"description": "检索当前运行的阶段名称，如: init, 用于 init_by_lua 的上下文等",
+		"prefix": "ngx.get_phase",
+		"body": [
+			"local $str = ngx.get_phase()"
+		]
+	},
+	"ngx.on_abort": {
+		"description": "注册一个回调函数，当客户机过早关闭(下游)连接时自动调用。",
+		"prefix": "ngx.on_abort",
+		"body": [
+			"local ok, err = ngx.on_abort($callback)"
+		]
+	},
+	"ngx.re.match": {
+		"description": "使用正则表达式查找并返回匹配的字符串",
+		"prefix": "ngx.re.match",
+		"body": [
+			"local $captures, err = ngx.re.match($subject, $regex, $options?)"
+		]
+	},
+	"ngx.re.find": {
+		"description": "使用正则表达式查找匹配的字符串位置",
+		"prefix": "ngx.re.find",
+		"body": [
+			"local $from, $to, err = ngx.re.find($subject, $regex, $options?)"
+		]
+	},
+	"ngx.re.gmatch": {
+		"description": "类似于 ngx.re.match，但是返回一个Lua迭代器",
+		"prefix": "ngx.re.gmatch",
+		"body": [
+			"local $iterator, err = ngx.re.gmatch($subject, $regex, $options?)"
+		]
+	},
+	"ngx.re.sub": {
+		"description": "使用正则查找并替换字符串",
+		"prefix": "ngx.re.sub",
+		"body": [
+			"local $newstr, n, err = ngx.re.sub($subject, $regex, $replace, $options?)"
+		]
+	},
+	"ngx.re.gsub": {
+		"description": "使用正则查找并替换字符",
+		"prefix": "ngx.re.gsub",
+		"body": [
+			"local $newstr, n, err = ngx.re.gsub($subject, $regex, $replace, $options?)"
+		]
+	},
+	"ngx.req.is_internal": {
+		"description": "返回一个 boolean 用来表示当前处理的是否一个内部请求",
+		"prefix": "ngx.req.is_internal",
+		"body": [
+			"local $is_internal  = ngx.req.is_internal()"
+		]
+	},
+	"ngx.req.start_time": {
+		"description": "返回创建请求的时间戳",
+		"prefix": "ngx.req.start_time",
+		"body": [
+			"local $secs = ngx.req.start_time()"
+		]
+	},
+	"ngx.req.http_version": {
+		"description": "返回请求的 http 协议版本 (1.1/1.0/2.0/nil， nil 表示无法识别)",
+		"prefix": "ngx.req.start_time",
+		"body": [
+			"local $num = ngx.req.http_version()"
+		]
+	},
+	"ngx.req.raw_header": {
+		"description": "返回请求的 http 头信息，raw 格式",
+		"prefix": "ngx.req.raw_header",
+		"body": [
+			"local $str = ngx.req.raw_header($no_request_line?)"
+		]
+	},
+	"ngx.req.get_method": {
+		"description": "返回请求的 http 方法，如 'GET' 'POST'",
+		"prefix": "ngx.req.get_method",
+		"body": [
+			"local $method_name = ngx.req.get_method()"
+		]
+	},
+	"ngx.req.set_method": {
+		"description": "重写请求的 http 方法",
+		"prefix": "ngx.req.set_method",
+		"body": [
+			"ngx.req.set_method($method_name)"
+		]
+	},
+	"ngx.req.set_uri": {
+		"description": "重写请求的 uri 地址, 布尔类型 jump 指是否接受重定向",
+		"prefix": "ngx.req.set_uri",
+		"body": [
+			"ngx.req.set_uri($uri, $jump?)"
+		]
+	},
+	"ngx.req.set_uri_args": {
+		"description": "重写请求的 uri 参数，args可以是字符串，也可以是非数组table",
+		"prefix": "ngx.req.set_uri_args",
+		"body": [
+			"ngx.req.set_uri_args({$args})"
+		]
+	},
+	"ngx.req.get_uri_args": {
+		"description": "获取请求的 uri 参数, max_args 解析最大的参数个数，不填为默认100个",
+		"prefix": "ngx.req.get_uri_args",
+		"body": [
+			"local $args ngx.req.get_uri_args($max_args?)"
+		]
+	},
+	"ngx.req.get_post_args": {
+		"description": "获取类型为 application/x-www-form-urlencoded 的 post 参数， 返回 table",
+		"prefix": "ngx.req.get_post_args",
+		"body": [
+			"local $args, err =  ngx.req.get_post_args($max_args)"
+		]
+	},
+	"ngx.req.get_headers": {
+		"description": "获取请求头信息 (table) ",
+		"prefix": "ngx.req.get_headers",
+		"body": [
+			"local $headers = ngx.req.get_headers($max_headers?, $raw?)"
+		]
+	},
+	"ngx.req.set_header": {
+		"description": "设置请求头信息",
+		"prefix": "ngx.req.set_header",
+		"body": [
+			"ngx.req.set_header($header_name, $header_value)"
+		]
+	},
+	"ngx.req.clear_header": {
+		"description": "删除指定的请求头信息",
+		"prefix": "ngx.req.clear_header",
+		"body": [
+			"ngx.req.clear_header($header_name)"
+		]
+	},
+	"ngx.req.read_body": {
+		"description": "同步读取客户端请求体，不阻塞Nginx事件循环。",
+		"prefix": "ngx.req.read_body",
+		"body": [
+			"ngx.req.read_body()",
+			"local args = ngx.req.get_post_args()"
+		]
+	},
+	"ngx.req.discard_body": {
+		"description": "同步读取客户端请求体，不阻塞Nginx事件循环。如果已调用了 read_body 方法后，此方法无效 ",
+		"prefix": "ngx.req.discard_body",
+		"body": [
+			"ngx.req.discard_body()"
+		]
+	},
+	"ngx.req.get_body_data": {
+		"description": "同步读取客户端请求内容，不阻塞Nginx事件循环，返加 string 类型的数据",
+		"prefix": "ngx.req.get_body_data",
+		"body": [
+			"local $data = ngx.req.get_body_data()"
+		]
+	},
+	"ngx.req.get_body_file": {
+		"description": "检索 request body 部分的文件，返回文件名",
+		"prefix": "ngx.req.get_body_file",
+		"body": [
+			"local $file_name, $err = ngx.req.get_body_file()",
+			"if not $err then",
+			"  local fd, err = io.open($file_name, 'r')",
+			"end"
+		]
+	},
+	"ngx.req.set_body_data": {
+		"description": "重新设置请求的内容,  以前的内容将被清空（释放内存或删除文件）",
+		"prefix": "ngx.req.set_body_data",
+		"body": [
+			"ngx.req.set_body_data($data)"
+		]
+	},
+	"ngx.req.set_body_file": {
+		"description": "设置请求内容中的文件, auto_clean 指是否请求完成时删除文件，默认为 false",
+		"prefix": "ngx.req.set_body_file",
+		"body": [
+			"ngx.req.set_body_file($file_name, $auto_clean?)"
+		]
+	},
+	"ngx.req.init_body": {
+		"description": "初始化 request body 缓存大小（字节）",
+		"prefix": "ngx.req.init_body",
+		"body": [
+			"ngx.req.init_body($buffer_size)"
+		]
+	},
+	"ngx.req.append_body": {
+		"description": "添加 request body 内容",
+		"prefix": "ngx.req.append_body",
+		"body": [
+			"ngx.req.append_body($data_chunk)"
+		]
+	},
+	"ngx.req.finish_body": {
+		"description": "完成创建一个新请求体的构建过程",
+		"prefix": "ngx.req.finish_body",
+		"body": [
+			"ngx.req.finish_body()"
+		]
+	},
+	"ngx.req.socket": {
+		"description": "返回一个封装下游连接的只读cosocket对象，raw: 是否全双工",
+		"prefix": "ngx.req.socket",
+		"body": [
+			"local $tcpsock, err = ngx.req.socket($raw?)"
+		]
+	},
+	"ngx.socket.udp": {
+		"description": "创建并返回一个 UDP 或 datagram 的 unix 域套接字对象",
+		"prefix": "ngx.socket.udp",
+		"body": [
+			"local udpsock = ngx.socket.udp()"
+		]
+	},
+	"udpsock:setpeername": {
+		"description": "尝试将UDP套接字对象连接到远程服务器或数据报unix域套接字文件",
+		"prefix": "ngx.socket.udp:setpeername",
+		"body": [
+			"local ok, err = $udpsock:setpeername($host, $port)"
+		]
+	},
+	"udpsock:send": {
+		"description": "发送当前UDP或datagram unix域套接字对象的数据。",
+		"prefix": "ngx.socket.udp:send",
+		"body": [
+			"local ok, err = $udpsock:send($data)"
+		]
+	},
+	"udpsock:receive": {
+		"description": "接收来自UDP或datagram unix域套接字对象的数据",
+		"prefix": "ngx.socket.udp:receive",
+		"body": [
+			"local data, err = $udpsock:receive()"
+		]
+	},
+	"udpsock:close": {
+		"description": "关闭当前的UDP或datagram unix域套接字。",
+		"prefix": "ngx.socket.udp:close",
+		"body": [
+			"local ok, err = $udpsock:close()"
+		]
+	},
+	"udpsock:settimeout": {
+		"description": "为后续的套接字操作设置以毫秒为单位的超时值",
+		"prefix": "ngx.socket.udp:settimeout",
+		"body": [
+			"$udpsock:settimeout($time)"
+		]
+	},
+	"ngx.socket.tcp": {
+		"description": "创建并返回一个TCP或面向流的unix域套接字对象",
+		"prefix": "ngx.socket.tcp",
+		"body": [
+			"local tcpsock = ngx.socket.tcp()"
+		]
+	},
+	"tcpsock:connect": {
+		"description": "尝试将TCP套接字对象连接到远程服务器或流unix域套接字文件而不阻塞。",
+		"prefix": "ngx.socket.tcp:connect",
+		"body": [
+			"local ok, err = $tcpsock:connect($host, $port, $options_table?)"
+		]
+	},
+	"tcpsock:sslhandshake": {
+		"description": "SSL/TLS握手是否与当前已建立的连接有关。",
+		"prefix": "ngx.socket.tcp:sslhandshake",
+		"body": [
+			"local session, err = $tcpsock:sslhandshake($reused_session?, $server_name?, $ssl_verify?, $send_status_req?)"
+		]
+	},
+	"tcpsock:send": {
+		"description": "在不阻塞当前TCP或Unix域套接字连接的情况下发送数据。",
+		"prefix": "ngx.socket.tcp:send",
+		"body": [
+			"local bytes, err = $tcpsock:send($data)"
+		]
+	},
+	"tcpsock:receive": {
+		"description": "根据读取模式或大小从连接的套接字接收数据",
+		"prefix": "ngx.socket.tcp:receive",
+		"body": [
+			"local data, err, partial = $tcpsock:receive($size)"
+		]
+	},
+	"tcpsock:receiveuntil": {
+		"description": "该方法返回一个迭代器Lua函数，该函数可以调用该函数来读取数据流，直到它看到指定的模式或出现错误。",
+		"prefix": "ngx.socket.tcp:receiveuntil",
+		"body": [
+			"local iterator = $tcpsock:receiveuntil($pattern, $options?)"
+		]
+	},
+	"tcpsock:close": {
+		"description": "关闭当前的TCP或流unix域套接字。",
+		"prefix": "ngx.socket.tcp:close",
+		"body": [
+			"local ok, err = $tcpsock:close()"
+		]
+	},
+	"tcpsock:settimeout": {
+		"description": "为后续的套接字操作设置以毫秒为单位的超时值",
+		"prefix": "ngx.socket.tcp:settimeout",
+		"body": [
+			"$tcpsock:settimeout($time)"
+		]
+	},
+	"tcpsock:settimeouts": {
+		"description": "分别设置套接字的连接、发送、读取的超时时间，以毫秒为单位",
+		"prefix": "ngx.socket.tcp:settimeouts",
+		"body": [
+			"$tcpsock:settimeouts($connect_timeout, $send_timeout, $read_timeout)"
+		]
+	},
+	"tcpsock:setoption": {
+		"description": "这个函数添加到LuaSocket API兼容性，现在什么也不做。它的功能将在未来实现",
+		"prefix": "ngx.socket.tcp:setoption",
+		"body": [
+			"$tcpsock:setoption($option, $value?)"
+		]
+	},
+	"tcpsock:setkeepalive": {
+		"description": "将当前套接字的连接立即插入到cosocket内置的连接池中，并使其保持存活，直到其他连接方法调用请求或相关的最大空闲超时过期。",
+		"prefix": "ngx.socket.tcp:setkeepalive",
+		"body": [
+			"local ok, err = $tcpsock:setkeepalive($timeout?, $size?)"
+		]
+	},
+	"tcpsock:getreusedtimes": {
+		"description": "此方法返回当前连接的(成功)重用时间。如果出现错误，它返回nil和描述错误的字符串。",
+		"prefix": "ngx.socket.tcp:getreusedtimes",
+		"body": [
+			"local  count, err = $tcpsock:getreusedtimes()"
+		]
+	},
+	"ngx.socket.connect": {
+		"description": "这个函数是结合ngx.socket.tcp()和connect()方法调用的快捷方式。",
+		"prefix": "ngx.socket.connect",
+		"body": [
+			"local  tcpsock, err = ngx.socket.connect($host, $port)"
+		]
+	},
+	"ngx.thread.spawn": {
+		"description": "生成一个新的用户“轻线程”",
+		"prefix": "ngx.thread.spawn",
+		"body": [
+			"local $co = ngx.thread.spawn($func, $arg1, $arg2, ...)"
+		]
+	},
+	"ngx.thread.wait": {
+		"description": "等待一个或多个子“轻线程”，并返回第一个“轻线程”的结果(成功或错误)。",
+		"prefix": "ngx.thread.wait",
+		"body": [
+			"local ok, $res1, $res2, ... = ngx.thread.wait($thread1, $thread2, ...)"
+		]
+	},
+	"ngx.thread.kill": {
+		"description": "销毁一个通过 ngx.thread.spawn 创建出来的子线程",
+		"prefix": "ngx.thread.kill",
+		"body": [
+			"local ok, err = ngx.thread.kill($thread)"
+		]
+	},
+	"ngx.timer.at": {
+		"description": "创建一个具有用户回调函数和可选用户参数的Nginx计时器。",
+		"prefix": "ngx.timer.at",
+		"body": [
+			"local ok, err = ngx.timer.at($delay, $callback, $user_arg1, $user_arg2, ...)"
+		]
+	},
+	"ngx.timer.every": {
+		"description": "与 ngx.timer.at 类似，delay 不能是 0，在当前Nginx工作进程开始退出之前，计时器将被创建。",
+		"prefix": "ngx.timer.every",
+		"body": [
+			"local ok, err = ngx.timer.every($delay, $callback, $user_arg1, $user_arg2, ...)"
+		]
+	},
+	"ngx.timer.running_count": {
+		"description": "返回当前正在运行的计时器的数量。",
+		"prefix": "ngx.timer.running_count",
+		"body": [
+			"local count = ngx.timer.running_count()"
+		]
+	},
+	"ngx.timer.pending_count": {
+		"description": "返回等待计时器的数量。",
+		"prefix": "ngx.timer.pending_count",
+		"body": [
+			"local count = ngx.timer.pending_count()"
+		]
+	}
+}

@@ -1,0 +1,245 @@
+{
+    "PhalconRandomUuid": {
+        "prefix": "pc.uuid",
+        "body": [
+            "\\$random = new \\Phalcon\\Security\\Random();",
+            "\\$${1:uuid} = \\$random->uuid();$0"
+        ],
+        "description": "Phalcon random uuid"
+    },
+    "PhalconModelColumn": {
+        "prefix": "pc.model-column",
+        "body": [
+            "\\$${1:columns} = \\$$2->getModelsMetaData()->getAttributes(\\$$2);$0"
+        ],
+        "description": "Phalcon model column"
+    },
+    "PhalconBuilderQuery": {
+        "prefix": "pc.builder",
+        "body": [
+            "\\$columns = 'a.*';",
+            "\\$orderBy = 'a.created DESC';",
+            "\\$limit = 10;",
+            "\\$offset = 0;",
+            "\\$builder = \\$this->modelsManager->createBuilder();",
+            "\\$builder->columns(\\$columns);",
+            "\\$builder->from(['a' => $2]);",
+            "\\$builder->where(true);",
+            "\\$builder->andWhere('a.is_delete = :is_delete:', ['is_delete' => 2]);",
+            "\\$builder->orderBy(\\$orderBy);",
+            "\\$builder->limit(\\$limit, \\$offset);",
+            "\\$array = \\$builder->getQuery()->execute()->toArray();$0"
+        ],
+        "description": "Phalcon builder query"
+    },
+    "PhalconBuilderWhere": {
+        "prefix": "pc.where",
+        "body": [
+            "if (! empty($1 = ${2:Arr::get}(\\$data, '$3'))) {",
+            "\t\\$${4:builder}->andWhere('$3=:$3:', [",
+            "\t\t'$3' => $1,",
+            "\t]);",
+            "}$0"
+        ],
+        "description": "Phalcon builder where condition"
+    },
+    "PhalconPrintBuilderSql": {
+        "prefix": "pc.bsql",
+        "body": [
+            "print_r(${1:\\$builder}->getQuery()->getSql());die;$0"
+        ],
+        "description": "Phalcon print builder sql"
+    },
+    "PhalconValidationAlnum": {
+        "prefix": "pc.validation-alnum",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:alnum}'}, new \\Phalcon\\Validation\\Validator\\Alnum([",
+            "\t'message' => ${4:'${5:The :field must contain only alphanumeric characters}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation alnum"
+    },
+    "PhalconValidationAlpha": {
+        "prefix": "pc.validation-alpha",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:alnum}'}, new \\Phalcon\\Validation\\Validator\\Alpha([",
+            "\t'message' => ${4:'${5:The :field must contain only letters}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation alpha"
+    },
+    "PhalconValidationDate": {
+        "prefix": "pc.validation-date",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:date}'}, new \\Phalcon\\Validation\\Validator\\Date([",
+            "\t'format' => '${4:Y-m-d}',",
+            "\t'message' => ${5:'${6:The :field must be date}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation date"
+    },
+    "PhalconValidationDigit": {
+        "prefix": "pc.validation-digit",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:digit}'}, new \\Phalcon\\Validation\\Validator\\Digit([",
+            "\t'message' => ${4:'${5:The :field must be digit}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation digit"
+    },
+    "PhalconValidationFile": {
+        "prefix": "pc.validation-file",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:file}'}, new \\Phalcon\\Validation\\Validator\\File([",
+            "\t'maxSize' => '${4:2M}',",
+            "\t'messageSize' => '${5::field exceeds the max filesize (:max)}',",
+            "\t'allowedTypes' => ['image/jpeg', 'image/png'$6],",
+            "\t'messageType' => '${7:Allowed file types are :types}',",
+            "\t'maxResolution' => '${8:800x600}',",
+            "\t'messageMaxResolution' => '${9:Max resolution of :field is :max}',",
+            "\t'message' => ${10:'${11:The :field must be file}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation file"
+    },
+    "PhalconValidationUniqueness": {
+        "prefix": "pc.validation-uniqueness",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:unique}'}, new \\Phalcon\\Validation\\Validator\\Uniqueness([",
+            "\t'model' => ${4:new Users()};",
+            "\t'message' => ${5:'${6:The :field must be unique}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation uniqueness"
+    },
+    "PhalconValidationNumericality": {
+        "prefix": "pc.validation-numericality",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:numeric}'}, new \\Phalcon\\Validation\\Validator\\Numericality([",
+            "\t'message' => ${4:'${5:The :field must be numeric}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation numericality"
+    },
+    "PhalconValidationPresence": {
+        "prefix": "pc.validation-presence",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:name}'}, new \\Phalcon\\Validation\\Validator\\PresenceOf([",
+            "\t'message' => ${4:'${5:The :field is required}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation presence"
+    },
+    "PhalconValidationIdentical": {
+        "prefix": "pc.validation-identical",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:name}'}, new \\Phalcon\\Validation\\Validator\\Identical([",
+            "\t'accepted' => '${4:yes}',",
+            "\t'message' => ${5:'${6:The :field and conditions must be accepted}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation identical"
+    },
+    "PhalconValidationEmail": {
+        "prefix": "pc.validation-email",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:email}'}, new \\Phalcon\\Validation\\Validator\\Email([",
+            "\t'message' => ${4:'${5:The :field must be email}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation email"
+    },
+    "PhalconValidationExclusionIn": {
+        "prefix": "pc.validation-exclusionin",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:exclusionin}'}, new \\Phalcon\\Validation\\Validator\\ExclusionIn([",
+            "\t'domain' => [$4],",
+            "\t'message' => ${5:'${6:The :field must not be $7}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation exclusionin"
+    },
+    "PhalconValidationInclusionIn": {
+        "prefix": "pc.validation-inclusionin",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:inclusionin}'}, new \\Phalcon\\Validation\\Validator\\InclusionIn([",
+            "\t'domain' => [$4],",
+            "\t'message' => ${5:'${6:The :field must be $7}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation inclusionin"
+    },
+    "PhalconValidationRegex": {
+        "prefix": "pc.validation-regex",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:regex}'}, new \\Phalcon\\Validation\\Validator\\Regex([",
+            "\t'pattern' => \"/^[0-9]{4}[-\\/](0[1-9]|1[12])[-\\/](0[1-9]|[12][0-9]|3[01])\\$/\",",
+            "\t'message' => ${4:'${5:The :field is invalid}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation regex"
+    },
+    "PhalconValidationStringLength": {
+        "prefix": "pc.validation-strlen",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:strlen}'}, new \\Phalcon\\Validation\\Validator\\StringLength([",
+            "\t'max' => ${4:8},",
+            "\t'min' => ${5:3},",
+            "\t'messageMaximum' => '${6:The :field is too long}',",
+            "\t'messageMinimum' => '${7:The :field is too short}',",
+            "]));$0"
+        ],
+        "description": "Phalcon validation regex"
+    },
+    "PhalconValidationBetween": {
+        "prefix": "pc.validation-between",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:strlen}'}, new \\Phalcon\\Validation\\Validator\\Between([",
+            "\t'minimum' => $4,",
+            "\t'maximum' => $5,",
+            "\t'message' => '${6:The :field must be $4 and $5}',",
+            "]));$0"
+        ],
+        "description": "Phalcon validation regex"
+    },
+    "PhalconValidationConfirmation": {
+        "prefix": "pc.validation-confirmation",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:confirm}'}, new \\Phalcon\\Validation\\Validator\\Confirmation([",
+            "\t'with' => '${4:confirmField}',",
+            "\t'message' => ${5:'${6:The :field does not match confirmation}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation confirmation"
+    },
+    "PhalconValidationUrl": {
+        "prefix": "pc.validation-url",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:url}'}, new \\Phalcon\\Validation\\Validator\\Url([",
+            "\t'message' => ${4:'${5:The :field must be a url}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation confirmation"
+    },
+    "PhalconValidationCreditCard": {
+        "prefix": "pc.validation-card",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:card}'}, new \\Phalcon\\Validation\\Validator\\CreditCard([",
+            "\t'message' => ${4:'${5:The :field number is not valid}'},",
+            "]));$0"
+        ],
+        "description": "Phalcon validation credit card number"
+    },
+    "PhalconValidationCallback": {
+        "prefix": "pc.validation-callback",
+        "body": [
+            "\\$${1:validation}->add(${2:'${3:callback}'}, new \\Phalcon\\Validation\\Validator\\Callback([",
+            "\t'message' => ${4:'${5:The :field must be only admin set}'},",
+            "\t'callback' => function (\\$${6:data}) {",
+            "\t\t${7:return false};",
+            "\t}",
+            "]));$0"
+        ],
+        "description": "Phalcon validation callback"
+    }
+}

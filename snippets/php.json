@@ -1,0 +1,2574 @@
+{
+	"define new function": {
+		"prefix": "nofunc",
+		"body": [
+			"if (!function_exists('')) {\n\tfunction $1(){\n\t}\n}"
+		],
+		"description": "若函数不存在则定义新的函数"
+	},
+	"$_SERVER['REMOTE_ADDR']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REMOTE_ADDR']$0"
+		],
+		"description": "REMOTE_ADDR: The IP address from which the user is viewing the current page."
+	},
+	"$_SERVER['PHP_SELF']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PHP_SELF']$0"
+		],
+		"description": "PHP_SELF: The filename of the currently executing script, relative to the document root. For instance, $_SERVER['PHP_SELF'] in a script at the address http://example.com/foo/bar.php would be /foo/bar.php. The __FILE__ constant contains the full path and filename of the current (i.e. included) file. If PHP is running as a command-line processor this variable contains the script name since PHP 4.3.0. Previously it was not available."
+	},
+	"$_SERVER['argc']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['argc']$0"
+		],
+		"description": "argc: Contains the number of command line parameters passed to the script (if run on the command line)."
+	},
+	"$_SERVER['argv']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['argv']$0"
+		],
+		"description": "argv: Array of arguments passed to the script. When the script is run on the command line, this gives C-style access to the command line parameters. When called via the GET method, this will contain the query string."
+	},
+	"$_SERVER['GATEWAY_INTERFACE']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['GATEWAY_INTERFACE']$0"
+		],
+		"description": "GATEWAY_INTERFACE: What revision of the CGI specification the server is using; e.g. 'CGI/1.1'."
+	},
+	"$_SERVER['SERVER_ADDR']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_ADDR']$0"
+		],
+		"description": "SERVER_ADDR: The IP address of the server under which the current script is executing."
+	},
+	"$_SERVER['SERVER_NAME']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_NAME']$0"
+		],
+		"description": "SERVER_NAME: The name of the server host under which the current script is executing. If the script is running on a virtual host, this will be the value defined for that virtual host. Note: Under Apache 2, you must set UseCanonicalName = On and ServerName. Otherwise, this value reflects the hostname supplied by the client, which can be spoofed. It is not safe to rely on this value in security-dependent contexts."
+	},
+	"$_SERVER['SERVER_SOFTWARE']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_SOFTWARE']$0"
+		],
+		"description": "SERVER_SOFTWARE: Server identification string, given in the headers when responding to requests."
+	},
+	"$_SERVER['SERVER_PROTOCOL']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_PROTOCOL']$0"
+		],
+		"description": "SERVER_PROTOCOL: Name and revision of the information protocol via which the page was requested; e.g. 'HTTP/1.0';"
+	},
+	"$_SERVER['REQUEST_METHOD']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REQUEST_METHOD']$0"
+		],
+		"description": "REQUEST_METHOD: Which request method was used to access the page; e.g. 'GET', 'HEAD', 'POST', 'PUT'. Note: PHP script is terminated after sending headers (it means after producing any output without output buffering) if the request method was HEAD."
+	},
+	"$_SERVER['REQUEST_TIME']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REQUEST_TIME']$0"
+		],
+		"description": "REQUEST_TIME: The timestamp of the start of the request. Available since PHP 5.1.0."
+	},
+	"$_SERVER['REQUEST_TIME_FLOAT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REQUEST_TIME_FLOAT']$0"
+		],
+		"description": "REQUEST_TIME_FLOAT: The timestamp of the start of the request, with microsecond precision. Available since PHP 5.4.0."
+	},
+	"$_SERVER['QUERY_STRING']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['QUERY_STRING']$0"
+		],
+		"description": "QUERY_STRING: The query string, if any, via which the page was accessed."
+	},
+	"$_SERVER['DOCUMENT_ROOT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['DOCUMENT_ROOT']$0"
+		],
+		"description": "DOCUMENT_ROOT: The document root directory under which the current script is executing, as defined in the server's configuration file."
+	},
+	"$_SERVER['HTTP_ACCEPT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_ACCEPT']$0"
+		],
+		"description": "HTTP_ACCEPT: Contents of the Accept: header from the current request, if there is one."
+	},
+	"$_SERVER['HTTP_ACCEPT_CHARSET']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_ACCEPT_CHARSET']$0"
+		],
+		"description": "HTTP_ACCEPT_CHARSET: Contents of the Accept-Charset: header from the current request, if there is one. Example: 'iso-8859-1,*,utf-8'."
+	},
+	"$_SERVER['HTTP_ACCEPT_ENCODING']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_ACCEPT_ENCODING']$0"
+		],
+		"description": "HTTP_ACCEPT_ENCODING: Contents of the Accept-Encoding: header from the current request, if there is one. Example: 'gzip'."
+	},
+	"$_SERVER['HTTP_ACCEPT_LANGUAGE']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_ACCEPT_LANGUAGE']$0"
+		],
+		"description": "HTTP_ACCEPT_LANGUAGE: Contents of the Accept-Language: header from the current request, if there is one. Example: 'en'."
+	},
+	"$_SERVER['HTTP_CONNECTION']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_CONNECTION']$0"
+		],
+		"description": "HTTP_CONNECTION: Contents of the Connection: header from the current request, if there is one. Example: 'Keep-Alive'."
+	},
+	"$_SERVER['HTTP_HOST']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_HOST']$0"
+		],
+		"description": "HTTP_HOST: Contents of the Host: header from the current request, if there is one."
+	},
+	"$_SERVER['HTTP_REFERER']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_REFERER']$0"
+		],
+		"description": "HTTP_REFERER: The address of the page (if any) which referred the user agent to the current page. This is set by the user agent. Not all user agents will set this, and some provide the ability to modify HTTP_REFERER as a feature. In short, it cannot really be trusted."
+	},
+	"$_SERVER['HTTP_USER_AGENT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_USER_AGENT']$0"
+		],
+		"description": "HTTP_USER_AGENT: Contents of the User-Agent: header from the current request, if there is one. This is a string denoting the user agent being which is accessing the page. A typical example is: Mozilla/4.5 [en] (X11; U; Linux 2.2.9 i586). Among other things, you can use this value with get_browser() to tailor your page's output to the capabilities of the user agent."
+	},
+	"$_SERVER['HTTPS']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTPS']$0"
+		],
+		"description": "HTTPS: Set to a non-empty value if the script was queried through the HTTPS protocol. Note: Note that when using ISAPI with IIS, the value will be off if the request was not made through the HTTPS protocol."
+	},
+	"$_SERVER['REMOTE_HOST']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REMOTE_HOST']$0"
+		],
+		"description": "REMOTE_HOST: The Host name from which the user is viewing the current page. The reverse dns lookup is based on the REMOTE_ADDR of the user. Note: Your web server must be configured to create this variable. For example in Apache you'll need HostnameLookups On inside httpd.conf for it to exist. See also gethostbyaddr()."
+	},
+	"$_SERVER['REMOTE_PORT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REMOTE_PORT']$0"
+		],
+		"description": "REMOTE_PORT: The port being used on the user's machine to communicate with the web server."
+	},
+	"$_SERVER['REMOTE_USER']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REMOTE_USER']$0"
+		],
+		"description": "REMOTE_USER: The authenticated user."
+	},
+	"$_SERVER['REDIRECT_REMOTE_USER']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REDIRECT_REMOTE_USER']$0"
+		],
+		"description": "REDIRECT_REMOTE_USER: The authenticated user if the request is internally redirected."
+	},
+	"$_SERVER['SCRIPT_FILENAME']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SCRIPT_FILENAME']$0"
+		],
+		"description": "SCRIPT_FILENAME: The absolute pathname of the currently executing script. Note: If a script is executed with the CLI, as a relative path, such as file.php or ../file.php, $_SERVER['SCRIPT_FILENAME'] will contain the relative path specified by the user."
+	},
+	"$_SERVER['SERVER_ADMIN']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_ADMIN']$0"
+		],
+		"description": "SERVER_ADMIN: The value given to the SERVER_ADMIN (for Apache) directive in the web server configuration file. If the script is running on a virtual host, this will be the value defined for that virtual host."
+	},
+	"$_SERVER['SERVER_PORT']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_PORT']$0"
+		],
+		"description": "SERVER_PORT: The port on the server machine being used by the web server for communication. For default setups, this will be '80'; using SSL, for instance, will change this to whatever your defined secure HTTP port is. Note: Under the Apache 2, you must set UseCanonicalName = On, as well as UseCanonicalPhysicalPort = On in order to get the physical (real) port, otherwise, this value can be spoofed and it may or may not return the physical port value. It is not safe to rely on this value in security-dependent contexts."
+	},
+	"$_SERVER['SERVER_SIGNATURE']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SERVER_SIGNATURE']$0"
+		],
+		"description": "SERVER_SIGNATURE: String containing the server version and virtual host name which are added to server-generated pages, if enabled."
+	},
+	"$_SERVER['PATH_TRANSLATED']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PATH_TRANSLATED']$0"
+		],
+		"description": "PATH_TRANSLATED: Filesystem- (not document root-) based path to the current script, after the server has done any virtual-to-real mapping. Note: As of PHP 4.3.2, PATH_TRANSLATED is no longer set implicitly under the Apache 2 SAPI in contrast to the situation in Apache 1, where it's set to the same value as the SCRIPT_FILENAME server variable when it's not populated by Apache. This change was made to comply with the CGI specification that PATH_TRANSLATED should only exist if PATH_INFO is defined. Apache 2 users may use AcceptPathInfo = On inside httpd.conf to define PATH_INFO."
+	},
+	"$_SERVER['SCRIPT_NAME']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['SCRIPT_NAME']$0"
+		],
+		"description": "SCRIPT_NAME: Contains the current script's path. This is useful for pages which need to point to themselves. The __FILE__ constant contains the full path and filename of the current (i.e. included) file."
+	},
+	"$_SERVER['REQUEST_URI']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['REQUEST_URI']$0"
+		],
+		"description": "REQUEST_URI: The URI which was given in order to access this page; for instance, '/index.html'."
+	},
+	"$_SERVER['PHP_AUTH_DIGEST']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PHP_AUTH_DIGEST']$0"
+		],
+		"description": "PHP_AUTH_DIGEST: When doing Digest HTTP authentication this variable is set to the 'Authorization' header sent by the client (which you should then use to make the appropriate validation)."
+	},
+	"$_SERVER['PHP_AUTH_USER']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PHP_AUTH_USER']$0"
+		],
+		"description": "PHP_AUTH_USER: When doing HTTP authentication this variable is set to the username provided by the user."
+	},
+	"$_SERVER['PHP_AUTH_PW']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PHP_AUTH_PW']$0"
+		],
+		"description": "PHP_AUTH_PW: When doing HTTP authentication this variable is set to the password provided by the user."
+	},
+	"$_SERVER['AUTH_TYPE']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['AUTH_TYPE']$0"
+		],
+		"description": "AUTH_TYPE: When doing HTTP authentication this variable is set to the authentication type."
+	},
+	"$_SERVER['PATH_INFO']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['PATH_INFO']$0"
+		],
+		"description": "PATH_INFO: Contains any client-provided pathname information trailing the actual script filename but preceding the query string, if available. For instance, if the current script was accessed via the URL http://www.example.com/php/path_info.php/some/stuff?foo=bar, then $_SERVER['PATH_INFO'] would contain /some/stuff."
+	},
+	"$_SERVER['ORIG_PATH_INFO']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['ORIG_PATH_INFO']$0"
+		],
+		"description": "ORIG_PATH_INFO: Original version of 'PATH_INFO' before processed by PHP."
+	},
+	"$_SERVER['HTTP_X_FORWARDED_FOR']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_X_FORWARDED_FOR']$0"
+		],
+		"description": "HTTP_X_FORWARDED_FOR"
+	},
+	"$_SERVER['HTTP_X_REAL_IP']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_X_REAL_IP']$0"
+		],
+		"description": "HTTP_X_REAL_IP"
+	},
+	"$_SERVER['HTTP_X_REQUESTED_WITH']": {
+		"prefix": "$_SERVER",
+		"body": [
+			"\\$_SERVER['HTTP_X_REQUESTED_WITH']$0"
+		],
+		"description": "HTTP_X_REQUESTED_WITH"
+	},
+	"class …": {
+		"prefix": "class",
+		"body": [
+			"class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "Class definition"
+	},
+	"PHPDoc class …": {
+		"prefix": "doc_class",
+		"body": [
+			"/**",
+			" * ${6:undocumented class}",
+			" */",
+			"class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "Documented Class Declaration"
+	},
+	"function __construct": {
+		"prefix": "con",
+		"body": [
+			"${1:public} function __construct(${2:${3:Type} $${4:var}${5: = ${6:null}}}) {",
+			"\t\\$this->${4:var} = $${4:var};$0",
+			"}"
+		]
+	},
+	"PHPDoc property": {
+		"prefix": "doc_v",
+		"body": [
+			"/** @var ${1:Type} $${2:var} ${3:description} */",
+			"${4:protected} $${2:var}${5: = ${6:null}};$0"
+		],
+		"description": "Documented Class Variable"
+	},
+	"PHPDoc function …": {
+		"prefix": "doc_f",
+		"body": [
+			"/**",
+			" * ${1:undocumented function summary}",
+			" *",
+			" * ${2:Undocumented function long description}",
+			" *",
+			"${3: * @param ${4:Type} $${5:var} ${6:Description}}",
+			"${7: * @return ${8:type}}",
+			"${9: * @throws ${10:conditon}}",
+			" **/",
+			"${11:public }function ${12:FunctionName}(${13:${14:${4:Type} }$${5:var}${15: = ${16:null}}})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Documented function"
+	},
+	"PHPDoc param …": {
+		"prefix": "param",
+		"body": [
+			"* @param ${1:Type} ${2:var} ${3:Description}$0"
+		],
+		"description": "Parameter documentation"
+	},
+	"function …": {
+		"prefix": "fun",
+		"body": [
+			"${1:public }function ${2:FunctionName}(${3:${4:${5:Type} }$${6:var}${7: = ${8:null}}})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Function"
+	},
+	"trait …": {
+		"prefix": "trait",
+		"body": [
+			"/**",
+			" * $1",
+			" */",
+			"trait ${2:TraitName}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "Trait"
+	},
+	"define(…, …)": {
+		"prefix": "def",
+		"body": [
+			"define('$1', ${2:'$3'});",
+			"$0"
+		],
+		"description": "Definition"
+	},
+	"do … while …": {
+		"prefix": "do",
+		"body": [
+			"do {",
+			"\t${0:# code...}",
+			"} while (${1:$${2:a} <= ${3:10}});"
+		],
+		"description": "Do-While loop"
+	},
+	"while …": {
+		"prefix": "while",
+		"body": [
+			"while (${1:$${2:a} <= ${3:10}}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "While-loop"
+	},
+	"if …": {
+		"prefix": "if",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If block"
+	},
+	"if … else …": {
+		"prefix": "ifelse",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:# code...}",
+			"} else {",
+			"\t${3:# code...}",
+			"}",
+			"$0"
+		],
+		"description": "If Else block"
+	},
+	"$… = ( … ) ? … : …": {
+		"prefix": "if?",
+		"body": "$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b} ;",
+		"description": "Ternary conditional assignment"
+	},
+	"else …": {
+		"prefix": "else",
+		"body": [
+			"else {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Else block"
+	},
+	"elseif …": {
+		"prefix": "elseif",
+		"body": [
+			"elseif (${1:condition}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Elseif block"
+	},
+	"for …": {
+		"prefix": "for",
+		"body": [
+			"for ($${1:i}=${2:0}; $${1:i} < $3; $${1:i}++) { ",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "For-loop"
+	},
+	"foreach …": {
+		"prefix": "foreach",
+		"body": [
+			"foreach ($${1:variable} as $${2:key} ${3:=> $${4:value}}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Foreach loop"
+	},
+	"$… = array (…)": {
+		"prefix": "array",
+		"body": "$${1:arrayName} = array('$2' => $3${4:,} $0);",
+		"description": "Array initializer"
+	},
+	"$… = […]": {
+		"prefix": "shorray",
+		"body": "$${1:arrayName} = ['$2' => $3${4:,} $0];",
+		"description": "Array initializer"
+	},
+	"… => …": {
+		"prefix": "keyval",
+		"body": "'$1' => $2${3:,} $0",
+		"description": "Key-Value initializer"
+	},
+	"switch …": {
+		"prefix": "switch",
+		"body": [
+			"switch (\\$${1:variable}) {",
+			"\tcase '${2:value}':",
+			"\t\t${3:# code...}",
+			"\t\tbreak;",
+			"\t$0",
+			"\tdefault:",
+			"\t\t${4:# code...}",
+			"\t\tbreak;",
+			"}"
+		],
+		"description": "Switch block"
+	},
+	"case …": {
+		"prefix": "case",
+		"body": [
+			"case '${1:value}':",
+			"\t${0:# code...}",
+			"\tbreak;"
+		],
+		"description": "Case Block"
+	},
+	"$this->…": {
+		"prefix": "this",
+		"body": "\\$this->$0;",
+		"description": "$this->..."
+	},
+	"echo $this->…": {
+		"prefix": "ethis",
+		"body": "echo \\$this->$0;",
+		"description": "Echo this"
+	},
+	"Throw Exception": {
+		"prefix": "throw",
+		"body": [
+			"throw new $1Exception(${2:\"${3:Error Processing Request}\"}${4:, ${5:1}});",
+			"$0"
+		],
+		"description": "Throw exception"
+	},
+	"Region Start": {
+		"prefix": "#region",
+		"body": [
+			"#region"
+		],
+		"description": "Folding Region Start"
+	},
+	"Region End": {
+		"prefix": "#endregion",
+		"body": [
+			"#endregion"
+		],
+		"description": "Folding Region End"
+	},
+	"Try Catch Block": {
+		"prefix": "try",
+		"body": [
+			"try {",
+			"\t${1://code...}",
+			"} catch (${2:\\Throwable} ${3:\\$th}) {",
+			"\t${4://throw \\$th;}",
+			"}"
+		],
+		"description": "Try catch block"
+	},
+	"PHPClass": {
+		"prefix": "p.class",
+		"body": [
+			"${1:namespace ${2:App}};",
+			"",
+			"class ${3:ClassName} ${4:extends ${5:AnotherClass}} ${6:implements ${7:Interface}}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "PHP class"
+	},
+	"PHPDocClass": {
+		"prefix": "p.docclass",
+		"body": [
+			"${1:namespace ${2:App}};",
+			"",
+			"/**",
+			" * Class $3.",
+			" */",
+			"class $3 ${4:extends ${5:AnotherClass}} ${6:implements ${7:Interface}}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "PHP document class"
+	},
+	"PHPConstructMethod": {
+		"prefix": "p.__construct",
+		"body": [
+			"/**",
+			" * Class constructor.",
+			" */",
+			"${1:public} function __construct(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"{",
+			"\t\\$this->${4} = \\$${4};$0",
+			"}"
+		],
+		"description": "PHP construct method"
+	},
+	"PHPDestructMethod": {
+		"prefix": "p.__destruct",
+		"body": [
+			"/**",
+			" * Class destructor.",
+			" */",
+			"${1:public} function __destruct()",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP destruct method"
+	},
+	"PHPSetMethod": {
+		"prefix": "p.__set",
+		"body": [
+			"${1:public} function __set(${2:${3:type} \\$${4}${5: = ${6:null}}}, ${7:${8:type} \\$${9}${10: = ${11:null}}})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP set method"
+	},
+	"PHPGetMethod": {
+		"prefix": "p.__get",
+		"body": [
+			"${1:public} function __get(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP get method"
+	},
+	"PHPProperty": {
+		"prefix": "p.property",
+		"body": [
+			"/** @var ${1:type} \\$${2} ${3:description}. */",
+			"${4:protected} \\$${2}${5: = ${6:null}};$0"
+		],
+		"description": "PHP property"
+	},
+	"PHPMethod": {
+		"prefix": "p.method",
+		"body": [
+			"${1:public }function ${2:functionName}(${3:${4:type} \\$${5}${6: = ${7:null}}})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP method"
+	},
+	"PHPDocMethod": {
+		"prefix": "p.docmethod",
+		"body": [
+			"/**",
+			" * ${1:Undocumented function}.",
+			" *",
+			"${2: * @param ${3} \\$${4} ${5:description}}.",
+			" *",
+			"${6: * @return ${7:type}}",
+			" **/",
+			"${8:public }function ${9:functionName}(${10:${3} \\$${4}${13: = ${14:null}}})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP document and method"
+	},
+	"PHPFunction": {
+		"prefix": "p.function",
+		"body": [
+			"function ${1:functionName}(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP method"
+	},
+	"PHPDocParameter": {
+		"prefix": "p.docparam",
+		"body": [
+			"@param ${1:type} \\$${2:var} ${3:description}.$0"
+		],
+		"description": "PHP document parameter"
+	},
+	"PHPGlobal": {
+		"prefix": "p.globals",
+		"body": [
+			"\\$_GLOBALS['$1']$0"
+		],
+		"description": "PHP $_GLOBALS global variable"
+	},
+	"PHPGlobalRequest": {
+		"prefix": "p.request",
+		"body": [
+			"\\$_REQUEST['$1']$0"
+		],
+		"description": "PHP $_REQUEST global variable"
+	},
+	"PHPGlobalPost": {
+		"prefix": "p.post",
+		"body": [
+			"\\$_POST['$1']$0"
+		],
+		"description": "PHP $_POST global variable"
+	},
+	"PHPGlobalGet": {
+		"prefix": "p.get",
+		"body": [
+			"\\$_GET['$1']$0"
+		],
+		"description": "PHP $_GET global variable"
+	},
+	"PHPGlobalServer": {
+		"prefix": "p.server",
+		"body": [
+			"\\$_SERVER['$1']$0"
+		],
+		"description": "PHP $_SERVER global variable"
+	},
+	"PHPGlobalFile": {
+		"prefix": "p.file",
+		"body": [
+			"\\$_FILES['$1']$0"
+		],
+		"description": "PHP $_FILES global variable"
+	},
+	"PHPGlobalEnv": {
+		"prefix": "p.env",
+		"body": [
+			"\\$_ENV['$1']$0"
+		],
+		"description": "PHP $_ENV global variable"
+	},
+	"PHPGlobalCookie": {
+		"prefix": "p.cookie",
+		"body": [
+			"\\$_COOKIE['$1']$0"
+		],
+		"description": "PHP $_COOKIE global variable"
+	},
+	"PHPGlobalSession": {
+		"prefix": "p.session",
+		"body": [
+			"\\$_SESSION['$1']$0"
+		],
+		"description": "PHP $_SESSION global variable"
+	},
+	"PHPPrintVariableWithPrintR": {
+		"prefix": "p.pr",
+		"body": [
+			"printf(PHP_SAPI !== 'cli' ? '<pre>%s</pre>' : '%s', print_r($1, true));$0"
+		],
+		"description": "PHP print some variables using print_r function"
+	},
+	"PHPPrintResourceWithVarDump": {
+		"prefix": "p.vd",
+		"body": [
+			"var_dump($1);die;$0"
+		],
+		"description": "PHP print some resources using var_dump function"
+	},
+	"PHPPrintClassReflection": {
+		"prefix": "p.crfc",
+		"body": [
+			"\\$rfc = new \\ReflectionClass($1);",
+			"print_r(\\$rfc->getMethods());$0"
+		],
+		"description": "PHP print class reflection"
+	},
+	"PHPPrivateMethod": {
+		"prefix": "p.prim",
+		"body": [
+			"private function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class private method"
+	},
+	"PHPPrivateStaticMethod": {
+		"prefix": "p.prism",
+		"body": [
+			"private static function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class private static method"
+	},
+	"PHPProtectedMethod": {
+		"prefix": "p.prom",
+		"body": [
+			"private function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class protected method"
+	},
+	"PHPProtectedStaticMethod": {
+		"prefix": "p.prosm",
+		"body": [
+			"protected static function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class protected static method"
+	},
+	"PHPPublicMethod": {
+		"prefix": "p.pubm",
+		"body": [
+			"public function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class public method"
+	},
+	"PHPPublicStaticMethod": {
+		"prefix": "p.pubsm",
+		"body": [
+			"public static function ${1:functionName}($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "PHP class public static method"
+	},
+	"PHPIf": {
+		"prefix": "p.if",
+		"body": [
+			"if (\\$${1:var}) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "PHP if"
+	},
+	"PHPIfElse": {
+		"prefix": "p.ifel",
+		"body": [
+			"if (\\$${1:var}) {",
+			"\t$2",
+			"} else {",
+			"\t$3",
+			"}$0"
+		],
+		"description": "PHP if else"
+	},
+	"PHPForeach": {
+		"prefix": "p.fore",
+		"body": [
+			"foreach (\\$${1:variables} as \\$${2:key} => \\$${3:val}) {",
+			"\t$4",
+			"}$0"
+		],
+		"description": "PHP foreach loop"
+	},
+	"PHPFor": {
+		"prefix": "p.for",
+		"body": [
+			"for (\\$i = 0; \\$i < \\$${1:variable}; \\$i++) {",
+			"\t$2",
+			"}$0"
+		],
+		"description": "PHP for loop"
+	},
+	"PHPDoWhile": {
+		"prefix": "p.dow",
+		"body": [
+			"do {",
+			"\t${0:# code...}",
+			"} while (${1:$${2:a} <= ${3:10}});"
+		],
+		"description": "PHP do-while loop"
+	},
+	"PHPWhile": {
+		"prefix": "p.while",
+		"body": [
+			"while (${1:$${2:a} <= ${3:10}}) {",
+			"\t${4:# code...}",
+			"}$0"
+		],
+		"description": "PHP while loop"
+	},
+	"PHPSwitch": {
+		"prefix": "p.switch",
+		"body": [
+			"switch (\\$${1:variable}) {",
+			"\tcase $2:",
+			"\t\t$3;",
+			"\t\tbreak;",
+			"\tcase $4:",
+			"\t\t$5;",
+			"\t\tbreak;",
+			"\tdefault:",
+			"\t\t$6;",
+			"\t\tbreak;",
+			"}$0"
+		],
+		"description": "PHP switch case"
+	},
+	"PHPTryCatch": {
+		"prefix": "p.try",
+		"body": [
+			"try {",
+			"\t${1:// code...}",
+			"} catch (${2:\\Throwable} ${3}) {",
+			"\t${4:// throw ${3};}",
+			"}$0"
+		],
+		"description": "PHP try catch"
+	},
+	"PHPThrowException": {
+		"prefix": "p.throw",
+		"body": [
+			"throw new $1Exception(${2:\"${3:Error Processing Request}\"}${4:, ${5:1}});",
+			"$0"
+		],
+		"description": "PHP throw exception"
+	},
+	"PHPClassThis": {
+		"prefix": "p.this",
+		"body": "\\$this->$1;$0",
+		"description": "PHP class this"
+	},
+	"PHPInclude": {
+		"prefix": "p.include",
+		"body": [
+			"include ${1:${2:__DIR__} . ${3:'${4:/vendor/autoload.php}'}};$0"
+		],
+		"description": "PHP include file"
+	},
+	"PHPRequire": {
+		"prefix": "p.require",
+		"body": [
+			"require ${1:${2:__DIR__} . ${3:'${4:/vendor/autoload.php}'}};$0"
+		],
+		"description": "PHP require file"
+	},
+	"PHPIsset": {
+		"prefix": "p.isset",
+		"body": [
+			"\\$${1:array}${2:['${3:index}']} ?? ${4:null};$0"
+		],
+		"description": "PHP isset"
+	},
+	"PHPEmpty": {
+		"prefix": "p.isset",
+		"body": [
+			"\\$${1:array}${2:['${3:index}']} ?: ${4:null};$0"
+		],
+		"description": "PHP empty"
+	},
+	"PHPDate": {
+		"prefix": "p.date",
+		"body": [
+			"date(${1:'${2:Y-m-d H:i:s}'}${3:, \\$${4:var}});$0"
+		],
+		"description": "PHP date"
+	},
+	"PHPStringLowercaseLetters": {
+		"prefix": "p.strlc",
+		"body": [
+			"\\$${1:lowercases} = 'abcdefghijklmnopqrstuvwxyz';$0"
+		],
+		"description": "PHP string initialization lowercase letters"
+	},
+	"PHPStringUppercaseLetters": {
+		"prefix": "p.struc",
+		"body": [
+			"\\$${1:uppercases} = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';$0"
+		],
+		"description": "PHP string initialization lowercase letters"
+	},
+	"PHPArray": {
+		"prefix": "p.arr",
+		"body": [
+			"\\$${1:array} = [$2, $3];$0"
+		],
+		"description": "PHP array"
+	},
+	"PHPArrayColumn": {
+		"prefix": "p.arr-column",
+		"body": [
+			"\\$${1:ids} = array_unique(array_filter(array_column(\\$${2:result}, '$3')));$0"
+		],
+		"description": "PHP get the column specified in the array"
+	},
+	"PHPArrayCombine": {
+		"prefix": "p.arr-combine",
+		"body": [
+			"\\$${1:array} = array_combine(",
+			"\tarray_column(\\$$2, '$3'),",
+			"\tarray_column(\\$$2, '$4')",
+			");$0"
+		],
+		"description": "PHP array combine new array"
+	},
+	"PHPArrayLowercaseLetters": {
+		"prefix": "p.arrlc",
+		"body": [
+			"\\$${1:lowercases} = ['a', 'b', 'c', 'd', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];$0"
+		],
+		"description": "PHP array initialization lowercase letters"
+	},
+	"PHPArrayUppercaseLetters": {
+		"prefix": "p.arruc",
+		"body": [
+			"\\$${1:uppercases} = ['A', 'B', 'C', 'D', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];$0"
+		],
+		"description": "PHP array initialization uppercase letters"
+	},
+	"PHPRegionStart": {
+		"prefix": "#region",
+		"body": [
+			"#region"
+		],
+		"description": "PHP folding region start"
+	},
+	"PHPRegionEnd": {
+		"prefix": "#endregion",
+		"body": [
+			"#endregion"
+		],
+		"description": "PHP folding region end"
+	},
+	"StringEndsWith": {
+		"prefix": "p.str-ends-with",
+		"body": [
+			"\\$${1:result} = strrpos(\\$$2, \\$$3) === (strlen(\\$$2) - strlen(\\$$3));$0"
+		],
+		"description": "Determine if a given string ends with a given substring"
+	},
+	"PHP comment": {
+		"prefix": "ch_comment",
+		"body": [
+			"// === "
+		],
+		"description": "Creates a comment"
+	},
+	"Yii command": {
+		"prefix": "yii_command_estructura",
+		"body": [
+			"<?php",
+			" class exportarImagenesEmpleadosCommand extends CConsoleCommand",
+			"   {",
+			"     public function actionIndex()",
+			"     {",
+			"         echo Yii::app()->cliColor->getColoredString('nombre comando', \"light_green\");",
+			"         echo Yii::app()->cliColor->getColoredString(\" *Comando* \", \"light_green\");",
+			"         echo Yii::app()->cliColor->getColoredString(\" imagenes\", \"light_cyan\");",
+			"         echo Yii::app()->cliColor->getColoredString(\" Argumentos por default \", \"brown\");",
+			"         echo Yii::app()->cliColor->getColoredString(\" --mover=no --eliminar=no\", \"light_cyan\");",
+			"         echo \"**************************************\";",
+			"     }",
+			"   }"
+		],
+		"description": "Crea la estructura de un command"
+	},
+	"PHP: COOKIE['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_COOKIE['$1']"
+		],
+		"description": "PHP Cookie"
+	},
+	"PHP: ENV['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_ENV['$1']"
+		],
+		"description": "PHP env"
+	},
+	"PHP: FILES['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_FILES['$1']"
+		],
+		"description": "PHP Files"
+	},
+	"PHP: GET['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_GET['$1']"
+		],
+		"description": "PHP Get"
+	},
+	"PHP: POST['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_POST['$1']"
+		],
+		"description": "PHP Post"
+	},
+	"PHP: REQUEST['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_REQUEST['$1']"
+		],
+		"description": "PHP Request"
+	},
+	"PHP: SERVER['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_SERVER['$1']"
+		],
+		"description": "PHP Server"
+	},
+	"PHP: SESSION['...']": {
+		"prefix": "$_",
+		"body": [
+			"$$_SESSION['$1']"
+		],
+		"description": "PHP Session"
+	},
+	"PHP: return;": {
+		"prefix": "r",
+		"body": [
+			"return$1;"
+		],
+		"desription": "PHP blank return statement"
+	},
+	"PHP: Short echo tag ": {
+		"prefix": "?=",
+		"body": [
+			"<?= $1 ?>"
+		],
+		"description": "PHP short echo tag"
+	},
+	"PHP: Class declaration": {
+		"prefix": "c",
+		"body": [
+			"class $1 {",
+			"     $2",
+			"}"
+		],
+		"description": "PHP class declaration"
+	},
+	"PHP: Class w/ constructor": {
+		"prefix": "cc",
+		"body": [
+			"class $1 {",
+			"     public function __construct()",
+			"     {",
+			"         $2",
+			"     }",
+			"}"
+		],
+		"description": "PHP class w/ constructor"
+	},
+	"PHP: trait ... {": {
+		"prefix": "trt",
+		"body": [
+			"namespace $1;",
+			"",
+			"use $2;",
+			"",
+			"trait $3Trait {",
+			"    $4",
+			"}"
+		]
+	},
+	"Laravel: dd(...)": {
+		"prefix": "dd",
+		"body": [
+			"dd($1);"
+		],
+		"description": "Laravel die & dump"
+	},
+	"PHP Public Function: public function ...(...)": {
+		"prefix": "pfunc",
+		"body": [
+			"public function $1($2)",
+			"{",
+			"\t$3",
+			"}"
+		]
+	},
+	"ifend": {
+		"prefix": "ifend",
+		"body": [
+			"if (${1:cond}):",
+			"endif;"
+		],
+		"description": "ifend"
+	},
+	"ifelseend": {
+		"prefix": "ifelseend",
+		"body": [
+			"if (${1:cond}):",
+			"else:",
+			"endif;"
+		],
+		"description": "ifelseend"
+	},
+	"ifelseifend": {
+		"prefix": "ifelseifend",
+		"body": [
+			"if (${1:cond}):",
+			"elseif (${2:cond}):",
+			"else:",
+			"endif;"
+		],
+		"description": "ifelseifend"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if (${1:cond}) {",
+			"",
+			"}"
+		],
+		"description": "if"
+	},
+	"ifelse": {
+		"prefix": "ifelse",
+		"body": [
+			"if (${1:cond}) {",
+			"} else {",
+			"",
+			"}"
+		],
+		"description": "ifelse"
+	},
+	"ifelseif": {
+		"prefix": "ifelseif",
+		"body": [
+			"if (${1:cond}) {",
+			"} elseif(${2:cond}) {",
+			"",
+			"} else {",
+			"",
+			"}"
+		],
+		"description": "ifelseif"
+	},
+	"foreach": {
+		"prefix": "foreachend",
+		"body": [
+			"foreach ($${1:variable} as $${2:key} => $${3:value}):",
+			"",
+			"endforeach;"
+		],
+		"description": "foreach"
+	},
+	"for": {
+		"prefix": "forend",
+		"body": [
+			"for ($${1:i}=0; $${1:i} < ; $${1:i}++):",
+			"\t",
+			"endfor;"
+		],
+		"description": "for"
+	},
+	"while": {
+		"prefix": "whileend",
+		"body": [
+			"while ($${1:variable} <= 10):",
+			"\t",
+			"endwhile;"
+		],
+		"description": "while"
+	},
+	"dowhile": {
+		"prefix": "dowhile",
+		"body": [
+			"do {",
+			"\t",
+			"} while ($${1:variable} <= 10);"
+		],
+		"description": "dowhile"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": [
+			"switch ($${1:cond}) {",
+			"\tcase ${2:label}:",
+			"\t\tbreak;",
+			"\tcase ${3:label}:",
+			"\t\tbreak;",
+			"\tcase ${4:label}:",
+			"\t\tbreak;",
+			"\tdefault:",
+			"}"
+		],
+		"description": "switch"
+	},
+	"globals": {
+		"prefix": "$G",
+		"body": [
+			"$GLOBALS[\"${1:name}\"]"
+		],
+		"description": "globals"
+	},
+	"server": {
+		"prefix": "$se",
+		"body": [
+			"$_SERVER[\"${1:name}\"]"
+		],
+		"description": "server"
+	},
+	"request": {
+		"prefix": "$r",
+		"body": [
+			"$_REQUEST[\"${1:name}\"]"
+		],
+		"description": "request"
+	},
+	"post": {
+		"prefix": "$p",
+		"body": [
+			"$$_POST[\"${1:name}\"]"
+		],
+		"description": "post"
+	},
+	"get": {
+		"prefix": "$g",
+		"body": [
+			"$$_GET[\"${1:name}\"]"
+		],
+		"description": "get"
+	},
+	"files": {
+		"prefix": "$f",
+		"body": [
+			"$$_FILES[\"${1:name}\"]"
+		],
+		"description": "files"
+	},
+	"env": {
+		"prefix": "$e",
+		"body": [
+			"$$_ENV[\"${1:name}\"]"
+		],
+		"description": "env"
+	},
+	"cookie": {
+		"prefix": "$c",
+		"body": [
+			"$$_COOKIE[\"${1:name}\"]"
+		],
+		"description": "cookie"
+	},
+	"session": {
+		"prefix": "$s",
+		"body": [
+			"$$_SESSION[\"${1:name}\"]"
+		],
+		"description": "session"
+	},
+	"date": {
+		"prefix": "date",
+		"body": [
+			"date(\"${1:format}\",${2:timestamp})"
+		],
+		"description": "date"
+	},
+	"function": {
+		"prefix": "function",
+		"body": [
+			"function ${1:item}() {",
+			"",
+			"}"
+		],
+		"description": "function"
+	},
+	"_c": {
+		"prefix": "_c",
+		"body": [
+			"public function __construct($${1:parameters})",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Constructor"
+	},
+	"fore": {
+		"prefix": "fore",
+		"body": [
+			"foreach ($1 as $${2:item}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "foreach(iterable_expr as $value) {...}"
+	},
+	"forek": {
+		"prefix": "forek",
+		"body": [
+			"foreach ($1 as $${2:key} => $${3:index}) {",
+			"\t$0",
+			"}"
+		],
+		"description": "foreach(iterable_expr as $key => $value) {...}"
+	},
+	"inc": {
+		"prefix": "inc",
+		"body": [
+			"include \"$0\";"
+		],
+		"description": "'include' statement"
+	},
+	"inco": {
+		"prefix": "inco",
+		"body": [
+			"include_once \"$0\";"
+		],
+		"description": "'include_once' statement"
+	},
+	"prif": {
+		"prefix": "prif",
+		"body": [
+			"private function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "private function"
+	},
+	"prisf": {
+		"prefix": "prisf",
+		"body": [
+			"private static function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "private static function"
+	},
+	"prof": {
+		"prefix": "prof",
+		"body": [
+			"protected function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "protected function"
+	},
+	"prosf": {
+		"prefix": "prosf",
+		"body": [
+			"protected static function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "protected static function"
+	},
+	"pubf": {
+		"prefix": "pubf",
+		"body": [
+			"public function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "public function"
+	},
+	"pubsf": {
+		"prefix": "pubsf",
+		"body": [
+			"public static function $1($2)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "public static function"
+	},
+	"rqr": {
+		"prefix": "rqr",
+		"body": [
+			"require \"$0\";"
+		],
+		"description": "'require' statement"
+	},
+	"rqro": {
+		"prefix": "rqro",
+		"body": [
+			"require_once \"$0\";"
+		],
+		"description": "'require_once' statement"
+	},
+	"thr": {
+		"prefix": "thr",
+		"body": [
+			"throw new ${1:\\Exception}(\"${2:Error Processing Request}\");"
+		],
+		"description": "throw new"
+	},
+	"new MongoDB": {
+		"scope": "php",
+		"prefix": "nmdb",
+		"body": [
+			"$$db = (new MongoDB\\client)->location; // db name",
+			"$$collection = $$db->city; // collection name"
+		],
+		"description": "Create new MongoDb"
+	},
+	"new MongoDB collection": {
+		"scope": "php",
+		"prefix": "nmdbc",
+		"body": [
+			"$$db = (new MongoDB\\client)->location->city;"
+		],
+		"description": "Create new MongoDb"
+	},
+	"insertOne": {
+		"scope": "php",
+		"prefix": "i.o",
+		"body": [
+			"$$db->insertOne([",
+			"'name' => 'iran',",
+			"'code' => '+98'",
+			"]);"
+		],
+		"description": "insertOne in mongo php"
+	},
+	"insertMany": {
+		"scope": "php",
+		"prefix": "i.m",
+		"body": [
+			"$$db->insertOne([",
+			"'name' => 'iran',",
+			"'code' => '+98'",
+			"],[",
+			"'name'=>'usa',",
+			"'code' => '+1'",
+			"]);"
+		],
+		"description": "insertMany in mongo php"
+	},
+	"updateOne": {
+		"scope": "php",
+		"prefix": "u.o",
+		"body": [
+			"$$db->updateOne([",
+			"'name' => 'iran',",
+			"], ['$$set' => ['code' => '0098']]);"
+		],
+		"description": "updateOne in mongo php"
+	},
+	"updateMany": {
+		"scope": "php",
+		"prefix": "u.m",
+		"body": [
+			"$$db->updateMany([",
+			"'name' => 'iran',",
+			"], ['$$set' => ['code' => '0098']]);"
+		],
+		"description": "updateMany in mongo php"
+	},
+	"ReplaceOne": {
+		"scope": "php",
+		"prefix": "r.o",
+		"body": [
+			"$$db->replaceOne([",
+			"'name' => 'iran',",
+			"], ['name' => 'Iran','code' => '0098']);"
+		],
+		"description": "ReplaceOne in mongo php"
+	},
+	"deleteOne": {
+		"scope": "php",
+		"prefix": "d.o",
+		"body": [
+			"$$db->deleteOne([",
+			"'name' => 'iran'",
+			"]);"
+		],
+		"description": "deleteOne in mongo php"
+	},
+	"deleteMany": {
+		"scope": "php",
+		"prefix": "d.m",
+		"body": [
+			"$$db->deleteMany([",
+			"'state' => 'iran'",
+			"]);"
+		],
+		"description": "deleteMany in mongo php"
+	},
+	"findOne mongo php": {
+		"scope": "php",
+		"prefix": "f.o",
+		"body": [
+			"$$data=$$db->findOne([",
+			"'state' => 'iran'",
+			"]);",
+			"var_dump($$data);"
+		],
+		"description": "findOne in mongo php"
+	},
+	"findMany mongo php": {
+		"scope": "php",
+		"prefix": "f.m",
+		"body": [
+			"$$data=$$db->find([",
+			"'state' => 'iran'",
+			"]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "findMany in mongo php"
+	},
+	"findMany limited mongo php": {
+		"scope": "php",
+		"prefix": "f.ml",
+		"body": [
+			"$$data = $$db->find([], ['limit' => 2]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "findMany by limit in mongo php"
+	},
+	"findMany limited  and sort ASC mongo php": {
+		"scope": "php",
+		"prefix": "f.lsa",
+		"body": [
+			"$$data = $$db->find([], ['limit' => 5,'sort'=>['CityId'=>1]]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "findMany by limit and sort ASC in mongo php"
+	},
+	"findMany limited  and sort Desc mongo php": {
+		"scope": "php",
+		"prefix": "f.lsd",
+		"body": [
+			"$$data = $$db->find([], ['limit' => 5,'sort'=>['CityId'=>-1]]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "findMany by limit and sort Desc in mongo php"
+	},
+	"findMany Regular Expression mongo php": {
+		"scope": "php",
+		"prefix": "f.r",
+		"body": [
+			"$$data = $$db->find(['name'=> new MongoDB\\BSON\\Regex('^garden', 'i')]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "findMany and reqular expretion in mongo php"
+	},
+	"findMany Aggregation mongo php": {
+		"scope": "php",
+		"prefix": "f.ag",
+		"body": [
+			"$$data = $$db->aggregate([",
+			"['$$group' => ['_id' => '$$state', 'count' => ['$$sum' => 1]]],",
+			"['$$sort' => ['count' => -1]],",
+			"['$$limit' => 5],",
+			"]);",
+			"foreach ($$data as $$row) {",
+			"echo '<br>'. $$row['_id'];",
+			"}"
+		],
+		"description": "aggregate in mongo php"
+	},
+	"Inserting a Decimal128 mongo php": {
+		"scope": "php",
+		"prefix": "i.d",
+		"body": [
+			"$$db->insertOne([",
+			"'_id' => 1,",
+			"'item' => '26-inch monitor',",
+			"'price' => new MongoDB\\BSON\\Decimal128('428.79'),",
+			"]);",
+			"$$item = $$db->findOne(['_id' => 1]);",
+			"var_dump($$item);"
+		],
+		"description": "Inserting a Decimal128 in mongo php"
+	},
+	"eco": {
+		"prefix": "eco",
+		"body": [
+			"echo \"$0\";"
+		],
+		"description": "'echo' statement"
+	},
+	"pri": {
+		"prefix": "pri",
+		"body": [
+			"print(\"$0\");"
+		],
+		"description": "'print' statement"
+	},
+	"dump": {
+		"prefix": "dump",
+		"body": [
+			"var_dump ($0);"
+		],
+		"description": "'var_dump' statement"
+	},
+	"pre_dump": {
+		"prefix": "dump",
+		"body": [
+			"echo \"<pre>\";\nvar_dump ($0);\necho \"</pre>\";"
+		],
+		"description": "'var_dump' statement"
+	},
+	"fn": {
+		"prefix": "fn",
+		"body": [
+			"fn($0) => $1"
+		],
+		"description": "Arrow function"
+	},
+	"req": {
+		"prefix": "req",
+		"body": [
+			"require \"$0\";"
+		],
+		"description": "'require' statement"
+	},
+	"reqo": {
+		"prefix": "reqo",
+		"body": [
+			"require_once \"$0\";"
+		],
+		"description": "'require_once' statement"
+	},
+	"ns": {
+		"prefix": "ns",
+		"body": [
+			"namespace $0;"
+		],
+		"description": "namespace statement"
+	},
+	"mt": {
+		"prefix": "mt",
+		"body": [
+			"match($0) {\n$1 => $2\n};"
+		],
+		"description": "match expression"
+	},
+	"def": {
+		"prefix": "def",
+		"body": [
+			"define($0,$1);"
+		],
+		"description": "define your constant"
+	},
+	"G": {
+		"prefix": "G",
+		"body": [
+			"$_GET[$0];"
+		],
+		"description": "PHP Superglobal $_GET"
+	},
+	"P": {
+		"prefix": "P",
+		"body": [
+			"$_POST[$0];"
+		],
+		"description": "PHP Superglobal $_POST"
+	},
+	"SE": {
+		"prefix": "SE",
+		"body": [
+			"$_SERVER[$0];"
+		],
+		"description": "PHP Superglobal $_SERVER"
+	},
+	"SESS": {
+		"prefix": "SESS",
+		"body": [
+			"$_SESSION[$0];"
+		],
+		"description": "PHP Superglobal $_SESSION"
+	},
+	"REQ": {
+		"prefix": "REQ",
+		"body": [
+			"$_REQUEST[$0];"
+		],
+		"description": "PHP Superglobal $_REQUEST"
+	},
+	"FI": {
+		"prefix": "FI",
+		"body": [
+			"$_FILE[$0][$1];"
+		],
+		"description": "PHP Superglobal $_FILET"
+	},
+	"Array": {
+		"prefix": "arr",
+		"body": [
+			"[${1:value}, ${2:value}, $3];"
+		],
+		"description": "Array [] block"
+	},
+	"Array key ... value": {
+		"prefix": "ark",
+		"body": [
+			"[",
+			"\t'${1:key}' => ${2:value},",
+			"\t'${3:key}' => ${4:value},$5",
+			"]"
+		],
+		"description": "Array [] key => value block"
+	},
+	"Key ... value": {
+		"prefix": "kv",
+		"body": [
+			"'${1:key}' => ${2:value},"
+		],
+		"description": "key => value statement"
+	},
+	"Array ... value": {
+		"prefix": "va",
+		"body": [
+			"${1:value}, "
+		],
+		"description": "Array value statement"
+	},
+	"Class": {
+		"prefix": "cl",
+		"body": [
+			"class ${1:ClassName}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class block"
+	},
+	"Class extends": {
+		"prefix": "clx",
+		"body": [
+			"class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class extends block"
+	},
+	"Class implements": {
+		"prefix": "cli",
+		"body": [
+			"class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class implements block"
+	},
+	"Class extends implements": {
+		"prefix": "clxi",
+		"body": [
+			"class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Class extends and implements block"
+	},
+	"Abstract class": {
+		"prefix": "acl",
+		"body": [
+			"abstract class ${1:ClassName}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class block"
+	},
+	"Abstract class extends": {
+		"prefix": "aclx",
+		"body": [
+			"abstract class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class extends block"
+	},
+	"Abstract class implements": {
+		"prefix": "acli",
+		"body": [
+			"abstract class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class implements block"
+	},
+	"Abstract class extends implements": {
+		"prefix": "aclxi",
+		"body": [
+			"abstract class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP abstract Class extends and implements block"
+	},
+	"Final class": {
+		"prefix": "fcl",
+		"body": [
+			"final class ${1:ClassName}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class block"
+	},
+	"Final class extends": {
+		"prefix": "fclx",
+		"body": [
+			"final class ${1:ClassName} extends ${2:MotherClass}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class extends block"
+	},
+	"Final class implements": {
+		"prefix": "fcli",
+		"body": [
+			"final class ${1:ClassName} implements ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class implements block"
+	},
+	"Final class extends implements": {
+		"prefix": "fclxi",
+		"body": [
+			"final class ${1:ClassName} extends ${2:MotherClass} implements ${3:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP final Class extends and implements block"
+	},
+	"Interface": {
+		"prefix": "in",
+		"body": [
+			"interface ${1:InterfaceName}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Interface block"
+	},
+	"Interface extends": {
+		"prefix": "inx",
+		"body": [
+			"interface ${1:InterfaceName} extends ${2:Interfaces}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Interface extends block"
+	},
+	"Trait": {
+		"prefix": "trt",
+		"body": [
+			"trait ${1:TraitName}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "PHP Trait block"
+	},
+	"If ... endif": {
+		"prefix": "ifen",
+		"body": [
+			"if (${1:condition}):",
+			"\t${0:# code...}",
+			"endif;"
+		],
+		"description": "If endif block"
+	},
+	"If ... else ... endif": {
+		"prefix": "ifelen",
+		"body": [
+			"if (${1:condition}):",
+			"\t${2:# code...}",
+			"else:",
+			"\t${0:# code...}",
+			"endif;"
+		],
+		"description": "If else endif block"
+	},
+	"If ... elseif ... else ... endif": {
+		"prefix": "ifelifen",
+		"body": [
+			"if (${1:condition}):",
+			"\t${2:# code...}",
+			"elseif (${3:condition}):",
+			"\t${4:# code...}",
+			"else:",
+			"\t${0:# code...}",
+			"endif;"
+		],
+		"description": "If elseif else endif block"
+	},
+	"If block": {
+		"prefix": "ifb",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If  block"
+	},
+	"If ... else": {
+		"prefix": "ifel",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:# code...}",
+			"} else {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If else block"
+	},
+	"If ... elseif ... else": {
+		"prefix": "ifelif",
+		"body": [
+			"if (${1:condition}) {",
+			"\t${2:# code...}",
+			"} elseif (${3:condition}) {",
+			"\t${4:# code...}",
+			"} else {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "If elseif else block"
+	},
+	"Switch block": {
+		"prefix": "sw",
+		"body": [
+			"switch (\\$${1:variable}) {",
+			"\tcase '${2:label}':",
+			"\t\t${3:# code...}",
+			"\t\tbreak;",
+			"\tcase '${4:label}':",
+			"\t\t${5:# code...}",
+			"\t\tbreak;$6",
+			"\tdefault:",
+			"\t\t${0:# code...}",
+			"\t\tbreak;",
+			"}"
+		],
+		"description": "Switch block"
+	},
+	"Case statement": {
+		"prefix": "cs",
+		"body": [
+			"case '${1:label}':",
+			"\t${2:# code...}",
+			"\tbreak;"
+		],
+		"description": "Case addon block"
+	},
+	"Ternary operator": {
+		"prefix": "tern",
+		"body": [
+			"${1:condition} ? ${2:if_true} : ${3:if_false};"
+		],
+		"description": "Ternary statement"
+	},
+	"Try ... catch": {
+		"prefix": "tryc",
+		"body": [
+			"try {",
+			"\t${1:# code...}",
+			"} catch (${2:\\Throwable} \\$${3:e}) {",
+			"\t${4:# code...}",
+			"}"
+		],
+		"description": "Try catch block"
+	},
+	"Try ... catch ... finally": {
+		"prefix": "tryf",
+		"body": [
+			"try {",
+			"\t${1:# code...}",
+			"} catch (${2:\\Throwable} \\$${3:e}) {",
+			"\t${4:# code...}",
+			"}$5 finally {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Try catch finally block"
+	},
+	"Catch": {
+		"prefix": "cat",
+		"body": [
+			"catch (${1:\\Throwable} \\$${2:e}) {",
+			"\t${3:# code...}",
+			"}"
+		],
+		"description": "Catch block"
+	},
+	"Finally": {
+		"prefix": "fy",
+		"body": [
+			"finally {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Finally block"
+	},
+	"Throw new Exception": {
+		"prefix": "thr",
+		"body": [
+			"throw new ${1:Some}Exception(\"${2:Error statement}\");"
+		],
+		"description": "Throw new exception statement"
+	},
+	"Function": {
+		"prefix": "fn",
+		"body": [
+			"function ${1:func_name}(${2:Type} \\$${3:args}): ${4:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Function block"
+	},
+	"Anonymous function": {
+		"prefix": "fna",
+		"body": [
+			"function (${1:Type} \\$${2:args}): ${3:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Anonymous function block"
+	},
+	"Anonymous function ... use": {
+		"prefix": "fnu",
+		"body": [
+			"function (${1:Type} \\$${2:args}) use (\\$${3:vars}): ${4:void} {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Anonymous function with use block"
+	},
+	"GLOBAL array": {
+		"prefix": "gglob",
+		"body": [
+			"\\$GLOBALS[\"${1:key}\"]"
+		],
+		"description": "$GLOBALS array"
+	},
+	"SERVER array": {
+		"prefix": "gser",
+		"body": [
+			"\\$_SERVER[\"${1:key}\"]"
+		],
+		"description": "$_SERVER array"
+	},
+	"REQUEST array": {
+		"prefix": "greq",
+		"body": [
+			"\\$_REQUEST[\"${1:key}\"]"
+		],
+		"description": "$_REQUEST array"
+	},
+	"POST array": {
+		"prefix": "gpost",
+		"body": [
+			"\\$_POST[\"${1:key}\"]"
+		],
+		"description": "$_POST array"
+	},
+	"GET array": {
+		"prefix": "gget",
+		"body": [
+			"\\$_GET[\"${1:key}\"]"
+		],
+		"description": "$_GET array"
+	},
+	"FILES array": {
+		"prefix": "gfile",
+		"body": [
+			"\\$_FILES['${1:userfile}']['${2:key}']"
+		],
+		"description": "$_FILES array"
+	},
+	"ENV array": {
+		"prefix": "genv",
+		"body": [
+			"\\$_ENV[\"${1:key}\"]"
+		],
+		"description": "$_ENV array"
+	},
+	"COOKIE array": {
+		"prefix": "gcook",
+		"body": [
+			"\\$_COOKIE[\"${1:key}\"]"
+		],
+		"description": "$_COOKIE array"
+	},
+	"SESSION array": {
+		"prefix": "gss",
+		"body": [
+			"\\$_SESSION[\"${1:key}\"]"
+		],
+		"description": "$_SESSION array"
+	},
+	"Foreach loop": {
+		"prefix": "fore",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:item}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Foreach as $item block"
+	},
+	"Foreach ... key ... item": {
+		"prefix": "forek",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:key} => \\$${3:item}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Foreach as $key => $item block"
+	},
+	"Foreach ... end": {
+		"prefix": "foren",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:item}):",
+			"\t${0:# code...}",
+			"endforeach;"
+		],
+		"description": "Foreach end as $item block"
+	},
+	"Foreach ... key ... item ... end": {
+		"prefix": "forenk",
+		"body": [
+			"foreach (\\$${1:iterable} as \\$${2:key} => \\$${3:item}):",
+			"\t${0:# code...}",
+			"endforeach;"
+		],
+		"description": "Foreach end as $key => $item block"
+	},
+	"For loop": {
+		"prefix": "forl",
+		"body": [
+			"for (\\$${1:i} = ${2:0}; \\$${1:i} < \\$${3:limit}; \\$${1:i}++) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "For loop"
+	},
+	"For ... end": {
+		"prefix": "forlen",
+		"body": [
+			"for (\\$${1:i} = ${2:0}; \\$${1:i} < \\$${3:limit}; \\$${1:i}++):",
+			"\t${0:# code...}",
+			"endfor;"
+		],
+		"description": "For end loop"
+	},
+	"While loop": {
+		"prefix": "wl",
+		"body": [
+			"while (\\$${1:variable} ${2:<=} \\$${3:limit}) {",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "While loop"
+	},
+	"While ... end": {
+		"prefix": "wlen",
+		"body": [
+			"while (\\$${1:variable} ${2:<=} \\$${3:limit}):",
+			"\t${0:# code...}",
+			"endwhile;"
+		],
+		"description": "While end loop"
+	},
+	"Do ... while": {
+		"prefix": "dowl",
+		"body": [
+			"do {",
+			"\t${0:# code...}",
+			"} while (\\$${1:variable} ${2:<=} \\$${3:limit});"
+		],
+		"description": "Do while loop"
+	},
+	"Class constructor": {
+		"prefix": "pubc",
+		"body": [
+			"public function __construct(${1:Type} \\$${2:args})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Class public constructor block"
+	},
+	"Class private constructor": {
+		"prefix": "pric",
+		"body": [
+			"private function __construct(${1:Type} \\$${2:args})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Class private constructor block"
+	},
+	"Class protected constructor": {
+		"prefix": "proc",
+		"body": [
+			"protected function __construct(${1:Type} \\$${2:args})",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Class protected constructor block"
+	},
+	"Private method": {
+		"prefix": "prif",
+		"body": [
+			"private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Private method block"
+	},
+	"Private static method": {
+		"prefix": "prisf",
+		"body": [
+			"private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Private static method block"
+	},
+	"Final private method": {
+		"prefix": "fprif",
+		"body": [
+			"final private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final private method block"
+	},
+	"Final private static method": {
+		"prefix": "fprisf",
+		"body": [
+			"final private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final private static method block"
+	},
+	"Protected method": {
+		"prefix": "prof",
+		"body": [
+			"protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Protected method block"
+	},
+	"Protected static method": {
+		"prefix": "prosf",
+		"body": [
+			"protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Protected static method block"
+	},
+	"Final protected method": {
+		"prefix": "fprof",
+		"body": [
+			"final protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final protected method block"
+	},
+	"Final protected static method": {
+		"prefix": "fprosf",
+		"body": [
+			"final protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final protected static method block"
+	},
+	"Abstract protected method": {
+		"prefix": "aprof",
+		"body": [
+			"abstract protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+		],
+		"description": "Abstract protected method statement"
+	},
+	"Abstract protected static method": {
+		"prefix": "aprosf",
+		"body": [
+			"abstract protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+		],
+		"description": "Abstract protected static method statement"
+	},
+	"Public method": {
+		"prefix": "pubf",
+		"body": [
+			"public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Public method block"
+	},
+	"Public static method": {
+		"prefix": "pubsf",
+		"body": [
+			"public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Public static method block"
+	},
+	"Final public method": {
+		"prefix": "fpubf",
+		"body": [
+			"final public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final public method block"
+	},
+	"Final public static method": {
+		"prefix": "fpubsf",
+		"body": [
+			"final public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"{",
+			"\t${0:# code...}",
+			"}"
+		],
+		"description": "Final public static method block"
+	},
+	"Abstract public method": {
+		"prefix": "apubf",
+		"body": [
+			"abstract public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+		],
+		"description": "Abstract public method statement"
+	},
+	"Abstract public static method": {
+		"prefix": "apubsf",
+		"body": [
+			"abstract public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+		],
+		"description": "Abstract public static method statement"
+	},
+	"define": {
+		"prefix": "df",
+		"body": [
+			"define(\"${1:CONSTANT}\", \"${2:value}\");"
+		],
+		"description": "'define' call"
+	},
+	"include": {
+		"prefix": "inc",
+		"body": [
+			"include ${1:__DIR__.}'${2:path_to_filename}';"
+		],
+		"description": "'include' statement"
+	},
+	"include_once": {
+		"prefix": "inco",
+		"body": [
+			"include_once ${1:__DIR__.}'${2:path_to_filename}';"
+		],
+		"description": "'include_once' statement"
+	},
+	"require": {
+		"prefix": "rqr",
+		"body": [
+			"require ${1:__DIR__.}'${2:path_to_filename}';"
+		],
+		"description": "'require' statement"
+	},
+	"require_once": {
+		"prefix": "rqro",
+		"body": [
+			"require_once ${1:__DIR__.}'${2:path_to_filename}';"
+		],
+		"description": "'require_once' statement"
+	},
+	"echo": {
+		"prefix": "eco",
+		"body": [
+			"echo \"${1:text}\";"
+		],
+		"description": "'echo' statement"
+	},
+	"print_r": {
+		"prefix": "pr",
+		"body": [
+			"print_r(\\$${1:variable});"
+		],
+		"description": "'print_r' call"
+	},
+	"var_dump": {
+		"prefix": "vd",
+		"body": [
+			"var_dump(\\$${1:variable});"
+		],
+		"description": "'var_dump' call"
+	},
+	"var_export": {
+		"prefix": "vx",
+		"body": [
+			"var_export(\\$${1:variable});"
+		],
+		"description": "'var_export' call"
+	},
+	"PHP tags": {
+		"prefix": "php",
+		"body": [
+			"<?php $0?>"
+		],
+		"description": "PHP open tag"
+	},
+	"PHP open tag": {
+		"prefix": "po",
+		"body": [
+			"<?php"
+		],
+		"description": "PHP open tag"
+	},
+	"PHP close tag": {
+		"prefix": "pc",
+		"body": [
+			"?>"
+		],
+		"description": "PHP close tag"
+	},
+	"PHP echo short tag": {
+		"prefix": "peco",
+		"body": [
+			"<?= \\$${1:variable} ?>"
+		],
+		"description": "PHP echo short tag"
+	}
+}

@@ -1,0 +1,462 @@
+{
+	"JQuery Core - $(document).ready (Jquery snippet)": {
+		"prefix": "$(document)",
+		"body": [
+			"$(document).ready()"
+		],
+		"description": "JQuery Core - $(document).ready (Jquery snippet)"
+	},
+	"Jquery Core - $ (Jquery snippet)": {
+		"prefix": "$",
+		"body": [
+			"$()"
+		],
+		"description": "Jquery Core - $ (Jquery snippet)"
+	},
+	"Jquery Ajax - $.ajax (Jquery snippet)": {
+		"prefix": "$.ajax",
+		"body": [
+			"$.ajax()"
+		],
+		"description": "Jquery Ajax - $.ajax (Jquery snippet)"
+	},
+	"Jquery Ajax - $.ajaxSetup (Jquery snippet)": {
+		"prefix": "$.ajaxSetup",
+		"body": [
+			"$.ajaxSetup()"
+		],
+		"description": "Jquery Ajax - $.ajaxSetup (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - async (Jquery snippet)": {
+		"prefix": "async",
+		"body": [
+			"async: "
+		],
+		"description": "Jquery Ajax name/value pairs - async (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - cache (Jquery snippet)": {
+		"prefix": "cache",
+		"body": [
+			"cache: "
+		],
+		"description": "Jquery Ajax name/value pairs - cache (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - contentType (Jquery snippet)": {
+		"prefix": "contentType",
+		"body": [
+			"contentType: "
+		],
+		"description": "Jquery Ajax name/value pairs - contentType (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - context (Jquery snippet)": {
+		"prefix": "context",
+		"body": [
+			"context: "
+		],
+		"description": "Jquery Ajax name/value pairs - context (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - data (Jquery snippet)": {
+		"prefix": "data",
+		"body": [
+			"data: "
+		],
+		"description": "Jquery Ajax name/value pairs - data (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - dataType (Jquery snippet)": {
+		"prefix": "dataType",
+		"body": [
+			"dataType: "
+		],
+		"description": "Jquery Ajax name/value pairs - dataType (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - global (Jquery snippet)": {
+		"prefix": "global",
+		"body": [
+			"global: "
+		],
+		"description": "Jquery Ajax name/value pairs - global (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - ifModified (Jquery snippet)": {
+		"prefix": "ifModified",
+		"body": [
+			"ifModified: "
+		],
+		"description": "Jquery Ajax name/value pairs - ifModified (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - password (Jquery snippet)": {
+		"prefix": "password",
+		"body": [
+			"password: "
+		],
+		"description": "Jquery Ajax name/value pairs - password (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - timeout (Jquery snippet)": {
+		"prefix": "timeout",
+		"body": [
+			"timeout: "
+		],
+		"description": "Jquery Ajax name/value pairs - timeout (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - traditional (Jquery snippet)": {
+		"prefix": "traditional",
+		"body": [
+			"traditional: "
+		],
+		"description": "Jquery Ajax name/value pairs - traditional (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - type (Jquery snippet)": {
+		"prefix": "type",
+		"body": [
+			"type: "
+		],
+		"description": "Jquery Ajax name/value pairs - type (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - url (Jquery snippet)": {
+		"prefix": "url",
+		"body": [
+			"url: "
+		],
+		"description": "Jquery Ajax name/value pairs - url (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - username (Jquery snippet)": {
+		"prefix": "username",
+		"body": [
+			"username: "
+		],
+		"description": "Jquery Ajax name/value pairs - username (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - xhr (Jquery snippet)": {
+		"prefix": "xhr",
+		"body": [
+			"xhr: "
+		],
+		"description": "Jquery Ajax name/value pairs - xhr (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - method (Jquery snippet)": {
+		"prefix": "method",
+		"body": [
+			"method: "
+		],
+		"description": "Jquery Ajax name/value pairs - method (Jquery snippet)"
+	},
+	"Jquery Ajax name/value pairs - success (Jquery snippet)": {
+		"prefix": "success",
+		"body": [
+			"success: "
+		],
+		"description": "Jquery Ajax name/value pairs - success (Jquery snippet)"
+	},
+	"Jquery HTML Attributes - attr (Jquery snippet)": {
+		"prefix": ".attr",
+		"body": [
+			".attr()"
+		],
+		"description": "Jquery HTML Attributes - attr (Jquery snippet)"
+	},
+	"Jquery HTML Attributes - prop(Jquery snippet)": {
+		"prefix": ".prop",
+		"body": [
+			".prop()"
+		],
+		"description": "Jquery HTML Attributes - prop(Jquery snippet)"
+	},
+	"Jquery HTML Attributes - html (Jquery snippet)": {
+		"prefix": ".html",
+		"body": [
+			".html()"
+		],
+		"description": "Jquery HTML Attributes - html (Jquery snippet)"
+	},
+	"Jquery HTML Attributes - text (Jquery snippet)": {
+		"prefix": ".text",
+		"body": [
+			".text()"
+		],
+		"description": "Jquery HTML Attributes - text (Jquery snippet)"
+	},
+	"Jquery HTML Attributes - val (Jquery snippet)": {
+		"prefix": ".val",
+		"body": [
+			".val()"
+		],
+		"description": "Jquery HTML Attributes - val (Jquery snippet)"
+	},
+	"Jquery DOM Removal Methods - detach (Jquery snippet)": {
+		"prefix": ".detach",
+		"body": [
+			".detach()"
+		],
+		"description": "Jquery DOM Removal Methods - detach (Jquery snippet)"
+	},
+	"Jquery DOM Removal Methods - empty (Jquery snippet)": {
+		"prefix": ".empty",
+		"body": [
+			".empty()"
+		],
+		"description": "Jquery DOM Removal Methods - empty (Jquery snippet)"
+	},
+	"Jquery DOM Removal Methods - remove (Jquery snippet)": {
+		"prefix": ".remove",
+		"body": [
+			".remove()"
+		],
+		"description": "Jquery DOM Removal Methods - remove (Jquery snippet)"
+	},
+	"Jquery DOM Removal Methods - unwrap(Jquery snippet)": {
+		"prefix": ".unwrap",
+		"body": [
+			".unwrap()"
+		],
+		"description": "Jquery DOM Removal Methods - unwrap(Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - addClass (Jquery snippet)": {
+		"prefix": ".addClass",
+		"body": [
+			".addClass()"
+		],
+		"description": "JQuery DOM Manipulation Methods - addClass (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - after (Jquery snippet)": {
+		"prefix": ".after",
+		"body": [
+			".after()"
+		],
+		"description": "JQuery DOM Manipulation Methods - after (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - append (Jquery snippet)": {
+		"prefix": ".append",
+		"body": [
+			".append()"
+		],
+		"description": "JQuery DOM Manipulation Methods - append (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - appendTo (Jquery snippet)": {
+		"prefix": ".appendTo",
+		"body": [
+			".appendTo()"
+		],
+		"description": "JQuery DOM Manipulation Methods - appendTo (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - attr (Jquery snippet)": {
+		"prefix": ".attr",
+		"body": [
+			".attr()"
+		],
+		"description": "JQuery DOM Manipulation Methods - attr (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - before (Jquery snippet)": {
+		"prefix": ".before",
+		"body": [
+			".before()"
+		],
+		"description": "JQuery DOM Manipulation Methods - before (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - clone (Jquery snippet)": {
+		"prefix": ".clone",
+		"body": [
+			".clone()"
+		],
+		"description": "JQuery DOM Manipulation Methods - clone (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - css (Jquery snippet)": {
+		"prefix": ".css",
+		"body": [
+			".css()"
+		],
+		"description": "JQuery DOM Manipulation Methods - css (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - hasClass (Jquery snippet)": {
+		"prefix": ".hasClass",
+		"body": [
+			".hasClass()"
+		],
+		"description": "JQuery DOM Manipulation Methods - hasClass (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - height (Jquery snippet)": {
+		"prefix": ".height",
+		"body": [
+			".height()"
+		],
+		"description": "JQuery DOM Manipulation Methods - height (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - html (Jquery snippet)": {
+		"prefix": ".html",
+		"body": [
+			".html()"
+		],
+		"description": "JQuery DOM Manipulation Methods - html (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - innerHeight (Jquery snippet)": {
+		"prefix": ".innerHeight",
+		"body": [
+			".innerHeight()"
+		],
+		"description": "JQuery DOM Manipulation Methods - innerHeight (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - innerWidth (Jquery snippet)": {
+		"prefix": ".innerWidth",
+		"body": [
+			".innerWidth()"
+		],
+		"description": "JQuery DOM Manipulation Methods - innerWidth (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - insertAfter (Jquery snippet)": {
+		"prefix": ".insertAfter",
+		"body": [
+			".insertAfter()"
+		],
+		"description": "JQuery DOM Manipulation Methods - insertAfter (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - insertBefore (Jquery snippet)": {
+		"prefix": ".insertBefore",
+		"body": [
+			".insertBefore()"
+		],
+		"description": "JQuery DOM Manipulation Methods - insertBefore (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - offset (Jquery snippet)": {
+		"prefix": ".offset",
+		"body": [
+			".offset()"
+		],
+		"description": "JQuery DOM Manipulation Methods - offset (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - outerHeight (Jquery snippet)": {
+		"prefix": ".outerHeight",
+		"body": [
+			".outerHeight()"
+		],
+		"description": "JQuery DOM Manipulation Methods - outerHeight (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - outerWidth (Jquery snippet)": {
+		"prefix": ".outerWidth",
+		"body": [
+			".outerWidth()"
+		],
+		"description": "JQuery DOM Manipulation Methods - outerWidth (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - position (Jquery snippet)": {
+		"prefix": ".position",
+		"body": [
+			".position()"
+		],
+		"description": "JQuery DOM Manipulation Methods - position (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - prepend (Jquery snippet)": {
+		"prefix": ".prepend",
+		"body": [
+			".prepend()"
+		],
+		"description": "JQuery DOM Manipulation Methods - prepend (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - prependTo (Jquery snippet)": {
+		"prefix": ".prependTo",
+		"body": [
+			".prependTo()"
+		],
+		"description": "JQuery DOM Manipulation Methods - prependTo (Jquery snippet)"
+	},
+	"JQuery DOM Manipulation Methods - prop (Jquery snippet)": {
+		"prefix": ".prop",
+		"body": [
+			".prop()"
+		],
+		"description": "JQuery DOM Manipulation Methods - prop (Jquery snippet)"
+	},
+	"JQuery Event Methods - bind (Jquery snippet)": {
+		"prefix": ".bind",
+		"body": [
+			".bind()"
+		],
+		"description": "JQuery Event Methods - bind (Jquery snippet)"
+	},
+	"JQuery Event Methods - blur (Jquery snippet)": {
+		"prefix": ".blur",
+		"body": [
+			".blur()"
+		],
+		"description": "JQuery Event Methods - blur (Jquery snippet)"
+	},
+	"JQuery Event Methods - change (Jquery snippet)": {
+		"prefix": ".change",
+		"body": [
+			".change()"
+		],
+		"description": "JQuery Event Methods - change (Jquery snippet)"
+	},
+	"JQuery Event Methods - click (Jquery snippet)": {
+		"prefix": ".click",
+		"body": [
+			".click()"
+		],
+		"description": "JQuery Event Methods - click (Jquery snippet)"
+	},
+	"JQuery Event Methods - contextmenu (Jquery snippet)": {
+		"prefix": ".contextmenu",
+		"body": [
+			".contextmenu()"
+		],
+		"description": "JQuery Event Methods - contextmenu (Jquery snippet)"
+	},
+	"JQuery Event Methods - dblclick (Jquery snippet)": {
+		"prefix": ".dblclick",
+		"body": [
+			".dblclick()"
+		],
+		"description": "JQuery Event Methods - dblclick (Jquery snippet)"
+	},
+	"JQuery Event Methods - error (Jquery snippet)": {
+		"prefix": ".error",
+		"body": [
+			".error()"
+		],
+		"description": "JQuery Event Methods - error (Jquery snippet)"
+	},
+	"JQuery Event Methods - focus (Jquery snippet)": {
+		"prefix": ".focus",
+		"body": [
+			".focus()"
+		],
+		"description": "JQuery Event Methods - focus (Jquery snippet)"
+	},
+	"JQuery Event Methods - focusin (Jquery snippet)": {
+		"prefix": ".focusin",
+		"body": [
+			".focusin()"
+		],
+		"description": "JQuery Event Methods - focusin (Jquery snippet)"
+	},
+	"JQuery Event Methods - focusout (Jquery snippet)": {
+		"prefix": ".focusout",
+		"body": [
+			".focusout()"
+		],
+		"description": "JQuery Event Methods - focusout (Jquery snippet)"
+	},
+	"JQuery Event Methods - hover (Jquery snippet)": {
+		"prefix": ".hover",
+		"body": [
+			".hover()"
+		],
+		"description": "JQuery Event Methods - hover (Jquery snippet)"
+	},
+	"JQuery Event Methods - ready (Jquery snippet)": {
+		"prefix": ".ready",
+		"body": [
+			".ready()"
+		],
+		"description": "JQuery Event Methods - ready (Jquery snippet)"
+	},
+	"JQuery Ajax Boilerplate": {
+		"prefix": "jquery-ajax-boilerplate",
+		"body": [
+			"method: \"\",",
+			"url: \"\",",
+			"data: {},",
+			"dataType: \"\",",
+			"success: function() {},",
+			"error: function() {}"
+		],
+		"description": "JQuery Ajax Boilerplate"
+	}
+}
