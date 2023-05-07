@@ -254,15 +254,107 @@
 				"path": "./snippets/yaml.json"
 			},
 			{
+				"language": "c",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "closure",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "coffeescript",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "csharp",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "git-commit",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "go",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "groovy",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "java",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "jsonc",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "latex",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "markdown",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "objective-c",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "objective-cpp",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "perl",
+				"path": "./snippets/global.json"
+			},
+			{
 				"language": "php",
 				"path": "./snippets/global.json"
 			},
 			{
-				"language": "shellscript",
+				"language": "plaintext",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "jade",
 				"path": "./snippets/global.json"
 			},
 			{
 				"language": "python",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "r",
 				"path": "./snippets/global.json"
 			},
 			{
@@ -274,20 +366,180 @@
 				"path": "./snippets/global.json"
 			},
 			{
+				"language": "scss",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "swift",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "xml",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "c",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "cpp",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "closure",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "coffeescript",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "csharp",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "css",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "git-commit",
+				"path": "./snippets/emoji.json"
+			},
+			{
 				"language": "go",
-				"path": "./snippets/global.json"
+				"path": "./snippets/emoji.json"
 			},
 			{
-				"language": "dockerfile",
-				"path": "./snippets/global.json"
+				"language": "groovy",
+				"path": "./snippets/emoji.json"
 			},
 			{
-				"language": "ini",
-				"path": "./snippets/global.json"
+				"language": "html",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "java",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "json",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "jsonc",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "latex",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "less",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/emoji.json"
 			},
 			{
 				"language": "markdown",
-				"path": "./snippets/global.json"
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "objective-c",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "objective-cpp",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "perl",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "php",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "plaintext",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "python",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "r",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "ruby",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "rust",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "scss",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "shellscript",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "swift",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "xml",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "yaml",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/emoji.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/emoji.json"
 			}
 		]
 	}
