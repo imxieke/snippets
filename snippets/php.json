@@ -2570,5 +2570,12 @@
 			"<?= \\$${1:variable} ?>"
 		],
 		"description": "PHP echo short tag"
+	},
+	"declare strict types": {
+		"prefix": "decl",
+		"body": [
+			"declare (strict_types = 1);"
+		],
+		"description": "PHP echo short tag"
 	}
 }
