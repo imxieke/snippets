@@ -164,6 +164,9 @@
 			{
 				"language": "sql",
 				"path": "./snippets/mssql.json"
+			},			{
+				"language": "sql",
+				"path": "./snippets/mysql.json"
 			},
 			{
 				"language": "typescript",

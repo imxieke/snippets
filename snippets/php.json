@@ -307,60 +307,35 @@
 		],
 		"description": "HTTP_X_REQUESTED_WITH"
 	},
-	"class …": {
-		"prefix": "class",
-		"body": [
-			"class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
-			"{",
-			"\t$0",
-			"}",
-			""
-		],
-		"description": "Class definition"
-	},
-	"PHPDoc class …": {
-		"prefix": "doc_class",
-		"body": [
-			"/**",
-			" * ${6:undocumented class}",
-			" */",
-			"class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
-			"{",
-			"\t$0",
-			"}",
-			""
-		],
-		"description": "Documented Class Declaration"
-	},
 	"function __construct": {
 		"prefix": "con",
 		"body": [
-			"${1:public} function __construct(${2:${3:Type} $${4:var}${5: = ${6:null}}}) {",
+			"${1:public} function __construct(${2:${3:string} $${4:var}${5: = ${6:null}}}) {",
 			"\t\\$this->${4:var} = $${4:var};$0",
 			"}"
 		]
 	},
 	"PHPDoc property": {
-		"prefix": "doc_v",
+		"prefix": "docv",
 		"body": [
-			"/** @var ${1:Type} $${2:var} ${3:description} */",
+			"/** @var ${1:string} $${2:var} ${3:description} */",
 			"${4:protected} $${2:var}${5: = ${6:null}};$0"
 		],
 		"description": "Documented Class Variable"
 	},
 	"PHPDoc function …": {
-		"prefix": "doc_f",
+		"prefix": "docf",
 		"body": [
 			"/**",
 			" * ${1:undocumented function summary}",
 			" *",
 			" * ${2:Undocumented function long description}",
 			" *",
-			"${3: * @param ${4:Type} $${5:var} ${6:Description}}",
-			"${7: * @return ${8:type}}",
-			"${9: * @throws ${10:conditon}}",
+			"${3: * @param ${4:string} $${5:var} ${6:Description}}",
+			"${7: * @return ${8:string}}",
+			"${9: * @throws ${10:\\Exception}}",
 			" **/",
-			"${11:public }function ${12:FunctionName}(${13:${14:${4:Type} }$${5:var}${15: = ${16:null}}})",
+			"${11:public }function ${12:FunctionName}(${13:${14:${4:string} }$${5:var}${15: = ${16:null}}})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -370,14 +345,14 @@
 	"PHPDoc param …": {
 		"prefix": "param",
 		"body": [
-			"* @param ${1:Type} ${2:var} ${3:Description}$0"
+			"* @param ${1:string} ${2:var} ${3:Description}$0"
 		],
 		"description": "Parameter documentation"
 	},
 	"function …": {
 		"prefix": "fun",
 		"body": [
-			"${1:public }function ${2:FunctionName}(${3:${4:${5:Type} }$${6:var}${7: = ${8:null}}})",
+			"${1:public }function ${2:FunctionName}(${3:${4:${5:string} }$${6:var}${7: = ${8:null}}})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -568,34 +543,49 @@
 		],
 		"description": "Try catch block"
 	},
-	"PHPClass": {
-		"prefix": "p.class",
+	"class ... extends ... implements ...": {
+		"prefix": "class",
 		"body": [
-			"${1:namespace ${2:App}};",
-			"",
-			"class ${3:ClassName} ${4:extends ${5:AnotherClass}} ${6:implements ${7:Interface}}",
+			"class ${1:ClassName} ${2:extends ${3:AnotherClass}} ${4:implements ${5:Interface}}",
 			"{",
 			"\t$0",
 			"}",
 			""
 		],
-		"description": "PHP class"
+		"description": "Class definition"
 	},
-	"PHPDocClass": {
-		"prefix": "p.docclass",
+	"class ... extends ...": {
+		"prefix": "classe",
 		"body": [
-			"${1:namespace ${2:App}};",
-			"",
-			"/**",
-			" * Class $3.",
-			" */",
-			"class $3 ${4:extends ${5:AnotherClass}} ${6:implements ${7:Interface}}",
+			"class ${3:ClassName} ${4:extends ${5:AnotherClass}}",
 			"{",
 			"\t$0",
 			"}",
 			""
 		],
-		"description": "PHP document class"
+		"description": "PHP class name extends Abstruct"
+	},
+	"class ... implements ...": {
+		"prefix": "classi",
+		"body": [
+			"class ${3:ClassName} ${6:implements ${7:Interface}}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "PHP class name implements Abstruct"
+	},
+	"class ...": {
+		"prefix": "class",
+		"body": [
+			"class ${3:ClassName}",
+			"{",
+			"\t$0",
+			"}",
+			""
+		],
+		"description": "PHP class define"
 	},
 	"PHPConstructMethod": {
 		"prefix": "p.__construct",
@@ -603,7 +593,7 @@
 			"/**",
 			" * Class constructor.",
 			" */",
-			"${1:public} function __construct(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"${1:public} function __construct(${2:${3:string} \\$${4}${5: = ${6:null}}})",
 			"{",
 			"\t\\$this->${4} = \\$${4};$0",
 			"}"
@@ -626,7 +616,7 @@
 	"PHPSetMethod": {
 		"prefix": "p.__set",
 		"body": [
-			"${1:public} function __set(${2:${3:type} \\$${4}${5: = ${6:null}}}, ${7:${8:type} \\$${9}${10: = ${11:null}}})",
+			"${1:public} function __set(${2:${3:string} \\$${4}${5: = ${6:null}}}, ${7:${8:string} \\$${9}${10: = ${11:null}}})",
 			"{",
 			"\t$0",
 			"}"
@@ -636,7 +626,7 @@
 	"PHPGetMethod": {
 		"prefix": "p.__get",
 		"body": [
-			"${1:public} function __get(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"${1:public} function __get(${2:${3:string} \\$${4}${5: = ${6:null}}})",
 			"{",
 			"\t$0",
 			"}"
@@ -646,7 +636,7 @@
 	"PHPProperty": {
 		"prefix": "p.property",
 		"body": [
-			"/** @var ${1:type} \\$${2} ${3:description}. */",
+			"/** @var ${1:string} \\$${2} ${3:description}. */",
 			"${4:protected} \\$${2}${5: = ${6:null}};$0"
 		],
 		"description": "PHP property"
@@ -654,46 +644,22 @@
 	"PHPMethod": {
 		"prefix": "p.method",
 		"body": [
-			"${1:public }function ${2:functionName}(${3:${4:type} \\$${5}${6: = ${7:null}}})",
+			"${1:public }function ${2:functionName}(${3:${4:string} \\$${5}${6: = ${7:null}}})",
 			"{",
 			"\t${0:# code...}",
 			"}"
 		],
 		"description": "PHP method"
-	},
-	"PHPDocMethod": {
-		"prefix": "p.docmethod",
-		"body": [
-			"/**",
-			" * ${1:Undocumented function}.",
-			" *",
-			"${2: * @param ${3} \\$${4} ${5:description}}.",
-			" *",
-			"${6: * @return ${7:type}}",
-			" **/",
-			"${8:public }function ${9:functionName}(${10:${3} \\$${4}${13: = ${14:null}}})",
-			"{",
-			"\t${0:# code...}",
-			"}"
-		],
-		"description": "PHP document and method"
 	},
 	"PHPFunction": {
 		"prefix": "p.function",
 		"body": [
-			"function ${1:functionName}(${2:${3:type} \\$${4}${5: = ${6:null}}})",
+			"function ${1:functionName}(${2:${3:string} \\$${4}${5: = ${6:null}}})",
 			"{",
 			"\t${0:# code...}",
 			"}"
 		],
 		"description": "PHP method"
-	},
-	"PHPDocParameter": {
-		"prefix": "p.docparam",
-		"body": [
-			"@param ${1:type} \\$${2:var} ${3:description}.$0"
-		],
-		"description": "PHP document parameter"
 	},
 	"PHPGlobal": {
 		"prefix": "p.globals",
@@ -819,16 +785,6 @@
 			"}"
 		],
 		"description": "PHP class protected static method"
-	},
-	"PHPPublicMethod": {
-		"prefix": "p.pubm",
-		"body": [
-			"public function ${1:functionName}($2)",
-			"{",
-			"\t$0",
-			"}"
-		],
-		"description": "PHP class public method"
 	},
 	"PHPPublicStaticMethod": {
 		"prefix": "p.pubsm",
@@ -1052,25 +1008,6 @@
 		],
 		"description": "Creates a comment"
 	},
-	"Yii command": {
-		"prefix": "yii_command_estructura",
-		"body": [
-			"<?php",
-			" class exportarImagenesEmpleadosCommand extends CConsoleCommand",
-			"   {",
-			"     public function actionIndex()",
-			"     {",
-			"         echo Yii::app()->cliColor->getColoredString('nombre comando', \"light_green\");",
-			"         echo Yii::app()->cliColor->getColoredString(\" *Comando* \", \"light_green\");",
-			"         echo Yii::app()->cliColor->getColoredString(\" imagenes\", \"light_cyan\");",
-			"         echo Yii::app()->cliColor->getColoredString(\" Argumentos por default \", \"brown\");",
-			"         echo Yii::app()->cliColor->getColoredString(\" --mover=no --eliminar=no\", \"light_cyan\");",
-			"         echo \"**************************************\";",
-			"     }",
-			"   }"
-		],
-		"description": "Crea la estructura de un command"
-	},
 	"PHP: COOKIE['...']": {
 		"prefix": "$_",
 		"body": [
@@ -1180,15 +1117,6 @@
 			"dd($1);"
 		],
 		"description": "Laravel die & dump"
-	},
-	"PHP Public Function: public function ...(...)": {
-		"prefix": "pfunc",
-		"body": [
-			"public function $1($2)",
-			"{",
-			"\t$3",
-			"}"
-		]
 	},
 	"ifend": {
 		"prefix": "ifend",
@@ -1378,16 +1306,6 @@
 		],
 		"description": "function"
 	},
-	"_c": {
-		"prefix": "_c",
-		"body": [
-			"public function __construct($${1:parameters})",
-			"{",
-			"\t$0",
-			"}"
-		],
-		"description": "Constructor"
-	},
 	"fore": {
 		"prefix": "fore",
 		"body": [
@@ -1459,16 +1377,6 @@
 			"}"
 		],
 		"description": "protected static function"
-	},
-	"pubf": {
-		"prefix": "pubf",
-		"body": [
-			"public function $1($2)",
-			"{",
-			"\t$0",
-			"}"
-		],
-		"description": "public function"
 	},
 	"pubsf": {
 		"prefix": "pubsf",
@@ -2134,7 +2042,7 @@
 	"Function": {
 		"prefix": "fn",
 		"body": [
-			"function ${1:func_name}(${2:Type} \\$${3:args}): ${4:void} {",
+			"function ${1:func_name}(${2:string} \\$${3:args}) {",
 			"\t${0:# code...}",
 			"}"
 		],
@@ -2143,7 +2051,7 @@
 	"Anonymous function": {
 		"prefix": "fna",
 		"body": [
-			"function (${1:Type} \\$${2:args}): ${3:void} {",
+			"function (${1:string} \\$${2:args}): ${3:void} {",
 			"\t${0:# code...}",
 			"}"
 		],
@@ -2152,7 +2060,7 @@
 	"Anonymous function ... use": {
 		"prefix": "fnu",
 		"body": [
-			"function (${1:Type} \\$${2:args}) use (\\$${3:vars}): ${4:void} {",
+			"function (${1:string} \\$${2:args}) use (\\$${3:vars}) {",
 			"\t${0:# code...}",
 			"}"
 		],
@@ -2302,20 +2210,10 @@
 		],
 		"description": "Do while loop"
 	},
-	"Class constructor": {
-		"prefix": "pubc",
-		"body": [
-			"public function __construct(${1:Type} \\$${2:args})",
-			"{",
-			"\t${0:# code...}",
-			"}"
-		],
-		"description": "Class public constructor block"
-	},
 	"Class private constructor": {
 		"prefix": "pric",
 		"body": [
-			"private function __construct(${1:Type} \\$${2:args})",
+			"private function __construct(${1:string} \\$${2:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2325,7 +2223,7 @@
 	"Class protected constructor": {
 		"prefix": "proc",
 		"body": [
-			"protected function __construct(${1:Type} \\$${2:args})",
+			"protected function __construct(${1:string} \\$${2:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2335,7 +2233,7 @@
 	"Private method": {
 		"prefix": "prif",
 		"body": [
-			"private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"private function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2345,7 +2243,7 @@
 	"Private static method": {
 		"prefix": "prisf",
 		"body": [
-			"private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"private static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2355,7 +2253,7 @@
 	"Final private method": {
 		"prefix": "fprif",
 		"body": [
-			"final private function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final private function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2365,7 +2263,7 @@
 	"Final private static method": {
 		"prefix": "fprisf",
 		"body": [
-			"final private static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final private static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2375,7 +2273,7 @@
 	"Protected method": {
 		"prefix": "prof",
 		"body": [
-			"protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"protected function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2385,7 +2283,7 @@
 	"Protected static method": {
 		"prefix": "prosf",
 		"body": [
-			"protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"protected static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2395,7 +2293,7 @@
 	"Final protected method": {
 		"prefix": "fprof",
 		"body": [
-			"final protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final protected function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2405,7 +2303,7 @@
 	"Final protected static method": {
 		"prefix": "fprosf",
 		"body": [
-			"final protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final protected static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2415,31 +2313,31 @@
 	"Abstract protected method": {
 		"prefix": "aprof",
 		"body": [
-			"abstract protected function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+			"abstract protected function (${2:string} \\$${3:args});"
 		],
 		"description": "Abstract protected method statement"
 	},
 	"Abstract protected static method": {
 		"prefix": "aprosf",
 		"body": [
-			"abstract protected static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+			"abstract protected static function (${2:string} \\$${3:args});"
 		],
 		"description": "Abstract protected static method statement"
 	},
-	"Public method": {
+	"pubic function name": {
 		"prefix": "pubf",
 		"body": [
-			"public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"public function $1($2)",
 			"{",
-			"\t${0:# code...}",
+			"\t$0",
 			"}"
 		],
-		"description": "Public method block"
+		"description": "public function"
 	},
 	"Public static method": {
 		"prefix": "pubsf",
 		"body": [
-			"public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"public static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2449,7 +2347,7 @@
 	"Final public method": {
 		"prefix": "fpubf",
 		"body": [
-			"final public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final public function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2459,7 +2357,7 @@
 	"Final public static method": {
 		"prefix": "fpubsf",
 		"body": [
-			"final public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void}",
+			"final public static function (${2:string} \\$${3:args})",
 			"{",
 			"\t${0:# code...}",
 			"}"
@@ -2469,14 +2367,14 @@
 	"Abstract public method": {
 		"prefix": "apubf",
 		"body": [
-			"abstract public function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+			"abstract public function (${2:string} \\$${3:args});"
 		],
 		"description": "Abstract public method statement"
 	},
 	"Abstract public static method": {
 		"prefix": "apubsf",
 		"body": [
-			"abstract public static function ${1:methodName}(${2:Type} \\$${3:args}): ${4:void};"
+			"abstract public static function (${2:string} \\$${3:args});"
 		],
 		"description": "Abstract public static method statement"
 	},
@@ -2551,14 +2449,14 @@
 		"description": "PHP open tag"
 	},
 	"PHP open tag": {
-		"prefix": "po",
+		"prefix": "otag",
 		"body": [
 			"<?php"
 		],
 		"description": "PHP open tag"
 	},
 	"PHP close tag": {
-		"prefix": "pc",
+		"prefix": "ctag",
 		"body": [
 			"?>"
 		],

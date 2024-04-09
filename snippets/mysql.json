@@ -1,0 +1,8 @@
+{
+	"create datebase": {
+		"prefix": "mkdb",
+		"body": [
+			"CREATE DATABASE IF NOT EXISTS `$1` DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;"
+		]
+	},
+}
