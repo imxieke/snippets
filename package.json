@@ -1,345 +1,346 @@
 {
-	"name": "cloudflying-snippets",
-	"displayName": "Cloudflying Code Snippets",
-	"publisher": "imxieke",
-	"author": "imxieke",
-	"description": "Person VSCode Snippets.",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.53.0"
-	},
-	"categories": [
-		"Snippets",
-		"Programming Languages",
-		"Linters"
-	],
-	"icon": "icon.png",
-	"galleryBanner": {
-		"color": "#046380",
-		"theme": "dark"
-	},
-	"license": "GPL-2.0-or-later",
-	"bugs": {
-		"url": "https://github.com/imxieke/snippets"
-	},
-	"homepage": "https://github.com/imxieke/snippets",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/imxieke/snippets.git"
-	},
-	"contributes": {
-		"snippets": [
-			{
-				"language": "bats",
-				"path": "./snippets/bats.json"
-			},
-			{
-				"language": "c",
-				"path": "./snippets/arduino.json"
-			},
-			{
-				"language": "coffeescript",
-				"path": "./snippets/coffeescript.json"
-			},
-			{
-				"language": "cpp",
-				"path": "./snippets/cpp.json"
-			},
-			{
-				"language": "csharp",
-				"path": "./snippets/csharp.json"
-			},
-			{
-				"language": "css",
-				"path": "./snippets/css.json"
-			},
-			{
-				"language": "dart",
-				"path": "./snippets/dart.json"
-			},
-			{
-				"language": "dart",
-				"path": "./snippets/flutter.json"
-			},
-			{
-				"language": "go",
-				"path": "./snippets/go.json"
-			},
-			{
-				"language": "groovy",
-				"path": "./snippets/groovy.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/html.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/html-bootstrap5.json"
-			},
-			{
-				"language": "java",
-				"path": "./snippets/java.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript-angular.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/html-bootstrap5.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript-jquery.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript-jsx.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript-react.json"
-			},
-			{
-				"language": "json",
-				"path": "./snippets/json.json"
-			},
-			{
-				"language": "json",
-				"path": "./snippets/jsonc.json"
-			},
-			{
-				"language": "latex",
-				"path": "./snippets/latex.json"
-			},
-			{
-				"language": "lua",
-				"path": "./snippets/lua.json"
-			},
-			{
-				"language": "markdown",
-				"path": "./snippets/markdown.json"
-			},
-			{
-				"language": "nginx",
-				"path": "./snippets/nginx.json"
-			},
-			{
-				"language": "php",
-				"path": "./snippets/php.json"
-			},
-			{
-				"language": "powershell",
-				"path": "./snippets/powershell.json"
-			},
-			{
-				"language": "python",
-				"path": "./snippets/python.json"
-			},
-			{
-				"language": "python",
-				"path": "./snippets/python-django.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/ruby.json"
-			},
-			{
-				"language": "rust",
-				"path": "./snippets/rust.json"
-			},
-			{
-				"language": "shellscript",
-				"path": "./snippets/shellscript.json"
-			},
-			{
-				"language": "swift",
-				"path": "./snippets/swift.json"
-			},
-			{
-				"language": "sql",
-				"path": "./snippets/mssql.json"
-			},			{
-				"language": "sql",
-				"path": "./snippets/mysql.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/typescript.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/html-bootstrap5.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/typescript-react.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/typescript-anjular.json"
-			},
-			{
-				"language": "vb",
-				"path": "./snippets/vb.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/vue.json"
-			},
-			{
-				"language": "yaml",
-				"path": "./snippets/yaml.json"
-			},
-			{
-				"language": "c",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "cpp",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "closure",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "coffeescript",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "csharp",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "css",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "git-commit",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "go",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "groovy",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "html",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "java",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "json",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "jsonc",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "latex",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "less",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "lua",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "markdown",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "objective-c",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "objective-cpp",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "perl",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "php",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "plaintext",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "jade",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "python",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "r",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "ruby",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "rust",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "scss",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "shellscript",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "swift",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "xml",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "yaml",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "vue",
-				"path": "./snippets/global.json"
-			},
-			{
-				"language": "vue-html",
-				"path": "./snippets/global.json"
-			}
-		]
-	}
+  "name": "snippets",
+  "displayName": "Cloudflying Code Snippets",
+  "publisher": "imxieke",
+  "author": "imxieke",
+  "description": "Person VSCode Snippets.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages",
+    "Linters"
+  ],
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#046380",
+    "theme": "dark"
+  },
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/imxieke/snippets"
+  },
+  "homepage": "https://github.com/imxieke/snippets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imxieke/snippets.git"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "bats",
+        "path": "./snippets/bats.json"
+      },
+      {
+        "language": "c",
+        "path": "./snippets/arduino.json"
+      },
+      {
+        "language": "coffeescript",
+        "path": "./snippets/coffeescript.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/cpp.json"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/csharp.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css.json"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/dart.json"
+      },
+      {
+        "language": "dart",
+        "path": "./snippets/flutter.json"
+      },
+      {
+        "language": "go",
+        "path": "./snippets/go.json"
+      },
+      {
+        "language": "groovy",
+        "path": "./snippets/groovy.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html-bootstrap5.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/java.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript-angular.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/html-bootstrap5.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript-jquery.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript-jsx.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript-react.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/jsonc.json"
+      },
+      {
+        "language": "latex",
+        "path": "./snippets/latex.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/lua.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "nginx",
+        "path": "./snippets/nginx.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/php.json"
+      },
+      {
+        "language": "powershell",
+        "path": "./snippets/powershell.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python-django.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/ruby.json"
+      },
+      {
+        "language": "rust",
+        "path": "./snippets/rust.json"
+      },
+      {
+        "language": "shellscript",
+        "path": "./snippets/shellscript.json"
+      },
+      {
+        "language": "swift",
+        "path": "./snippets/swift.json"
+      },
+      {
+        "language": "sql",
+        "path": "./snippets/mssql.json"
+      },
+      {
+        "language": "sql",
+        "path": "./snippets/mysql.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/html-bootstrap5.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript-react.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript-anjular.json"
+      },
+      {
+        "language": "vb",
+        "path": "./snippets/vb.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/vue.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
+      },
+      {
+        "language": "c",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "closure",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "coffeescript",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "csharp",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "git-commit",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "go",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "groovy",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "java",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "jsonc",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "latex",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "less",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "objective-c",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "objective-cpp",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "perl",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "plaintext",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "jade",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "r",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "ruby",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "rust",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "scss",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "shellscript",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "swift",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": "vue-html",
+        "path": "./snippets/global.json"
+      }
+    ]
+  }
 }
